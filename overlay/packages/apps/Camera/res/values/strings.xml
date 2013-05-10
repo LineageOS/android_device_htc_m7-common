@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="pref_camera_picturesize_entry_23">2688x1520</string>
+    <string name="pref_camera_picturesize_entry_22">2592x1456</string>
+    <string name="pref_camera_picturesize_entry_21">2048x1520</string>
+    <string name="pref_camera_picturesize_entry_20">2048x1216</string>
+    <string name="pref_camera_picturesize_entry_19">2048x1152</string>
+    <string name="pref_camera_picturesize_entry_18">1920x1088</string>
+    <string name="pref_camera_picturesize_entry_17">1600x1200</string>
+    <string name="pref_camera_picturesize_entry_16">1600x896</string>
+    <string name="pref_camera_picturesize_entry_15">1520x1520</string>
+    <string name="pref_camera_picturesize_entry_14">1440x1088</string>
+    <string name="pref_camera_picturesize_entry_13">1280x960</string>
+    <string name="pref_camera_picturesize_entry_12">1280x768</string>
+    <string name="pref_camera_picturesize_entry_11">1280x720</string>
+    <string name="pref_camera_picturesize_entry_10">1024x768</string>
+    <string name="pref_camera_picturesize_entry_9">1088x1088</string>
+    <string name="pref_camera_picturesize_entry_8">800x600</string>
+    <string name="pref_camera_picturesize_entry_7">800x480</string>
+    <string name="pref_camera_picturesize_entry_6">640x480</string>
+    <string name="pref_camera_picturesize_entry_5">640x384</string>
+    <string name="pref_camera_picturesize_entry_4">640x368</string>
+    <string name="pref_camera_picturesize_entry_3">352x288</string>
+    <string name="pref_camera_picturesize_entry_2">320x240</string>
+    <string name="pref_camera_picturesize_entry_1">176x144</string>
+
+</resources>
