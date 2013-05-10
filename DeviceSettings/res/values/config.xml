@@ -26,4 +26,7 @@
     <string name="intensity_default_value">1700</string>
     <string name="intensity_min_value">1200</string>
 
+    <!-- logo2menu -->
+    <bool name="has_logo2menu">true</bool>
+
 </resources>
