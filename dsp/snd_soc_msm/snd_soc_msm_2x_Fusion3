@@ -1,6 +1,6 @@
 # Master file for snd_soc_msm tabla 2.0 sound card proj=m7  DMIC DATE= 20130314
 # Lists all use case verbs
-SectionUseCase."HiFi" { 
+SectionUseCase."HiFi" {
 SectionVerb
 	Name "HiFi"
 
@@ -966,7 +966,7 @@ SectionVerb
 EndSection
 
 }
-SectionUseCase."HiFi Rec" { 
+SectionUseCase."HiFi Rec" {
 SectionVerb
 	Name "HiFi Rec"
 
@@ -1892,7 +1892,7 @@ SectionVerb
 EndSection
 
 }
-SectionUseCase."Voice Call" { 
+SectionUseCase."Voice Call" {
 SectionVerb
 	Name "Voice Call"
 
@@ -2188,7 +2188,7 @@ SectionVerb
 	DisableSequence
 		'MI2S_RX Port Mixer SLIM_1_TX':1:0
 		'MI2S_RX_Voice Mixer Voice Stub':1:0
-		'Voice Stub Tx Mixer SLIM_1_TX':1:0 
+		'Voice Stub Tx Mixer SLIM_1_TX':1:0
 		'Voice Stub Tx Mixer MI2S_TX':1:0
 		'SLIMBUS_3_RX_Voice Mixer Voice Stub':1:0
 		'SLIMBUS_3_RX Port Mixer MI2S_TX':1:0
@@ -2458,7 +2458,7 @@ SectionVerb
 EndSection
 
 }
-SectionUseCase."FM Digital Radio" { 
+SectionUseCase."FM Digital Radio" {
 SectionVerb
 	Name "FM Digital Radio"
 
@@ -2508,7 +2508,7 @@ SectionVerb
 EndSection
 
 }
-SectionUseCase."HiFi Low Power" { 
+SectionUseCase."HiFi Low Power" {
 SectionVerb
 	Name "HiFi Low Power"
 
@@ -2600,7 +2600,7 @@ SectionVerb
 EndSection
 
 }
-SectionUseCase."Incall REC" { 
+SectionUseCase."Incall REC" {
 SectionVerb
 	Name "Incall REC"
 
@@ -2616,7 +2616,7 @@ SectionVerb
 EndSection
 
 }
-SectionUseCase."Voice Call IP" { 
+SectionUseCase."Voice Call IP" {
 SectionVerb
 	Name "Voice Call IP"
 
@@ -2806,7 +2806,7 @@ SectionVerb
 EndSection
 
 }
-SectionUseCase."HiFi Tunnel" { 
+SectionUseCase."HiFi Tunnel" {
 SectionVerb
 	Name "HiFi Tunnel"
 
@@ -2920,7 +2920,7 @@ SectionVerb
 EndSection
 
 }
-SectionUseCase."HiFi Tunnel2" { 
+SectionUseCase."HiFi Tunnel2" {
 SectionVerb
 	Name "HiFi Tunnel2"
 
@@ -3034,7 +3034,7 @@ SectionVerb
 EndSection
 
 }
-SectionUseCase."HiFi Tunnel3" { 
+SectionUseCase."HiFi Tunnel3" {
 SectionVerb
 	Name "HiFi Tunnel3"
 
