@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012-2013 The CyanogenMod Project
+<!-- Copyright (C) 2013 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,10 +15,23 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Paramètres avancés</string>
-    <string name="defaults_button">Reset to default</string>
+    <string name="defaults_button">Réinitialiser</string>
     <string name="category_haptic_title">Haptique</string>
     <string name="vibrator_title">Vibreur</string>
     <string name="vibrator_tuning_title">Intensité du vibreur</string>
     <string name="vibrator_tuning_summary_head">Définir l\'intensité du vibreur</string>
     <string name="vibrator_warning">Les valeurs supérieurs à %1$d ne sont pas recommandées</string>
+    <string name="category_touchscreen_title">Écran</string>
+    <string name="logo2menu_title">Logo vers Menu</string>
+    <string name="logo2menu_switch_title_head">Activer</string>
+    <string name="logo2menu_switch_summary_head">Autoriser la partie supérieure du bouton HTC à agir comme un bouton menu matériel</string>
+    <string name="longtaplogosleep_switch_title_head">Veille par appui long</string>
+    <string name="longtaplogosleep_switch_summary_head">L\'activation permet la mise en veille du téléphone par un appui long sur la partie supérieure du bouton HTC et le remplacement des touches Système/Matériel - bouton menu par le réglage du toucher long</string>
+    <string name="wake_title">Sortie de veille</string>
+    <string name="wake_method_title_head">Méthode de sortie</string>
+    <string name="wake_method_summary_head">Sélectionner la méthode préférée pour sortir le téléphone de la veille</string>
+    <string name="category_sensors_title">Capteurs</string>
+    <string name="proximity_subcat_title">Proximité</string>
+    <string name="proximity_calibration_title">Calibration</string>
+    <string name="proximity_calibration_summary">Régler la valeur d\'étalonnage. Des valeurs plus élevées signifient moins de sensibilité.</string>
 </resources>
