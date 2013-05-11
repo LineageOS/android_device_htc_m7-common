@@ -45,124 +45,6 @@ on init
     symlink /storage/usbdisk /usbdisk
     symlink /storage/usbdisk /mnt/usbdisk
 
-    # For Invense MPU3050
-    chmod 0664 /dev/mpu
-    chmod 0664 /dev/mpuirq
-    chmod 0664 /dev/timerirq
-    chmod 0664 /sys/class/gyro_sensors/gyro/mpu_lpm_flag
-    chown system system /dev/mpu
-    chown system system /dev/mpuirq
-    chown system system /dev/timerirq
-    chown system system /sys/class/gyro_sensors/gyro/mpu_lpm_flag
-
-    # For ST R3GD20
-    chown system system /sys/class/htc_gyro/gyro/enable_device
-    chown system system /sys/class/htc_gyro/gyro/pollrate_ms
-    chown system system /sys/class/htc_gyro/gyro/range
-    chown system system /sys/class/htc_gyro/gyro/enable_polling
-    chown system system /sys/class/htc_gyro/gyro/fifo_samples
-    chown system system /sys/class/htc_gyro/gyro/fifo_mode
-    chown system system /sys/class/htc_gyro/gyro/reg_value
-    chown system system /sys/class/htc_gyro/gyro/reg_addr
-    chmod 0664 /sys/class/htc_gyro/gyro/enable_device
-    chmod 0664 /sys/class/htc_gyro/gyro/pollrate_ms
-    chmod 0664 /sys/class/htc_gyro/gyro/range
-    chmod 0664 /sys/class/htc_gyro/gyro/enable_polling
-    chmod 0664 /sys/class/htc_gyro/gyro/fifo_samples
-    chmod 0664 /sys/class/htc_gyro/gyro/fifo_mode
-    chmod 0664 /sys/class/htc_gyro/gyro/reg_value
-    chmod 0664 /sys/class/htc_gyro/gyro/reg_addr
-
-    # For AKM8963
-    chown system system /dev/akm8963_dev
-    chown system system /sys/class/compass/akm8963/enable_acc
-    chown system system /sys/class/compass/akm8963/enable_mag
-    chown system system /sys/class/compass/akm8963/enable_ori
-    chown system system /sys/class/compass/akm8963/delay_acc
-    chown system system /sys/class/compass/akm8963/delay_mag
-    chown system system /sys/class/compass/akm8963/delay_ori
-    chown system system /sys/class/compass/akm8963/accel
-    chmod 0660 /dev/akm8963_dev
-    chmod 0660 /sys/class/compass/akm8963/enable_acc
-    chmod 0660 /sys/class/compass/akm8963/enable_mag
-    chmod 0660 /sys/class/compass/akm8963/enable_ori
-    chmod 0660 /sys/class/compass/akm8963/delay_acc
-    chmod 0660 /sys/class/compass/akm8963/delay_mag
-    chmod 0660 /sys/class/compass/akm8963/delay_ori
-    chmod 0660 /sys/class/compass/akm8963/accel
-
-    # For BMA250 BOSCH
-    chown system system /sys/class/htc_g_sensor/g_sensor/bandwidth
-    chown system system /sys/class/htc_g_sensor/g_sensor/chip_layout
-    chown system system /sys/class/htc_g_sensor/g_sensor/delay
-    chown system system /sys/class/htc_g_sensor/g_sensor/eeprom_writing
-    chown system system /sys/class/htc_g_sensor/g_sensor/enable
-    chown system system /sys/class/htc_g_sensor/g_sensor/enable_int
-    chown system system /sys/class/htc_g_sensor/g_sensor/fast_calibration_x
-    chown system system /sys/class/htc_g_sensor/g_sensor/fast_calibration_y
-    chown system system /sys/class/htc_g_sensor/g_sensor/fast_calibration_z
-    chown system system /sys/class/htc_g_sensor/g_sensor/flat_hold_time
-    chown system system /sys/class/htc_g_sensor/g_sensor/flat_theta
-    chown system system /sys/class/htc_g_sensor/g_sensor/get_raw_data
-    chown system system /sys/class/htc_g_sensor/g_sensor/high_g_duration
-    chown system system /sys/class/htc_g_sensor/g_sensor/high_g_threshold
-    chown system system /sys/class/htc_g_sensor/g_sensor/int_mode
-    chown system system /sys/class/htc_g_sensor/g_sensor/low_g_duration
-    chown system system /sys/class/htc_g_sensor/g_sensor/low_g_threshold
-    chown system system /sys/class/htc_g_sensor/g_sensor/mode
-    chown system system /sys/class/htc_g_sensor/g_sensor/orient_blocking
-    chown system system /sys/class/htc_g_sensor/g_sensor/orient_hyst
-    chown system system /sys/class/htc_g_sensor/g_sensor/orient_mode
-    chown system system /sys/class/htc_g_sensor/g_sensor/orient_theta
-    chown system system /sys/class/htc_g_sensor/g_sensor/range
-    chown system system /sys/class/htc_g_sensor/g_sensor/reg
-    chown system system /sys/class/htc_g_sensor/g_sensor/selftest
-    chown system system /sys/class/htc_g_sensor/g_sensor/set_k_value
-    chown system system /sys/class/htc_g_sensor/g_sensor/slope_duration
-    chown system system /sys/class/htc_g_sensor/g_sensor/slope_threshold
-    chown system system /sys/class/htc_g_sensor/g_sensor/tap_duration
-    chown system system /sys/class/htc_g_sensor/g_sensor/tap_quiet
-    chown system system /sys/class/htc_g_sensor/g_sensor/tap_samp
-    chown system system /sys/class/htc_g_sensor/g_sensor/tap_shock
-    chown system system /sys/class/htc_g_sensor/g_sensor/tap_threshold
-    chown system system /sys/class/htc_g_sensor/g_sensor/enable_cir_interrupt
-    chown system system /sys/class/bma250/bma250/enable
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/bandwidth
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/chip_layout
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/delay
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/eeprom_writing
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/enable
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/enable_int
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/fast_calibration_x
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/fast_calibration_y
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/fast_calibration_z
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/flat_hold_time
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/flat_theta
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/get_raw_data
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/high_g_duration
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/high_g_threshold
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/int_mode
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/low_g_duration
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/low_g_threshold
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/mode
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/orient_blocking
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/orient_hyst
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/orient_mode
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/orient_theta
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/range
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/reg
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/selftest
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/set_k_value
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/slope_duration
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/slope_threshold
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/tap_duration
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/tap_quiet
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/tap_samp
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/tap_shock
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/tap_threshold
-    chmod 0660 /sys/class/htc_g_sensor/g_sensor/enable_cir_interrupt
-    chmod 0660 /sys/class/bma250/bma250/enable
-
     # P-sensor
     chown radio radio /sys/class/optical_sensors/proximity/PhoneApp_status
     chmod 0660 /sys/class/optical_sensors/proximity/PhoneApp_status
@@ -291,20 +173,6 @@ on boot
     chown bluetooth net_bt_stack /proc/bluetooth/sleep/lpm
     chown bluetooth net_bt_stack /proc/bluetooth/sleep/btwrite
 
-# simlock +
-    chown radio radio /dev/simlock
-    chmod 0660 /dev/simlock
-# simlock -
-
-#DRM +
-    chown drm system /dev/htcdrm
-    chmod 0660 /dev/htcdrm
-#DRM -
-
-# Remote kill
-    chown system system /dev/htc_msgservice
-# Remote kill
-
 # HTC SSD Peripheral UI - BEGIN
     chown system system /sys/class/leds/red/brightness
     chown system system /sys/class/leds/red/blink
@@ -346,12 +214,6 @@ on boot
     chown system system /sys/class/leds/flashlight/brightness
     chmod 0666 /sys/class/leds/flashlight/brightness
 
-# Permissions for NFC
-    chmod 0600 /dev/pn544
-    chown nfc nfc /dev/pn544
-    setprop debug.nfc.fw_download "true"
-    setprop debug.nfc.fw_boot_download "false"
-
     # disable L27 S3 static pull down disable
     write /sys/kernel/debug/pm8921-dbg/addr 0x0E3
     write /sys/kernel/debug/pm8921-dbg/data 0xA0
@@ -391,13 +253,6 @@ on boot
     mkdir /data/misc/gpsone_d 0770 system gps
 # --SSD_GPS
 
-# ++SSD_AUDIO
-    chown system audio /dev/tfa9887
-    chmod 0664 /dev/tfa9887
-    chown system audio /dev/tfa9887l
-    chmod 0664 /dev/tfa9887l
-# --SSD_AUDIO
-
 # Set RLIMIT_NICE to allow priorities from 19 to -20
     setrlimit 8 268435456 268435456
 
@@ -411,10 +266,6 @@ on boot
 # For Flashlight Restriction
     chown system system /sys/camera_led_status/led_hotspot_status
     chown radio system /sys/camera_led_status/led_ril_status
-
-# HTC set radio_feedback permissions
-    chown radio radio /dev/radio_feedback
-    chmod 0660 /dev/radio_feedback
 
 # For RIL to set htc_monitor_param permission
     chown radio radio /sys/htc_monitor_status/htc_monitor_param

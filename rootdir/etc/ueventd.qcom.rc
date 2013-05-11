@@ -68,7 +68,7 @@
 /dev/tty_sdio_00          0660   system     system
 /dev/block/mmcblk0p17     0660   system     system
 /dev/block/mmcblk0p18     0660   system     system
-/dev/video*	              0660   system     camera 
+/dev/video*               0660   system     camera
 #regular apps need to be able to open ion
 /dev/ion                  0664   system     system
 
@@ -100,20 +100,102 @@
 /dev/msm_dsps             0660  system       system
 
 # felica device file nodes
-/dev/felica            0666   felicaclient   felicaclient
-/dev/felica_pon        0666   felicaclient   felicaclient
-/dev/felica_cen        0666   felicalock     felicalock
-/dev/felica_rfs        0444   felicaclient   felicaclient
-/dev/felica_rws        0666   felicaclient   felicaclient
-/dev/felica_int        0444   felicaclient   felicaclient
-/dev/felica_int_poll   0400   felicaclient   felicaclient
-/dev/felica_uid        0222   felicaclient   felicaclient
+/dev/felica               0666   felicaclient   felicaclient
+/dev/felica_pon           0666   felicaclient   felicaclient
+/dev/felica_cen           0666   felicalock     felicalock
+/dev/felica_rfs           0444   felicaclient   felicaclient
+/dev/felica_rws           0666   felicaclient   felicaclient
+/dev/felica_int           0444   felicaclient   felicaclient
+/dev/felica_int_poll      0400   felicaclient   felicaclient
+/dev/felica_uid           0222   felicaclient   felicaclient
 
 # cir
 /dev/ttyHSL3              0660   irda       irda
 
 # HtcCarGPS
-/dev/ttyHSUSB1                                 0600    system  system
+/dev/ttyHSUSB1            0600   system     system
 
 # for autobot car pc
-/dev/ttyHSUSB3                                 0660    autobot_access autobot_access
+/dev/ttyHSUSB3            0660   autobot_access autobot_access
+
+# simlock
+/dev/simlock              0660  radio        radio
+
+# HTC drm
+/dev/htcdrm               0660  drm          system
+
+# remote kill
+/dev/htc_msgservice       0600  system       system
+
+# NFC
+/dev/pn544                0600  nfc          nfc
+
+# Audio
+/dev/tfa9887              0664  system       audio
+/dev/tfa9887l             0664  system       audio
+
+# Radio
+/dev/radio_feedback       0660  radio        radio
+
+# MPU3050
+/dev/mpu                  0664  system       system
+/dev/mpuirq               0664  system       system
+/dev/timerirq             0644  system       system
+/sys/class/gyro_sensors/gyro/mpu_lpm_flag    0664   system     system
+
+# ST R3GD20
+/sys/class/htc_gyro/gyro/enable_device    0664   system     system
+/sys/class/htc_gyro/gyro/pollrate_ms      0664   system     system
+/sys/class/htc_gyro/gyro/range            0664   system     system
+/sys/class/htc_gyro/gyro/enable_polling   0664   system     system
+/sys/class/htc_gyro/gyro/fifo_samples     0664   system     system
+/sys/class/htc_gyro/gyro/fifo_mode        0664   system     system
+/sys/class/htc_gyro/gyro/reg_value        0664   system     system
+/sys/class/htc_gyro/gyro/reg_addr         0664   system     system
+
+# AKM8963
+/dev/akm8963_dev
+/sys/class/compass/akm8963/enable_acc     0660   system     system
+/sys/class/compass/akm8963/enable_mag     0660   system     system
+/sys/class/compass/akm8963/enable_ori     0660   system     system
+/sys/class/compass/akm8963/delay_acc      0660   system     system
+/sys/class/compass/akm8963/delay_mag      0660   system     system
+/sys/class/compass/akm8963/delay_ori      0660   system     system
+/sys/class/compass/akm8963/accel          0660   system     system
+
+# BMA250 BOSCH
+/sys/class/htc_g_sensor/g_sensor/bandwidth            0660   system     system
+/sys/class/htc_g_sensor/g_sensor/chip_layout          0660   system     system
+/sys/class/htc_g_sensor/g_sensor/delay                0660   system     system
+/sys/class/htc_g_sensor/g_sensor/eeprom_writing       0660   system     system
+/sys/class/htc_g_sensor/g_sensor/enable               0660   system     system
+/sys/class/htc_g_sensor/g_sensor/enable_int           0660   system     system
+/sys/class/htc_g_sensor/g_sensor/fast_calibration_x   0660   system     system
+/sys/class/htc_g_sensor/g_sensor/fast_calibration_y   0660   system     system
+/sys/class/htc_g_sensor/g_sensor/fast_calibration_z   0660   system     system
+/sys/class/htc_g_sensor/g_sensor/flat_hold_time       0660   system     system
+/sys/class/htc_g_sensor/g_sensor/flat_theta           0660   system     system
+/sys/class/htc_g_sensor/g_sensor/get_raw_data         0660   system     system
+/sys/class/htc_g_sensor/g_sensor/high_g_duration      0660   system     system
+/sys/class/htc_g_sensor/g_sensor/high_g_threshold     0660   system     system
+/sys/class/htc_g_sensor/g_sensor/int_mode             0660   system     system
+/sys/class/htc_g_sensor/g_sensor/low_g_duration       0660   system     system
+/sys/class/htc_g_sensor/g_sensor/low_g_threshold      0660   system     system
+/sys/class/htc_g_sensor/g_sensor/mode                 0660   system     system
+/sys/class/htc_g_sensor/g_sensor/orient_blocking      0660   system     system
+/sys/class/htc_g_sensor/g_sensor/orient_hyst          0660   system     system
+/sys/class/htc_g_sensor/g_sensor/orient_mode          0660   system     system
+/sys/class/htc_g_sensor/g_sensor/orient_theta         0660   system     system
+/sys/class/htc_g_sensor/g_sensor/range                0660   system     system
+/sys/class/htc_g_sensor/g_sensor/reg                  0660   system     system
+/sys/class/htc_g_sensor/g_sensor/selftest             0660   system     system
+/sys/class/htc_g_sensor/g_sensor/set_k_value          0660   system     system
+/sys/class/htc_g_sensor/g_sensor/slope_duration       0660   system     system
+/sys/class/htc_g_sensor/g_sensor/slope_threshold      0660   system     system
+/sys/class/htc_g_sensor/g_sensor/tap_duration         0660   system     system
+/sys/class/htc_g_sensor/g_sensor/tap_quiet            0660   system     system
+/sys/class/htc_g_sensor/g_sensor/tap_samp             0660   system     system
+/sys/class/htc_g_sensor/g_sensor/tap_shock            0660   system     system
+/sys/class/htc_g_sensor/g_sensor/tap_threshold        0660   system     system
+/sys/class/htc_g_sensor/g_sensor/enable_cir_interrupt 0660   system     system
+/sys/class/bma250/bma250/enable                       0660   system     system
