@@ -1,0 +1,8 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="wake_method_entries">
+        <item></item>
+        <item>Bouton Accueil</item>
+        <item>Bouton HTC</item>
+        <item>Balayages des boutons</item>
+    </string-array>
+</resources>
