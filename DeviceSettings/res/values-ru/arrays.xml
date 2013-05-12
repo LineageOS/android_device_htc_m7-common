@@ -1,0 +1,10 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string-array name="wake_method_entries">
+        <item>Выключено</item>
+        <item>Кнопка \"Домой\"</item>
+        <item>Логотип \"HTC\"</item>
+        <item>Проведя по кнопкам</item>
+    </string-array>
+
+</resources>
