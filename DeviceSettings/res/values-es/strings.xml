@@ -21,4 +21,13 @@
     <string name="vibrator_tuning_title">Intensidad de vibración</string>
     <string name="vibrator_tuning_summary_head">Establecer la intensidad de vibración</string>
     <string name="vibrator_warning">No son recomendables valores mayores de %1$d</string>
+    <string name="category_touchscreen_title">Pantalla táctil</string>
+    <string name="logo2menu_title">Logotipo a Menú</string>
+    <string name="logo2menu_switch_title_head">Activado</string>
+    <string name="logo2menu_switch_summary_head">Permitir que la parte superior del logotipo de HTC actue como el botón Menú</string>
+    <string name="longtaplogosleep_switch_title_head">Modo de espera</string>
+    <string name="longtaplogosleep_switch_summary_head">Permitir que una pulsación prolongada sobre la parte superior del logotipo de HTC ponga el dispositivo en modo de espera. Este ajuste prevalecerá sobre otros</string>
+    <string name="wake_title">Despertar</string>
+    <string name="wake_method_title_head">Método para despertar</string>
+    <string name="wake_method_summary_head">Elegir el método a utilizar para despertar el dispositivo</string>
 </resources>
