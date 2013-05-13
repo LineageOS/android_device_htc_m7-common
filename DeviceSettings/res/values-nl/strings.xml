@@ -18,7 +18,16 @@
     <string name="defaults_button">Herstellen naar standaard</string>
     <string name="category_haptic_title">Trillen</string>
     <string name="vibrator_title">Trilapparaat</string>
-    <string name="vibrator_tuning_title">Trilsterkte</string>
-    <string name="vibrator_tuning_summary_head">Sterkte instellen van trillen</string>
-    <string name="vibrator_warning">Values higher than %1$d are not recommended</string>
+    <string name="vibrator_tuning_title">Trilintensiteit</string>
+    <string name="vibrator_tuning_summary_head">Trilintensiteit instellen</string>
+    <string name="vibrator_warning">Waarden hoger dan %1$d worden niet aangeraden</string>
+    <string name="category_touchscreen_title">Aanraakscherm</string>
+    <string name="logo2menu_title">Logo als menuknop</string>
+    <string name="logo2menu_switch_title_head">Inschakelen</string>
+    <string name="logo2menu_switch_summary_head">Bovenkant van het HTC-logo als menuknop gebruiken.</string>
+    <string name="longtaplogosleep_switch_title_head">Slaapstand na lang aanraken</string>
+    <string name="longtaplogosleep_switch_summary_head">Naar slaapstand door de bovenkant van het HTC-logo lang aan te raken. Hiermee wordt de optie \'Menuknop (lang ingedrukt)\' in \'Systeem\' - \'Hardwareknoppen\' overschreven.</string>
+    <string name="wake_title">Ontwaken</string>
+    <string name="wake_method_title_head">Ontwaakmethode</string>
+    <string name="wake_method_summary_head">Touchpad ontwaakmethode selecteren.</string>
 </resources>
