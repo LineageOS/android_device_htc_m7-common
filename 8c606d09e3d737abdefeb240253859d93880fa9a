@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f-LXtus",
+        "filename": "DeviceSettings/res/values-fr/arrays.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4045
+      },
+      "writtenOn": "2013-05-13T23:39:21Z",
+      "side": 1,
+      "message": "Ce n\u0027est pas la syntaxe initiale, mais je vois mal un \"bouton logo\"",
+      "revId": "8c606d09e3d737abdefeb240253859d93880fa9a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
