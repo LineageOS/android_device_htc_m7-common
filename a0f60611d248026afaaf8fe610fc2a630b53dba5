@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "hn9yS34",
+        "filename": "DeviceSettings/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-05-14T17:21:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "hZ0kA7A",
+      "revId": "a0f60611d248026afaaf8fe610fc2a630b53dba5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "hH4TcV0",
         "filename": "DeviceSettings/res/values-nl/strings.xml",
         "patchSetId": 1
@@ -107,6 +125,24 @@
     },
     {
       "key": {
+        "uuid": "hh9pB4w",
+        "filename": "DeviceSettings/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-05-14T17:21:13Z",
+      "side": 1,
+      "message": "Sorry, na nader inzien denk ik dat indrukken beter is, aangezien het iets hardwarematig is.",
+      "parentUuid": "hX06V88",
+      "revId": "a0f60611d248026afaaf8fe610fc2a630b53dba5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "hB4aLW8",
         "filename": "DeviceSettings/res/values-nl/strings.xml",
         "patchSetId": 1
@@ -136,6 +172,24 @@
       "side": 1,
       "message": "- Naar slaapstand door de bovenkant van het HTC-logo lang aan te raken. Hiermee wordt de optie \\\u0027Menuknop (lang ingedrukt)\\\u0027 in \\\u0027Systeem\\\u0027 - \\\u0027Hardwareknoppen\\\u0027 overschreven.",
       "parentUuid": "hB4aLW8",
+      "revId": "a0f60611d248026afaaf8fe610fc2a630b53dba5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "hj9sw5s",
+        "filename": "DeviceSettings/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-05-14T17:21:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "hrwI4Sk",
       "revId": "a0f60611d248026afaaf8fe610fc2a630b53dba5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
