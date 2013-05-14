@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "hN4DpQw",
+        "filename": "DeviceSettings/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-05-14T02:56:33Z",
+      "side": 1,
+      "message": "Waarden* (de meervoudsvorm op -en wordt zoveel mogelijk gebruikt)",
+      "revId": "a0f60611d248026afaaf8fe610fc2a630b53dba5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "hL4I2Sk",
+        "filename": "DeviceSettings/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-05-14T02:56:33Z",
+      "side": 1,
+      "message": "- Bovenkant van HTC-logo gebruiken als menuknop\n\nHet HTC-logo is al een hardware-onderdeel dus dan lijkt het mij logisch dat het een menuknop wordt? Heb geen HTC One dus kan dat niet bevestigen",
+      "revId": "a0f60611d248026afaaf8fe610fc2a630b53dba5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "hH4TcV0",
+        "filename": "DeviceSettings/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-05-14T02:56:33Z",
+      "side": 1,
+      "message": "- Slaapstand na lang aanraken",
+      "revId": "a0f60611d248026afaaf8fe610fc2a630b53dba5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "hB4aLW8",
+        "filename": "DeviceSettings/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-05-14T02:56:33Z",
+      "side": 1,
+      "message": "- Naar slaapstand door de bovenkant van het HTC-logo lang aan te raken en hiermee ook de optie \\\u0027Menuknop (lang ingedrukt)\\\u0027 overschrijven in \\\u0027Systeem\\\u0027 - \\\u0027Hardwareknoppen\\\u0027",
+      "revId": "a0f60611d248026afaaf8fe610fc2a630b53dba5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "hN4qhX4",
+        "filename": "DeviceSettings/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-05-14T02:56:33Z",
+      "side": 1,
+      "message": "- Ontwaakmethode",
+      "revId": "a0f60611d248026afaaf8fe610fc2a630b53dba5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
