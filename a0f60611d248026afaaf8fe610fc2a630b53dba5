@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "hd0Dqww",
+        "filename": "DeviceSettings/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-05-14T17:16:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "hN4DpQw",
+      "revId": "a0f60611d248026afaaf8fe610fc2a630b53dba5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "hL4I2Sk",
         "filename": "DeviceSettings/res/values-nl/strings.xml",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-05-14T02:56:33Z",
       "side": 1,
       "message": "- Bovenkant van HTC-logo gebruiken als menuknop\n\nHet HTC-logo is al een hardware-onderdeel dus dan lijkt het mij logisch dat het een menuknop wordt? Heb geen HTC One dus kan dat niet bevestigen",
+      "revId": "a0f60611d248026afaaf8fe610fc2a630b53dba5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "hZ0kA7A",
+        "filename": "DeviceSettings/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-05-14T17:16:23Z",
+      "side": 1,
+      "message": "Klopt: http://youtu.be/CC-hSUR0dyU\n\n\"It\u0027s not a button by design, but with kernel driver level changes it can be tricked to be used as a functional pseudo button. Only the upper half is sensitive, so clearly it is not as suitable as? a button as the Home and Back button area of the phone.\"\n\n- Bovenkant van het HTC-logo gebruiken als menuknop\n\n(zie r.29 waar we ook wel De en Het gebruiken in de summary)",
+      "parentUuid": "hL4I2Sk",
       "revId": "a0f60611d248026afaaf8fe610fc2a630b53dba5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "hX06V88",
+        "filename": "DeviceSettings/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-05-14T17:16:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "hH4TcV0",
+      "revId": "a0f60611d248026afaaf8fe610fc2a630b53dba5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "hB4aLW8",
         "filename": "DeviceSettings/res/values-nl/strings.xml",
         "patchSetId": 1
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "hrwI4Sk",
+        "filename": "DeviceSettings/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-05-14T17:16:23Z",
+      "side": 1,
+      "message": "- Naar slaapstand door de bovenkant van het HTC-logo lang aan te raken. Hiermee wordt de optie \\\u0027Menuknop (lang ingedrukt)\\\u0027 in \\\u0027Systeem\\\u0027 - \\\u0027Hardwareknoppen\\\u0027 overschreven.",
+      "parentUuid": "hB4aLW8",
+      "revId": "a0f60611d248026afaaf8fe610fc2a630b53dba5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "hN4qhX4",
         "filename": "DeviceSettings/res/values-nl/strings.xml",
         "patchSetId": 1
@@ -81,6 +153,24 @@
       "writtenOn": "2013-05-14T02:56:33Z",
       "side": 1,
       "message": "- Ontwaakmethode",
+      "revId": "a0f60611d248026afaaf8fe610fc2a630b53dba5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "hV03m.M",
+        "filename": "DeviceSettings/res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2013-05-14T17:16:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "hN4qhX4",
       "revId": "a0f60611d248026afaaf8fe610fc2a630b53dba5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
