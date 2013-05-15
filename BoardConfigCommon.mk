@@ -42,7 +42,6 @@ COMMON_GLOBAL_CFLAGS += -DNEW_ION_API=1
 COMMON_GLOBAL_CFLAGS += -DHTCLOG
 
 # Audio
-BOARD_AUDIO_CAF_LEGACY_INPUT_BUFFERSIZE := true
 BOARD_USES_FLUENCE_INCALL := true  # use DMIC in call only
 BOARD_USES_SEPERATED_AUDIO_INPUT := true  # use distinct voice recog/camcorder use cases
 BOARD_USES_SEPERATED_VOICE_SPEAKER := true  # use distinct voice speaker use case
