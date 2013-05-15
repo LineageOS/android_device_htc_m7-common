@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "hqXVZLo",
+        "filename": "DeviceSettings/res/values-ru/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-05-15T18:31:24Z",
+      "side": 1,
+      "message": "Kak naschet: \"Son dolgim nazhatiem\"?",
+      "revId": "daa5e077b7869d76bb39f1e4e016c7a1af9ebf4c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
