@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "hmX1HII",
+        "filename": "DeviceSettings/res/values-es/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2013-05-15T13:58:02Z",
+      "side": 1,
+      "message": "Here it is. ;)",
+      "revId": "71acead4c5f5edbad724043924a5cea0357af8c4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
