@@ -106,6 +106,10 @@ static char * camera_fixup_getparams(int id, const char * settings)
     if(params.get(android::CameraParameters::KEY_ROTATION))
         rotation = params.get(android::CameraParameters::KEY_ROTATION);
 
+    /* Face detection */
+    params.set("max-num-detected-faces-hw", "0");
+    params.set("max-num-detected-faces-sw", "0");
+
     /* Hardware HDR */
     if(strcmp(captureMode, "hdr") == 0) {
         ALOGI("Scene-Mode: HDR.");
@@ -157,6 +161,10 @@ char * camera_fixup_setparams(int id, const char * settings)
     params.set(android::CameraParameters::KEY_GPU_EFFECT_PARAM_1, "0,0,0,0");
     params.set(android::CameraParameters::KEY_GPU_EFFECT_PARAM_2, "");
     params.set(android::CameraParameters::KEY_GPU_EFFECT_PARAM_3, "0,0,0,0");
+
+    /* Face detection */
+    params.set("max-num-detected-faces-hw", "0");
+    params.set("max-num-detected-faces-sw", "0");
 
     /* Photo Mode */
     if(strcmp(recordingHint, "false") == 0) {
