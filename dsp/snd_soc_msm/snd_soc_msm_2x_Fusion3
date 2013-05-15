@@ -931,11 +931,11 @@ SectionDevice
 		'LINEOUT2 Volume':1:66
 		'LINEOUT3 Volume':1:66
 		'LINEOUT4 Volume':1:66
-		'RCV AMP EN Switch':1:1
+		'RCV AMP EN':1:1
 	EndSequence
 
 	DisableSequence
-		'RCV AMP EN Switch':1:0
+		'RCV AMP EN':1:0
 		'RX3 MIX1 INP1':0:ZERO
 		'RX3 MIX1 INP2':0:ZERO
 		'RX5 MIX1 INP1':0:ZERO
@@ -959,7 +959,8 @@ SectionDevice
 	Name "Voice Earpiece"
 
 	EnableSequence
-		'SLIM_0_RX Channels':0:Two
+		'SLIM_0_RX Channels':0:One
+		'SLIM TX3 MUX':0:RMIX3
 		'RX3 MIX1 INP1':0:RX1
 		'RX3 MIX1 INP2':0:RX6
 		'RX5 MIX1 INP1':0:RX2
@@ -974,11 +975,12 @@ SectionDevice
 		'LINEOUT2 Volume':1:66
 		'LINEOUT3 Volume':1:66
 		'LINEOUT4 Volume':1:66
-		'RCV AMP EN Switch':1:1
+		'RCV AMP EN':1:1
 	EndSequence
 
 	DisableSequence
-		'RCV AMP EN Switch':1:0
+		'RCV AMP EN':1:0
+		'SLIM TX3 MUX':0:ZERO
 		'RX3 MIX1 INP1':0:ZERO
 		'RX3 MIX1 INP2':0:ZERO
 		'RX5 MIX1 INP1':0:ZERO
@@ -1017,11 +1019,11 @@ SectionDevice
 		'LINEOUT2 Volume':1:66
 		'LINEOUT3 Volume':1:66
 		'LINEOUT4 Volume':1:66
-		'RCV AMP EN Switch':1:1
+		'RCV AMP EN':1:1
 	EndSequence
 
 	DisableSequence
-		'RCV AMP EN Switch':1:0
+		'RCV AMP EN':1:0
 		'RX3 MIX1 INP1':0:ZERO
 		'RX3 MIX1 INP2':0:ZERO
 		'RX5 MIX1 INP1':0:ZERO
