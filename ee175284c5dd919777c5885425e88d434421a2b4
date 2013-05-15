@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "huKlorU",
+        "filename": "DeviceSettings/res/values-es/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2013-05-15T00:25:54Z",
+      "side": 1,
+      "message": "I think is important to reflect the \"System/Hardware Keys - Menu\" override",
+      "revId": "ee175284c5dd919777c5885425e88d434421a2b4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
