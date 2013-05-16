@@ -41,4 +41,8 @@
     <string name="wake_method_title_head">Wake Method</string>
     <string name="wake_method_summary_head">Select which touchpad wake method you prefer to use.</string>
 
+    <string name="buttonlightnotif_title">Button Light Notification</string>
+    <string name="buttonlightnotif_switch_title_head">Enable</string>
+    <string name="buttonlightnotif_switch_summary_head">Enables the Home and Back button leds to flash when notification led is blinking.</string>
+
 </resources>

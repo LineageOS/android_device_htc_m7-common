@@ -38,12 +38,15 @@ public class TouchscreenFragmentActivity extends PreferenceFragment {
     public static final String KEY_LOGO2MENU_SWITCH = "logo2menu_switch";
     public static final String KEY_LONGTAPLOGOSLEEP_SWITCH = "longtaplogosleep_switch";
     public static final String KEY_WAKE_METHOD = "wake_method";
+    public static final String KEY_BUTTONLIGHTNOTIF_SWITCH = "buttonlightnotif_switch";
 
     private static boolean sLogo2Menu;
     private static boolean sWake;
+    private static boolean sButtonLightNotif;
     private TwoStatePreference mLogo2MenuSwitch;
     private TwoStatePreference mLongTapLogoSleepSwitch;
     private ListPreference mWakeMethod;
+    private TwoStatePreference mButtonLightNotifSwitch;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,6 +55,7 @@ public class TouchscreenFragmentActivity extends PreferenceFragment {
         Resources res = getResources();
         sLogo2Menu = res.getBoolean(R.bool.has_logo2menu);
         sWake = res.getBoolean(R.bool.has_wake);
+        sButtonLightNotif = res.getBoolean(R.bool.has_buttonlightnotif);
 
         addPreferencesFromResource(R.xml.touchscreen_preferences);
 
@@ -67,6 +71,11 @@ public class TouchscreenFragmentActivity extends PreferenceFragment {
             mWakeMethod = (ListPreference) findPreference(KEY_WAKE_METHOD);
             mWakeMethod.setEnabled(WakeMethod.isSupported());
             mWakeMethod.setOnPreferenceChangeListener(new WakeMethod());
+        }
+        if (sButtonLightNotif) {
+            mButtonLightNotifSwitch = (TwoStatePreference) findPreference(KEY_BUTTONLIGHTNOTIF_SWITCH);
+            mButtonLightNotifSwitch.setEnabled(ButtonLightNotifSwitch.isSupported());
+            mButtonLightNotifSwitch.setOnPreferenceChangeListener(new ButtonLightNotifSwitch());
         }
     }
 

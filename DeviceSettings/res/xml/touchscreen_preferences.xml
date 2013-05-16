@@ -38,4 +38,12 @@
                 android:entryValues="@array/wake_method_entries_values"
                 android:defaultValue="0" />
     </PreferenceCategory>
+    <PreferenceCategory
+            android:title="@string/buttonlightnotif_title">
+                <CheckBoxPreference
+                android:key="buttonlightnotif_switch"
+                android:title="@string/buttonlightnotif_switch_title_head"
+                android:summary="@string/buttonlightnotif_switch_summary_head"
+                android:defaultValue="0" />
+    </PreferenceCategory>
 </PreferenceScreen>
