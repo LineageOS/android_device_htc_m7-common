@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "hlaq1Bo",
+        "filename": "m7-common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2013-05-18T14:45:17Z",
+      "side": 1,
+      "message": "y u no separate the commits?",
+      "revId": "31a5ee0068cfc5603caf4807543c8f3030f79f0e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
