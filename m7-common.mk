@@ -125,7 +125,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.nfc.port=I2C \
     persist.timed.enable=true \
     persist.gps.qmienabled=true \
-    ro.baseband.arch=mdm
+    ro.baseband.arch=mdm \
+    ro.config.bt.amp=no
 
 # Set build date
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
