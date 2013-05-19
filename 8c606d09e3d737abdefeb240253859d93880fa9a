@@ -52,6 +52,24 @@
       "revId": "8c606d09e3d737abdefeb240253859d93880fa9a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "hoM3-eI",
+        "filename": "DeviceSettings/res/values-fr/arrays.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-05-19T19:24:24Z",
+      "side": 1,
+      "message": "Bouton HTC, je trouve ça pas mal",
+      "parentUuid": "hgMr7YM",
+      "revId": "8c606d09e3d737abdefeb240253859d93880fa9a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
