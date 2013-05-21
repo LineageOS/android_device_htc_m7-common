@@ -1506,21 +1506,17 @@ SectionDevice
 
 	EnableSequence
 		'SLIM_0_TX Channels':0:One
-		'SLIM TX7 MUX':0:DEC6
-		'DEC6 MUX':0:ADC1
-		'DEC6 Volume':2:54
-		'ADC1 Volume':1:100
+		'SLIM TX7 MUX':0:DEC8
+		'DEC8 MUX':0:DMIC2
+		'DEC8 Volume':2:58
 		'MICBIAS1 CAPLESS Switch':1:0
-		'MICBIAS1 PD MODE':1:1
 	EndSequence
 
 	DisableSequence
 		'SLIM TX7 MUX':0:ZERO
-		'DEC6 MUX':0:ZERO
-		'DEC6 Volume':2:0
-		'ADC1 Volume':1:0
+		'DEC8 MUX':0:ZERO
+		'DEC8 Volume':2:0
 		'MICBIAS1 CAPLESS Switch':1:0
-		'MICBIAS1 PD MODE':1:0
 	EndSequence
 
 	ACDBID  501:2
