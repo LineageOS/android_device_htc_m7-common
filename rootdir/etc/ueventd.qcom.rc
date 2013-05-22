@@ -121,6 +121,7 @@
 /dev/pn544                0600  nfc          nfc
 
 # Audio
+/dev/rt5501               0644  system       media
 /dev/tfa9887              0664  system       audio
 /dev/tfa9887l             0664  system       audio
 
