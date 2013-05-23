@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "iIBBOjw",
+        "filename": "DeviceSettings/res/values-fr/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-05-23T02:08:46Z",
+      "side": 1,
+      "message": "Habituellement les \"summary\" sont à l\u0027infinitif : \"Autoriser ....\" et  pas de point en fin de phrase dans les \"summary\"",
+      "revId": "01d2ca85e95dcdeb2b91dd2118f152a92e823924",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "iOAqNn4",
         "filename": "DeviceSettings/res/values-fr/strings.xml",
         "patchSetId": 4
@@ -19,6 +36,41 @@
     },
     {
       "key": {
+        "uuid": "iMBt8s0",
+        "filename": "DeviceSettings/res/values-fr/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-05-23T02:08:46Z",
+      "side": 1,
+      "message": "Pas de point en fin de phrase dans les \"summary\"",
+      "parentUuid": "iOAqNn4",
+      "revId": "01d2ca85e95dcdeb2b91dd2118f152a92e823924",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iOB49pE",
+        "filename": "DeviceSettings/res/values-fr/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-05-23T02:08:46Z",
+      "side": 1,
+      "message": "Quand on a une cascade de hiérarchie très claire comme ici \"Sortie de veille\" \u003d\u003e \"Méthode de sortie de veille\" \u003d\u003e \"Sélectionnez la méthode que vous préférez pour sortir votre téléphone de veille.\", il n\u0027est pas nécessaire de repréciser de quoi on parle, du coup seulement \"Méthode de sortie\" suffit, il ne faut que cela devienne trop lourd à lire.",
+      "revId": "01d2ca85e95dcdeb2b91dd2118f152a92e823924",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "iAAmSro",
         "filename": "DeviceSettings/res/values-fr/strings.xml",
         "patchSetId": 4
@@ -30,6 +82,24 @@
       "writtenOn": "2013-05-23T01:46:21Z",
       "side": 1,
       "message": "la méthode préférée",
+      "revId": "01d2ca85e95dcdeb2b91dd2118f152a92e823924",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iCBILls",
+        "filename": "DeviceSettings/res/values-fr/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-05-23T02:08:46Z",
+      "side": 1,
+      "message": "Mettre ici aussi à l\u0027infinitif \"Sélectionner....\", supprimer les vouvoiement. \"Sélectionner la méthode préférée pour sortir le téléphone de la veille\" \u003c\u003d Pas de point en fin de phrase dans les \"summary\"",
+      "parentUuid": "iAAmSro",
       "revId": "01d2ca85e95dcdeb2b91dd2118f152a92e823924",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
