@@ -34,6 +34,24 @@
       "revId": "6576fe26951588d22c18be42aa4c886b7979ea9d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iO8JAd8",
+        "filename": "DeviceSettings/res/values-fr/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-05-24T13:42:56Z",
+      "side": 1,
+      "message": "Ok, donc si j\u0027ai bien compris, quand \"Veille par appui long\" est coché cela a deux conséquences :\n1- L\u0027appui long sur le bouton permet la mise en veille\n2- L\u0027appui court émule la touche \"menu\" \u003c\u003d Là je demande confirmation :) Désolé je veux vraiment être sur de bien comprend.",
+      "parentUuid": "iHRbiFU",
+      "revId": "6576fe26951588d22c18be42aa4c886b7979ea9d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
