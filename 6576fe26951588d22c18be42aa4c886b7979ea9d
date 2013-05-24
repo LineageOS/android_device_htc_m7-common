@@ -16,6 +16,24 @@
       "revId": "6576fe26951588d22c18be42aa4c886b7979ea9d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iHRbiFU",
+        "filename": "DeviceSettings/res/values-fr/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 4045
+      },
+      "writtenOn": "2013-05-24T01:04:37Z",
+      "side": 1,
+      "message": "Sans vouloir dire de salades, le logo central du HTC One (là où c\u0027est écrit \"HTC\") est inactif par défaut.. en l\u0027activant, on peut lui ajouter deux fonctions: mettre le téléphone en veille par un appui long ou/et utiliser le logo comme un bouton menu matériel",
+      "parentUuid": "iBRKDIQ",
+      "revId": "6576fe26951588d22c18be42aa4c886b7979ea9d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
