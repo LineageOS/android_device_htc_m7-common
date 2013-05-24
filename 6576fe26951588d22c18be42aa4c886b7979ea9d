@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "iBRKDIQ",
+        "filename": "DeviceSettings/res/values-fr/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-05-24T00:50:54Z",
+      "side": 1,
+      "message": "Je ne connais pas le téléphone et la particularité de ces boutons et du coup je ne comprend pas la deuxième partie de la phrase \"...et le remplacement des touches Système/Matériel - bouton menu par le réglage du toucher long\". Quelqu\u0027un pourrait m\u0027éclairer :)",
+      "revId": "6576fe26951588d22c18be42aa4c886b7979ea9d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
