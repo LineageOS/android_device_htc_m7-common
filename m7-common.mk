@@ -22,6 +22,10 @@ $(call inherit-product, device/htc/msm8960-common/msm8960.mk)
 # overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.target \
@@ -123,6 +127,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.nfc.fw_boot_download=false \
     debug.nfc.se=true \
     ro.nfc.port=I2C \
+    ro.sf.lcd_density=480 \
     persist.timed.enable=true \
     persist.gps.qmienabled=true \
     ro.baseband.arch=mdm
