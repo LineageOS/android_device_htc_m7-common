@@ -202,7 +202,7 @@ on fs
     mkdir /firmware/mdm 0771 system system
     mkdir /firmware/q6 0771 system system
 
-    mount_all ./fstab.target
+    mount_all ./fstab.qcom
 
     insmod /system/lib/modules/dm-crypt.ko
 
