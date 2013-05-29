@@ -52,6 +52,24 @@
       "revId": "6576fe26951588d22c18be42aa4c886b7979ea9d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iFC2ST4",
+        "filename": "DeviceSettings/res/values-fr/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 4045
+      },
+      "writtenOn": "2013-05-29T19:26:10Z",
+      "side": 1,
+      "message": "Si j\u0027ai bien compris, oui, c\u0027est ça. ;)",
+      "parentUuid": "iO8JAd8",
+      "revId": "6576fe26951588d22c18be42aa4c886b7979ea9d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
