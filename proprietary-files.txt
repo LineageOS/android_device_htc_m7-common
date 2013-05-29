@@ -5,7 +5,6 @@ system/bin/efsks
 system/bin/qcks
 
 # NFC
-system/lib/hw/nfc.default.so
 system/vendor/firmware/libpn544_fw.so
 system/vendor/firmware/mfg.bin
 
