@@ -3,48 +3,21 @@
     <item name="none">0</item>
     <item name="screen.on">5.0</item>
     <item name="screen.full">43.0</item>
-    <array name="screen.brightness">
-        <value>dark</value>
-        <value>dim</value>
-        <value>medium</value>
-        <value>light</value>
-        <value>bright</value>
-    </array>
-    <array name="screen.brightness_bin">
-        <value>5.0</value>
-        <value>14.5</value>
-        <value>23.9</value>
-        <value>33.6</value>
-        <value>43.0</value>
-    </array>
-    <array name="gpu.speeds">
-        <value>27000</value>
-        <value>200000</value>
-        <value>320000</value>
-        <value>400000</value>
-    </array>
-    <array name="gpu.active">
-        <value>28.5</value>
-        <value>112.8</value>
-        <value>145.8</value>
-        <value>173.6</value>
-    </array>
     <item name="bluetooth.active">6.9</item>
     <item name="bluetooth.on">0.5</item>
-    <item name="bluetooth.at">0</item>
     <item name="wifi.on">0.001</item>
     <item name="wifi.active">74000</item>
     <item name="wifi.scan">15.5</item>
     <item name="dsp.audio">2.7</item>
     <item name="dsp.video">11.1</item>
-    <item name="radio.talk">26.7</item>
-    <item name="radio.active">191270</item>
+    <item name="radio.active">185.6</item>
+    <!-- The current consumed by the radio when it is scanning for a signal -->
+    <item name="radio.scanning">122.68</item>
     <item name="gps.on">14.6</item>
-    <item name="battery.capacity">2300</item>
-    <item name="radio.scanning">23.1</item>
-    <array name="radio.on">
-        <value>0.84</value>
-        <value>0.84</value>
+    <!-- Current consumed by the radio at different signal strengths, when paging -->
+    <array name="radio.on"> <!-- Strength 0 to BINS-1 -->
+        <value>1.16</value>
+        <value>2.15</value>
     </array>
     <array name="cpu.speeds">
         <value>384000</value>
@@ -79,4 +52,5 @@
         <value>42.8</value>
         <value>45.2</value>
     </array>
+    <item name="battery.capacity">2300</item>
 </device>
