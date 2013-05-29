@@ -91,6 +91,9 @@
          config to 7. -->
     <integer name="config_deviceHardwareKeys">7</integer>
 
+    <!-- Enable overflow button by default. -->
+    <bool name="config_defaultShowOverflow">true</bool>
+
     <!-- Default color for notification LED is green. -->
     <color name="config_defaultNotificationColor">#ff00ff00</color>
 
