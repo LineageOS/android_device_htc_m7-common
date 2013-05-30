@@ -73,6 +73,9 @@
     <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
     <bool translatable="false" name="config_wifi_dual_band_support">true</bool>
 
+    <!-- Boolean indicating whether the wifi chipset has p2p support -->
+    <bool translatable="false" name="config_wifi_p2p_support">true</bool>
+
     <!-- Boolean indicating whether the wifi chipset has background scan support -->
     <bool translatable="false" name="config_wifi_background_scan_support">true</bool>
 
@@ -175,6 +178,9 @@
 
     <!-- Minimum screen brightness allowed by the power manager. -->
     <integer name="config_screenBrightnessDim">10</integer>
+
+    <!-- WiFi display -->
+    <bool name="config_enableWifiDisplay">true</bool>
 
     <!-- XXXXX NOTE THE FOLLOWING RESOURCES USE THE WRONG NAMING CONVENTION.
          Please don't copy them, copy anything else. -->
