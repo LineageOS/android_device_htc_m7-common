@@ -24,7 +24,7 @@ public class Logo2MenuSwitch implements OnPreferenceChangeListener {
         }
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-        boolean enabled = sharedPrefs.getBoolean(TouchscreenFragmentActivity.KEY_LOGO2MENU_SWITCH, true);
+        boolean enabled = sharedPrefs.getBoolean(TouchscreenFragmentActivity.KEY_LOGO2MENU_SWITCH, false);
         if(enabled)
             Utils.writeValue(FILE, "1\n");
         else
