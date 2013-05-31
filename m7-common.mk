@@ -26,12 +26,12 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.target \
+    fstab.qcom \
     init.qcom.firmware_links.sh \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
-    remount.target \
+    remount.qcom \
     ueventd.qcom.rc
 
 # Custom recovery charging
