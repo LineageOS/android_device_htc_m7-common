@@ -20,7 +20,7 @@
                 android:key="logo2menu_switch"
                 android:title="@string/logo2menu_switch_title_head"
                 android:summary="@string/logo2menu_switch_summary_head"
-                android:defaultValue="1" />
+                android:defaultValue="0" />
                 <CheckBoxPreference
                 android:key="longtaplogosleep_switch"
                 android:dependency="logo2menu_switch"
