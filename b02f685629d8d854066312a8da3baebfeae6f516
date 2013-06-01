@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "iEbiD6E",
+        "filename": "DeviceSettings/res/values-nl/arrays.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-06-01T00:22:43Z",
+      "side": 1,
+      "message": "Alleen 2013",
+      "revId": "b02f685629d8d854066312a8da3baebfeae6f516",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iGblE6c",
+        "filename": "DeviceSettings/res/values-nl/arrays.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-06-01T00:22:43Z",
+      "side": 1,
+      "message": "Onnodige witregel",
+      "revId": "b02f685629d8d854066312a8da3baebfeae6f516",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iCbu.4s",
+        "filename": "DeviceSettings/res/values-nl/arrays.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-06-01T00:22:43Z",
+      "side": 1,
+      "message": "Hmmm... Is gewoon \u0027Logo\u0027 niet genoeg? Ik weet niet meer wat er in de strings staat...",
+      "revId": "b02f685629d8d854066312a8da3baebfeae6f516",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
