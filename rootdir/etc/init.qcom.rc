@@ -521,10 +521,6 @@ service thermald /system/bin/thermald
     group root
     disabled
 
-service tpd /sbin/tpd
-    class core
-    user root
-
 # wifi ++
 service p2p_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf -N \

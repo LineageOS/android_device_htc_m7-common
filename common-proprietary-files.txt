@@ -1,8 +1,3 @@
-# Recovery files
-sbin/mfgsrv
-sbin/sfc
-sbin/tpd
-
 # Executables
 system/bin/adaptive
 system/bin/akmd
