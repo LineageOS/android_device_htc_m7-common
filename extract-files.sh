@@ -21,6 +21,9 @@ fi
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 rm -rf $BASE/*
 
+adb root
+adb wait-for-device
+
 for FILE in `egrep -v '(^#|^$)' ../$DEVICE/device-proprietary-files.txt`; do
   echo "Extracting /$FILE ..."
   DIR=`dirname $FILE`
