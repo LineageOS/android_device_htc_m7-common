@@ -155,11 +155,19 @@ on init
     chmod 0660 /sys/class/htc_g_sensor/g_sensor/enable_cir_interrupt
     chmod 0660 /sys/class/bma250/bma250/enable
 
-
-
-    # P-sensor
+    # Proximity sensor
     chown radio radio /sys/class/optical_sensors/proximity/PhoneApp_status
     chmod 0660 /sys/class/optical_sensors/proximity/PhoneApp_status
+
+    chown radio radio /sys/devices/virtual/optical_sensors/proximity/ps_adc
+    chmod 0660 /sys/devices/virtual/optical_sensors/proximity/ps_adc
+    chown radio radio /sys/devices/virtual/optical_sensors/proximity/ps_canc
+    chmod 0660 /sys/devices/virtual/optical_sensors/proximity/ps_canc
+    chown radio radio /sys/devices/virtual/optical_sensors/proximity/pc_kadc
+    chmod 0660 /sys/devices/virtual/optical_sensors/proximity/pc_kadc
+
+    # Proximity calibration values
+    write /sys/devices/virtual/optical_sensors/proximity/ps_kadc "0x0 0xFFFF0C09"
 
     # htc_cir
     chown irda irda /sys/class/htc_cir/cir/reset_cir
