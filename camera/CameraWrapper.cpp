@@ -116,12 +116,13 @@ static char * camera_fixup_getparams(int id, const char * settings)
         params.set(android::CameraParameters::KEY_SCENE_MODE, "hdr");
     }
 
-    /* Photo Mode */
-    if(strcmp(recordingHint, "false") == 0) {
-        /* Back Camera */
-        if(id == 0) {
+    /* Back Camera */
+    if(id == 0) {
+        /* Photo Mode */
+        if(strcmp(recordingHint, "false") == 0) {
             params.set(android::CameraParameters::KEY_SUPPORTED_SCENE_MODES, "off,auto,action,portrait,landscape,night,night-portrait,theatre,beach,snow,sunset,steadyphoto,fireworks,sports,party,candlelight,backlight,flowers,AR,text,hdr");
         }
+        params.set(android::CameraParameters::KEY_FOCAL_LENGTH, "3.82");
     }
 
     /* Fix rotation missmatch */
