@@ -1,13 +1,13 @@
 # Device-specific proprietary files sharing a common name
 
 # Executables
-system/bin/efsks
-system/bin/qcks
+bin/efsks
+bin/qcks
 
 # NFC
-system/vendor/firmware/libpn544_fw.so
-system/vendor/firmware/mfg.bin
+vendor/firmware/libpn544_fw.so
+vendor/firmware/mfg.bin
 
 # Radio
-system/lib/libril-qc-qmi-1.so
-system/lib/libril-qcril-hook-oem.so
+lib/libril-qc-qmi-1.so
+lib/libril-qcril-hook-oem.so

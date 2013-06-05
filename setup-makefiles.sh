@@ -27,7 +27,7 @@ DISM=`egrep -c '(^#|^$)' device-proprietary-files.txt`
 COUNT=`expr $COUNT - $DISM`
 for FILE in `egrep -v '(^#|^$)' ../$DEVICE/device-proprietary-files.txt`; do
   COUNT=`expr $COUNT - 1`
-  echo "        $OUTDIR/proprietary/$FILE:$FILE$LINEEND" >> $MAKEFILE
+  echo "        $OUTDIR/proprietary/$FILE:/system/$FILE$LINEEND" >> $MAKEFILE
 done
 
 LINEEND=" \\"
@@ -39,7 +39,7 @@ for FILE in `egrep -v '(^#|^$)' ../m7-common/proprietary-files.txt`; do
   if [ $COUNT = "0" ]; then
     LINEEND=""
   fi
-  echo "        $OUTDIR/proprietary/$FILE:$FILE$LINEEND" >> $MAKEFILE
+  echo "        $OUTDIR/proprietary/$FILE:/system/$FILE$LINEEND" >> $MAKEFILE
 done
 
 (cat << EOF) > ../../../$OUTDIR/$DEVICE-vendor.mk
@@ -115,7 +115,7 @@ for FILE in `egrep -v '(^#|^$)' ../m7-common/common-proprietary-files.txt`; do
   if [ $COUNT = "0" ]; then
     LINEEND=""
   fi
-   echo "        $OUTDIR/proprietary/$FILE:$FILE$LINEEND" >> $MAKEFILE
+   echo "        $OUTDIR/proprietary/$FILE:/system/$FILE$LINEEND" >> $MAKEFILE
 done
 
 (cat << EOF) > ../../../$OUTDIR/$DEVICE-vendor.mk
