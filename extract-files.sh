@@ -24,6 +24,10 @@ rm -rf $BASE/*
 adb root
 adb wait-for-device
 
+adb pull /sbin/mfgsrv $BASE/sbin/mfgsrv
+adb pull /sbin/sfc $BASE/sbin/sfc
+adb pull /sbin/tpd $BASE/sbin/tpd
+
 for FILE in `egrep -v '(^#|^$)' ../$DEVICE/device-proprietary-files.txt`; do
   echo "Extracting /$FILE ..."
   DIR=`dirname $FILE`
