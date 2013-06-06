@@ -895,7 +895,6 @@ SectionVerb
 EndSection
 }
 SectionUseCase."HiFi Lowlatency Rec" {
-# Unused by HTC
 SectionVerb
 	Name "HiFi Lowlatency Rec"
 
@@ -911,7 +910,6 @@ SectionVerb
 EndSection
 }
 SectionUseCase."HiFi Lowlatency" {
-# Unused by HTC
 SectionVerb
 	Name "HiFi Lowlatency"
 
@@ -924,6 +922,56 @@ SectionVerb
 	EndSequence
 	PlaybackPCM 14
 	CapturePCM 14
+EndSection
+
+SectionVerb
+	Name "HiFi LowlatencyBT SCO Rx"
+
+	EnableSequence
+		'AUX_PCM_RX Audio Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'AUX_PCM_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	PlaybackPCM 14
+EndSection
+
+SectionVerb
+	Name "HiFi LowlatencyBT SCO WB Rx"
+
+	EnableSequence
+		'AUX_PCM_RX Audio Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'AUX_PCM_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	PlaybackPCM 14
+EndSection
+
+SectionVerb
+	Name "HiFi LowlatencyPROXY Rx"
+
+	EnableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	PlaybackPCM 14
+EndSection
+
+SectionVerb
+	Name "HiFi LowlatencyPROXY Tx"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+	EndSequence
+	PlaybackPCM 14
 EndSection
 }
 SectionDevice
