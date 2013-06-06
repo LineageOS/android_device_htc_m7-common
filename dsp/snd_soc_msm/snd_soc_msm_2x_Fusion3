@@ -460,8 +460,8 @@ SectionVerb
 	DisableSequence
 		'MultiMedia4 Mixer SLIM_0_TX':1:1
 	EndSequence
-	CapturePCM  9
-	PlaybackPCM  9
+	CapturePCM  36
+	PlaybackPCM  36
 EndSection
 
 }
@@ -863,6 +863,20 @@ SectionVerb
 	EndSequence
 	CapturePCM  0
 	PlaybackPCM  36
+EndSection
+
+SectionVerb
+	Name "HiFi TunnelPROXY Rx"
+
+	EnableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+	CapturePCM 0
+	PlaybackPCM 36
 EndSection
 
 # HTC additional verbs
@@ -2798,6 +2812,20 @@ SectionModifier
 
 	DisableSequence
 		'AUX_PCM_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+	CapturePCM  0
+	PlaybackPCM  36
+EndSection
+
+SectionModifier
+	Name "Play TunnelPROXY Rx"
+
+	EnableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
 	EndSequence
 	CapturePCM  0
 	PlaybackPCM  36
