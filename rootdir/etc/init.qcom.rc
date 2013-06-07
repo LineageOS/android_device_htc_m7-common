@@ -163,8 +163,8 @@ on init
     chmod 0660 /sys/devices/virtual/optical_sensors/proximity/ps_adc
     chown radio radio /sys/devices/virtual/optical_sensors/proximity/ps_canc
     chmod 0660 /sys/devices/virtual/optical_sensors/proximity/ps_canc
-    chown system radio /sys/devices/virtual/optical_sensors/proximity/pc_kadc
-    chmod 0660 /sys/devices/virtual/optical_sensors/proximity/pc_kadc
+    chown system radio /sys/devices/virtual/optical_sensors/proximity/ps_kadc
+    chmod 0660 /sys/devices/virtual/optical_sensors/proximity/ps_kadc
 
     # Proximity calibration values
     write /sys/devices/virtual/optical_sensors/proximity/ps_kadc "0x0 0xFFFF3C2D"
