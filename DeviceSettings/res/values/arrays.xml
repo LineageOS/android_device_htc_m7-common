@@ -14,4 +14,21 @@
         <item>3</item>
     </string-array>
 
+    <!-- Proximity calibration -->
+    <string-array name="proximity_calibration_entries" translatable="false">
+        <item>12</item>
+        <item>60</item>
+        <item>120</item>
+        <item>180</item>
+        <item>240</item>
+    </string-array>
+
+    <string-array name="proximity_calibration_entries_values" translatable="false">
+        <item>0x0 0xFFFF0C09</item>
+        <item>0x0 0xFFFF3C2D</item>
+        <item>0x0 0xFFFF785A</item>
+        <item>0x0 0xFFFFB487</item>
+        <item>0x0 0xFFFFF0B4</item>
+    </string-array>
+
 </resources>

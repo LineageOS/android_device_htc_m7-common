@@ -28,4 +28,12 @@
     <string name="vibrator_tuning_summary_head">Stärke des Vibrationseffektes einstellen</string>
     <string name="vibrator_warning">Vorsicht: Höhere Werte als %1$d werden nicht empfohlen</string>
 
+    <!-- Sensors Preference -->
+    <string name="category_sensors_title">Sensoren</string>
+
+    <!-- Proximity Calibration -->
+    <string name="proximity_subcat_title">Annäherungssensor</string>
+    <string name="proximity_calibration_title">Kalibrierung</string>
+    <string name="proximity_calibration_summary">Setze Kalibrierungswerte. Höhere Werte bedeuten geringere Sensitivität.</string>
+
 </resources>

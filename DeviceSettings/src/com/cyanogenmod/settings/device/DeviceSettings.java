@@ -60,6 +60,8 @@ public class DeviceSettings extends FragmentActivity {
         mTabsAdapter = new TabsAdapter(this, mViewPager);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.category_haptic_title),
                     HapticFragmentActivity.class, null);
+        mTabsAdapter.addTab(bar.newTab().setText(R.string.category_sensors_title),
+                    SensorsFragmentActivity.class, null);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.category_touchscreen_title),
                     TouchscreenFragmentActivity.class, null);
 
