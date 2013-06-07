@@ -101,8 +101,8 @@ on property:sys.usb.config=ptp,adb
 on property:sys.usb.config=diag
     stop adbd
     write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 1004
-    write /sys/class/android_usb/android0/idProduct 631B
+    write /sys/class/android_usb/android0/idVendor 0bb4
+    write /sys/class/android_usb/android0/idProduct 0fe7
     write /sys/class/android_usb/android0/bDeviceClass 239
     write /sys/class/android_usb/android0/bDeviceSubClass 2
     write /sys/class/android_usb/android0/bDeviceProtocol 1
@@ -116,8 +116,8 @@ on property:sys.usb.config=diag
 on property:sys.usb.config=diag,adb
     stop adbd
     write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 1004
-    write /sys/class/android_usb/android0/idProduct 631B
+    write /sys/class/android_usb/android0/idVendor 0bb4
+    write /sys/class/android_usb/android0/idProduct 0fde
     write /sys/class/android_usb/android0/bDeviceClass 239
     write /sys/class/android_usb/android0/bDeviceSubClass 2
     write /sys/class/android_usb/android0/bDeviceProtocol 1
