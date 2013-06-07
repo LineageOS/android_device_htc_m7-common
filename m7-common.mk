@@ -143,7 +143,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=480 \
     persist.timed.enable=true \
     persist.gps.qmienabled=true \
-    ro.baseband.arch=mdm
+    ro.baseband.arch=mdm \
+    ro.telephony.call_ring.multiple=false \
+    ro.telephony.call_ring.delay=3000
 
 # Set build date
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
