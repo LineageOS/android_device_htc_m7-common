@@ -34,6 +34,10 @@ PRODUCT_PACKAGES += \
     remount.qcom \
     ueventd.qcom.rc
 
+# Post boot service
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/init.post_boot.sh:system/etc/init.post_boot.sh
+
 # Custom recovery charging
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/sbin/choice_fn:recovery/root/sbin/choice_fn \
