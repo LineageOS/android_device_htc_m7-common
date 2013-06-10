@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "iCWwJ90",
+        "filename": "DeviceSettings/res/values-fr/arrays.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-06-10T01:08:13Z",
+      "side": 1,
+      "message": "Please add xml header (\u003c?xml version\u003d\"1.0\" encoding\u003d\"utf-8\"?\u003e) and copyright.",
+      "revId": "22fe6a976ac4cc0b0140d0d0af780e96072a7774",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
