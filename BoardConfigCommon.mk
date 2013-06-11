@@ -38,14 +38,12 @@ TARGET_KERNEL_CONFIG := cyanogenmod_m7_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/m7
 
 # Flags
-COMMON_GLOBAL_CFLAGS += -DNEW_ION_API=1
 COMMON_GLOBAL_CFLAGS += -DNEW_LIBRIL_HTC
 
 # Audio
 BOARD_USES_FLUENCE_INCALL := true  # use DMIC in call only
 BOARD_USES_SEPERATED_AUDIO_INPUT := true  # use distinct voice recog/camcorder use cases
 BOARD_USES_SEPERATED_VOICE_SPEAKER := true  # use distinct voice speaker use case
-TARGET_USES_QCOM_COMPRESSED_AUDIO := true
 BOARD_HAVE_HTC_CSDCLIENT := true
 
 # Bluetooth
