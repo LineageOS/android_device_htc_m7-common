@@ -16,6 +16,24 @@
       "revId": "bd01d6dbcde1cdd9cd32bc1d1bc32c7c207c109d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iIj5SlA",
+        "filename": "DeviceSettings/res/values-fr/strings.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 4045
+      },
+      "writtenOn": "2013-06-11T00:25:03Z",
+      "side": 1,
+      "message": "Je suis partagé là dessus.. des avis ?",
+      "parentUuid": "iKVJ19I",
+      "revId": "bd01d6dbcde1cdd9cd32bc1d1bc32c7c207c109d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
