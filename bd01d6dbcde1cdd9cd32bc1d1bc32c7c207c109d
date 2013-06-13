@@ -34,6 +34,24 @@
       "revId": "bd01d6dbcde1cdd9cd32bc1d1bc32c7c207c109d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "iNloNr0",
+        "filename": "DeviceSettings/res/values-fr/strings.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-06-13T02:26:22Z",
+      "side": 1,
+      "message": "\"Régler la valeur d\\\u0027étalonnage. Plus la valeur est élevée plus la sensibilité est réduite.\"\n\nJe trouve beaucoup ça plus clair, non ?",
+      "parentUuid": "iIj5SlA",
+      "revId": "bd01d6dbcde1cdd9cd32bc1d1bc32c7c207c109d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
