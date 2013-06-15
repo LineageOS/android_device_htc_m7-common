@@ -21,4 +21,17 @@
     <string name="vibrator_tuning_title">Intensidade da vibração</string>
     <string name="vibrator_tuning_summary_head">Ajusar a intensidade da resposta por vibração</string>
     <string name="vibrator_warning">Valores maiores que %1$d não são recomendados</string>
+    <string name="category_touchscreen_title">Tela sensível ao toque</string>
+    <string name="logo2menu_title">Logomarca para menu</string>
+    <string name="logo2menu_switch_title_head">Ativar</string>
+    <string name="logo2menu_switch_summary_head">Ativar a logomarca HTC para funcionar como um botão para abrir o menu.</string>
+    <string name="longtaplogosleep_switch_title_head">Dormir com longo toque</string>
+    <string name="longtaplogosleep_switch_summary_head">Se marcado, ao pressionar a logomarca da HTC, irá por seu telefone para dormir. Se marcado, ela anula Teclas Sistema/Hardware - Configuração do botão menu com toque longo</string>
+    <string name="wake_title">Acordar</string>
+    <string name="wake_method_title_head">Método de acordar</string>
+    <string name="wake_method_summary_head">Selecione qual método de acordar do touchpad você prefere usar.</string>
+    <string name="category_sensors_title">Sensores</string>
+    <string name="proximity_subcat_title">Proximidade</string>
+    <string name="proximity_calibration_title">Calibragem</string>
+    <string name="proximity_calibration_summary">Define o valor da calibragem. Valores maiores significa menor sensitividade.</string>
 </resources>
