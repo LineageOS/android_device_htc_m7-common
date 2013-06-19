@@ -62,6 +62,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/calibration:/system/etc/calibration \
     $(LOCAL_PATH)/configs/calibration_EMEA:/system/etc/calibration_EMEA
 
+# Audio config
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
+
 # Sound configs
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/dsp/soundimage/srs_bypass.cfg:system/etc/soundimage/srs_bypass.cfg \
