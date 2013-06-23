@@ -34,6 +34,8 @@
 #include <camera/Camera.h>
 #include <camera/CameraParameters.h>
 
+const char KEY_VIDEO_HDR[] = "video-hdr";
+
 static android::Mutex gCameraWrapperLock;
 static camera_module_t *gVendorModule = 0;
 
@@ -95,6 +97,7 @@ static char * camera_fixup_getparams(int id, const char * settings)
     const char* recordingHint = "false";
     const char* captureMode = "normal";
     const char* rotation = "0";
+    const char* videoHDR = "false";
 
     android::CameraParameters params;
     params.unflatten(android::String8(settings));
@@ -105,6 +108,8 @@ static char * camera_fixup_getparams(int id, const char * settings)
         captureMode = params.get(android::CameraParameters::KEY_CAPTURE_MODE);
     if(params.get(android::CameraParameters::KEY_ROTATION))
         rotation = params.get(android::CameraParameters::KEY_ROTATION);
+    if(params.get(KEY_VIDEO_HDR))
+        videoHDR = params.get(KEY_VIDEO_HDR);
 
     /* Face detection */
     params.set(android::CameraParameters::KEY_MAX_NUM_DETECTED_FACES_HW, "0");
@@ -115,6 +120,12 @@ static char * camera_fixup_getparams(int id, const char * settings)
         ALOGI("Scene-Mode: HDR.");
         params.set(android::CameraParameters::KEY_SCENE_MODE, "hdr");
     }
+
+    /* Video HDR */
+    if(strcmp(videoHDR, "true") == 0)
+        params.set(KEY_VIDEO_HDR, "on");
+    else if(strcmp(videoHDR, "false") == 0)
+        params.set(KEY_VIDEO_HDR, "off");
 
     /* Back Camera */
     if(id == 0) {
@@ -142,11 +153,12 @@ static char * camera_fixup_getparams(int id, const char * settings)
     return ret;
 }
 
-char * camera_fixup_setparams(int id, const char * settings)
+static char * camera_fixup_setparams(int id, const char * settings)
 {
     const char* previewSize = "0x0";
     const char* recordingHint = "false";
     const char* sceneMode = "auto";
+    const char* videoHDR = "false";
 
     android::CameraParameters params;
     params.unflatten(android::String8(settings));
@@ -158,6 +170,8 @@ char * camera_fixup_setparams(int id, const char * settings)
         recordingHint = params.get(android::CameraParameters::KEY_RECORDING_HINT);
     if(params.get(android::CameraParameters::KEY_SCENE_MODE))
         sceneMode = params.get(android::CameraParameters::KEY_SCENE_MODE);
+    if(params.get(KEY_VIDEO_HDR))
+        videoHDR = params.get(KEY_VIDEO_HDR);
 
     params.set(android::CameraParameters::KEY_GPU_EFFECT, "0_bypass"); // Bypass
     params.set(android::CameraParameters::KEY_GPU_EFFECT_PARAM_0, "0,0,0,0");
@@ -197,6 +211,15 @@ char * camera_fixup_setparams(int id, const char * settings)
         /* For 1080p videosnapshot feature */
         if(strcmp(previewSize, "1920x1088") == 0)
             params.set(android::CameraParameters::KEY_PICTURE_SIZE, "1920x1088");
+    }
+
+    /* Video HDR */
+    if(strcmp(videoHDR, "on") == 0) {
+        ALOGI("Video-HDR: enabled");
+        params.set(KEY_VIDEO_HDR, "true");
+    } else if(strcmp(videoHDR, "off") == 0) {
+        ALOGI("Video-HDR: disabled");
+        params.set(KEY_VIDEO_HDR, "false");
     }
 
     android::String8 strParams = params.flatten();
