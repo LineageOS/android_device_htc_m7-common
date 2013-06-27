@@ -13,23 +13,18 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <string name="app_name">Настройки HTC One</string>
 
     <string name="defaults_button">Настройки по умолчанию</string>
 
-    <!-- Haptic Preference -->
     <string name="category_haptic_title">Отклик</string>
 
-    <!-- VibratorTuning -->
     <string name="vibrator_title">Вибрация</string>
     <string name="vibrator_tuning_title">Интенсивность вибрации</string>
     <string name="vibrator_tuning_summary_head">Установка интенсивности вибрации</string>
     <string name="vibrator_warning">Не рекомендуется установка значения выше %1$d</string>
 
-    <!-- Touchscreen Preference -->
     <string name="category_touchscreen_title">Сенсорный экран</string>
     <string name="logo2menu_title">Логотип \"HTC\"</string>
     <string name="logo2menu_switch_title_head">Включить</string>
@@ -40,5 +35,4 @@
     <string name="wake_title">Пробуждение</string>
     <string name="wake_method_title_head">Способ пробуждения</string>
     <string name="wake_method_summary_head">Выберите метод пробуждения устройства</string>
-
 </resources>

@@ -13,9 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <string name="app_name">Advanced settings</string>
 
     <string name="defaults_button">Reset to default</string>
@@ -48,5 +46,4 @@
     <string name="proximity_subcat_title">Proximity</string>
     <string name="proximity_calibration_title">Calibration</string>
     <string name="proximity_calibration_summary">Set the calibration value. Higher values mean less sensitivity.</string>
-
 </resources>
