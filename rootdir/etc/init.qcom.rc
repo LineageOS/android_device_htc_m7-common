@@ -445,11 +445,6 @@ on boot
     write /proc/sys/net/core/rmem_max  1220608
     write /proc/sys/net/core/wmem_max  1220608
 
-service adaptive /system/bin/adaptive -c 0 -s 150 -b 210
-    class main
-    user root
-    disabled
-
 # Compass/accelerometer daemon
 service akmd /system/bin/akmd
     class main

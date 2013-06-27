@@ -1,35 +1,21 @@
 # Executables
-bin/adaptive
 bin/akmd
-bin/awb_camera
-bin/bma150_usr
 bin/charging
-bin/flash_camera
 bin/ks
-bin/lsc_camera
 bin/mm-pp-daemon
-bin/mm-qcamera-app
 bin/mm-qcamera-daemon
-bin/mm-qcamera-test
-bin/mm-qcamera-testsuite-client
 bin/mpdecision
 bin/netmgrd
-bin/netsharing
-bin/ois_camera
 bin/qmuxd
-bin/test_gemini
 bin/thermald
 bin/zchgd
 
 # Configuration files
 etc/agps_rm
-etc/ar0260_1
 etc/cir.img
 etc/hldm.bin
 etc/hltof.bin
 etc/hltrd.bin
-etc/ov2722_1
-etc/RT5501
 
 # Audio
 lib/libacdbloader.so
