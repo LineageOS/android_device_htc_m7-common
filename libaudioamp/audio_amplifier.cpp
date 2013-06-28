@@ -29,14 +29,22 @@
 #include "audio_amplifier.h"
 
 int mDevices = AUDIO_DEVICE_NONE;
+audio_mode_t mMode = AUDIO_MODE_NORMAL;
 
 void amplifier_set_devices(int devices) {
-    if (devices != NULL)
-        mDevices = devices;
+    if (devices != NULL) {
+        if (mDevices != devices) {
+            mDevices = devices;
+            /* Set amplifier mode when device changes */
+            amplifier_set_mode(mMode);
+        }
+    }
 }
 
 int amplifier_set_mode(audio_mode_t mode) {
     int ret = 0;
+
+    mMode = mode;
 
     if (mDevices & AUDIO_DEVICE_OUT_WIRED_HEADSET || mDevices & AUDIO_DEVICE_OUT_WIRED_HEADPHONE) {
         /* Write config for headset amplifier */
