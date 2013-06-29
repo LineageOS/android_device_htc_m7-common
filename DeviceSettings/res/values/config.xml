@@ -17,7 +17,6 @@
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <!-- Vibrator Tuning -->
     <bool name="has_vibrator_tuning">true</bool>
     <string name="vibrator_sysfs_file">"/sys/class/timed_output/vibrator/voltage_level"</string>
@@ -30,5 +29,4 @@
     <bool name="has_logo2menu">true</bool>
     <!-- wake -->
     <bool name="has_wake">true</bool>
-
 </resources>

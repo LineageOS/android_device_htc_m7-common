@@ -15,7 +15,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Geavanceerde instellingen</string>
-    <string name="defaults_button">Herstellen naar standaard</string>
+    <string name="defaults_button">Standaardwaarden</string>
     <string name="category_haptic_title">Trillen</string>
     <string name="vibrator_title">Trilapparaat</string>
     <string name="vibrator_tuning_title">Trilintensiteit</string>
@@ -30,4 +30,8 @@
     <string name="wake_title">Ontwaken</string>
     <string name="wake_method_title_head">Ontwaakmethode</string>
     <string name="wake_method_summary_head">Touchpad ontwaakmethode selecteren.</string>
+    <string name="category_sensors_title">Sensoren</string>
+    <string name="proximity_subcat_title">Nabijheidssensor</string>
+    <string name="proximity_calibration_title">Kalibreren</string>
+    <string name="proximity_calibration_summary">Kalibratiewaarden instellen. Hogere waarden betekenen minder gevoelige sensor.</string>
 </resources>

@@ -14,7 +14,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <string-array name="wake_method_entries">
         <item>None</item>
         <item>Home button</item>
@@ -53,5 +52,4 @@
         <item>0x0 0xFFFF6C51</item>
         <item>0x0 0xFFFF785A</item>
     </string-array>
-
 </resources>
