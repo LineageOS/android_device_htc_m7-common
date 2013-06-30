@@ -106,7 +106,6 @@ lib/libc2d2_z180.so
 lib/libC2D2.so
 lib/libgsl.so
 lib/libllvm-a3xx.so
-lib/libllvm-arm.so
 lib/libOpenCL.so
 lib/libOpenVG.so
 lib/libsc-a2xx.so
