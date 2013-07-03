@@ -968,11 +968,11 @@ SectionVerb
 	Name "HiFi Lowlatency"
 
 	EnableSequence
-		'MI2S_RX Audio Mixer MultiMedia5':1:1
+		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
 	EndSequence
 
 	DisableSequence
-		'MI2S_RX Audio Mixer MultiMedia5':1:0
+		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
 	EndSequence
 	PlaybackPCM 40
 	CapturePCM 40
@@ -1039,6 +1039,34 @@ SectionVerb
 	DisableSequence
 	EndSequence
 	PlaybackPCM 40
+EndSection
+
+SectionVerb
+	Name "HiFi LowlatencySpeaker"
+
+	EnableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	PlaybackPCM 40
+	CapturePCM 40
+EndSection
+
+SectionVerb
+	Name "HiFi LowlatencyVOIP Speaker"
+
+	EnableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	PlaybackPCM 40
+	CapturePCM 40
 EndSection
 }
 SectionDevice
@@ -1256,24 +1284,12 @@ SectionDevice
 	Name "Speaker"
 
 	EnableSequence
-		'MI2S_RX Port Mixer SLIM_1_TX':1:1
-		'MI2S_RX_Voice Mixer Voice Stub':1:1
-		'Voice Stub Tx Mixer SLIM_1_TX':1:1
-		'Voice Stub Tx Mixer MI2S_TX':1:1
-		'SLIMBUS_3_RX_Voice Mixer Voice Stub':1:1
-		'SLIMBUS_3_RX Port Mixer MI2S_TX':1:1
 	EndSequence
 
 	DisableSequence
-		'MI2S_RX Port Mixer SLIM_1_TX':1:0
-		'MI2S_RX_Voice Mixer Voice Stub':1:0
-		'Voice Stub Tx Mixer SLIM_1_TX':1:0
-		'Voice Stub Tx Mixer MI2S_TX':1:0
-		'SLIMBUS_3_RX_Voice Mixer Voice Stub':1:0
-		'SLIMBUS_3_RX Port Mixer MI2S_TX':1:0
 	EndSequence
 
-	ACDBID  14:1
+	ACDBID  15:1
 
 EndSection
 
@@ -3176,11 +3192,11 @@ SectionModifier
 	Name "Play Lowlatency Music"
 
 	EnableSequence
-		'MI2S_RX Audio Mixer MultiMedia5':1:1
+		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
 	EndSequence
 
 	DisableSequence
-		'MI2S_RX Audio Mixer MultiMedia5':1:0
+		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
 	EndSequence
 	PlaybackPCM 40
 EndSection
@@ -3220,6 +3236,32 @@ SectionModifier
 
 	DisableSequence
 		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	PlaybackPCM 40
+EndSection
+
+SectionModifier
+	Name "Play Lowlatency MusicSpeaker"
+
+	EnableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	PlaybackPCM 40
+EndSection
+
+SectionModifier
+	Name "Play Lowlatency MusicVOIP Speaker"
+
+	EnableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:0
 	EndSequence
 	PlaybackPCM 40
 EndSection
