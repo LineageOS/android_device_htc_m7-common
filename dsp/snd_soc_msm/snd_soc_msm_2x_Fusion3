@@ -1683,18 +1683,6 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "HeadsetVM Tx"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	ACDBID  8:2
-EndSection
-
-SectionDevice
 	Name "Handset"
 
 	EnableSequence
@@ -1742,18 +1730,6 @@ SectionDevice
 	EndSequence
 
 	ACDBID  103:2
-EndSection
-
-SectionDevice
-	Name "HandsetVM Tx"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	ACDBID  4:2
 EndSection
 
 SectionDevice
