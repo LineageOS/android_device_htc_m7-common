@@ -135,3 +135,6 @@
 
 # AKM8963
 /dev/akm8963_dev          0660  system       system
+
+# Bluetooth
+/dev/btlock               0600  bluetooth    bluetooth
