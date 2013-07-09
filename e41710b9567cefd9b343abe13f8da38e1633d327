@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dac4157f_2a7ebde4",
+        "filename": "overlay-cdma/packages/apps/Phone/res/values/network_mode.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2013-07-09T22:48:22Z",
+      "side": 1,
+      "message": "I don\u0027t think this is a choice in the preferred_network_mode_choices array, it\u0027s part of the preferred_network_mode_values_lte array.",
+      "revId": "e41710b9567cefd9b343abe13f8da38e1633d327",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
