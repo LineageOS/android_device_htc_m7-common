@@ -16,6 +16,24 @@
       "revId": "e41710b9567cefd9b343abe13f8da38e1633d327",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_4d37cbb0",
+        "filename": "overlay-cdma/packages/apps/Phone/res/values/network_mode.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 883
+      },
+      "writtenOn": "2013-07-10T04:46:23Z",
+      "side": 1,
+      "message": "they correspond to the values below. it is valid in world mode.",
+      "parentUuid": "dac4157f_2a7ebde4",
+      "revId": "e41710b9567cefd9b343abe13f8da38e1633d327",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
