@@ -468,12 +468,6 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     user system
     group system camera inet graphics
 
-# HDMI
-service hdmid /system/bin/hdmid
-    class late_start
-    socket displayd stream 0660 root system graphics
-    disabled
-
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
     class main
     user root
@@ -577,6 +571,3 @@ on property:init.svc.bootanim=stopped
     write /sys/module/lowmemorykiller/parameters/adj 0,2,4,7,9,12
     stop thermald_boot
     start thermald
-
-on property:ro.hdmi.enable=true
-    start hdmid
