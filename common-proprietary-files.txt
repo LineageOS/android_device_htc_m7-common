@@ -164,6 +164,11 @@ lib/libmlplatform.so
 lib/libmpl.so
 lib/libmpl_jni.so
 
+# Widevine
+lib/libQSEEComAPI.so
+vendor/lib/libwvm.so
+vendor/lib/libWVStreamControlAPI_L1.so
+
 # WLAN firmware
 etc/firmware/BCM4335B0_002.001.006.0092.0093.hcd
 etc/firmware/fw_bcm4335_apsta_b0.bin
