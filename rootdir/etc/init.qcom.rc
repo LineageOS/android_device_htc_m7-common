@@ -426,37 +426,11 @@ on boot
     chmod 0220 /sys/class/power_supply/battery/navigation
 # HTC SSD Battery - END
 
-# Define TCP buffer sizes for various networks
-#   ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
-    setprop net.tcp.buffersize.default 4096,87380,110208,4096,16384,110208
-    setprop net.tcp.buffersize.wifi    524288,1048576,2097152,262144,524288,1048576
-    setprop net.tcp.buffersize.lte     524288,1048576,5120000,4096,221184,3461120
-    setprop net.tcp.buffersize.hspap   4096,174760,1572864,4096,225280,1220608
-    setprop net.tcp.buffersize.hspa    4096,174760,1572864,4096,225280,1220608
-    setprop net.tcp.buffersize.hsupa   4096,174760,1572864,4096,225280,1220608
-    setprop net.tcp.buffersize.hsdpa   4096,174760,1572864,4096,225280,1220608
-    setprop net.tcp.buffersize.umts    4096,174760,1572864,4096,225280,1220608
-    setprop net.tcp.buffersize.edge    4093,26280,35040,4096,16384,35040
-    setprop net.tcp.buffersize.gprs    4092,8760,11680,4096,8760,11680
-    setprop net.tcp.buffersize.evdo_b  4094,87380,262144,4096,16384,262144
-
-# Assign TCP buffer thresholds to be ceiling value of technology maximums
-# Increased technology maximums should be reflected here.
-    write /proc/sys/net/core/rmem_max  1220608
-    write /proc/sys/net/core/wmem_max  1220608
-
 # Compass/accelerometer daemon
 service akmd /system/bin/akmd
     class main
     user system
     group system misc input
-
-# Bluetooth
-service btld /system/bin/btld -lpm 1 -hb 3000000
-    user root
-    group bluetooth net_bt_admin
-    disabled
-    onrestart restart bluetoothd
 
 service dhcpcd_brcm-pan /system/bin/dhcpcd -ABKL
     disabled
@@ -468,28 +442,9 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     user system
     group system camera inet graphics
 
-# HDMI
-service hdmid /system/bin/hdmid
-    class late_start
-    socket displayd stream 0660 root system graphics
-    disabled
-
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
     class main
     user root
-
-# Netsharing
-service netsharing_on /system/bin/netsharing net on
-    disabled
-    oneshot
-
-service netsharing_off /system/bin/netsharing net off
-    disabled
-    oneshot
-
-service netsharing_pass /system/bin/netsharing net_pass on
-    disabled
-    oneshot
 
 service post-boot /system/bin/sh /system/etc/init.post_boot.sh
     user root
@@ -562,9 +517,6 @@ service zchgd_onmode /system/bin/zchgd -onmode
     user root
     group root graphics
 
-on property:dev.bootcomplete=1
-    write /sys/power/pnpmgr/apps/media_mode " "
-
 on property:dev.zcharge=true
     start zchgd_onmode
 
@@ -573,10 +525,5 @@ on property:dev.zcharge=false
 
 on property:init.svc.bootanim=stopped
     start post-boot
-    # Overwrite ActivityManager's low memory killer settings
-    write /sys/module/lowmemorykiller/parameters/adj 0,2,4,7,9,12
     stop thermald_boot
     start thermald
-
-on property:ro.hdmi.enable=true
-    start hdmid
