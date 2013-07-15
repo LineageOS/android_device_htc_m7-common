@@ -96,9 +96,11 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 # Custom Recovery
 ifneq ($(filter m7att m7tmo m7ul,$(TARGET_DEVICE)),)
 TARGET_RECOVERY_FSTAB := device/htc/m7-common/recovery/recovery.fstab.gsm
+TARGET_RECOVERY_KERNEL := device/htc/m7-common/recovery/kernel
 else
 TARGET_RECOVERY_FSTAB := device/htc/m7-common/recovery/recovery.fstab.cdma
 endif
+TARGET_RECOVERY_INITRC := device/htc/m7-common/recovery/root/init.rc
 BOARD_CUSTOM_GRAPHICS := ../../../device/htc/m7-common/recovery/graphics.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_HAS_NO_SELECT_BUTTON := true
