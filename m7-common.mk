@@ -110,6 +110,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf
 
+# Irda
+PRODUCT_PACKAGES += \
+    irda.msm8960
+
 # NFC
 PRODUCT_PACKAGES += \
     nfc.msm8960 \
