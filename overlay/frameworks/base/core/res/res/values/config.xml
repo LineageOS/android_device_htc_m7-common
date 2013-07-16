@@ -203,4 +203,7 @@
     <!-- If this value is true, The mms content-disposition field is supported correctly.
          If false, Content-disposition fragments are ignored -->
     <bool name="config_mms_content_disposition_support">false</bool>
+
+    <!-- True if the Irda service should be started at system start. -->
+    <bool name="config_enableIrdaManagerService">true</bool>
 </resources>
