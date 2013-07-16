@@ -38,12 +38,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/init.post_boot.sh:system/etc/init.post_boot.sh
 
-# Custom recovery charging
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/sbin/choice_fn:recovery/root/sbin/choice_fn \
-    $(LOCAL_PATH)/recovery/sbin/offmode_charging:recovery/root/sbin/offmode_charging \
-    $(LOCAL_PATH)/recovery/sbin/detect_key:recovery/root/sbin/detect_key \
-    $(LOCAL_PATH)/recovery/sbin/power_test:recovery/root/sbin/power_test
+# Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.qcom.rc \
+    choice_fn \
+    detect_key \
+    offmode_charging \
+    power_test
 
 # QC thermald config
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/thermald.conf:system/etc/thermald.conf
