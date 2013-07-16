@@ -118,6 +118,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf
 
+# Irda
+PRODUCT_PACKAGES += \
+    irda.msm8960
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/com.sec.feature.irda_service.xml:system/etc/permissions/com.sec.feature.irda_service.xml
+
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8960
