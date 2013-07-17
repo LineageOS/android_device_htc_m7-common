@@ -12,7 +12,6 @@ bin/zchgd
 
 # Configuration files
 etc/agps_rm
-etc/cir.img
 etc/hldm.bin
 etc/hltof.bin
 etc/hltrd.bin
@@ -121,6 +120,10 @@ etc/firmware/vidc.b03
 etc/firmware/vidc.mdt
 etc/firmware/vidc_1080p.fw
 etc/firmware/vidcfw.elf
+
+# Irda
+bin/cir_fw_update
+etc/cir.img
 
 # Modem firmware
 etc/firmware/hcheck.b00

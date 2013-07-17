@@ -170,7 +170,9 @@ on init
     write /sys/devices/virtual/optical_sensors/proximity/ps_kadc "0x0 0xFFFF3C2D"
 
     # htc_cir
-    chown irda irda /sys/class/htc_cir/cir/reset_cir
+    chown system system /sys/class/htc_cir/cir/reset_cir
+    chmod 0660 /sys/class/htc_cir/cir/reset_cir
+    chown system system /sys/class/htc_cir/cir/enable_cir
     chmod 0660 /sys/class/htc_cir/cir/reset_cir
 
     # NETWORK: NAT setting
@@ -441,6 +443,14 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
     user system
     group system camera inet graphics
+
+# HTC CIR firmware update - BEGIN
+service cir_fw_update /system/bin/cir_fw_update -u cir.img
+    class main
+    user root
+    group root
+    oneshot
+# HTC CIR firmware update - END
 
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
     class main
