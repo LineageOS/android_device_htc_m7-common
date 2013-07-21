@@ -1,0 +1,6 @@
+# restorecon processes and scripts
+type restorecon, domain;
+type restorecon_exec, exec_type, file_type;
+
+allow restorecon radio_efs_file:file { getattr };
+allow restorecon radio_efs_file:filesystem { associate };
