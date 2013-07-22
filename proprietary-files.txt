@@ -4,9 +4,6 @@
 bin/efsks
 bin/qcks
 
-# NFC
-vendor/firmware/mfg.bin
-
 # Radio
 lib/libril-qc-qmi-1.so
 lib/libril-qcril-hook-oem.so
