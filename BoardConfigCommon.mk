@@ -94,6 +94,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 27917287424
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Custom Recovery
+RECOVERY_FSTAB_VERSION := 2
 ifneq ($(filter m7att m7tmo m7ul,$(TARGET_DEVICE)),)
 TARGET_RECOVERY_FSTAB := device/htc/m7-common/recovery/recovery.fstab.gsm
 else
