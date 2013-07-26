@@ -49,10 +49,6 @@ PRODUCT_PACKAGES += \
 # QC thermald config
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/thermald.conf:system/etc/thermald.conf
 
-# Vold config
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/vold.fstab:system/etc/vold.fstab
-
 PRODUCT_CHARACTERISTICS := nosdcard
 
 PRODUCT_PACKAGES += \
