@@ -97,17 +97,12 @@ lib/egl/eglsubAndroid.so
 lib/egl/libEGL_adreno200.so
 lib/egl/libGLESv1_CM_adreno200.so
 lib/egl/libGLESv2_adreno200.so
-lib/egl/libGLESv2S3D_adreno200.so
-lib/egl/libplayback_adreno200.so
 lib/egl/libq3dtools_adreno200.so
 lib/libc2d2_a3xx.so
 lib/libc2d2_z180.so
 lib/libC2D2.so
 lib/libgsl.so
 lib/libllvm-a3xx.so
-lib/libOpenCL.so
-lib/libOpenVG.so
-lib/libsc-a2xx.so
 lib/libsc-a3xx.so
 
 # Graphics firmware
@@ -119,7 +114,6 @@ etc/firmware/vidc.b02
 etc/firmware/vidc.b03
 etc/firmware/vidc.mdt
 etc/firmware/vidc_1080p.fw
-etc/firmware/vidcfw.elf
 
 # Irda
 bin/cir_fw_update
