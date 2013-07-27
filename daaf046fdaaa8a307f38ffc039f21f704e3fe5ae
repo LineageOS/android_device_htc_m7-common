@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3acd31a7_0312d8b4",
+        "filename": "recovery/recovery.fstab.cdma",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2013-07-27T04:35:23Z",
+      "side": 1,
+      "message": "Listing the firmware partitions is unnecessary, the directories to mount them aren\u0027t even created in recovery.",
+      "revId": "daaf046fdaaa8a307f38ffc039f21f704e3fe5ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_2346f4bf",
+        "filename": "recovery/recovery.fstab.gsm",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2013-07-27T04:35:23Z",
+      "side": 1,
+      "message": "Listing the firmware partitions is unnecessary, the directories to mount them aren\u0027t even created in recovery.",
+      "revId": "daaf046fdaaa8a307f38ffc039f21f704e3fe5ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
