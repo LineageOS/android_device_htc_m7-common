@@ -56,7 +56,6 @@ lib/libchromatix_vd6869_video_hdr.so
 lib/libchromatix_vd6869_zoe.so
 lib/libchromatix_vd6869_zsl.so
 lib/libgemini.so
-lib/libhtccamera.so
 lib/libhtccamera_yushaniiproc.so
 lib/libHTC_DIS.so
 lib/libimage-jpeg-dec-omx-comp.so
@@ -77,13 +76,9 @@ lib/libmmcamera_wavelet_lib.so
 lib/libmm-color-convertor.so
 lib/libmmipl.so
 lib/libmmjpeg.so
-lib/libmmosal.so
-lib/libmmparser.so
 lib/libmmstillomx.so
 lib/liboemcamera.so
-lib/libOlaEngineNew.so
 lib/libposteffect.so
-lib/libyuvimage.so
 
 # Camera firmware
 etc/firmware/ILP0100_IPM_Code_out.bin
