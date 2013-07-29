@@ -85,6 +85,7 @@ etc/firmware/ILP0100_IPM_Code_out.bin
 etc/firmware/ILP0100_IPM_Data_out.bin
 
 # GPS
+lib/libgeofence.so
 lib/libloc_api_v02.so
 
 # Graphics
