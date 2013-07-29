@@ -1,22 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <device name="Android">
     <item name="none">0</item>
-    <item name="screen.on">5.0</item>
-    <item name="screen.full">43.0</item>
-    <item name="bluetooth.active">110</item>
-    <item name="bluetooth.on">0.9</item>
-    <item name="screen.full">130</item>
-    <item name="wifi.on">0.64</item>
-    <item name="wifi.active">145</item>
-    <item name="wifi.scan">120</item>
-    <item name="dsp.audio">35</item>
-    <item name="dsp.video">205</item>
-    <item name="radio.active">117</item>
-    <item name="radio.scanning">76</item>
-    <item name="gps.on">0.13</item>
+    <item name="screen.on">5</item>
+    <item name="screen.full">43</item>
+    <array name="screen.brightness">
+        <value>dark</value>
+        <value>dim</value>
+        <value>medium</value>
+        <value>light</value>
+        <value>bright</value>
+    </array>
+    <array name="screen.brightness_bin">
+        <value>5</value>
+        <value>14.5</value>
+        <value>23.9</value>
+        <value>33.6</value>
+        <value>43</value>
+    </array>
+    <array name="gpu.speeds">
+        <value>27000</value>
+        <value>200000</value>
+        <value>320000</value>
+        <value>400000</value>
+    </array>
+    <array name="gpu.active">
+        <value>28.5</value>
+        <value>113</value>
+        <value>146</value>
+        <value>174</value>
+    </array>
+    <item name="bluetooth.active">7</item>
+    <item name="bluetooth.on">0.5</item>
+    <item name="bluetooth.at">0</item>
+    <item name="wifi.on">1</item>
+    <item name="wifi.active">74000</item>
+    <item name="wifi.scan">15</item>
+    <item name="dsp.audio">3</item>
+    <item name="dsp.video">11</item>
+    <item name="radio.talk">26.7</item>
+    <item name="radio.active">26.7</item>
+    <item name="gps.on">14</item>
+    <item name="battery.capacity">2300</item>
+    <item name="radio.scanning">23</item>
     <array name="radio.on">
-        <value>1.23</value>
-        <value>1.23</value>
+        <value>0.8</value>
+        <value>0.8</value>
     </array>
     <array name="cpu.speeds">
         <value>384000</value>
@@ -34,22 +62,21 @@
         <value>1674000</value>
         <value>1728000</value>
     </array>
-    <item name="cpu.idle">0.72</item>
+    <item name="cpu.idle">0.7</item>
     <array name="cpu.active">
         <value>7.6</value>
         <value>8.6</value>
-        <value>10.1</value>
-        <value>11.3</value>
-        <value>13.1</value>
-        <value>15.3</value>
-        <value>17.3</value>
+        <value>10</value>
+        <value>11</value>
+        <value>13</value>
+        <value>15</value>
+        <value>17</value>
         <value>23.3</value>
         <value>23.5</value>
-        <value>27.4</value>
-        <value>30.9</value>
-        <value>35.9</value>
-        <value>42.8</value>
-        <value>45.2</value>
+        <value>27</value>
+        <value>31</value>
+        <value>35</value>
+        <value>42</value>
+        <value>45</value>
     </array>
-    <item name="battery.capacity">2300</item>
 </device>
