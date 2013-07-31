@@ -48,6 +48,9 @@ BOARD_USES_SEPERATED_VOIP := true  # use distinct VOIP use cases
 BOARD_AUDIO_AMPLIFIER := device/htc/m7-common/libaudioamp
 BOARD_HAVE_HTC_CSDCLIENT := true
 
+# Enable tunnel audio
+USE_TUNNEL_AUDIO := true
+
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/m7-common/bluetooth
