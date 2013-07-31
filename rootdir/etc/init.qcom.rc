@@ -288,6 +288,9 @@ on boot
 
     start qcamerasvr
 
+    # 4.3 requires this
+    chmod 0644 /proc/cmdline
+
     # Bluetooth
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
