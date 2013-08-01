@@ -38,4 +38,12 @@
                 android:entryValues="@array/wake_method_entries_values"
                 android:defaultValue="0" />
     </PreferenceCategory>
+    <PreferenceCategory
+            android:title="@string/buttonbacklight_title">
+            <CheckBoxPreference
+                android:key="buttonbacklight_switch"
+                android:title="@string/buttonbacklight_title_head"
+                android:summary="@string/buttonbacklight_summary_head"
+                android:defaultValue="0" />
+    </PreferenceCategory>
 </PreferenceScreen>

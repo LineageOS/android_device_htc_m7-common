@@ -199,6 +199,7 @@ on init
     chown system system /sys/android_touch/logo_delay
     chown system system /sys/android_touch/sleep_wake_vibration_time
     chown system system /sys/android_touch/l2m_2_phase
+    chown system system /sys/class/leds/button-backlight/brightness
 
 # On emmc mount the partition containing firmware
 on fs
@@ -287,6 +288,9 @@ on boot
     write /sys/devices/i2c-3/3-0024/cyttsp_update_fw 1
 
     start qcamerasvr
+
+    # 4.3 requires this
+    chmod 0644 /proc/cmdline
 
     # Bluetooth
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
