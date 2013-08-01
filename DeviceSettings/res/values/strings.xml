@@ -39,6 +39,11 @@
     <string name="wake_method_title_head">Wake Method</string>
     <string name="wake_method_summary_head">Select which touchpad wake method you prefer to use.</string>
 
+    <!-- Button Lights -->
+    <string name="button_lights_title">Button lights</string>
+    <string name="backlightdisable_title_head">Disable button backlight</string>
+    <string name="backlightdisable_summary_head">Select to disable the capacitive button backlight</string>
+
     <!-- Sensors Preference -->
     <string name="category_sensors_title">Sensors</string>
 
