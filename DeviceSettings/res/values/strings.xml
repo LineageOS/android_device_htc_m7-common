@@ -52,4 +52,12 @@
     <string name="buttonlightnotification_title">Backlight</string>
     <string name="buttonlightnotification_summary_head">Enable BLN</string>
     <string name="buttonlightnotification_summary">Select to enable the capacitive button backlight for notification events.</string>
+
+    <!-- Misc -->
+    <string name="category_misc_title">Misc</string>
+
+    <!-- Fast Charge -->
+    <string name="fastcharge_title">Fast Charge</string>
+    <string name="fastcharge_summary_head">Enable</string>
+    <string name="fastcharge_summary">Enable to draw more power when connected to a PC USB port.</string>
 </resources>

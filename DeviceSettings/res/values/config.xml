@@ -31,4 +31,6 @@
     <bool name="has_wake">true</bool>
     <!-- buttonlight -->
     <bool name="has_buttonlight">true</bool>
+    <!-- fastcharge -->
+    <bool name="has_fastcharge">true</bool>
 </resources>

@@ -33,5 +33,7 @@ public class Startup extends BroadcastReceiver {
         LongTapLogoSleepSwitch.restore(context);
         ButtonLightFragmentActivity.restore(context);
         ButtonLightNotificationSwitch.restore(context);
+        MiscFragmentActivity.restore(context);
+        FastChargeSwitch.restore(context);
     }
 }
