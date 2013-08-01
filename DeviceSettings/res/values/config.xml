@@ -29,4 +29,6 @@
     <bool name="has_logo2menu">true</bool>
     <!-- wake -->
     <bool name="has_wake">true</bool>
+    <!-- buttonlight -->
+    <bool name="has_buttonlight">true</bool>
 </resources>

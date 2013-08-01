@@ -46,4 +46,10 @@
     <string name="proximity_subcat_title">Proximity</string>
     <string name="proximity_calibration_title">Calibration</string>
     <string name="proximity_calibration_summary">Set the calibration value. Higher values mean less sensitivity.</string>
+
+    <!-- Button Lights -->
+    <string name="category_buttonlight_title">Button Lights</string>
+    <string name="buttonlightnotification_title">Backlight</string>
+    <string name="buttonlightnotification_summary_head">Enable BLN</string>
+    <string name="buttonlightnotification_summary">Select to enable the capacitive button backlight for notification events.</string>
 </resources>

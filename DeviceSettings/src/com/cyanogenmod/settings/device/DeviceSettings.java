@@ -64,6 +64,8 @@ public class DeviceSettings extends FragmentActivity {
                     SensorsFragmentActivity.class, null);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.category_touchscreen_title),
                     TouchscreenFragmentActivity.class, null);
+        mTabsAdapter.addTab(bar.newTab().setText(R.string.category_buttonlight_title),
+                    ButtonLightFragmentActivity.class, null);
 
         if (savedInstanceState != null) {
             bar.setSelectedNavigationItem(savedInstanceState.getInt("tab", 0));
