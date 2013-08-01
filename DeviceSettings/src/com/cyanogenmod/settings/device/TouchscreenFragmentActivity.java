@@ -38,12 +38,15 @@ public class TouchscreenFragmentActivity extends PreferenceFragment {
     public static final String KEY_LOGO2MENU_SWITCH = "logo2menu_switch";
     public static final String KEY_LONGTAPLOGOSLEEP_SWITCH = "longtaplogosleep_switch";
     public static final String KEY_WAKE_METHOD = "wake_method";
+    public static final String KEY_BACKLIGHTDISABLE_SWITCH = "backlightdisable_switch";
 
     private static boolean sLogo2Menu;
     private static boolean sWake;
+    private static boolean sButtonLights;
     private TwoStatePreference mLogo2MenuSwitch;
     private TwoStatePreference mLongTapLogoSleepSwitch;
     private ListPreference mWakeMethod;
+    private TwoStatePreference mBacklightDisableSwitch;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,6 +55,7 @@ public class TouchscreenFragmentActivity extends PreferenceFragment {
         Resources res = getResources();
         sLogo2Menu = res.getBoolean(R.bool.has_logo2menu);
         sWake = res.getBoolean(R.bool.has_wake);
+        sButtonLights = res.getBoolean(R.bool.has_buttonlights);
 
         addPreferencesFromResource(R.xml.touchscreen_preferences);
 
@@ -67,6 +71,11 @@ public class TouchscreenFragmentActivity extends PreferenceFragment {
             mWakeMethod = (ListPreference) findPreference(KEY_WAKE_METHOD);
             mWakeMethod.setEnabled(WakeMethod.isSupported());
             mWakeMethod.setOnPreferenceChangeListener(new WakeMethod());
+        }
+        if (sButtonLights) {
+            mBacklightDisableSwitch = (TwoStatePreference) findPreference(KEY_BACKLIGHTDISABLE_SWITCH);
+            mBacklightDisableSwitch.setEnabled(BacklightDisableSwitch.isSupported());
+            mBacklightDisableSwitch.setOnPreferenceChangeListener(new BacklightDisableSwitch());
         }
     }
 
