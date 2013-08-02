@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aca2d91_9c952442",
+        "filename": "DeviceSettings/res/values/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 6870
+      },
+      "writtenOn": "2013-08-02T00:10:23Z",
+      "side": 1,
+      "message": "lutton --\u003e button",
+      "revId": "1c84ae3b6ddf6c9da3ff2f27a1f472cd2fcd233c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aca2d91_7c924859",
+        "filename": "DeviceSettings/src/com/cyanogenmod/settings/device/BacklightDisableSwitch.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 6870
+      },
+      "writtenOn": "2013-08-02T00:10:23Z",
+      "side": 1,
+      "message": "probably you want to fix the Tab instead of space issue...",
+      "revId": "1c84ae3b6ddf6c9da3ff2f27a1f472cd2fcd233c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
