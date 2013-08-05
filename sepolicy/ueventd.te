@@ -1,0 +1,8 @@
+# Drivers read firmware files (/firmware/image, /system/etc/firmware)
+allow ueventd { radio_device radio_efs_file wifi_data_file }:file r_file_perms;
+allow ueventd { radio_efs_file wifi_data_file }:dir search;
+
+allow ueventd radio_efs_file:file { read open getattr };
+
+# Bluetooth
+allow ueventd btlock_device:chr_file rw_file_perms;
