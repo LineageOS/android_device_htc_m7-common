@@ -101,5 +101,8 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 RECOVERY_FSTAB_VERSION := 2
 TARGET_USERIMAGES_USE_EXT4 := true
 
+# Use retire fence from MDP driver
+TARGET_DISPLAY_USE_RETIRE_FENCE := true
+
 # inherit from the proprietary version
 -include vendor/htc/m7-common/BoardConfigVendor.mk
