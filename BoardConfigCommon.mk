@@ -65,6 +65,9 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/
 # We have the new GPS driver
 BOARD_HAVE_NEW_QC_GPS := true
 
+# Tuning
+BOARD_HARDWARE_CLASS := device/htc/m7-common/cmhw
+
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
