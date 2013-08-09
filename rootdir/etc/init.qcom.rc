@@ -190,7 +190,8 @@ on init
     write /sys/power/pnpmgr/apps/media_mode "booting"
 
     # Vibrator
-    chown system system /sys/class/timed_output/vibrator/voltage_level
+    chown root system /sys/class/timed_output/vibrator/voltage_level
+    chmod 0664 /sys/class/timed_output/vibrator/voltage_level
 
     # Touchscreen
     chown system system /sys/android_touch/logo2menu
