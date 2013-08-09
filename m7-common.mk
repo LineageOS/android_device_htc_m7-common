@@ -41,10 +41,9 @@ PRODUCT_COPY_FILES += \
 # Recovery
 PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
+    charger \
     choice_fn \
-    detect_key \
-    offmode_charging \
-    power_test
+    offmode_charging
 
 # QC thermald config
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/thermald.conf:system/etc/thermald.conf
