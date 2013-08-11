@@ -33,3 +33,8 @@ allow hci_attach bluetooth_device:chr_file rw_file_perms;
 
 # Allow getprop/setprop for init.mako.bt.sh
 allow bluetooth_loader system_file:file execute_no_trans;
+
+# Bluetooth
+allow bluetooth radio_efs_file:file r_file_perms;
+allow bluetooth radio_efs_file:dir { open read search };
+allow bluetooth btlock_device:chr_file rw_file_perms;
