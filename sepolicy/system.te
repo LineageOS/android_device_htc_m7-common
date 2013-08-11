@@ -17,3 +17,6 @@ allow system mpdecision:unix_stream_socket sendto;
 allow system mpdecision_socket:dir search;
 
 allow system sysfs:file { read open write };
+
+# WifiStateMachine
+allow system self:capability { sys_module };
