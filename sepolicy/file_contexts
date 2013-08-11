@@ -73,6 +73,7 @@
 /dev/socket/mpdecision(/.*)?            u:object_r:mpdecision_socket:s0
 
 # Block labeling
+/dev/block/mmcblk0p17                   u:object_r:efs_block_device:s0
 /dev/block/mmcblk0p20                   u:object_r:efs_block_device:s0
 /dev/block/mmcblk0p21                   u:object_r:efs_block_device:s0
 /dev/block/mmcblk0p28                   u:object_r:efs_block_device:s0
@@ -122,6 +123,8 @@
 /system/etc/firmware(/.*)?              u:object_r:radio_efs_file:s0
 
 /system/etc/hldm.bin                    u:object_r:radio_efs_file:s0
+/system/etc/hltof.bin                   u:object_r:radio_efs_file:s0
+/system/etc/hltrd.bin                   u:object_r:radio_efs_file:s0
 
 # for wpa_supp
 /dev/rfkill                             u:object_r:rfkill_device:s0
