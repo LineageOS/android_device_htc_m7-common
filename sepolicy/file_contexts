@@ -75,6 +75,7 @@
 # Block labeling
 /dev/block/mmcblk0p20                   u:object_r:efs_block_device:s0
 /dev/block/mmcblk0p21                   u:object_r:efs_block_device:s0
+/dev/block/mmcblk0p28                   u:object_r:efs_block_device:s0
 
 # Modem firmware loader
 /dev/ks_hsic_bridge                     u:object_r:kickstart_device:s0

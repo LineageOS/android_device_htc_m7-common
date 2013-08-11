@@ -13,5 +13,8 @@ allow mpdecision self:netlink_kobject_uevent_socket { create read setopt bind re
 allow mpdecision mpdecision_socket:dir w_dir_perms;
 allow mpdecision mpdecision_socket:sock_file { create setattr write };
 
+allow mpdecision socket_device:dir { write add_name };
+allow mpdecision socket_device:sock_file { create setattr write };
+
 # XXX Should we label with own type?
-allow mpdecision sysfs:file { read open write getattr };
+allow mpdecision sysfs:file { read open write setattr };

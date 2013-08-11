@@ -1,5 +1,6 @@
 allow rild self:netlink_socket { create bind read write };
 allow rild self:netlink_route_socket { write };
+allow rild self:netlink_kobject_uevent_socket { create setopt bind };
 
 # Talk to qmuxd
 qmux_socket(rild)
