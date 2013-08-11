@@ -242,6 +242,14 @@ on fs
     exec /system/bin/sh /init.qcom.firmware_links.sh /firmware/mdm/image /vendor/firmware "*.mbn *.img"
     exec /system/bin/sh /init.qcom.firmware_links.sh /firmware/q6 /vendor/firmware "q6.*"
 
+# Restorecon
+    restorecon /system/bin/qcks
+    restorecon /system/etc/hldm.bin
+    restorecon /system/etc/hltof.bin
+    restorecon /system/etc/hltrd.bin
+    restorecon /system/etc/firmware/a300_pfp.fw
+    restorecon /system/etc/firmware/a300_pm4.fw
+
     mount_all ./remount.qcom
 
 on post-fs-data

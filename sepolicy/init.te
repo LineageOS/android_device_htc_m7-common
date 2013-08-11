@@ -1,3 +1,4 @@
 allow init wpa_socket:unix_dgram_socket { bind create };
 
-allow init radio_efs_file:filesystem { associate };
+allow init labeledfs:filesystem { associate };
+allow init rootfs:filesystem { associate };
