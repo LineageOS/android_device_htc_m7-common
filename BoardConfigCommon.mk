@@ -125,7 +125,8 @@ BOARD_SEPOLICY_UNION := \
 	tee.te \
 	thermald.te \
 	ueventd.te \
-	wpa_supplicant.te
+	wpa_supplicant.te \
+    zygote.te
 
 # Custom Recovery
 ifneq ($(filter m7att m7tmo m7ul,$(TARGET_DEVICE)),)
