@@ -104,6 +104,7 @@ BOARD_SEPOLICY_UNION := \
     bridge.te \
     camera.te \
     conn_init.te \
+    debuggerd.te \
     device.te \
     dhcp.te \
     domain.te \
