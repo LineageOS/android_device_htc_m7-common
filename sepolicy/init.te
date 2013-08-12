@@ -2,3 +2,23 @@ allow init wpa_socket:unix_dgram_socket { bind create };
 
 allow init labeledfs:filesystem { associate };
 allow init rootfs:filesystem { associate };
+allow init self:binder { set_context_mgr };
+
+# Init shell
+allow init_shell self:capability { dac_override chown fsetid };
+
+# Firmwares
+allow init_shell radio_efs_file:dir { read open };
+allow init_shell radio_efs_file:file { getattr };
+allow init_shell radio_efs_file:lnk_file { getattr };
+
+# Allow writing to sysfs and proc nodes
+allow init_shell sysfs:file { write setattr };
+allow init_shell proc:file write;
+
+allow init_shell tmpfs:chr_file { ioctl };
+
+# init.qcom.firmware_links.sh
+allow init_shell init_shell_script:file { read open };
+
+allow init_shell_script rootfs:filesystem { associate };

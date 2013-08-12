@@ -6,6 +6,8 @@ allow wpa devpts:chr_file { read write };
 allow wpa wpa_socket:unix_dgram_socket { read write };
 allow wpa_socket system:unix_dgram_socket sendto;
 
+# wifi firmware
+allow wpa radio_efs_file:dir search;
 allow wpa radio_efs_file:file r_file_perms;
 
 ## /dev/rfkill for wpa_supp
