@@ -1,0 +1,1 @@
+allow debuggerd debuggerd_socket:sock_file write;

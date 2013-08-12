@@ -20,3 +20,6 @@ allow system sysfs:file { read open write };
 
 # WifiStateMachine
 allow system self:capability { sys_module };
+
+# Debuggerd access
+allow system debuggerd_socket:sock_file { getattr unlink };

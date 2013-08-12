@@ -8,5 +8,8 @@ unix_socket_send(mediaserver, camera, camera)
 
 allow mediaserver self:socket create;
 
+# Camera socket
+allow mediaserver camera_socket:sock_file write;
+
 # Allow logging diagnostic items
 allow mediaserver diagnostic_device:chr_file rw_file_perms;

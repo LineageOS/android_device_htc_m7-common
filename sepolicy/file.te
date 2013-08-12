@@ -1,4 +1,5 @@
 type mpdecision_socket, file_type;
+type debuggerd_socket, file_type;
 type qmuxd_socket, file_type;
 type sensors_socket, file_type;
 type camera_socket, file_type;
@@ -20,3 +21,6 @@ type persist_bluetooth_file, file_type;
 type persist_drm_file, file_type;
 type persist_sensors_file, file_type;
 type persist_wifi_file, file_type;
+
+# Init shell scripts
+type init_shell_script, fs_type;
