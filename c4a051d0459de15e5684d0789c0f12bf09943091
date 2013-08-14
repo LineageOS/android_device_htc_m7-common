@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dae975fb_d0fdb56f",
+        "filename": "sepolicy/file_contexts",
+        "patchSetId": 1
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 523
+      },
+      "writtenOn": "2013-08-14T19:36:01Z",
+      "side": 1,
+      "message": "spaces :-P",
+      "revId": "c4a051d0459de15e5684d0789c0f12bf09943091",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
