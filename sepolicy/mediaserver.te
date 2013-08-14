@@ -10,7 +10,12 @@ allow mediaserver audio_data_file:file create_file_perms;
 
 # Camera
 allow mediaserver camera_data_file:sock_file w_file_perms;
-allow mediaserver camera_socket:sock_file w_file_perms;
+allow mediaserver self:netlink_kobject_uevent_socket { create read getopt setopt bind };
+allow mediaserver system:unix_stream_socket { read write setopt };
+allow mediaserver shell_data_file:dir search;
+
+# persist.camera.zoemode / persist.camera.optical
+allow mediaserver camera_prop:property_service set;
 
 # Allow logging diagnostic items
 allow mediaserver diagnostic_device:chr_file rw_file_perms;

@@ -16,7 +16,7 @@ allow init_shell radio_efs_file:lnk_file { getattr };
 allow init_shell sysfs:file { write setattr };
 allow init_shell proc:file write;
 
-allow init_shell tmpfs:chr_file { ioctl };
+allow init_shell tmpfs:chr_file { read write getattr ioctl };
 
 # init.qcom.firmware_links.sh
 allow init_shell init_shell_script:file { read open };

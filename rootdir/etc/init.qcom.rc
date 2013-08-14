@@ -252,9 +252,6 @@ on fs
     restorecon /system/etc/hltrd.bin
     restorecon /system/etc/firmware/a300_pfp.fw
     restorecon /system/etc/firmware/a300_pm4.fw
-    restorecon /data/system/ndebugsocket
-    restorecon /data/cam_socket0
-    restorecon /data/cam_socket1
 
     mount_all ./remount.qcom
 
@@ -463,8 +460,8 @@ service dhcpcd_brcm-pan /system/bin/dhcpcd -ABKL
 # Camera server
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
-    user system
-    group system camera inet graphics
+    user camera
+    group camera system inet graphics
 
 # HTC CIR firmware update - BEGIN
 service cir_fw_update /system/bin/cir_fw_update -u cir.img
