@@ -100,6 +100,7 @@ BOARD_SEPOLICY_UNION := \
     file_contexts \
     property_contexts \
     te_macros \
+    app.te \
     bluetooth_loader.te \
     bridge.te \
     camera.te \

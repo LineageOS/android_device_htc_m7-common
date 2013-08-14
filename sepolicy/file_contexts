@@ -138,3 +138,6 @@
 
 # Hardware tuning
 /sys/class/timed_output/vibrator/voltage_level    u:object_r:sysfs_writable:s0
+
+# GPU device
+/dev/kgsl-3d0				u:object_r:gpu_device:s0

@@ -1,1 +1,4 @@
 allow surfaceflinger sysfs:file rw_file_perms;
+
+# Grant GPU access to SurfaceFlinger
+allow surfaceflinger gpu_device:chr_file rw_file_perms;
