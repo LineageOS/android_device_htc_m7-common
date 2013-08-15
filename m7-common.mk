@@ -40,7 +40,7 @@ PRODUCT_COPY_FILES += \
 
 # Recovery
 PRODUCT_PACKAGES += \
-    init.recovery.qcom.rc \
+    lpm.rc \
     charger \
     choice_fn \
     offmode_charging
