@@ -267,6 +267,20 @@ SectionVerb
 EndSection
 
 SectionVerb
+	Name "HiFiVOIP Speaker"
+
+	EnableSequence
+		'MI2S_RX Audio Mixer MultiMedia1':1:1
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Audio Mixer MultiMedia1':1:0
+	EndSequence
+	PlaybackPCM 0
+	CapturePCM 0
+EndSection
+
+SectionVerb
 	Name "HiFiSpeaker Headset"
 
 	EnableSequence
