@@ -158,6 +158,13 @@ endif
 PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
+# HTC IR Blaster resources
+PRODUCT_PACKAGES += \
+    CIRModule \
+    htcirlibs \
+    libhtcirinterface_jni \
+    init.rc
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp,adb
 
