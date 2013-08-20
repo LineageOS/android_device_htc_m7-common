@@ -164,8 +164,11 @@ etc/firmware/vidc.mdt
 etc/firmware/vidc_1080p.fw
 
 # Irda
+app/CIRModule.apk
 bin/cir_fw_update
 etc/cir.img
+framework/htcirlibs.jar
+lib/libhtcirinterface_jni.so
 
 # Keystore
 vendor/firmware/keymaster/keymaster.b00
