@@ -29,6 +29,8 @@
 import init.qcom.usb.rc
 
 on init
+    export $BOOTCLASSPATH:system/framework/htcirlibs.jar
+
     mkdir /mnt/shell/emulated 0700 shell shell
     mkdir /storage/emulated 0555 root root
     mkdir /storage/usbdisk 0775 system system
@@ -173,7 +175,7 @@ on init
     chown system system /sys/class/htc_cir/cir/reset_cir
     chmod 0660 /sys/class/htc_cir/cir/reset_cir
     chown system system /sys/class/htc_cir/cir/enable_cir
-    chmod 0660 /sys/class/htc_cir/cir/reset_cir
+    chmod 0660 /sys/class/htc_cir/cir/enable_cir
 
     # NETWORK: NAT setting
     # To prevent out of WINDOW ACK from making
@@ -456,7 +458,7 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     group camera system inet graphics
 
 # HTC CIR firmware update - BEGIN
-service cir_fw_update /system/bin/cir_fw_update -u cir.img
+service cir_fw_update /system/bin/cir_fw_update -u /system/etc/cir.img
     class main
     user root
     group root
