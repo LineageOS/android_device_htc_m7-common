@@ -167,7 +167,7 @@ on init
     chmod 0660 /sys/devices/virtual/optical_sensors/proximity/ps_kadc
 
     # Proximity calibration values
-    write /sys/devices/virtual/optical_sensors/proximity/ps_kadc "0x0 0xFFFF3C2D"
+    write /sys/devices/virtual/optical_sensors/proximity/ps_kadc "0x0 0xFFFF0C0C"
 
     # htc_cir
     chown system system /sys/class/htc_cir/cir/reset_cir
