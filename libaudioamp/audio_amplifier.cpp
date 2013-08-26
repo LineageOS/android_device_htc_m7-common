@@ -51,7 +51,7 @@ int amplifier_set_mode(audio_mode_t mode) {
         ret = rt5501_set_mode(mode);
     } else {
         /* Write config for speaker amplifier */
-        //ret = tfa9887_set_mode(mode);
+        ret = tfa9887_set_mode(mode);
     }
 
     return ret;
