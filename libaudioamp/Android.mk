@@ -6,7 +6,9 @@ LOCAL_SHARED_LIBRARIES := \
 	liblog libutils
 
 LOCAL_SRC_FILES := \
-    audio_amplifier.cpp
+	rt5501.cpp \
+	tfa9887.cpp \
+	audio_amplifier.cpp
 
 LOCAL_MODULE := libaudioamp
 
