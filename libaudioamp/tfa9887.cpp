@@ -411,9 +411,14 @@ power_err:
     return error;
 }
 
-static int tfa9887_set_volume(int fd, int volume) {
+static int tfa9887_set_volume(int fd, float volume) {
     int error;
     uint16_t value;
+    uint8_t volume_int;
+
+    if (volume > 0.0) {
+        return -1;
+    }
 
     error = tfa9887_read_reg(fd, TFA9887_AUDIO_CONTROL, &value);
     if (error != 0) {
@@ -421,7 +426,10 @@ static int tfa9887_set_volume(int fd, int volume) {
         goto set_vol_err;
     }
 
-    value = ((value & 0x00FF) | (unsigned int)(volume << 8));
+    volume = -2.0 * volume;
+    volume_int = (((uint8_t) volume) & 0xFF);
+
+    value = ((value & 0x00FF) | (volume_int << 8));
     error = tfa9887_write_reg(fd, TFA9887_AUDIO_CONTROL, value);
     if (error != 0) {
         ALOGE("Unable to write to TFA9887_AUDIO_CONTROL");
@@ -745,7 +753,7 @@ static int tfa9887_init(int fd, int sample_rate,
         ALOGE("Unable to select input");
         goto priv_init_err;
     }
-    error = tfa9887_set_volume(fd, 0);
+    error = tfa9887_set_volume(fd, 0.0);
     if (error != 0) {
         ALOGE("Unable to set volume");
         goto priv_init_err;
