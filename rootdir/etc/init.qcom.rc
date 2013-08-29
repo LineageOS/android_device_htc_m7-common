@@ -206,6 +206,13 @@ on fs
     mkdir /firmware/mdm 0771 system system
     mkdir /firmware/q6 0771 system system
 
+    #mount vfat /dev/block/mmcblk0p31 /firmware/mdm ro shortname=lower
+    #mount vfat /dev/block/mmcblk0p16 /firmware/q6 ro shortname=lower
+    #mount ext4 /dev/block/mmcblk0p35  /system rw noatime barrier=0
+
+    #mount ext4 /dev/block/mmcblk0p36 /cache nosuid nodev noatime barrier=0
+    #mount ext4 /dev/block/mmcblk0p37 /data nosuid nodev noatime noauto_da_alloc barrier=0
+
     mount_all ./fstab.qcom
 
     insmod /system/lib/modules/dm-crypt.ko

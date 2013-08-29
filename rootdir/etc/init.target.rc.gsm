@@ -5,3 +5,9 @@ service kickstart /system/bin/qcks -1 modem_st1 -2 modem_st2 -3 radio_config -4 
     user root
     seclabel u:r:kickstart:s0
     oneshot
+
+service setup_fs /system/bin/setup_fs mmcblk0p36 mmcblk0p37
+    class core
+    user root
+    group root
+    oneshot
