@@ -358,7 +358,7 @@ static int tfa9887_load_dsp(int fd, const char *param_file) {
         type = PARAM_SET_PRESET;
         module = MODULE_SPEAKERBOOST;
     } else if (strcmp(suffix, ".eq") == 0) {
-        type = PARAM_SET_PRESET;
+        type = PARAM_SET_EQ;
         module = MODULE_BIQUADFILTERBANK;
     } else {
         ALOGE("%s: Invalid DSP param file %s", __func__, param_file);
