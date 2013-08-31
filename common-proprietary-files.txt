@@ -1,14 +1,11 @@
 # Executables
 bin/akmd
-bin/charging
 bin/ks
-bin/mm-pp-daemon
 bin/mm-qcamera-daemon
 bin/mpdecision
 bin/netmgrd
 bin/qmuxd
 bin/thermald
-bin/zchgd
 
 # Configuration files
 etc/tfa/deftcoefA_l.speaker
@@ -135,6 +132,7 @@ lib/libmmjpeg.so
 lib/libmmstillomx.so
 lib/liboemcamera.so
 lib/libposteffect.so
+lib/libwriteback.so
 
 # Camera firmware
 etc/firmware/ILP0100_IPM_Code_out.bin
@@ -208,7 +206,6 @@ lib/libqmi_encdec.so
 lib/libqmiservices.so
 
 # Radio
-lib/libhtc_rilhook.so
 lib/libnetmgr.so
 lib/libqc-opt.so
 
@@ -226,7 +223,7 @@ vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
 
 # WLAN firmware
-etc/firmware/BCM4335B0_002.001.006.0092.0093.hcd
+etc/firmware/BCM4335B0_002.001.006.0191.0194.hcd
 etc/firmware/fw_bcm4335_apsta_b0.bin
 etc/firmware/fw_bcm4335_b0.bin
 etc/firmware/fw_bcm4335_p2p_b0.bin
