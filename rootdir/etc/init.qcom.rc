@@ -166,9 +166,6 @@ on init
     chown system radio /sys/devices/virtual/optical_sensors/proximity/ps_kadc
     chmod 0660 /sys/devices/virtual/optical_sensors/proximity/ps_kadc
 
-    # Proximity calibration values
-    write /sys/devices/virtual/optical_sensors/proximity/ps_canc "0x01 0x22"
-
     # htc_cir
     chown system system /sys/class/htc_cir/cir/reset_cir
     chmod 0660 /sys/class/htc_cir/cir/reset_cir
