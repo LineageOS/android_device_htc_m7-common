@@ -34,7 +34,7 @@ struct rt5501_comm_data {
 
 static struct rt5501_reg_data rt5501_playback_data[] = {
     { 0x00, 0xC0, },
-    { 0x01, 0x1B, }, // gain -1dB
+    { 0x01, 0x16, }, // gain -6dB
     { 0x02, 0x80, }, // noise gate on
     { 0x08, 0x37, }, // noise gate on
     { 0x07, 0x7F, }, // noise gate setting
@@ -45,7 +45,7 @@ static struct rt5501_reg_data rt5501_playback_data[] = {
 
 static struct rt5501_reg_data rt5501_playback_128_data[] = {
     { 0x00, 0xC0, },
-    { 0x01, 0x20, }, // gain 4dB
+    { 0x01, 0x16, }, // gain -6dB
     { 0x02, 0x80, }, // noise gate on
     { 0x08, 0x37, }, // noise gate on
     { 0x07, 0x7F, }, // noise gate setting
@@ -56,7 +56,7 @@ static struct rt5501_reg_data rt5501_playback_128_data[] = {
 
 static struct rt5501_reg_data rt5501_ring_data[] = {
     { 0x00, 0xC0, },
-    { 0x01, 0x1C, }, // gain 0dB
+    { 0x01, 0x16, }, // gain -6dB
     { 0x02, 0x81, }, // noise gate on
     { 0x08, 0x01, }, // noise gate on
     { 0x07, 0x7F, }, // noise gate setting
