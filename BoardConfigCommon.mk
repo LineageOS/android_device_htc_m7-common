@@ -42,7 +42,8 @@ COMMON_GLOBAL_CFLAGS += -DNEW_LIBRIL_HTC
 
 # Audio
 BOARD_USES_FLUENCE_INCALL := true  # use DMIC in call only
-BOARD_USES_SEPERATED_AUDIO_INPUT := true  # use distinct voice recog/camcorder use cases
+BOARD_USES_SEPERATED_AUDIO_INPUT := true  # use distinct voice recognition use case
+BOARD_USES_SEPERATED_CAMCORDER := true  # use distinct camcorder use cases
 BOARD_USES_SEPERATED_VOICE_SPEAKER := true  # use distinct voice speaker use case
 BOARD_USES_SEPERATED_VOIP := true  # use distinct VOIP use cases
 BOARD_AUDIO_AMPLIFIER := device/htc/m7-common/libaudioamp
