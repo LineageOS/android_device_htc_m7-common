@@ -267,6 +267,76 @@ SectionVerb
 EndSection
 
 SectionVerb
+	Name "HiFiVOIP Handset"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+	EndSequence
+	CapturePCM  0
+	PlaybackPCM  0
+EndSection
+
+SectionVerb
+	Name "HiFiVOIP Earpiece"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+	EndSequence
+	CapturePCM  0
+	PlaybackPCM  0
+EndSection
+
+SectionVerb
+	Name "HiFiVOIP Line"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+	EndSequence
+	CapturePCM  0
+	PlaybackPCM  0
+EndSection
+
+SectionVerb
+	Name "HiFiVOIP Headset"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+	EndSequence
+	CapturePCM  0
+	PlaybackPCM  0
+EndSection
+
+SectionVerb
+	Name "HiFiVOIP Headphones"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+	EndSequence
+	CapturePCM  0
+	PlaybackPCM  0
+EndSection
+
+SectionVerb
 	Name "HiFiVOIP Speaker"
 
 	EnableSequence
@@ -457,6 +527,90 @@ SectionVerb
 
 	DisableSequence
 		'MultiMedia1 Mixer AFE_PCM_TX':1:0
+	EndSequence
+	CapturePCM  0
+	PlaybackPCM  0
+EndSection
+
+SectionVerb
+	Name "HiFi RecHandset VOIP"
+
+	EnableSequence
+		'MultiMedia1 Mixer SLIM_0_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'MultiMedia1 Mixer SLIM_0_TX':1:0
+	EndSequence
+	CapturePCM  0
+	PlaybackPCM  0
+EndSection
+
+SectionVerb
+	Name "HiFi RecEarpiece VOIP"
+
+	EnableSequence
+		'MultiMedia1 Mixer SLIM_0_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'MultiMedia1 Mixer SLIM_0_TX':1:0
+	EndSequence
+	CapturePCM  0
+	PlaybackPCM  0
+EndSection
+
+SectionVerb
+	Name "HiFi RecLine VOIP"
+
+	EnableSequence
+		'MultiMedia1 Mixer SLIM_0_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'MultiMedia1 Mixer SLIM_0_TX':1:0
+	EndSequence
+	CapturePCM  0
+	PlaybackPCM  0
+EndSection
+
+SectionVerb
+	Name "HiFi RecSpeaker VOIP"
+
+	EnableSequence
+		'MultiMedia1 Mixer SLIM_0_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'MultiMedia1 Mixer SLIM_0_TX':1:0
+	EndSequence
+	CapturePCM  0
+	PlaybackPCM  0
+EndSection
+
+SectionVerb
+	Name "HiFi RecHeadset VOIP"
+
+	EnableSequence
+		'MultiMedia1 Mixer SLIM_0_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'MultiMedia1 Mixer SLIM_0_TX':1:0
+	EndSequence
+	CapturePCM  0
+	PlaybackPCM  0
+EndSection
+
+SectionVerb
+	Name "HiFi RecHeadphones VOIP"
+
+	EnableSequence
+		'MultiMedia1 Mixer SLIM_0_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'MultiMedia1 Mixer SLIM_0_TX':1:0
 	EndSequence
 	CapturePCM  0
 	PlaybackPCM  0
@@ -693,6 +847,76 @@ SectionVerb
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:0
 		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
+	EndSequence
+	CapturePCM  3
+	PlaybackPCM  3
+EndSection
+
+SectionVerb
+	Name "Voice Call IPEarpiece VOIP"
+
+	EnableSequence
+		'SLIM_0_RX_Voice Mixer Voip':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIM_0_RX_Voice Mixer Voip':1:0
+	EndSequence
+	CapturePCM  3
+	PlaybackPCM  3
+EndSection
+
+SectionVerb
+	Name "Voice Call IPLine VOIP"
+
+	EnableSequence
+		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
+	EndSequence
+
+	DisableSequence
+		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
+	EndSequence
+	CapturePCM  3
+	PlaybackPCM  3
+EndSection
+
+SectionVerb
+	Name "Voice Call IPSpeaker VOIP"
+
+	EnableSequence
+		'MI2S_RX_Voice Mixer Voip':1:1
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX_Voice Mixer Voip':1:0
+	EndSequence
+	CapturePCM  3
+	PlaybackPCM  3
+EndSection
+
+SectionVerb
+	Name "Voice Call IPHeadphones VOIP"
+
+	EnableSequence
+		'SLIM_0_RX_Voice Mixer Voip':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIM_0_RX_Voice Mixer Voip':1:0
+	EndSequence
+	CapturePCM  3
+	PlaybackPCM  3
+EndSection
+
+SectionVerb
+	Name "Voice Call IPHeadphones Beats VOIP"
+
+	EnableSequence
+		'SLIM_0_RX_Voice Mixer Voip':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIM_0_RX_Voice Mixer Voip':1:0
 	EndSequence
 	CapturePCM  3
 	PlaybackPCM  3
@@ -976,7 +1200,92 @@ SectionVerb
 	CapturePCM  40
 	PlaybackPCM  40
 EndSection
+
+SectionVerb
+	Name "HiFi Lowlatency RecHandset HW VOIP"
+
+	EnableSequence
+		'MultiMedia5 Mixer SLIM_0_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'MultiMedia5 Mixer SLIM_0_TX':1:0
+	EndSequence
+	CapturePCM  40
+	PlaybackPCM  40
+EndSection
+
+SectionVerb
+	Name "HiFi Lowlatency RecEarpiece HW VOIP"
+
+	EnableSequence
+		'MultiMedia5 Mixer SLIM_0_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'MultiMedia5 Mixer SLIM_0_TX':1:0
+	EndSequence
+	CapturePCM  40
+	PlaybackPCM  40
+EndSection
+
+SectionVerb
+	Name "HiFi Lowlatency RecLine HW VOIP"
+
+	EnableSequence
+		'MultiMedia5 Mixer SLIM_0_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'MultiMedia5 Mixer SLIM_0_TX':1:0
+	EndSequence
+	CapturePCM  40
+	PlaybackPCM  40
+EndSection
+
+SectionVerb
+	Name "HiFi Lowlatency RecSpeaker HW VOIP"
+
+	EnableSequence
+		'MultiMedia5 Mixer SLIM_0_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'MultiMedia5 Mixer SLIM_0_TX':1:0
+	EndSequence
+	CapturePCM  40
+	PlaybackPCM  40
+EndSection
+
+SectionVerb
+	Name "HiFi Lowlatency RecHeadset HW VOIP"
+
+	EnableSequence
+		'MultiMedia5 Mixer SLIM_0_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'MultiMedia5 Mixer SLIM_0_TX':1:0
+	EndSequence
+	CapturePCM  40
+	PlaybackPCM  40
+EndSection
+
+SectionVerb
+	Name "HiFi Lowlatency RecHeadphones HW VOIP"
+
+	EnableSequence
+		'MultiMedia5 Mixer SLIM_0_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'MultiMedia5 Mixer SLIM_0_TX':1:0
+	EndSequence
+	CapturePCM  40
+	PlaybackPCM  40
+EndSection
 }
+
 SectionUseCase."HiFi Lowlatency" {
 SectionVerb
 	Name "HiFi Lowlatency"
@@ -1082,6 +1391,63 @@ SectionVerb
 	PlaybackPCM 40
 	CapturePCM 40
 EndSection
+
+SectionVerb
+	Name "HiFi LowlatencyVOIP Handset"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	CapturePCM  41
+	PlaybackPCM  41
+EndSection
+
+SectionVerb
+	Name "HiFi LowlatencyVOIP Earpiece"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	CapturePCM  41
+	PlaybackPCM  41
+EndSection
+
+SectionVerb
+	Name "HiFi LowlatencyVOIP Headset"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	CapturePCM  41
+	PlaybackPCM  41
+EndSection
+
+SectionVerb
+	Name "HiFi LowlatencyVOIP Headphones"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	CapturePCM  41
+	PlaybackPCM  41
+EndSection
+
 }
 SectionDevice
 	Name "Earpiece"
@@ -2070,9 +2436,18 @@ SectionDevice
 	Name "Speaker DMIC Stereo"
 
 	EnableSequence
+		'SLIM_0_TX Channels':0:One
+		'SLIM TX7 MUX':0:DEC9
+		'DEC9 MUX':0:DMIC4
+		'DEC9 Volume':2:5C
+		'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
 	DisableSequence
+		'SLIM_0_TX Channels':0:ZERO
+		'DEC9 MUX':0:ZERO
+		'DEC9 Volume':2:0
+		'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID  35:2
