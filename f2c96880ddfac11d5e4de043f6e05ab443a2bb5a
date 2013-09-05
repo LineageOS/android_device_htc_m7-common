@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da1255d7_ec87c310",
+        "filename": "dsp/snd_soc_msm/snd_soc_msm_2x_Fusion3",
+        "patchSetId": 1
+      },
+      "lineNbr": 270,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2013-09-05T04:47:25Z",
+      "side": 1,
+      "message": "Is this section necessary?",
+      "revId": "f2c96880ddfac11d5e4de043f6e05ab443a2bb5a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da1255d7_cc8cff37",
+        "filename": "dsp/snd_soc_msm/snd_soc_msm_2x_Fusion3",
+        "patchSetId": 1
+      },
+      "lineNbr": 530,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2013-09-05T04:47:25Z",
+      "side": 1,
+      "message": "Is this section necessary?",
+      "revId": "f2c96880ddfac11d5e4de043f6e05ab443a2bb5a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da1255d7_ac81cbfd",
+        "filename": "dsp/snd_soc_msm/snd_soc_msm_2x_Fusion3",
+        "patchSetId": 1
+      },
+      "lineNbr": 850,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2013-09-05T04:47:25Z",
+      "side": 1,
+      "message": "Is this section necessary?",
+      "revId": "f2c96880ddfac11d5e4de043f6e05ab443a2bb5a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da1255d7_8c860712",
+        "filename": "dsp/snd_soc_msm/snd_soc_msm_2x_Fusion3",
+        "patchSetId": 1
+      },
+      "lineNbr": 1203,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2013-09-05T04:47:25Z",
+      "side": 1,
+      "message": "Is this section necessary?",
+      "revId": "f2c96880ddfac11d5e4de043f6e05ab443a2bb5a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da1255d7_6c7cf320",
+        "filename": "dsp/snd_soc_msm/snd_soc_msm_2x_Fusion3",
+        "patchSetId": 1
+      },
+      "lineNbr": 1394,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2013-09-05T04:47:25Z",
+      "side": 1,
+      "message": "Is this section necessary?",
+      "revId": "f2c96880ddfac11d5e4de043f6e05ab443a2bb5a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da1255d7_4c792f2f",
+        "filename": "dsp/snd_soc_msm/snd_soc_msm_2x_Fusion3",
+        "patchSetId": 1
+      },
+      "lineNbr": 2439,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2013-09-05T04:47:25Z",
+      "side": 1,
+      "message": "I added this in a previous patchset, although I suspect this is the thing that actually fixes your apps. Please rebase.",
+      "revId": "f2c96880ddfac11d5e4de043f6e05ab443a2bb5a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
