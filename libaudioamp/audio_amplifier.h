@@ -14,5 +14,7 @@
  * limitations under the License.
  */
 
+int amplifier_open();
+int amplifier_close();
 void amplifier_set_devices(int devices);
 int amplifier_set_mode(audio_mode_t mode);
