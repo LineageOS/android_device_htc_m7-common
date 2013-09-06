@@ -32,7 +32,12 @@ int mDevices = AUDIO_DEVICE_NONE;
 audio_mode_t mMode = AUDIO_MODE_NORMAL;
 
 int amplifier_open(void) {
-    return 0;
+    int ret = -1;
+
+    ALOGD("%s", __func__);
+    ret = tfa9887_open();
+
+    return ret;
 }
 
 void amplifier_set_devices(int devices) {
@@ -62,5 +67,10 @@ int amplifier_set_mode(audio_mode_t mode) {
 }
 
 int amplifier_close(void) {
-    return 0;
+    int ret = -1;
+
+    ALOGD("%s", __func__);
+    ret = tfa9887_close();
+
+    return ret;
 }
