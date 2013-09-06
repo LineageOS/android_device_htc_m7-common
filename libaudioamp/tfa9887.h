@@ -223,5 +223,7 @@ typedef enum {
 #define TFA9887_CF_STATUS (0x73)
 #define TFA9887_MTP (0x80)
 
-int tfa9887_init(void);
+int tfa9887_open();
+int tfa9887_close();
+static int tfa9887_init(int fd, int sample_rate, bool is_right);
 int tfa9887_set_mode(audio_mode_t mode);

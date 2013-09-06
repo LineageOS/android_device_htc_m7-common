@@ -30,7 +30,8 @@
 #define LOG_TAG "tfa9887"
 
 /* Module variables */
-
+static int tfa9887_fd = -1;
+static int tfa9887l_fd = -1;
 static bool tfa9887_initialized = false;
 static bool tfa9887l_initialized = false;
 static Tfa9887_Mode_t tfa9887_mode = Tfa9887_Num_Modes;
@@ -625,7 +626,7 @@ static int tfa9887_wait_ready(int fd, unsigned int ready_bits,
                 ready_state, value);
         tries++;
         usleep(1000);
-    } while (!ready && tries < 10);
+    } while (!ready && tries < 25);
 
     if (tries >= 10) {
         ALOGE("Timed out waiting for tfa9887 to become ready");
@@ -715,6 +716,8 @@ static int tfa9887_init(int fd, int sample_rate,
     int channel;
     unsigned int pll_lock_bits = (TFA9887_STATUS_CLKS | TFA9887_STATUS_PLLS);
 
+    ALOGD("%s", __func__);
+
     if (is_right) {
         channel = 1;
         patch_file = PATCH_R;
@@ -723,13 +726,6 @@ static int tfa9887_init(int fd, int sample_rate,
         channel = 0;
         patch_file = PATCH_L;
         speaker_file = SPKR_L;
-    }
-
-    /* must wait until chip is ready otherwise no init happens */
-    error = tfa9887_wait_ready(fd, TFA9887_STATUS_MTPB, 0);
-    if (error != 0) {
-        ALOGE("tfa9887 MTP still busy");
-        goto priv_init_err;
     }
 
     /* do cold boot init */
@@ -763,6 +759,8 @@ static int tfa9887_init(int fd, int sample_rate,
         ALOGE("Unable to power up");
         goto priv_init_err;
     }
+
+    sleep(3);
 
     /* wait for ready */
     error = tfa9887_wait_ready(fd, pll_lock_bits, pll_lock_bits);
@@ -854,26 +852,13 @@ static Tfa9887_Mode_t tfa9887_get_mode(audio_mode_t mode) {
 
 int tfa9887_set_mode(audio_mode_t mode) {
     unsigned int reg_value[2];
-    int tfa9887_fd;
-    int tfa9887l_fd;
     int ret = -1;
     Tfa9887_Mode_t dsp_mode;
 
     dsp_mode = tfa9887_get_mode(mode);
-    if (tfa9887_initialized && tfa9887l_initialized &&
-            dsp_mode == tfa9887_mode) {
+    if (dsp_mode == tfa9887_mode) {
         ALOGI("No mode change needed, already mode %d", dsp_mode);
         return 0;
-    }
-
-    /* Open the amplifier devices */
-    if ((tfa9887_fd = open(TFA9887_DEVICE, O_RDWR)) < 0) {
-        ALOGE("error opening amplifier device %s", TFA9887_DEVICE);
-        return -1;
-    }
-    if ((tfa9887l_fd = open(TFA9887L_DEVICE, O_RDWR)) < 0) {
-        ALOGE("error opening amplifier device %s", TFA9887L_DEVICE);
-        return -1;
     }
 
     /* Lock TFA9887 kernel driver */
@@ -891,22 +876,6 @@ int tfa9887_set_mode(audio_mode_t mode) {
     /* Mute to avoid pop */
     ret = tfa9887_mute(tfa9887_fd, Tfa9887_Mute_Digital);
     ret = tfa9887_mute(tfa9887l_fd, Tfa9887_Mute_Digital);
-
-    /* Initialize if necessary */
-    if (!tfa9887_initialized) {
-        ret = tfa9887_init(tfa9887_fd, TFA9887_DEFAULT_RATE, true);
-        if (ret != 0) {
-            ALOGE("Failed to initialize tfa9887R, DSP not enabled");
-            goto set_mode_unmute;
-        }
-    }
-    if (!tfa9887l_initialized) {
-        ret = tfa9887_init(tfa9887l_fd, TFA9887_DEFAULT_RATE, true);
-        if (ret != 0) {
-            ALOGE("Failed to initialize tfa9887L, DSP not enabled");
-            goto set_mode_unmute;
-        }
-    }
 
     /* Set DSP mode */
     ret = tfa9887_set_dsp_mode(tfa9887_fd, dsp_mode, true);
@@ -956,8 +925,53 @@ set_mode_unlock:
         ALOGE("ioctl %d failed. ret = %d", TPA9887_ENABLE_DSP, ret);
     }
 
+    return ret;
+}
+
+int tfa9887_open() {
+    int ret = -1;
+
+    ALOGD("%s", __func__);
+
+    /* Open the amplifier devices */
+    if ((tfa9887_fd = open(TFA9887_DEVICE, O_RDWR)) < 0) {
+        ALOGE("error opening amplifier device %s", TFA9887_DEVICE);
+        return -1;
+    }
+    if ((tfa9887l_fd = open(TFA9887L_DEVICE, O_RDWR)) < 0) {
+        ALOGE("error opening amplifier device %s", TFA9887L_DEVICE);
+        return -1;
+    }
+
+    /* must wait until chip is ready otherwise no init happens */
+    ret = tfa9887_wait_ready(tfa9887_fd, TFA9887_STATUS_MTPB, 0);
+    if (ret != 0) {
+        ALOGE("tfa9887 MTP still busy");
+        return ret;
+    }
+
+    ret = tfa9887_init(tfa9887_fd, TFA9887_DEFAULT_RATE, true);
+    if (ret != 0) {
+        ALOGE("Failed to initialize tfa9887R, DSP not enabled");
+        return ret;
+    }
+
+    ret = tfa9887_init(tfa9887l_fd, TFA9887_DEFAULT_RATE, true);
+    if (ret != 0) {
+        ALOGE("Failed to initialize tfa9887L, DSP not enabled");
+        return ret;
+    }
+
+    return ret;
+}
+
+int tfa9887_close() {
+
+    ALOGD("%s", __func__);
+
+    /* Close the amplifier devices */
     close(tfa9887_fd);
     close(tfa9887l_fd);
 
-    return ret;
+    return 0;
 }
