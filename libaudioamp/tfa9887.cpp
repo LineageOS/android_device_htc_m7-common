@@ -16,6 +16,7 @@
 
 #include <errno.h>
 #include <fcntl.h>
+#include <pthread.h>
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -29,13 +30,38 @@
 //#define LOG_NDEBUG 0
 #define LOG_TAG "tfa9887"
 
-/* Module variables */
+#define TINYPLAY_PATH   "/system/bin/tinyplay"
 
+/* Module variables */
+static bool tfa9887_dsp_on = false;
+static bool tfa9887l_dsp_on = false;
 static bool tfa9887_initialized = false;
-static bool tfa9887l_initialized = false;
+static pthread_mutex_t init_mutex;
 static Tfa9887_Mode_t tfa9887_mode = Tfa9887_Num_Modes;
 
 /* Helper functions */
+
+// Stringify defined values
+#define DO_STRINGIFY(str) #str
+#define STRINGIFY(str) DO_STRINGIFY(str)
+
+static void tfa9887_set_initialized(bool state)
+{
+    pthread_mutex_lock(&init_mutex);
+    tfa9887_initialized = state;
+    pthread_mutex_unlock(&init_mutex);
+}
+
+static bool tfa9887_get_initialized(void)
+{
+    bool ret;
+
+    pthread_mutex_lock(&init_mutex);
+    ret = tfa9887_initialized;
+    pthread_mutex_unlock(&init_mutex);
+
+    return ret;
+}
 
 static int read_file(const char *file_name, uint8_t *buf, int sz) {
     int ret;
@@ -625,7 +651,7 @@ static int tfa9887_wait_ready(int fd, unsigned int ready_bits,
                 ready_state, value);
         tries++;
         usleep(1000);
-    } while (!ready && tries < 10);
+    } while (!ready && tries < 25);
 
     if (tries >= 10) {
         ALOGE("Timed out waiting for tfa9887 to become ready");
@@ -706,6 +732,29 @@ static int tfa9887_startup(int fd) {
     return error;
 }
 
+static int tfa9887_play_silence() {
+
+    if (access(TINYPLAY_PATH, X_OK)) {
+        SLOGE("tinyplay is not executable");
+        return -1;
+    }
+
+    const char* const args[] = { "tinyplay", STRINGIFY("/system/etc/silence.wav"), STRINGIFY("-D 0"), STRINGIFY("-d 0"), STRINGIFY("-p 880"), NULL };
+    pid_t tinyplayPid;
+
+    tinyplayPid=fork();
+
+    if (tinyplayPid == 0) {
+        SLOGW("Playing silence...");
+        if (execv(TINYPLAY_PATH, (char* const*)args) == -1) {
+            SLOGE("Failed to invoke tinyplay!");
+            return -1;
+        }
+    }
+
+    return 0;
+}
+
 static int tfa9887_init(int fd, int sample_rate,
         bool is_right) {
     int error;
@@ -714,6 +763,8 @@ static int tfa9887_init(int fd, int sample_rate,
     int patch_sz;
     int channel;
     unsigned int pll_lock_bits = (TFA9887_STATUS_CLKS | TFA9887_STATUS_PLLS);
+
+    ALOGD("%s", __func__);
 
     if (is_right) {
         channel = 1;
@@ -725,11 +776,15 @@ static int tfa9887_init(int fd, int sample_rate,
         speaker_file = SPKR_L;
     }
 
-    /* must wait until chip is ready otherwise no init happens */
-    error = tfa9887_wait_ready(fd, TFA9887_STATUS_MTPB, 0);
-    if (error != 0) {
-        ALOGE("tfa9887 MTP still busy");
-        goto priv_init_err;
+    while (true) {
+        /* must wait until chip is ready otherwise no init happens */
+        error = tfa9887_wait_ready(fd, TFA9887_STATUS_MTPB, 0);
+        if (error == 0) {
+            ALOGI("tfa9887 MTP ready");
+            break;
+        }
+        ALOGW("tfa9887 MTP still busy");
+        sleep(1);
     }
 
     /* do cold boot init */
@@ -764,11 +819,21 @@ static int tfa9887_init(int fd, int sample_rate,
         goto priv_init_err;
     }
 
-    /* wait for ready */
-    error = tfa9887_wait_ready(fd, pll_lock_bits, pll_lock_bits);
+    error = tfa9887_play_silence();
     if (error != 0) {
-        ALOGE("Failed to lock PLLs");
+        ALOGE("Unable to play silence");
         goto priv_init_err;
+    }
+
+    while (true) {
+        /* wait for ready */
+        error = tfa9887_wait_ready(fd, pll_lock_bits, pll_lock_bits);
+        if (error == 0) {
+            ALOGI("TFA9887 PLLs locked");
+            break;
+        }
+        ALOGW("TFA9887 PLLs not locked yet");
+        sleep(1);
     }
 
     /* load firmware */
@@ -837,6 +902,108 @@ set_dsp_err:
     return error;
 }
 
+static void * tfa9887_init_thread_func(void *unused) {
+    unsigned int reg_value[2];
+    int ret = -1;
+    int tfa9887_fd;
+    int tfa9887l_fd;
+
+    /* Open the amplifier devices */
+    if ((tfa9887_fd = open(TFA9887_DEVICE, O_RDWR)) < 0) {
+        ALOGE("error opening amplifier device %s", TFA9887_DEVICE);
+    }
+    if ((tfa9887l_fd = open(TFA9887L_DEVICE, O_RDWR)) < 0) {
+        ALOGE("error opening amplifier device %s", TFA9887L_DEVICE);
+        goto init_thread_close_fd;
+    }
+
+    ret = tfa9887_init(tfa9887_fd, TFA9887_DEFAULT_RATE, true);
+    if (ret != 0) {
+        ALOGE("Failed to initialize tfa9887R, DSP not enabled");
+        goto init_thread_close_l_fd;
+    }
+
+    ret = tfa9887_init(tfa9887l_fd, TFA9887_DEFAULT_RATE, true);
+    if (ret != 0) {
+        ALOGE("Failed to initialize tfa9887L, DSP not enabled");
+        goto init_thread_close_l_fd;
+    }
+
+    tfa9887_set_initialized(true);
+
+    /* Lock TFA9887 kernel driver */
+    reg_value[0] = 1;
+    reg_value[1] = 1;
+    if ((ret = ioctl(tfa9887_fd, TPA9887_KERNEL_LOCK, &reg_value)) != 0) {
+        ALOGE("ioctl %d failed. ret = %d", TPA9887_ENABLE_DSP, ret);
+        goto init_thread_unlock;
+    }
+    if ((ret = ioctl(tfa9887l_fd, TPA9887_KERNEL_LOCK, &reg_value)) != 0) {
+        ALOGE("ioctl %d failed. ret = %d", TPA9887_ENABLE_DSP, ret);
+        goto init_thread_unlock;
+    }
+
+    /* Mute to avoid pop */
+    ret = tfa9887_mute(tfa9887_fd, Tfa9887_Mute_Digital);
+    ret = tfa9887_mute(tfa9887l_fd, Tfa9887_Mute_Digital);
+
+    /* Set DSP mode */
+    ret = tfa9887_set_dsp_mode(tfa9887_fd, Tfa9887_Mode_Playback, true);
+    if (ret != 0) {
+        ALOGE("Failed to set TFA9887R DSP mode: %d", ret);
+        goto init_thread_unmute;
+    }
+    ret = tfa9887_set_dsp_mode(tfa9887l_fd, Tfa9887_Mode_Playback, false);
+    if (ret != 0) {
+        ALOGE("Failed to set TFA9887L DSP mode: %d", ret);
+        goto init_thread_unmute;
+    }
+
+    ALOGI("Set DSP mode to %d", Tfa9887_Mode_Playback);
+    tfa9887_mode = Tfa9887_Mode_Playback;
+
+    /* Enable DSP if necessary */
+    reg_value[0] = 1;
+    reg_value[0] = 1;
+    if (!tfa9887_dsp_on) {
+        if ((ret = ioctl(tfa9887_fd, TPA9887_ENABLE_DSP, &reg_value)) != 0) {
+            ALOGE("ioctl %d failed. ret = %d", TPA9887_ENABLE_DSP, ret);
+            goto init_thread_unmute;
+        }
+        tfa9887_dsp_on = true;
+    }
+    if (!tfa9887l_dsp_on) {
+        if ((ret = ioctl(tfa9887l_fd, TPA9887_ENABLE_DSP, &reg_value)) != 0) {
+            ALOGE("ioctl %d failed. ret = %d", TPA9887_ENABLE_DSP, ret);
+            goto init_thread_unmute;
+        }
+        tfa9887l_dsp_on = true;
+    }
+
+init_thread_unmute:
+    ret = tfa9887_mute(tfa9887_fd, Tfa9887_Mute_Off);
+    ret = tfa9887_mute(tfa9887l_fd, Tfa9887_Mute_Off);
+
+init_thread_unlock:
+    /* Unlock TFA9887 kernel driver */
+    reg_value[0] = 1;
+    reg_value[1] = 0;
+    if ((ret = ioctl(tfa9887_fd, TPA9887_KERNEL_LOCK, &reg_value)) != 0) {
+        ALOGE("ioctl %d failed. ret = %d", TPA9887_ENABLE_DSP, ret);
+    }
+    if ((ret = ioctl(tfa9887l_fd, TPA9887_KERNEL_LOCK, &reg_value)) != 0) {
+        ALOGE("ioctl %d failed. ret = %d", TPA9887_ENABLE_DSP, ret);
+    }
+
+init_thread_close_l_fd:
+    close(tfa9887l_fd);
+init_thread_close_fd:
+    close(tfa9887_fd);
+
+    pthread_exit(NULL);
+    return NULL;
+}
+
 static Tfa9887_Mode_t tfa9887_get_mode(audio_mode_t mode) {
     switch (mode) {
         case AUDIO_MODE_RINGTONE:
@@ -859,9 +1026,13 @@ int tfa9887_set_mode(audio_mode_t mode) {
     int ret = -1;
     Tfa9887_Mode_t dsp_mode;
 
+    if (!tfa9887_get_initialized()) {
+        ALOGW("TFA9887 amp not yet initialized, cannot set mode");
+        return 0;
+    }
+
     dsp_mode = tfa9887_get_mode(mode);
-    if (tfa9887_initialized && tfa9887l_initialized &&
-            dsp_mode == tfa9887_mode) {
+    if (dsp_mode == tfa9887_mode) {
         ALOGI("No mode change needed, already mode %d", dsp_mode);
         return 0;
     }
@@ -892,22 +1063,6 @@ int tfa9887_set_mode(audio_mode_t mode) {
     ret = tfa9887_mute(tfa9887_fd, Tfa9887_Mute_Digital);
     ret = tfa9887_mute(tfa9887l_fd, Tfa9887_Mute_Digital);
 
-    /* Initialize if necessary */
-    if (!tfa9887_initialized) {
-        ret = tfa9887_init(tfa9887_fd, TFA9887_DEFAULT_RATE, true);
-        if (ret != 0) {
-            ALOGE("Failed to initialize tfa9887R, DSP not enabled");
-            goto set_mode_unmute;
-        }
-    }
-    if (!tfa9887l_initialized) {
-        ret = tfa9887_init(tfa9887l_fd, TFA9887_DEFAULT_RATE, true);
-        if (ret != 0) {
-            ALOGE("Failed to initialize tfa9887L, DSP not enabled");
-            goto set_mode_unmute;
-        }
-    }
-
     /* Set DSP mode */
     ret = tfa9887_set_dsp_mode(tfa9887_fd, dsp_mode, true);
     if (ret != 0) {
@@ -926,19 +1081,19 @@ int tfa9887_set_mode(audio_mode_t mode) {
     /* Enable DSP if necessary */
     reg_value[0] = 1;
     reg_value[0] = 1;
-    if (!tfa9887_initialized) {
+    if (!tfa9887_dsp_on) {
         if ((ret = ioctl(tfa9887_fd, TPA9887_ENABLE_DSP, &reg_value)) != 0) {
             ALOGE("ioctl %d failed. ret = %d", TPA9887_ENABLE_DSP, ret);
             goto set_mode_unmute;
         }
-        tfa9887_initialized = true;
+        tfa9887_dsp_on = true;
     }
-    if (!tfa9887l_initialized) {
+    if (!tfa9887l_dsp_on) {
         if ((ret = ioctl(tfa9887l_fd, TPA9887_ENABLE_DSP, &reg_value)) != 0) {
             ALOGE("ioctl %d failed. ret = %d", TPA9887_ENABLE_DSP, ret);
             goto set_mode_unmute;
         }
-        tfa9887l_initialized = true;
+        tfa9887l_dsp_on = true;
     }
 
 set_mode_unmute:
@@ -956,8 +1111,44 @@ set_mode_unlock:
         ALOGE("ioctl %d failed. ret = %d", TPA9887_ENABLE_DSP, ret);
     }
 
+set_mode_close_fd:
     close(tfa9887_fd);
     close(tfa9887l_fd);
 
     return ret;
+}
+
+int tfa9887_open() {
+    int ret = -1;
+    pthread_t init_thread;
+
+    ALOGD("%s", __func__);
+
+    ret = pthread_mutex_init(&init_mutex, NULL);
+    if (ret != 0) {
+        ALOGE("Failed to initialize TFA9887 mutex, err = %d", ret);
+        goto open_err;
+    }
+    ret = pthread_create(&init_thread, NULL, tfa9887_init_thread_func, NULL);
+    if (ret != 0) {
+        ALOGE("Failed to create TFA9887 init thread, err = %d", ret);
+        goto open_err;
+    }
+    ret = pthread_detach(init_thread);
+    if (ret != 0) {
+        ALOGE("Failed to detach TFA9887 init thread, err = %d", ret);
+        goto open_err;
+    }
+
+open_err:
+    return ret;
+}
+
+int tfa9887_close() {
+
+    ALOGD("%s", __func__);
+
+    /* Do TFA9887 teardown */
+
+    return 0;
 }
