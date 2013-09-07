@@ -187,5 +187,5 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalv
 # call hwui memory config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
-# call the proprietary setup
-$(call inherit-product-if-exists, vendor/htc/m7-common/m7-common-vendor.mk)
+# Include non-opensource parts
+$(call inherit-product, vendor/htc/m7-common/m7-common-vendor.mk)
