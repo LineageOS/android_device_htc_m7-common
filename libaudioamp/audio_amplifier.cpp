@@ -31,6 +31,10 @@
 int mDevices = AUDIO_DEVICE_NONE;
 audio_mode_t mMode = AUDIO_MODE_NORMAL;
 
+int amplifier_open(void) {
+    return 0;
+}
+
 void amplifier_set_devices(int devices) {
     if (devices != 0) {
         if (mDevices != devices) {
@@ -55,4 +59,8 @@ int amplifier_set_mode(audio_mode_t mode) {
     }
 
     return ret;
+}
+
+int amplifier_close(void) {
+    return 0;
 }
