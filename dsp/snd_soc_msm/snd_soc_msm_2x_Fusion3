@@ -389,6 +389,31 @@ SectionVerb
 	PlaybackPCM  4
 EndSection
 
+SectionVerb
+	Name "HiFi Low PowerUSB PROXY Rx"
+
+	EnableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+	EndSequence
+
+	DisableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+	EndSequence
+	PlaybackPCM  4
+EndSection
+
+SectionVerb
+	Name "HiFi Low PowerUSB PROXY Tx"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+	EndSequence
+	PlaybackPCM  4
+EndSection
+
+
 # HTC additional verbs
 SectionVerb
 	Name "HiFi Low PowerSpeaker"
