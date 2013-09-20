@@ -191,6 +191,9 @@ on init
     chmod 0664 /sys/class/timed_output/vibrator/voltage_level
     restorecon /sys/class/timed_output/vibrator/voltage_level
 
+    # Touchscreen
+    chown system system /sys/class/leds/button-backlight/currents
+
 # On emmc mount the partition containing firmware
 on fs
     mkdir /devlog 0700 root root

@@ -240,4 +240,7 @@
 
     <!-- Is the device capable of hot swapping an UICC card -->
     <bool name="config_hotswapCapable">true</bool>
+
+    <!-- Button illumination -->
+    <bool name="config_deviceHasVariableButtonBrightness">true</bool>
 </resources>
