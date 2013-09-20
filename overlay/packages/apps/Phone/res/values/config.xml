@@ -28,4 +28,8 @@
     <!-- Flag indicating if the tty is enabled -->
     <bool name="tty_enabled">true</bool>
 
+    <!-- Send phone app status to proximity sensor
+         Writes the phone apps status on "answer call" and on "hangup" to the specified proximity sysfs node. -->
+    <string name="phone_app_status_file">"/sys/class/optical_sensors/proximity/PhoneApp_status"</string>
+
 </resources>
