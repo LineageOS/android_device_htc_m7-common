@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5afe65bd_6b13b55d",
+        "filename": "rootdir/Android.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2013-09-21T16:21:07Z",
+      "side": 1,
+      "message": "you can probably avoid duplicating most of this and just ifneq ($(filter m7vzw,$(TARGET_DEVICE)) for init.target.rc",
+      "revId": "d2820db2d0e55a9af38f02310d83ceda52553d90",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
