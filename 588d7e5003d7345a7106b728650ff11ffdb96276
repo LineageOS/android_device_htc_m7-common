@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5afe65bd_0855671c",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 6351
+      },
+      "writtenOn": "2013-09-21T13:00:55Z",
+      "side": 1,
+      "message": "Shouldn\u0027t that be :\u003d instead of : ?",
+      "revId": "588d7e5003d7345a7106b728650ff11ffdb96276",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
