@@ -553,3 +553,10 @@ on property:service.adb.root=1
     write /sys/class/android_usb/android0/enable 0
     restart adbd
     write /sys/class/android_usb/android0/enable 1
+
+# Add System Hardware Props
+    setprop ro.device.chipset 'Qualcomm SND600'
+    setprop ro.device.cpu '1.7 GHz quad-core'
+    setprop ro.device.rear_cam 'HTC UltraPixel (4mp) Camera'
+    setprop ro.device.front_cam '2.1 MP'
+    setprop ro.device.screen_res '4.7 inch 1080p resolution'
