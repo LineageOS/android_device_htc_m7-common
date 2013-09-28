@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da37b569_047e78e4",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2013-09-28T19:12:48Z",
+      "side": 1,
+      "message": "No need to comment out lines when we have source control, just remove them if they are unused.",
+      "revId": "048ac66cf6984b8c845f28b7513748a9421d8348",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
