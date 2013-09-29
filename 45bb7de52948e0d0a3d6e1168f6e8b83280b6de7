@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da37b569_0ad8bf52",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 4820
+      },
+      "writtenOn": "2013-09-29T11:46:27Z",
+      "side": 1,
+      "message": "This won\u0027t work.  I\u0027ve already tested this.  This will result in BOOTCLASSPATH being set as $BOOTCLASSPATH:system/framework/htcirlibs.jar\n\nIt doesn\u0027t expand the existing variable.  Also, the leading slash should be present.",
+      "revId": "45bb7de52948e0d0a3d6e1168f6e8b83280b6de7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
