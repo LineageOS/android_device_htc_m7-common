@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da37b569_8a65afe2",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 7093
+      },
+      "writtenOn": "2013-09-29T09:20:50Z",
+      "side": 1,
+      "message": "I think the actual error here is a missing bootclasspath:\n\"export BOOTCLASSPATH $BOOTCLASSPATH:system/framework/htcirlibs.jar\"",
+      "revId": "12100b1c5875d2d2be603d3ecc3f5ee3df6a5abd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
