@@ -43,7 +43,8 @@ PRODUCT_PACKAGES += \
     lpm.rc \
     charger \
     choice_fn \
-    offmode_charging
+    offmode_charging \
+    init.recovery.qcom.rc
 
 PRODUCT_PACKAGES += \
     battery_0.png \
