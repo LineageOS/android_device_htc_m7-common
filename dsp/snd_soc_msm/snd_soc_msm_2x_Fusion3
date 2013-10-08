@@ -323,6 +323,7 @@ SectionVerb
 	DisableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
+    CapturePCM 0
 	PlaybackPCM  4
 EndSection
 
@@ -335,8 +336,12 @@ SectionVerb
 
 	DisableSequence
 		'HDMI Mixer MultiMedia3':1:0
-	EndSequence
+o   CapturePCM 0
 	PlaybackPCM  4
+
+	EndSequence
+	EndapturePCM 0
+
 EndSection
 
 SectionVerb
@@ -349,6 +354,7 @@ SectionVerb
 	DisableSequence
 		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
+    CapturePCM 0
 	PlaybackPCM  4
 EndSection
 
@@ -362,6 +368,7 @@ SectionVerb
 	DisableSequence
 		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
+    CapturePCM 0
 	PlaybackPCM  4
 EndSection
 
@@ -375,6 +382,7 @@ SectionVerb
 	DisableSequence
 		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
+    CapturePCM 0
 	PlaybackPCM  4
 EndSection
 
@@ -387,6 +395,7 @@ SectionVerb
 	DisableSequence
 	EndSequence
 	PlaybackPCM  4
+    CapturePCM 0
 EndSection
 
 SectionVerb
@@ -400,6 +409,7 @@ SectionVerb
 		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
 	PlaybackPCM  4
+    CapturePCM 0
 EndSection
 
 SectionVerb
@@ -411,6 +421,25 @@ SectionVerb
 	DisableSequence
 	EndSequence
 	PlaybackPCM  4
+    CapturePCM 0
+EndSection
+
+SectionVerb
+    Name "HiFi Low PowerPROXY Rx Speaker"
+
+    EnableSequence
+        'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+        'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
+    EndSequence
+
+    DisableSequence
+        'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+        'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
+    EndSequence
+
+    # ALSA PCMs
+    CapturePCM 0
+    PlaybackPCM 4
 EndSection
 
 
