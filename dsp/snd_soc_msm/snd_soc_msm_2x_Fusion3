@@ -413,6 +413,24 @@ SectionVerb
 	PlaybackPCM  4
 EndSection
 
+SectionVerb
+    Name "HiFi Low PowerPROXY Rx Speaker"
+
+    EnableSequence
+        'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+        'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
+    EndSequence
+
+    DisableSequence
+        'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+        'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
+    EndSequence
+
+    # ALSA PCMs
+    CapturePCM 0
+    PlaybackPCM 4
+EndSection
+
 
 # HTC additional verbs
 SectionVerb
