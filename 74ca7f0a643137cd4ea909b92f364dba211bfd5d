@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a43c5e1_63265618",
+        "filename": "dsp/snd_soc_msm/snd_soc_msm_2x_Fusion3",
+        "patchSetId": 2
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2013-10-09T04:38:47Z",
+      "side": 1,
+      "message": "I\u0027m assuming the ordering here is meant to be DisableSequence, EndSequence, CapturePCM, PlaybackPCM?",
+      "revId": "74ca7f0a643137cd4ea909b92f364dba211bfd5d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
