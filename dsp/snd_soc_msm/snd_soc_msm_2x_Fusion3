@@ -3151,6 +3151,128 @@ SectionModifier
 EndSection
 
 SectionModifier
+	Name "Play LPAUSB PROXY Rx"
+
+	EnableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+	EndSequence
+
+	DisableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+	EndSequence
+	PlaybackPCM  4
+EndSection
+
+SectionModifier
+	Name "Play LPAPROXY Rx Speaker"
+
+	EnableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+		'MI2S_RX Audio Mixer MultiMedia3':1:1
+	EndSequence
+
+	DisableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+		'MI2S_RX Audio Mixer MultiMedia3':1:0
+	EndSequence
+	PlaybackPCM  4
+EndSection
+
+SectionModifier
+	Name "Play LPAUSB PROXY Rx Speaker"
+
+	EnableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+		'MI2S_RX Audio Mixer MultiMedia3':1:1
+	EndSequence
+
+	DisableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+		'MI2S_RX Audio Mixer MultiMedia3':1:0
+	EndSequence
+	PlaybackPCM  4
+EndSection
+
+SectionModifier
+	Name "Play LPAPROXY Rx Earpiece"
+
+	EnableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
+	EndSequence
+
+	DisableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
+	EndSequence
+	PlaybackPCM  4
+EndSection
+
+SectionModifier
+	Name "Play LPAPROXY Rx Headphones"
+
+	EnableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
+	EndSequence
+
+	DisableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
+	EndSequence
+	PlaybackPCM  4
+EndSection
+
+SectionModifier
+	Name "Play LPAPROXY Rx ANC Headset"
+
+	EnableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
+	EndSequence
+
+	DisableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
+	EndSequence
+	PlaybackPCM  4
+EndSection
+
+SectionModifier
+	Name "Play LPAPROXY Rx Speaker Headset"
+
+	EnableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+		'MI2S_RX Audio Mixer MultiMedia3':1:1
+		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
+	EndSequence
+
+	DisableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+		'MI2S_RX Audio Mixer MultiMedia3':1:0
+		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
+	EndSequence
+	PlaybackPCM  4
+EndSection
+
+SectionModifier
+	Name "Play LPAPROXY Rx Speaker ANC Headset"
+
+	EnableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+		'MI2S_RX Audio Mixer MultiMedia3':1:1
+		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
+	EndSequence
+
+	DisableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+		'MI2S_RX Audio Mixer MultiMedia3':1:0
+		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
+	EndSequence
+	PlaybackPCM  4
+EndSection
+
+SectionModifier
 	Name "Play Tunnel"
 
 	EnableSequence
