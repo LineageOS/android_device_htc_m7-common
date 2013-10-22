@@ -243,4 +243,7 @@
 
     <!-- Button illumination -->
     <bool name="config_deviceHasVariableButtonBrightness">true</bool>
+
+    <!-- Device Supports LED flashlight -->
+    <bool name="config_enableTorch">true</bool>
 </resources>
