@@ -16,6 +16,24 @@
       "revId": "3977064fca055575858622e56ce45c080a99add3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a50d1a3_0d88d621",
+        "filename": "recovery/graphics.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2013-10-22T18:26:34Z",
+      "side": 1,
+      "message": "see irc logs \u003d)",
+      "parentUuid": "3a50d1a3_cdb3ce09",
+      "revId": "3977064fca055575858622e56ce45c080a99add3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
