@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a50d1a3_cdb3ce09",
+        "filename": "recovery/graphics.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2013-10-22T18:05:40Z",
+      "side": 1,
+      "message": "0? why not just have the parameter and mark it with the unused attribute?",
+      "revId": "3977064fca055575858622e56ce45c080a99add3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
