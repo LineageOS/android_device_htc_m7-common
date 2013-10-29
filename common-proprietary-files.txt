@@ -3,8 +3,6 @@ bin/akmd
 bin/ks
 bin/mm-qcamera-daemon
 bin/mpdecision
-bin/netmgrd
-bin/qmuxd
 bin/thermald
 
 # Configuration files
@@ -189,24 +187,7 @@ etc/firmware/tzapps.b02
 etc/firmware/tzapps.b03
 etc/firmware/tzapps.mdt
 
-# Qualcomm/HTC common libs
-lib/libdiag.so
-lib/libdsi_netctrl.so
-lib/libdsutils.so
-lib/libidl.so
-lib/libqcci_legacy.so
-lib/libqdi.so
-lib/libqdp.so
-lib/libqmi.so
-lib/libqmi_cci.so
-lib/libqmi_client_qmux.so
-lib/libqmi_common_so.so
-lib/libqmi_csi.so
-lib/libqmi_encdec.so
-lib/libqmiservices.so
-
-# Radio
-lib/libnetmgr.so
+# Qualcomm extra
 lib/libqc-opt.so
 
 # Sensors
