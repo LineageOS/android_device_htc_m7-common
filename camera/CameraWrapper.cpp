@@ -35,6 +35,7 @@
 #include <camera/CameraParameters.h>
 
 const char KEY_VIDEO_HDR[] = "video-hdr";
+const char KEY_VIDEO_HDR_VALUES[] = "video-hdr-values";
 
 static android::Mutex gCameraWrapperLock;
 static camera_module_t *gVendorModule = 0;
@@ -94,57 +95,79 @@ static int check_vendor_module()
 
 static char *camera_fixup_getparams(int id, const char *settings)
 {
-    const char *recordingHint = "false";
+    int rotation = 0;
     const char *captureMode = "normal";
-    const char *rotation = "0";
-    const char *videoHDR = "false";
+    const char *videoHdr = "false";
 
     android::CameraParameters params;
     params.unflatten(android::String8(settings));
 
-    if (params.get(android::CameraParameters::KEY_RECORDING_HINT))
-        recordingHint = params.get(android::CameraParameters::KEY_RECORDING_HINT);
-    if (params.get(android::CameraParameters::KEY_CAPTURE_MODE))
-        captureMode = params.get(android::CameraParameters::KEY_CAPTURE_MODE);
-    if (params.get(android::CameraParameters::KEY_ROTATION))
-        rotation = params.get(android::CameraParameters::KEY_ROTATION);
-    if (params.get(KEY_VIDEO_HDR))
-        videoHDR = params.get(KEY_VIDEO_HDR);
+    ALOGV("%s: original parameters:", __FUNCTION__);
+    params.dump();
 
-    /* Face detection */
+    if (params.get(android::CameraParameters::KEY_CAPTURE_MODE)) {
+        captureMode = params.get(android::CameraParameters::KEY_CAPTURE_MODE);
+    }
+
+    if (params.get(android::CameraParameters::KEY_ROTATION)) {
+        rotation = atoi(params.get(android::CameraParameters::KEY_ROTATION));
+    }
+
+    if (params.get(KEY_VIDEO_HDR)) {
+        videoHdr = params.get(KEY_VIDEO_HDR);
+    }
+
+    /* Disable face detection */
     params.set(android::CameraParameters::KEY_MAX_NUM_DETECTED_FACES_HW, "0");
     params.set(android::CameraParameters::KEY_MAX_NUM_DETECTED_FACES_SW, "0");
 
-    /* Hardware HDR */
-    if (strcmp(captureMode, "hdr") == 0) {
-        ALOGI("Scene-Mode: HDR.");
-        params.set(android::CameraParameters::KEY_SCENE_MODE, "hdr");
-    }
+    /* Advertise video HDR values */
+    params.set(KEY_VIDEO_HDR_VALUES, "off,on");
 
-    /* Video HDR */
-    if(strcmp(videoHDR, "true") == 0)
+    /* Fix video HDR values */
+    if (!strcmp(videoHdr, "true")) {
         params.set(KEY_VIDEO_HDR, "on");
-    else if(strcmp(videoHDR, "false") == 0)
+    }
+    if (!strcmp(videoHdr, "false")) {
         params.set(KEY_VIDEO_HDR, "off");
-
-    /* Back Camera */
-    if (id == 0) {
-        /* Photo Mode */
-        if (strcmp(recordingHint, "false") == 0) {
-            params.set(android::CameraParameters::KEY_SUPPORTED_SCENE_MODES, "off,auto,action,portrait,landscape,night,night-portrait,theatre,beach,snow,sunset,steadyphoto,fireworks,sports,party,candlelight,backlight,flowers,AR,text,hdr");
-        }
-        params.set(android::CameraParameters::KEY_FOCAL_LENGTH, "3.82");
-        params.set(android::CameraParameters::KEY_HORIZONTAL_VIEW_ANGLE, "69.6");
-        params.set(android::CameraParameters::KEY_VERTICAL_VIEW_ANGLE, "43.0");
     }
 
     /* Fix rotation missmatch */
-    if (strcmp(rotation, "90") == 0)
-        params.set(android::CameraParameters::KEY_ROTATION, "0");
-    else if(strcmp(rotation, "180") == 0)
-        params.set(android::CameraParameters::KEY_ROTATION, "90");
-    else if(strcmp(rotation, "270") == 0)
-        params.set(android::CameraParameters::KEY_ROTATION, "180");
+    switch (rotation) {
+        case 90:
+            params.set(android::CameraParameters::KEY_ROTATION, "0");
+            break;
+        case 180:
+            params.set(android::CameraParameters::KEY_ROTATION, "90");
+            break;
+        case 270:
+            params.set(android::CameraParameters::KEY_ROTATION, "180");
+            break;
+        default:
+            break;
+    }
+
+    /* Set HDR mode */
+    if (!strcmp(captureMode, "hdr")) {
+        params.set(android::CameraParameters::KEY_SCENE_MODE,
+                android::CameraParameters::SCENE_MODE_HDR);
+    }
+
+    if (id == 0) {
+        /* Set sensor parameters */
+        params.set(android::CameraParameters::KEY_FOCAL_LENGTH, "3.82");
+        params.set(android::CameraParameters::KEY_HORIZONTAL_VIEW_ANGLE, "69.6");
+        params.set(android::CameraParameters::KEY_VERTICAL_VIEW_ANGLE, "43.0");
+
+        /* Set supported scene modes */
+        if (params.get(android::CameraParameters::KEY_SUPPORTED_SCENE_MODES)) {
+            params.set(android::CameraParameters::KEY_SUPPORTED_SCENE_MODES,
+                    "off,auto,action,portrait,landscape,night,night-portrait,theatre,beach,snow,sunset,steadyphoto,fireworks,sports,party,candlelight,backlight,flowers,AR,text,hdr");
+        }
+    }
+
+    ALOGV("%s: fixed parameters:", __FUNCTION__);
+    params.dump();
 
     android::String8 strParams = params.flatten();
     char *ret = strdup(strParams.string());
@@ -154,72 +177,78 @@ static char *camera_fixup_getparams(int id, const char *settings)
 
 static char *camera_fixup_setparams(int id, const char *settings)
 {
+    bool isVideo = false;
     const char *previewSize = "0x0";
-    const char *recordingHint = "false";
     const char *sceneMode = "auto";
-    const char *videoHDR = "false";
+    const char *videoHdr = "false";
 
     android::CameraParameters params;
     params.unflatten(android::String8(settings));
 
-    // fix params here
-    if (params.get(android::CameraParameters::KEY_PREVIEW_SIZE))
-        previewSize = params.get(android::CameraParameters::KEY_PREVIEW_SIZE);
-    if (params.get(android::CameraParameters::KEY_RECORDING_HINT))
-        recordingHint = params.get(android::CameraParameters::KEY_RECORDING_HINT);
-    if (params.get(android::CameraParameters::KEY_SCENE_MODE))
-        sceneMode = params.get(android::CameraParameters::KEY_SCENE_MODE);
-    if (params.get(KEY_VIDEO_HDR))
-        videoHDR = params.get(KEY_VIDEO_HDR);
+    ALOGV("%s: original parameters:", __FUNCTION__);
+    params.dump();
 
-    params.set(android::CameraParameters::KEY_GPU_EFFECT, "0_bypass"); // Bypass
+    if (params.get(android::CameraParameters::KEY_RECORDING_HINT)) {
+        isVideo = !strcmp(params.get(android::CameraParameters::KEY_RECORDING_HINT), "true");
+    }
+
+    if (params.get(android::CameraParameters::KEY_PREVIEW_SIZE)) {
+        previewSize = params.get(android::CameraParameters::KEY_PREVIEW_SIZE);
+    }
+
+    if (params.get(android::CameraParameters::KEY_SCENE_MODE)) {
+        sceneMode = params.get(android::CameraParameters::KEY_SCENE_MODE);
+    }
+
+    if (params.get(KEY_VIDEO_HDR)) {
+        videoHdr = params.get(KEY_VIDEO_HDR);
+    }
+
+    /* Disable GPU effect */
+    params.set(android::CameraParameters::KEY_GPU_EFFECT, "0_bypass");
     params.set(android::CameraParameters::KEY_GPU_EFFECT_PARAM_0, "0,0,0,0");
     params.set(android::CameraParameters::KEY_GPU_EFFECT_PARAM_1, "0,0,0,0");
     params.set(android::CameraParameters::KEY_GPU_EFFECT_PARAM_2, "");
     params.set(android::CameraParameters::KEY_GPU_EFFECT_PARAM_3, "0,0,0,0");
 
-    /* Face detection */
+    /* Disable face detection */
     params.set(android::CameraParameters::KEY_MAX_NUM_DETECTED_FACES_HW, "0");
     params.set(android::CameraParameters::KEY_MAX_NUM_DETECTED_FACES_SW, "0");
 
-    /* Photo Mode */
-    if (strcmp(recordingHint, "false") == 0) {
-        /* Back Camera */
-        if (id == 0) {
-            params.set(android::CameraParameters::KEY_CONTIBURST_TYPE, "unlimited");
-            params.set(android::CameraParameters::KEY_OIS_SUPPORT, "false");
-            params.set(android::CameraParameters::KEY_OIS_MODE, "off");
-
-            /* Hardware HDR */
-            if (strcmp(sceneMode, "hdr") == 0) {
-                ALOGI("Capture-Mode: HDR.");
-                params.set(android::CameraParameters::KEY_SCENE_MODE, "off");
-                params.set(android::CameraParameters::KEY_CAPTURE_MODE, "hdr");
-            } else {
-                ALOGI("Capture-Mode: Normal.");
-                params.set(android::CameraParameters::KEY_CAPTURE_MODE, "normal");
-
-                /* ZSL */
-                ALOGI("ZSL-Mode: enabled");
-                params.set(android::CameraParameters::KEY_ZSL, "on");
-                params.set(android::CameraParameters::KEY_CAMERA_MODE, "1");
-            }
-        }
-    /* Video Mode */
-    } else if(strcmp(recordingHint, "true") == 0) {
-        /* For 1080p videosnapshot feature */
-        if(strcmp(previewSize, "1920x1088") == 0)
-            params.set(android::CameraParameters::KEY_PICTURE_SIZE, "1920x1088");
-    }
-
-    /* Video HDR */
-    if (strcmp(videoHDR, "on") == 0) {
-        ALOGI("Video-HDR: enabled");
+    /* Fix video HDR values */
+    if (!strcmp(videoHdr, "on")) {
         params.set(KEY_VIDEO_HDR, "true");
-    } else if(strcmp(videoHDR, "off") == 0) {
-        ALOGI("Video-HDR: disabled");
+    }
+    if (!strcmp(videoHdr, "off")) {
         params.set(KEY_VIDEO_HDR, "false");
     }
+
+    if (!isVideo && id == 0) {
+        /* Disable OIS, set continuous burst to prevent crash */
+        params.set(android::CameraParameters::KEY_CONTIBURST_TYPE, "unlimited");
+        params.set(android::CameraParameters::KEY_OIS_SUPPORT, "false");
+        params.set(android::CameraParameters::KEY_OIS_MODE, "off");
+
+        /* Enable HDR */
+        if (!strcmp(sceneMode, android::CameraParameters::SCENE_MODE_HDR)) {
+            params.set(android::CameraParameters::KEY_SCENE_MODE, "off");
+            params.set(android::CameraParameters::KEY_CAPTURE_MODE, "hdr");
+        } else {
+            params.set(android::CameraParameters::KEY_CAPTURE_MODE, "normal");
+            params.set(android::CameraParameters::KEY_ZSL, "on");
+            params.set(android::CameraParameters::KEY_CAMERA_MODE, "1");
+        }
+    }
+
+    /* Fix 1080p video snapshot size */
+    if (isVideo) {
+        if (!strcmp(previewSize, "1920x1088")) {
+            params.set(android::CameraParameters::KEY_PICTURE_SIZE, "1920x1088");
+        }
+    }
+
+    ALOGV("%s: fixed parameters:", __FUNCTION__);
+    params.dump();
 
     android::String8 strParams = params.flatten();
     char *ret = strdup(strParams.string());
