@@ -25,10 +25,12 @@ LINEEND=" \\"
 COUNT=`wc -l device-proprietary-files.txt | awk {'print $1'}`
 DISM=`egrep -c '(^#|^$)' device-proprietary-files.txt`
 COUNT=`expr $COUNT - $DISM`
-for FILE in `egrep -v '(^#|^$)' ../$DEVICE/device-proprietary-files.txt`; do
-  COUNT=`expr $COUNT - 1`
-  echo "        $OUTDIR/proprietary/$FILE:/system/$FILE$LINEEND" >> $MAKEFILE
-done
+if [ -f ../$DEVICE/device-proprietary-files.txt ]; then
+  for FILE in `egrep -v '(^#|^$)' ../$DEVICE/device-proprietary-files.txt`; do
+    COUNT=`expr $COUNT - 1`
+    echo "        $OUTDIR/proprietary/$FILE:/system/$FILE$LINEEND" >> $MAKEFILE
+  done
+fi
 
 LINEEND=" \\"
 COUNT=`wc -l ../m7-common/proprietary-files.txt | awk {'print $1'}`
