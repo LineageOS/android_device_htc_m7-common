@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a4dcd0f_1a8d6c31",
+        "filename": "common-proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2013-10-30T06:28:56Z",
+      "side": 0,
+      "message": "bring this whole section over, including libidl.so",
+      "revId": "9f14ecef79a9be8a707bdfadf23080c32e25694c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
