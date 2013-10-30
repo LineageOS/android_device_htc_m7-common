@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a4dcd0f_9a517c65",
+        "filename": "m7-common.mk",
+        "patchSetId": 7
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2013-10-30T12:08:57Z",
+      "side": 1,
+      "message": "What are these still doing here?",
+      "revId": "7c28ca912afb3fb5e69e01c2a515ff289c86c2ba",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
