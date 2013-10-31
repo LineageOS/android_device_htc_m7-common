@@ -118,6 +118,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf
 
+# IR
+PRODUCT_PACKAGES += \
+    CIRModule
+
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8960
