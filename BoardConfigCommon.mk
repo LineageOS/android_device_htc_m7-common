@@ -59,6 +59,9 @@ COMMON_GLOBAL_CFLAGS += -DHTC_CAMERA_HARDWARE
 # Graphics
 TARGET_DISPLAY_INSECURE_MM_HEAP := true
 
+# IR
+TARGET_ADDITIONAL_BOOTCLASSPATH := /system/framework/htcirlibs.jar
+
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
