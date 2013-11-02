@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a4dcd0f_8e961e93",
+        "filename": "dsp/snd_soc_msm/snd_soc_msm_2x_Fusion3",
+        "patchSetId": 1
+      },
+      "lineNbr": 1381,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2013-11-02T07:17:59Z",
+      "side": 0,
+      "message": "This looks a little bit funny to me even though it makes sense, although Voice Speaker can only ever be active for Voice Call use cases anyway.",
+      "revId": "db2128f469e293e4167e06360164f472b7f37aa0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
