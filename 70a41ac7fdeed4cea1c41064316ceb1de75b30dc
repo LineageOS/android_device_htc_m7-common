@@ -16,6 +16,24 @@
       "revId": "70a41ac7fdeed4cea1c41064316ceb1de75b30dc",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a4dcd0f_4eb9f62d",
+        "filename": "dsp/snd_soc_msm/snd_soc_msm_2x_Fusion3",
+        "patchSetId": 1
+      },
+      "lineNbr": 607,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2013-11-02T07:01:59Z",
+      "side": 1,
+      "message": "It\u0027s true; it was included for completeness sake.  Will remove in patch set 2.",
+      "parentUuid": "1a4dcd0f_2ea02af4",
+      "revId": "70a41ac7fdeed4cea1c41064316ceb1de75b30dc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
