@@ -86,6 +86,15 @@ WIFI_DRIVER_MODULE_ARG           := "firmware_path=/system/etc/firmware/fw_bcm43
 WIFI_DRIVER_MODULE_AP_ARG        := "firmware_path=/system/etc/firmware/fw_bcm4335_apsta_b0.bin nvram_path=/system/etc/calibration"
 WIFI_BAND                        := 802_11_ABG
 
+# SELinux
+BOARD_SEPOLICY_DIRS := \
+    device/htc/m7-common/sepolicy
+
+BOARD_SEPOLICY_UNION := \
+    app.te \
+    device.te \
+    file_contexts
+
 # Filesystem
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776704
