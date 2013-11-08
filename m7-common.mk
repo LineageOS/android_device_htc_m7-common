@@ -163,7 +163,7 @@ PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp,adb
+    persist.sys.usb.config=mtp
 
 # Common build properties
 PRODUCT_PROPERTY_OVERRIDES += \
