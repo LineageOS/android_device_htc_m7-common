@@ -124,7 +124,6 @@ lib/libmmcamera_rawchipproc.so
 lib/libmmcamera_rubik.so
 lib/libmmcamera_statsproc31.so
 lib/libmmcamera_wavelet_lib.so
-lib/libmm-color-convertor.so
 lib/libmmipl.so
 lib/libmmjpeg.so
 lib/libmmstillomx.so
@@ -176,6 +175,10 @@ vendor/firmware/keymaster/keymaster.b01
 vendor/firmware/keymaster/keymaster.b02
 vendor/firmware/keymaster/keymaster.b03
 vendor/firmware/keymaster/keymaster.mdt
+
+# Media
+lib/libI420colorconvert.so
+lib/libmm-color-convertor.so
 
 # Modem firmware
 etc/firmware/hcheck.b00
