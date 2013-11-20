@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2009 The Android Open Source Project
+<!-- Copyright (C) 2013 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,10 +14,9 @@
      limitations under the License.
 -->
 
-<!-- device-specific phone app resources. -->
+<!-- Phone app resources that may need to be customized
+     for different hardware or product builds. -->
 <resources>
-
     <!-- Flag indicating if the phone is a world phone -->
     <bool name="world_phone">true</bool>
-
 </resources>
