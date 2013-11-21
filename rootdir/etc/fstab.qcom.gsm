@@ -12,4 +12,4 @@
 /dev/block/mmcblk0p16	/firmware/q6	vfat	ro,fmask=0000,dmask=0000,shortname=lower		wait
 
 # USB storage
-/devices/platform/msm_hsusb_host/usb	/storage/usbdisk	auto	defaults	voldmanaged=usbdisk:auto
+/devices/platform/msm_hsusb_host/usb	auto	auto	defaults	voldmanaged=usbdisk:auto
