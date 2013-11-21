@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a29b11f_77da8a7a",
+        "filename": "overlay-cdma/packages/apps/services/Telephony/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 3556
+      },
+      "writtenOn": "2013-11-21T19:13:18Z",
+      "side": 1,
+      "message": "glabal? also what is the last comment for?",
+      "revId": "e59d810791dc57f21f2bcf4c214bf536ba8e1539",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
