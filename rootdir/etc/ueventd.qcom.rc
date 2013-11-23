@@ -138,6 +138,3 @@
 
 # Bluetooth
 /dev/btlock               0600  bluetooth    bluetooth
-
-# keystore
-/dev/qseecom              0660  system       drmrpc
