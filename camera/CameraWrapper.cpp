@@ -103,7 +103,9 @@ static char *camera_fixup_getparams(int id, const char *settings)
     params.unflatten(android::String8(settings));
 
     ALOGV("%s: original parameters:", __FUNCTION__);
+#if !LOG_NDEBUG
     params.dump();
+#endif
 
     if (params.get(android::CameraParameters::KEY_CAPTURE_MODE)) {
         captureMode = params.get(android::CameraParameters::KEY_CAPTURE_MODE);
@@ -167,7 +169,9 @@ static char *camera_fixup_getparams(int id, const char *settings)
     }
 
     ALOGV("%s: fixed parameters:", __FUNCTION__);
+#if !LOG_NDEBUG
     params.dump();
+#endif
 
     android::String8 strParams = params.flatten();
     char *ret = strdup(strParams.string());
@@ -186,7 +190,9 @@ static char *camera_fixup_setparams(int id, const char *settings)
     params.unflatten(android::String8(settings));
 
     ALOGV("%s: original parameters:", __FUNCTION__);
+#if !LOG_NDEBUG
     params.dump();
+#endif
 
     if (params.get(android::CameraParameters::KEY_RECORDING_HINT)) {
         isVideo = !strcmp(params.get(android::CameraParameters::KEY_RECORDING_HINT), "true");
@@ -248,7 +254,9 @@ static char *camera_fixup_setparams(int id, const char *settings)
     }
 
     ALOGV("%s: fixed parameters:", __FUNCTION__);
+#if !LOG_NDEBUG
     params.dump();
+#endif
 
     android::String8 strParams = params.flatten();
     char *ret = strdup(strParams.string());
