@@ -140,17 +140,19 @@ lib/libgeofence.so
 lib/libloc_api_v02.so
 
 # Graphics
-lib/egl/eglsubAndroid.so
-lib/egl/libEGL_adreno200.so
-lib/egl/libGLESv1_CM_adreno200.so
-lib/egl/libGLESv2_adreno200.so
-lib/egl/libq3dtools_adreno200.so
-lib/libc2d2_a3xx.so
-lib/libc2d2_z180.so
-lib/libC2D2.so
-lib/libgsl.so
-lib/libllvm-a3xx.so
-lib/libsc-a3xx.so
+vendor/lib/egl/eglsubAndroid.so
+vendor/lib/egl/libEGL_adreno.so
+vendor/lib/egl/libGLESv1_CM_adreno.so
+vendor/lib/egl/libGLESv2_adreno.so
+vendor/lib/egl/libGLESv2S3D_adreno.so
+vendor/lib/egl/libq3dtools_adreno.so
+vendor/lib/libadreno_utils.so
+vendor/lib/libc2d2_a3xx.so
+vendor/lib/libc2d2_z180.so
+vendor/lib/libC2D2.so
+vendor/lib/libgsl.so
+vendor/lib/libllvm-a3xx.so
+vendor/lib/libsc-a3xx.so
 
 # Graphics firmware
 etc/firmware/a300_pfp.fw
@@ -207,7 +209,7 @@ vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
 
 # WLAN firmware
-etc/firmware/BCM4335B0_002.001.006.0191.0194.hcd
+etc/firmware/BCM4335B0_002.001.006.0296.0297.hcd
 etc/firmware/fw_bcm4335_apsta_b0.bin
 etc/firmware/fw_bcm4335_b0.bin
 etc/firmware/fw_bcm4335_p2p_b0.bin
