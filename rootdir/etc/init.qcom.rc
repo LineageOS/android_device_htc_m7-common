@@ -276,6 +276,9 @@ on post-fs-data
     chown system system /data/data
     chmod 0771 /data/data
 
+    # Mpdecision state
+    mkdir /data/mpdecision 0660 system system
+
     # If there is no fs-post-data action in the init.<device>.rc file, you
     # must uncomment this line, otherwise encrypted filesystems
     # won't work.

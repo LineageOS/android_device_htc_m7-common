@@ -172,7 +172,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.cam.hw.version=m7 \
     ro.opengles.version=196608 \
     ro.telephony.call_ring.multiple=false \
-    ro.telephony.call_ring.delay=3000
+    ro.telephony.call_ring.delay=3000 \
+    ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
 
 # Set build date
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0

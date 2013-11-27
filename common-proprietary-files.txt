@@ -190,7 +190,7 @@ etc/firmware/tzapps.b03
 etc/firmware/tzapps.mdt
 
 # Qualcomm extra
-lib/libqc-opt.so
+vendor/lib/libqc-opt.so
 
 # Sensors
 lib/hw/sensors.default.so
