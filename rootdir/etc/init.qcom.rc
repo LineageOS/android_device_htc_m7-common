@@ -279,6 +279,8 @@ on post-fs-data
     # Mpdecision state
     mkdir /data/mpdecision 0660 system system
 
+    setprop qcom.audio.init complete
+
     # If there is no fs-post-data action in the init.<device>.rc file, you
     # must uncomment this line, otherwise encrypted filesystems
     # won't work.
