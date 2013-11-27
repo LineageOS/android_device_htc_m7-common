@@ -120,5 +120,8 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Charge mode
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
 
+# Keystore
+TARGET_NO_QSEECOM_SET_BANDWIDTH := true
+
 # inherit from the proprietary version
 -include vendor/htc/m7-common/BoardConfigVendor.mk
