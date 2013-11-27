@@ -167,6 +167,7 @@ etc/firmware/vidc_1080p.fw
 # Irda
 bin/cir_fw_update
 etc/cir.img
+lib/hw/consumerir.default.so
 
 # Media
 lib/libI420colorconvert.so
