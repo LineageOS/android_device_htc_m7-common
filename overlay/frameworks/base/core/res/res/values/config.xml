@@ -249,4 +249,7 @@
 
     <!-- Disable lockscreen translucent decor by default -->
     <bool name="config_enableLockScreenTranslucentDecor">true</bool>
+
+    <!-- Flag indicating if the speed up audio on mt call code should be executed -->
+    <bool name="config_speed_up_audio_on_mt_calls">false</bool>
 </resources>
