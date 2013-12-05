@@ -210,13 +210,6 @@ static char *camera_fixup_setparams(int id, const char *settings)
         videoHdr = params.get(KEY_VIDEO_HDR);
     }
 
-    /* Disable GPU effect */
-    params.set(android::CameraParameters::KEY_GPU_EFFECT, "0_bypass");
-    params.set(android::CameraParameters::KEY_GPU_EFFECT_PARAM_0, "0,0,0,0");
-    params.set(android::CameraParameters::KEY_GPU_EFFECT_PARAM_1, "0,0,0,0");
-    params.set(android::CameraParameters::KEY_GPU_EFFECT_PARAM_2, "");
-    params.set(android::CameraParameters::KEY_GPU_EFFECT_PARAM_3, "0,0,0,0");
-
     /* Disable face detection */
     params.set(android::CameraParameters::KEY_MAX_NUM_DETECTED_FACES_HW, "0");
     params.set(android::CameraParameters::KEY_MAX_NUM_DETECTED_FACES_SW, "0");
