@@ -73,11 +73,11 @@ case "$target" in
         echo "ondemand" > /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
         echo "ondemand" > /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
         echo 1 > /dev/cpuctl/apps/cpu.notify_on_migrate
+        echo 384000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+        echo 384000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
+        echo 384000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
+        echo 384000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
         #echo 1 > /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
-        # echo 384000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-        # echo 384000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
-        # echo 384000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
-        # echo 384000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
         # chown system /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
         # chown system /sys/devices/system/cpu/cpufreq/interactive/boost
         # chown system /sys/devices/system/cpu/cpufreq/interactive/boostpulse
@@ -89,8 +89,8 @@ case "$target" in
         # chown system /sys/devices/system/cpu/cpufreq/interactive/target_loads
         # chown system /sys/devices/system/cpu/cpufreq/interactive/timer_rate
         # chown system /sys/devices/system/cpu/cpufreq/interactive/timer_slack
-        # chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-        # chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+         chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+         chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
          chown system /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
          chown system /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
          chown system /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq
