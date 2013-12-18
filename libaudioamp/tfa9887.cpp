@@ -19,6 +19,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include <pthread.h>
 
 #include <cutils/log.h>
 #include <sys/ioctl.h>
@@ -34,6 +35,7 @@
 static bool tfa9887_initialized = false;
 static bool tfa9887l_initialized = false;
 static Tfa9887_Mode_t tfa9887_mode = Tfa9887_Num_Modes;
+static pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 
 /* Helper functions */
 
@@ -852,7 +854,7 @@ static Tfa9887_Mode_t tfa9887_get_mode(audio_mode_t mode) {
 
 /* Public functions */
 
-int tfa9887_set_mode(audio_mode_t mode) {
+static int tfa9887_set_mode_locked(audio_mode_t mode) {
     unsigned int reg_value[2];
     int tfa9887_fd;
     int tfa9887l_fd;
@@ -958,6 +960,16 @@ set_mode_unlock:
 
     close(tfa9887_fd);
     close(tfa9887l_fd);
+
+    return ret;
+}
+
+int tfa9887_set_mode(audio_mode_t mode) {
+    int ret;
+
+    pthread_mutex_lock(&lock);
+    ret = tfa9887_set_mode_locked(mode);
+    pthread_mutex_unlock(&lock);
 
     return ret;
 }
