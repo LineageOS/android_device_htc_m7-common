@@ -19,6 +19,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include <pthread.h>
 
 #include <cutils/log.h>
 #include <sys/ioctl.h>
@@ -34,6 +35,7 @@
 static bool tfa9887_initialized = false;
 static bool tfa9887l_initialized = false;
 static Tfa9887_Mode_t tfa9887_mode = Tfa9887_Num_Modes;
+static pthread_mutex_t tfa9887_mode_lock = PTHREAD_MUTEX_INITIALIZER;
 
 /* Helper functions */
 
@@ -73,6 +75,22 @@ static void bytes2data(const uint8_t bytes[], int num_bytes,
         }
         data[i] = d;
     }
+}
+
+static Tfa9887_Mode_t get_tfa9887_mode(void) {
+    Tfa9887_Mode_t ret;
+
+    pthread_mutex_lock(&tfa9887_mode_lock);
+    ret = tfa9887_mode;
+    pthread_mutex_unlock(&tfa9887_mode_lock);
+
+    return ret;
+}
+
+static void set_tfa9887_mode(Tfa9887_Mode_t mode) {
+    pthread_mutex_lock(&tfa9887_mode_lock);
+    tfa9887_mode = mode;
+    pthread_mutex_unlock(&tfa9887_mode_lock);
 }
 
 static int tfa9887_read_reg(int fd, uint8_t reg, uint16_t *val) {
@@ -861,7 +879,7 @@ int tfa9887_set_mode(audio_mode_t mode) {
 
     dsp_mode = tfa9887_get_mode(mode);
     if (tfa9887_initialized && tfa9887l_initialized &&
-            dsp_mode == tfa9887_mode) {
+            dsp_mode == get_tfa9887_mode()) {
         ALOGI("No mode change needed, already mode %d", dsp_mode);
         return 0;
     }
@@ -921,7 +939,7 @@ int tfa9887_set_mode(audio_mode_t mode) {
     }
 
     ALOGI("Set DSP mode to %d", dsp_mode);
-    tfa9887_mode = dsp_mode;
+    set_tfa9887_mode(dsp_mode);
 
     /* Enable DSP if necessary */
     reg_value[0] = 1;
