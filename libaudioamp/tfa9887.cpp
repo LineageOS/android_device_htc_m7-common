@@ -860,11 +860,6 @@ int tfa9887_set_mode(audio_mode_t mode) {
     Tfa9887_Mode_t dsp_mode;
 
     dsp_mode = tfa9887_get_mode(mode);
-    if (tfa9887_initialized && tfa9887l_initialized &&
-            dsp_mode == tfa9887_mode) {
-        ALOGI("No mode change needed, already mode %d", dsp_mode);
-        return 0;
-    }
 
     /* Open the amplifier devices */
     if ((tfa9887_fd = open(TFA9887_DEVICE, O_RDWR)) < 0) {
@@ -885,6 +880,12 @@ int tfa9887_set_mode(audio_mode_t mode) {
     }
     if ((ret = ioctl(tfa9887l_fd, TPA9887_KERNEL_LOCK, &reg_value)) != 0) {
         ALOGE("ioctl %d failed. ret = %d", TPA9887_ENABLE_DSP, ret);
+        goto set_mode_unlock;
+    }
+
+    if (tfa9887_initialized && tfa9887l_initialized &&
+            dsp_mode == tfa9887_mode) {
+        ALOGI("No mode change needed, already mode %d", dsp_mode);
         goto set_mode_unlock;
     }
 
