@@ -77,7 +77,7 @@ case "$target" in
         echo 384000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
         echo 384000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
         echo 384000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
-        #echo 1 > /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
+        # echo 1 > /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
         # chown system /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
         # chown system /sys/devices/system/cpu/cpufreq/interactive/boost
         # chown system /sys/devices/system/cpu/cpufreq/interactive/boostpulse
