@@ -89,23 +89,23 @@ case "$target" in
         # chown system /sys/devices/system/cpu/cpufreq/interactive/target_loads
         # chown system /sys/devices/system/cpu/cpufreq/interactive/timer_rate
         # chown system /sys/devices/system/cpu/cpufreq/interactive/timer_slack
-         chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-         chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-         chown system /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
-         chown system /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
-         chown system /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq
-         chown system /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
-         chown system /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq
-         chown system /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
-     echo 1 > /sys/module/msm_thermal/core_control/enabled
-         chown root.system /sys/devices/system/cpu/mfreq
-         chmod 220 /sys/devices/system/cpu/mfreq
-         chown root.system /sys/devices/system/cpu/cpu1/online
-         chown root.system /sys/devices/system/cpu/cpu2/online
-         chown root.system /sys/devices/system/cpu/cpu3/online
-         chmod 664 /sys/devices/system/cpu/cpu1/online
-         chmod 664 /sys/devices/system/cpu/cpu2/online
-         chmod 664 /sys/devices/system/cpu/cpu3/online
+        chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+        chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+        chown system /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
+        chown system /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
+        chown system /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq
+        chown system /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
+        chown system /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq
+        chown system /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
+        echo 1 > /sys/module/msm_thermal/core_control/enabled
+        chown root.system /sys/devices/system/cpu/mfreq
+        chmod 220 /sys/devices/system/cpu/mfreq
+        chown root.system /sys/devices/system/cpu/cpu1/online
+        chown root.system /sys/devices/system/cpu/cpu2/online
+        chown root.system /sys/devices/system/cpu/cpu3/online
+        chmod 664 /sys/devices/system/cpu/cpu1/online
+        chmod 664 /sys/devices/system/cpu/cpu2/online
+        chmod 664 /sys/devices/system/cpu/cpu3/online
         chmod 664 /sys/power/pnpmgr/apps/media_mode
         chown media.system /sys/power/pnpmgr/apps/media_mode
         chown system /sys/power/pnpmgr/apps/activity_trigger
@@ -113,17 +113,17 @@ case "$target" in
         chown system /sys/power/launch_event
         chown system /sys/power/powersave
         chown system /sys/power/cpufreq_ceiling
-	chown system /sys/power/cpunum_floor
-	chown system /sys/power/cpunum_ceiling
-	echo 1 > /sys/module/rmnet_usb/parameters/rmnet_data_init
-	# Allow QMUX daemon to assign port open wait time
-	chown radio.radio /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
+        chown system /sys/power/cpunum_floor
+        chown system /sys/power/cpunum_ceiling
+        echo 1 > /sys/module/rmnet_usb/parameters/rmnet_data_init
+        # Allow QMUX daemon to assign port open wait time
+        chown radio.radio /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
     ;;
 esac
 
 # Post-setup services
 case "$target" in
     "msm8960")
-	start adaptive
+        start adaptive
     ;;
 esac
