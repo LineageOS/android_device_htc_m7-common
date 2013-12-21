@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a7e1126_a06d22ce",
+        "filename": "overlay/packages/apps/Settings/res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2013-12-21T12:51:46Z",
+      "side": 1,
+      "message": "This value doesn\u0027t exist anymore.",
+      "revId": "347b51140d321d39726777112ae92f437507f3d2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
