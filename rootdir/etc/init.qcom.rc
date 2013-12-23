@@ -1,5 +1,9 @@
 import init.qcom.usb.rc
 
+on early-init
+    mount debugfs /sys/kernel/debug /sys/kernel/debug
+    chown system system /sys/kernel/debug/kgsl/proc
+
 on init
     mkdir /mnt/shell/emulated 0700 shell shell
     mkdir /storage/emulated 0555 root root
@@ -203,22 +207,30 @@ on fs
 
     mount_all ./remount.qcom
 
+    setprop ro.crypto.fuse_sdcard true
+
 on post-fs-data
     mkdir /data/audio 0775 media audio
     chmod 2775 /data/audio
     mkdir /data/radio 0770 radio radio
     chmod 2770 /data/radio
-    mkdir /dev/socket/qmux_radio 0770 radio radio
-    chmod 2770 /dev/socket/qmux_radio
-    mkdir /dev/socket/qmux_audio 0770 audio audio
-    chmod 2770 /dev/socket/qmux_audio
-    mkdir /dev/socket/qmux_bluetooth 0770 bluetooth bluetooth
-    chmod 2770 /dev/socket/qmux_bluetooth
-    mkdir /dev/socket/qmux_gps 0770 gps gps
-    chmod 2770 /dev/socket/qmux_gps
 
     # Mpdecision state
     mkdir /data/mpdecision 0660 system system
+
+    # GPS
+    mkdir /data/misc/location 0770 gps gps
+    mkdir /data/misc/location/mq 0770 gps gps
+    mkdir /data/misc/gpsone_d 0770 system gps
+
+    # Give system access to wpa_supplicant.conf for backup and restore
+    mkdir /data/misc/wifi/sockets 0770 wifi wifi
+    mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
+    mkdir /data/misc/dhcp 0770 wifi wifi
+    chown dhcp dhcp /data/misc/dhcp
+
+    # We will remap this as /mnt/sdcard with the sdcard fuse tool
+    mkdir /data/media 0770 media_rw media_rw
 
     setprop qcom.audio.init complete
 
@@ -229,20 +241,14 @@ on post-fs-data
     setprop vold.post_fs_data_done 1
 
 on boot
-    # mount debugfs for systrace
-    mount debugfs /sys/kernel/debug /sys/kernel/debug
-
-    # We will remap this as /mnt/sdcard with the sdcard fuse tool
-    mkdir /data/media 0775 media_rw media_rw
-    chown media_rw media_rw /data/media
-
-    setprop ro.crypto.fuse_sdcard true
-
-    # Give system access to wpa_supplicant.conf for backup and restore
-    mkdir /data/misc/wifi/sockets 0770 wifi wifi
-    mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
-    mkdir /data/misc/dhcp 0770 wifi wifi
-    chown dhcp dhcp /data/misc/dhcp
+    mkdir /dev/socket/qmux_radio 0770 radio radio
+    chmod 2770 /dev/socket/qmux_radio
+    mkdir /dev/socket/qmux_audio 0770 audio audio
+    chmod 2770 /dev/socket/qmux_audio
+    mkdir /dev/socket/qmux_bluetooth 0770 bluetooth bluetooth
+    chmod 2770 /dev/socket/qmux_bluetooth
+    mkdir /dev/socket/qmux_gps 0770 gps gps
+    chmod 2770 /dev/socket/qmux_gps
 
     start qcamerasvr
 
@@ -253,11 +259,6 @@ on boot
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
     chmod 0660 /sys/class/rfkill/rfkill0/state
-
-    # GPS
-    mkdir /data/misc/location 0770 gps gps
-    mkdir /data/misc/location/mq 0770 gps gps
-    mkdir /data/misc/gpsone_d 0770 system gps
 
     chown system system /sys/class/leds/green/brightness
     chown system system /sys/class/leds/green/blink
