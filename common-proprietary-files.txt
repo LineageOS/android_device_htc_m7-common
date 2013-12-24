@@ -73,7 +73,7 @@ lib/libaudcal.so
 lib/libcsd-client.so
 
 # Camera
-lib/hw/vendor-camera.msm8960.so
+lib/hw/camera.vendor.msm8960.so
 lib/libBeautyChat.so
 lib/libcameraasd.so
 lib/libcameraface.so
