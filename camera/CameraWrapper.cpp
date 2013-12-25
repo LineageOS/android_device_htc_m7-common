@@ -136,6 +136,9 @@ static char *camera_fixup_getparams(int id, const char *settings)
         params.set(KEY_VIDEO_HDR, "off");
     }
 
+    params.set("preview-frame-rate-mode", "frame-rate-fixed");
+    params.set(android::CameraParameters::KEY_PREVIEW_FPS_RANGE, "10000,60000");
+
     /* Fix rotation missmatch */
     switch (rotation) {
         case 90:
@@ -207,6 +210,10 @@ static char *camera_fixup_setparams(int id, const char *settings)
     /* Disable face detection */
     params.set(android::CameraParameters::KEY_MAX_NUM_DETECTED_FACES_HW, "0");
     params.set(android::CameraParameters::KEY_MAX_NUM_DETECTED_FACES_SW, "0");
+
+    /* Enable fixed fps mode */
+    params.set("preview-frame-rate-mode", "frame-rate-fixed");
+    params.set("preview-fps-range", "20000,60000");
 
     /* Fix video HDR values */
     if (!strcmp(videoHdr, "on")) {
