@@ -230,6 +230,11 @@ static char *camera_fixup_setparams(int id, const char *settings)
         }
     }
 
+    if (isVideo && id == 1) {
+        /* Front camera only supports infinity */
+        params.set(android::CameraParameters::KEY_FOCUS_MODE, "infinity");
+    }
+
 #if !LOG_NDEBUG
     ALOGV("%s: fixed parameters:", __FUNCTION__);
     params.dump();
