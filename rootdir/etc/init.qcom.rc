@@ -178,6 +178,27 @@ on fs
 
     mount_all ./fstab.qcom
 
+    mkdir /mnt/qcks 0700 root system
+    mount tmpfs tmpfs /mnt/qcks size=20m,mode=0750,gid=1000
+    mkdir /mnt/efs 0700 root system
+    mount tmpfs tmpfs /mnt/efs size=20m,mode=0750,gid=1000
+    mkdir /mnt/secdata 0755 system system
+    mount tmpfs tmpfs /mnt/secdata mode=0755,gid=1000
+
+    setprop ro.crypto.fuse_sdcard true
+
+on post-fs-data
+    # Create symbolic links to mount points outside of /data for qcks
+    symlink /mnt/qcks /data/qcks
+
+    # Create symbolic links to mount points outside of /data for efs
+    symlink /mnt/efs /data/efs
+
+    # Create mountpoint outside of /data for secure data to get encryption working
+    mkdir /data/secure 0755 system system
+    symlink /mnt/secdata /data/secure/data
+
+    # Tombstones
     mkdir /data/tombstones 0771 system system
     symlink /data/tombstones /tombstones
     mkdir /tombstones/mdm 0771 system system
@@ -185,31 +206,7 @@ on fs
     mkdir /tombstones/lpass 0771 system system
     mkdir /tombstones/dsps 0771 system system
 
-    # Create symbolic links to mount points outside of /data for qcks
-    mkdir /mnt/qcks 0700 root system
-    symlink /mnt/qcks /data/qcks
-    mount tmpfs tmpfs /mnt/qcks size=20m,mode=0750,gid=1000
-
-    # Create symbolic links to mount points outside of /data for efs
-    mkdir /mnt/efs 0700 root system
-    symlink /mnt/efs /data/efs
-    mount tmpfs tmpfs /mnt/efs size=20m,mode=0750,gid=1000
-
-    mkdir /data/secure 0755 system system
-    # Create mountpoint outside of /data for secure data to get encryption working
-    mkdir /mnt/secdata 0755 system system
-    symlink /mnt/secdata /data/secure/data
-    mount tmpfs tmpfs /mnt/secdata mode=0755,gid=1000
-
-    # Symlink firmwares
-    exec /system/bin/sh /init.qcom.firmware_links.sh /firmware/mdm/image /vendor/firmware "*.mbn *.img"
-    exec /system/bin/sh /init.qcom.firmware_links.sh /firmware/q6 /vendor/firmware "q6.*"
-
-    mount_all ./remount.qcom
-
-    setprop ro.crypto.fuse_sdcard true
-
-on post-fs-data
+    # QC audio/radio
     mkdir /data/audio 0775 media audio
     chmod 2775 /data/audio
     mkdir /data/radio 0770 radio radio
