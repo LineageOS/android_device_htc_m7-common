@@ -28,7 +28,8 @@ FIRMWARE_MDM_IMAGES := \
     dsp1.mbn dsp2.mbn dsp3.mbn \
     efs1.mbn efs2.mbn efs3.mbn \
     htc61.mbn htc62.mbn htc63.mbn htc64.mbn htc65.mbn \
-    htccdma.mbn htcnvbak.mbn htcrcust.mbn htcrfnv.mbn htcsmem.mbn htcssmem.mbn \
+    htccdma.mbn htccnv.mbn htcnvbak.mbn htcnvmfg.mbn \
+    htcrcust.mbn htcrfnv.mbn htcsmem.mbn htcssmem.mbn htcuserd.mbn \
     mdm_acdb.img \
     rpm.mbn \
     sbl1.mbn sbl1_82.mbn sbl1_92.mbn sbl1_96.mbn \
