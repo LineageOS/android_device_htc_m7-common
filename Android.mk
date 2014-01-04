@@ -27,13 +27,23 @@ FIRMWARE_MDM_IMAGES := \
     apps.mbn \
     dsp1.mbn dsp2.mbn dsp3.mbn \
     efs1.mbn efs2.mbn efs3.mbn \
-    htc61.mbn htc62.mbn htc63.mbn htc64.mbn htc65.mbn \
-    htccdma.mbn htccnv.mbn htcnvbak.mbn htcnvmfg.mbn \
-    htcrcust.mbn htcrfnv.mbn htcsmem.mbn htcssmem.mbn htcuserd.mbn \
+    htccdma.mbn htcrfnv.mbn htcssmem.mbn \
     mdm_acdb.img \
     rpm.mbn \
-    sbl1.mbn sbl1_82.mbn sbl1_92.mbn sbl1_96.mbn \
+    sbl1.mbn \
     sbl2.mbn
+
+ifneq ($filter m7att m7tmo m7ul,$(TARGET_DEVICE),)
+FIRMWARE_MDM_IMAGES += \
+    htc61.mbn htc62.mbn htc63.mbn htc64.mbn htc65.mbn \
+    htcnvbak.mbn htcrcust.mbn htcsmem.mbn \
+    sbl1_82.mbn sbl1_92.mbn sbl1_96.mbn
+endif
+
+ifneq ($filter m7spr m7vzw,$(TARGET_DEVICE),)
+FIRMWARE_MDM_IMAGES += \
+    htccnv.mbn htcnvmfg.mbn htcuserd.mbn
+endif
 
 FIRMWARE_MDM_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/,$(notdir $(FIRMWARE_MDM_IMAGES)))
 $(FIRMWARE_MDM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
