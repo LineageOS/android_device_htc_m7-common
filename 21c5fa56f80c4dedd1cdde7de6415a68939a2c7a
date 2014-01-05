@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a5ae5dd_4e6827bb",
+        "filename": "Android.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-01-05T09:37:07Z",
+      "side": 1,
+      "message": "$filter? Shouldn\u0027t this be:\nifneq ($(filter m7att m7tmo m7ul,$(TARGET_DEVICE)),)",
+      "revId": "21c5fa56f80c4dedd1cdde7de6415a68939a2c7a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a5ae5dd_6e65e3df",
+        "filename": "Android.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-01-05T09:37:07Z",
+      "side": 1,
+      "message": "$filter? Shouldn\u0027t this be:\nifneq ($(filter m7spr m7vzw,$(TARGET_DEVICE)),)",
+      "revId": "21c5fa56f80c4dedd1cdde7de6415a68939a2c7a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
