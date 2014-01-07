@@ -1697,7 +1697,7 @@ SectionDevice
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX7 MUX':0:DEC9
 		'DEC9 MUX':0:DMIC4
-		'DEC9 Volume':2:64
+		'DEC9 Volume':2:5C
 		'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
@@ -1718,7 +1718,7 @@ SectionDevice
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX7 MUX':0:DEC9
 		'DEC9 MUX':0:DMIC4
-		'DEC9 Volume':2:64
+		'DEC9 Volume':2:5C
 		'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
