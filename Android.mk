@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-ifneq ($(filter m7att m7spr m7tmo m7ul m7vzw,$(TARGET_DEVICE)),)
+ifneq ($(filter m7 m7att m7spr m7tmo m7ul m7vzw,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
@@ -33,7 +33,7 @@ FIRMWARE_MDM_IMAGES := \
     sbl1.mbn \
     sbl2.mbn
 
-ifneq ($(filter m7att m7tmo m7ul,$(TARGET_DEVICE)),)
+ifneq ($(filter m7 m7att m7tmo m7ul,$(TARGET_DEVICE)),)
 FIRMWARE_MDM_IMAGES += \
     htc61.mbn htc62.mbn htc63.mbn htc64.mbn htc65.mbn \
     htcnvbak.mbn htcrcust.mbn htcsmem.mbn \
