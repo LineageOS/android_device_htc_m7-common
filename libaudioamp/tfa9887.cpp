@@ -902,7 +902,7 @@ int tfa9887_set_mode(audio_mode_t mode) {
         }
     }
     if (!tfa9887l_initialized) {
-        ret = tfa9887_init(tfa9887l_fd, TFA9887_DEFAULT_RATE, true);
+        ret = tfa9887_init(tfa9887l_fd, TFA9887_DEFAULT_RATE, false);
         if (ret != 0) {
             ALOGE("Failed to initialize tfa9887L, DSP not enabled");
             goto set_mode_unmute;
