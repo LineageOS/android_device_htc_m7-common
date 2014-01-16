@@ -50,62 +50,52 @@ case "$target" in
         echo 1 > /sys/devices/system/cpu/cpu1/online
         echo 1 > /sys/devices/system/cpu/cpu2/online
         echo 1 > /sys/devices/system/cpu/cpu3/online
-        echo "ondemand" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-        echo "ondemand" > /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
-        echo "ondemand" > /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
-        echo "ondemand" > /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
-        echo 50000 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
-        echo 90 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold
-        echo 1 > /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
-        echo 4 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
-        echo 10 > /sys/devices/system/cpu/cpufreq/ondemand/down_differential
-        echo 60 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_multi_core
-        echo 3 > /sys/devices/system/cpu/cpufreq/ondemand/down_differential_multi_core
-        echo 918000 > /sys/devices/system/cpu/cpufreq/ondemand/optimal_freq
-        echo 1026000 > /sys/devices/system/cpu/cpufreq/ondemand/sync_freq
-        echo 1134000 > /sys/devices/system/cpu/cpufreq/ondemand/input_boost
-        echo 80 > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_any_cpu_load
-        chown system /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
-        chown system /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
-        chown system /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
-        echo "ondemand" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-        echo "ondemand" > /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
-        echo "ondemand" > /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
-        echo "ondemand" > /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
-        echo 1 > /dev/cpuctl/apps/cpu.notify_on_migrate
-        echo 384000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-        echo 384000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
-        echo 384000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
-        echo 384000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
-        # echo 1 > /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/boost
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/boostpulse
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/boostpulse_duration
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/target_loads
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/timer_rate
-        # chown system /sys/devices/system/cpu/cpufreq/interactive/timer_slack
-        chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-        chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-        chown system /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
-        chown system /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
-        chown system /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq
-        chown system /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
-        chown system /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq
-        chown system /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
-        echo 1 > /sys/module/msm_thermal/core_control/enabled
-        chown root.system /sys/devices/system/cpu/mfreq
-        chmod 220 /sys/devices/system/cpu/mfreq
-        chown root.system /sys/devices/system/cpu/cpu1/online
-        chown root.system /sys/devices/system/cpu/cpu2/online
-        chown root.system /sys/devices/system/cpu/cpu3/online
-        chmod 664 /sys/devices/system/cpu/cpu1/online
-        chmod 664 /sys/devices/system/cpu/cpu2/online
-        chmod 664 /sys/devices/system/cpu/cpu3/online
+         echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+         echo "interactive" > /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
+         echo "interactive" > /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
+         echo "interactive" > /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
+         echo 40000 > /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
+         echo 1134000 > /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
+         echo 30000 > /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
+         echo 30000 > /sys/devices/system/cpu/cpufreq/interactive/timer_rate
+         echo 100000 > /sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor
+         echo 1 > /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
+         echo 20 > /sys/module/cpu_boost/parameters/boost_ms
+         echo 1566000 > /sys/module/cpu_boost/parameters/sync_threshold
+         echo 1134000 > /sys/module/cpu_boost/parameters/input_boost_freq
+         echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
+         echo 384000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+         echo 384000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
+         echo 384000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
+         echo 384000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
+         chown system /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
+         chown system /sys/devices/system/cpu/cpufreq/interactive/boost
+         chown system /sys/devices/system/cpu/cpufreq/interactive/boostpulse
+         chown system /sys/devices/system/cpu/cpufreq/interactive/boostpulse_duration
+         chown system /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
+         chown system /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
+         chown system /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
+         chown system /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
+         chown system /sys/devices/system/cpu/cpufreq/interactive/target_loads
+         chown system /sys/devices/system/cpu/cpufreq/interactive/timer_slack
+         chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+         chown system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+         chown system /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
+         chown system /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
+         chown system /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq
+         chown system /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
+         chown system /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq
+         chown system /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
+         echo 1 > /sys/module/msm_thermal/core_control/enabled
+         echo 1 > /dev/cpuctl/apps/cpu.notify_on_migrate
+         chown root.system /sys/devices/system/cpu/mfreq
+         chmod 220 /sys/devices/system/cpu/mfreq
+         chown root.system /sys/devices/system/cpu/cpu1/online
+         chown root.system /sys/devices/system/cpu/cpu2/online
+         chown root.system /sys/devices/system/cpu/cpu3/online
+         chmod 664 /sys/devices/system/cpu/cpu1/online
+         chmod 664 /sys/devices/system/cpu/cpu2/online
+         chmod 664 /sys/devices/system/cpu/cpu3/online
         chmod 664 /sys/power/pnpmgr/apps/media_mode
         chown media.system /sys/power/pnpmgr/apps/media_mode
         chown system /sys/power/pnpmgr/apps/activity_trigger
