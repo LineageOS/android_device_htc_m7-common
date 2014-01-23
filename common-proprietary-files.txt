@@ -97,6 +97,15 @@ lib/libchromatix_ov2722_default_video.so
 lib/libchromatix_ov2722_hdr.so
 lib/libchromatix_ov2722_preview.so
 lib/libchromatix_ov2722_zsl.so
+lib/libchromatix_ov4688_default_video.so
+lib/libchromatix_ov4688_hdr.so
+lib/libchromatix_ov4688_hfr.so
+lib/libchromatix_ov4688_hfr_60fps.so
+lib/libchromatix_ov4688_night.so
+lib/libchromatix_ov4688_preview.so
+lib/libchromatix_ov4688_video_hdr.so
+lib/libchromatix_ov4688_zoe.so
+lib/libchromatix_ov4688_zsl.so
 lib/libchromatix_vd6869_default_video.so
 lib/libchromatix_vd6869_hdr.so
 lib/libchromatix_vd6869_hfr.so
