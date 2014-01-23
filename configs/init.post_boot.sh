@@ -118,6 +118,8 @@ case "$target" in
 	echo 1 > /sys/module/rmnet_usb/parameters/rmnet_data_init
 	# Allow QMUX daemon to assign port open wait time
 	chown radio.radio /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
+        # Wake on volume
+        echo 1 > /sys/keyboard/vol_wakeup
     ;;
 esac
 
