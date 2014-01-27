@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a54edaf_8c0b8b7d",
+        "filename": "configs/init.post_boot.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-01-27T15:42:30Z",
+      "side": 1,
+      "message": "I think mdmower was ragging on my 5 space indents, so if you\u0027re going to fix the formatting of the file, you might as well fix all of it.",
+      "revId": "dd882711bca9ef9e234fa197b3990cccbd16fe7b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
