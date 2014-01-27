@@ -47,10 +47,10 @@ endif
 
 FIRMWARE_MDM_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/,$(notdir $(FIRMWARE_MDM_IMAGES)))
 $(FIRMWARE_MDM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "MDM Firmware link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /firmware/mdm/image/$(notdir $@) $@
+    @echo "MDM Firmware link: $@"
+    @mkdir -p $(dir $@)
+    @rm -rf $@
+    $(hide) ln -sf /firmware/mdm/image/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MDM_SYMLINKS)
 
@@ -59,10 +59,10 @@ FIRMWARE_Q6_IMAGES := \
 
 FIRMWARE_Q6_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/,$(notdir $(FIRMWARE_Q6_IMAGES)))
 $(FIRMWARE_Q6_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Q6 Firmware link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /firmware/q6/$(notdir $@) $@
+    @echo "Q6 Firmware link: $@"
+    @mkdir -p $(dir $@)
+    @rm -rf $@
+    $(hide) ln -sf /firmware/q6/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_Q6_SYMLINKS)
 
