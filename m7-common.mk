@@ -32,10 +32,6 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
-# Post boot service
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/init.post_boot.sh:system/etc/init.post_boot.sh
-
 # Recovery
 PRODUCT_PACKAGES += \
     lpm.rc \
