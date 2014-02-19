@@ -16,6 +16,24 @@
       "revId": "7c98123583111457fafd1c19381925d8e13b0fe5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fade3982_7e72f5e6",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 617,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-02-19T20:35:35Z",
+      "side": 1,
+      "message": "Because I suck at copy pasting apparently.",
+      "parentUuid": "fade3982_0dbbc4c5",
+      "revId": "7c98123583111457fafd1c19381925d8e13b0fe5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
