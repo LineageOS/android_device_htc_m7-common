@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fade3982_5eee118c",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-02-19T19:12:37Z",
+      "side": 1,
+      "message": "herp derp, this would explain why GSM m7s are still seeing unknown unsolicited responses, GSM m7 doesn\u0027t have this defined and uses regular libril.",
+      "revId": "e37398aa679cc98a02f548efed8c87dabea8f115",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
