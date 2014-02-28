@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bae84128_00cf1bb1",
+        "filename": "overlay/frameworks/base/core/res/res/xml/power_profile.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 4820
+      },
+      "writtenOn": "2014-02-28T11:04:00Z",
+      "side": 1,
+      "message": "I think the old value here was correct because one of the GPU speeds is 320000 not 300000.",
+      "revId": "f5190da4b3a2e667ccfefefd34df0b8e2208c2a3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bae84128_60c42792",
+        "filename": "overlay/frameworks/base/core/res/res/xml/power_profile.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 4820
+      },
+      "writtenOn": "2014-02-28T11:04:00Z",
+      "side": 1,
+      "message": "Go away whitespace, shoo.",
+      "revId": "f5190da4b3a2e667ccfefefd34df0b8e2208c2a3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
