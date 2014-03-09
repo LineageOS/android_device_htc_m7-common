@@ -547,27 +547,11 @@ on property:sys.boot_completed=1
     write /sys/module/msm_dcvs/cores/gpu0/slack_time_max_us 20000
     write /sys/module/msm_dcvs/cores/gpu0/slack_time_min_us 20000
     write /sys/module/msm_dcvs/cores/gpu0/slack_mode_dynamic 0
-    # Set msm_mpdecision parameters
-    write /sys/module/msm_mpdecision/slack_time_max_us 45000
-    write /sys/module/msm_mpdecision/slack_time_min_us 15000
-    write /sys/module/msm_mpdecision/em_win_size_min_us 100000
-    write /sys/module/msm_mpdecision/em_win_size_max_us 1000000
-    write /sys/module/msm_mpdecision/online_util_pct_min 3
-    write /sys/module/msm_mpdecision/online_util_pct_max 25
-    write /sys/module/msm_mpdecision/em_max_util_pct 97
-    write /sys/module/msm_mpdecision/rq_avg_poll_ms 2
-    write /sys/module/msm_mpdecision/mp_em_rounding_point_min 10
-    write /sys/module/msm_mpdecision/mp_em_rounding_point_max 85
-    write /sys/module/msm_mpdecision/iowait_threshold_pct 50
     # Set permissions for the nodes needed by display on/off hook
     chown -h system /sys/module/msm_dcvs/cores/cpu0/slack_time_max_us
     chown -h system /sys/module/msm_dcvs/cores/cpu0/slack_time_min_us
-    chown -h system /sys/module/msm_mpdecision/slack_time_max_us
-    chown -h system /sys/module/msm_mpdecision/slack_time_min_us
     chmod -h 664 /sys/module/msm_dcvs/cores/cpu0/slack_time_max_us
     chmod -h 664 /sys/module/msm_dcvs/cores/cpu0/slack_time_min_us
-    chmod -h 664 /sys/module/msm_mpdecision/slack_time_max_us
-    chmod -h 664 /sys/module/msm_mpdecision/slack_time_min_us
     # Wake on volume
     write /sys/keyboard/vol_wakeup 1
     # Set performance profile
