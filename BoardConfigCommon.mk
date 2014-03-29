@@ -34,8 +34,8 @@ BOARD_KERNEL_BASE := 0x80600000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01800000
-TARGET_KERNEL_CONFIG := cyanogenmod_m7_defconfig
-TARGET_KERNEL_SOURCE := kernel/htc/m7
+TARGET_KERNEL_CONFIG := m7_defconfig
+TARGET_KERNEL_SOURCE := kernel/htc/msm8960
 
 # Audio
 BOARD_USES_FLUENCE_INCALL := true  # use DMIC in call only
@@ -59,6 +59,9 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 # Graphics
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 HAVE_ADRENO_SOURCE := false
+
+# RIL
+BOARD_PROVIDES_LIBRIL := true
 
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
@@ -84,8 +87,6 @@ WIFI_DRIVER_FW_PATH_P2P          := "/system/etc/firmware/fw_bcm4335_p2p_b0.bin"
 # Filesystem
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776704
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1946156032
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 27917287424
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Custom Recovery

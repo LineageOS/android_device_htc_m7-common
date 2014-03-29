@@ -19,4 +19,7 @@
 <resources>
     <!-- Flag indicating if the phone is a world phone -->
     <bool name="world_phone">true</bool>
+
+    <!-- Show cdma auto network mode in (glabal) roaming -->
+    <bool name="config_show_cdma" translatable="false">true</bool>
 </resources>

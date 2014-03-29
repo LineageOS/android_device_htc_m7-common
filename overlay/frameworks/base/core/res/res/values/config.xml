@@ -56,7 +56,7 @@
          USB interfaces.  If the device doesn't want to support tething over USB this should
          be empty.  An example would be "usb.*" -->
     <string-array translatable="false" name="config_tether_usb_regexs">
-        <item>"rndis\\d"</item>
+        <item>"usb\\d"</item>
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
@@ -236,10 +236,6 @@
 
     <bool name="config_deviceHasVariableButtonBrightness">true</bool>
 
-    <!-- If this value is true, The mms content-disposition field is supported correctly.
-         If false, Content-disposition fragments are ignored -->
-    <bool name="config_mms_content_disposition_support">false</bool>
-
     <!-- Whether WiFi display is supported by this device.
          There are many prerequisites for this feature to work correctly.
          Here are a few of them:
@@ -271,5 +267,9 @@
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
     <integer name="config_deviceHardwareKeys">3</integer>
+
+    <!-- Performance profiles -->
+    <string name="config_perf_profile_prop">sys.perf.profile</string>
+    <string name="config_perf_profile_default_entry">1</string>
 
 </resources>

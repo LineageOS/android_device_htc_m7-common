@@ -32,10 +32,6 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
-# Post boot service
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/init.post_boot.sh:system/etc/init.post_boot.sh
-
 # Recovery
 PRODUCT_PACKAGES += \
     lpm.rc \
@@ -142,7 +138,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permissions/android.hardware.consumerir.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml
@@ -170,6 +165,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.gps.qmienabled=true \
     ro.baseband.arch=mdm \
     ro.cam.hw.version=m7 \
+    ro.cwm.forbid_format="/firmware/mdm,/firmware/q6" \
+    ro.cwm.forbid_mount="/firmware/mdm,/firmware/q6" \
+    ro.input.noresample=1 \
     ro.opengles.version=196608 \
     ro.telephony.call_ring.multiple=false \
     ro.telephony.call_ring.delay=3000 \
