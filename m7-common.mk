@@ -114,6 +114,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf
 
+# Keystore
+PRODUCT_PACKAGES += \
+    keystore.msm8960
+
 # NFC
 PRODUCT_PACKAGES += \
     nfc.msm8960 \

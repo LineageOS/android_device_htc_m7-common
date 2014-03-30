@@ -182,6 +182,13 @@ bin/cir_fw_update
 etc/cir.img
 lib/hw/consumerir.default.so
 
+# Keystore
+vendor/firmware/keymaster/keymaster.b00
+vendor/firmware/keymaster/keymaster.b01
+vendor/firmware/keymaster/keymaster.b02
+vendor/firmware/keymaster/keymaster.b03
+vendor/firmware/keymaster/keymaster.mdt
+
 # Media
 lib/libExtendedExtractor.so
 lib/libI420colorconvert.so
@@ -212,7 +219,7 @@ lib/libmpl.so
 lib/libmpl_jni.so
 
 # Widevine
-lib/libQSEEComAPI.so
+vendor/lib/libQSEEComAPI.so
 vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
 
