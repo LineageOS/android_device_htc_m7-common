@@ -131,9 +131,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Torch
 
+# Variant linking script
+PRODUCT_PACKAGES += \
+    makelinks.sh
+
 # Prepatch to fix BT/WiFi bus lockups
 PRODUCT_COPY_FILES += \
-    device/htc/m7-common/bluetooth/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd
+    device/htc/m7lte/bluetooth/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -147,9 +151,9 @@ PRODUCT_COPY_FILES += \
 
 # NFCEE access control
 ifeq ($(TARGET_BUILD_VARIANT),user)
-    NFCEE_ACCESS_PATH := device/htc/m7-common/configs/nfcee_access.xml
+    NFCEE_ACCESS_PATH := device/htc/m7lte/configs/nfcee_access.xml
 else
-    NFCEE_ACCESS_PATH := device/htc/m7-common/configs/nfcee_access_debug.xml
+    NFCEE_ACCESS_PATH := device/htc/m7lte/configs/nfcee_access_debug.xml
 endif
 PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
@@ -190,4 +194,4 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalv
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 # Include non-opensource parts
-$(call inherit-product, vendor/htc/m7-common/m7-common-vendor.mk)
+$(call inherit-product, vendor/htc/m7lte/m7lte-vendor.mk)
