@@ -27,7 +27,18 @@
 # inherit from common msm8960
 -include device/htc/msm8960-common/BoardConfigCommon.mk
 
-TARGET_SPECIFIC_HEADER_PATH := device/htc/m7-common/include
+TARGET_SPECIFIC_HEADER_PATH := device/htc/m7lte/include
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := m7,m7att,m7lte,m7spr,m7tmo,m7ul,m7wls,m7wlv,m7vzw
+
+# Vendor Init
+TARGET_UNIFIED_DEVICE := true
+TARGET_INIT_VENDOR_LIB := libinit_m7lte
+TARGET_LIBINIT_DEFINES_FILE := device/htc/m7lte/init/init_m7lte.c
+
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := m7lte
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80600000
@@ -42,13 +53,13 @@ BOARD_USES_FLUENCE_INCALL := true  # use DMIC in call only
 BOARD_USES_SEPERATED_AUDIO_INPUT := true  # use distinct voice recognition use case
 BOARD_USES_SEPERATED_VOICE_SPEAKER := true  # use distinct voice speaker use case
 BOARD_USES_SEPERATED_VOIP := true  # use distinct VOIP use cases
-BOARD_AUDIO_AMPLIFIER := device/htc/m7-common/libaudioamp
+BOARD_AUDIO_AMPLIFIER := device/htc/m7lte/libaudioamp
 BOARD_HAVE_HTC_CSDCLIENT := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/m7-common/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/htc/m7-common/bluetooth/libbt_vndcfg.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/m7lte/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/htc/m7lte/bluetooth/libbt_vndcfg.txt
 BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 
 # Camera
@@ -70,7 +81,7 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/
 BOARD_HAVE_NEW_QC_GPS := true
 
 # Tuning
-BOARD_HARDWARE_CLASS := device/htc/m7-common/cmhw
+BOARD_HARDWARE_CLASS := device/htc/m7lte/cmhw
 
 # Wifi
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
@@ -86,11 +97,13 @@ WIFI_DRIVER_FW_PATH_P2P          := "/system/etc/firmware/fw_bcm4335_p2p_b0.bin"
 
 # Filesystem
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1946156032
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 27917287424
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776704
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Custom Recovery
-TARGET_RECOVERY_FSTAB := device/htc/m7-common/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/htc/m7lte/rootdir/etc/fstab.qcom
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
@@ -100,5 +113,8 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Charge mode
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := device/htc/m7lte/releasetools
+
 # inherit from the proprietary version
--include vendor/htc/m7-common/BoardConfigVendor.mk
+-include vendor/htc/m7lte/BoardConfigVendor.mk
