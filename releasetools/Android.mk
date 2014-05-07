@@ -14,9 +14,11 @@
 # limitations under the License.
 #
 
-ifneq ($(filter m7,$(TARGET_DEVICE)),)
-
 LOCAL_PATH := $(call my-dir)
-include $(call all-subdir-makefiles,$(LOCAL_PATH))
 
-endif
+include $(CLEAR_VARS)
+LOCAL_MODULE := makelinks.sh
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT)/bin
+LOCAL_SRC_FILES := makelinks.sh
+include $(BUILD_PREBUILT)

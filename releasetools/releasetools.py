@@ -1,4 +1,4 @@
-#
+# Copyright (C) 2012 The Android Open Source Project
 # Copyright (C) 2013 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,9 +14,7 @@
 # limitations under the License.
 #
 
-ifneq ($(filter m7,$(TARGET_DEVICE)),)
+""" Custom OTA commands for m7 devices """
 
-LOCAL_PATH := $(call my-dir)
-include $(call all-subdir-makefiles,$(LOCAL_PATH))
-
-endif
+def FullOTA_InstallEnd(info):
+  info.script.AppendExtra('assert(run_program("/system/bin/makelinks.sh") == 0);')
