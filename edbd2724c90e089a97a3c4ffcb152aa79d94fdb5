@@ -1,0 +1,208 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da0c15f0_027c5071",
+        "filename": "device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 4123
+      },
+      "writtenOn": "2014-05-11T03:28:55Z",
+      "side": 1,
+      "message": "nope",
+      "revId": "edbd2724c90e089a97a3c4ffcb152aa79d94fdb5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da0c15f0_e2803c49",
+        "filename": "device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 4123
+      },
+      "writtenOn": "2014-05-11T03:28:55Z",
+      "side": 1,
+      "message": "and nope.",
+      "revId": "edbd2724c90e089a97a3c4ffcb152aa79d94fdb5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da0c15f0_a2780491",
+        "filename": "rootdir/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 4123
+      },
+      "writtenOn": "2014-05-11T03:28:55Z",
+      "side": 1,
+      "message": "ouch whitespace",
+      "revId": "edbd2724c90e089a97a3c4ffcb152aa79d94fdb5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da0c15f0_026e10c9",
+        "filename": "rootdir/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 4123
+      },
+      "writtenOn": "2014-05-11T03:28:55Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "edbd2724c90e089a97a3c4ffcb152aa79d94fdb5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da0c15f0_e272fcac",
+        "filename": "rootdir/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 4123
+      },
+      "writtenOn": "2014-05-11T03:28:55Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "edbd2724c90e089a97a3c4ffcb152aa79d94fdb5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da0c15f0_426808bb",
+        "filename": "rootdir/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 4123
+      },
+      "writtenOn": "2014-05-11T03:28:55Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "edbd2724c90e089a97a3c4ffcb152aa79d94fdb5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da0c15f0_826220d7",
+        "filename": "rootdir/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 4123
+      },
+      "writtenOn": "2014-05-11T03:28:55Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "edbd2724c90e089a97a3c4ffcb152aa79d94fdb5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da0c15f0_625f0c0f",
+        "filename": "rootdir/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 4123
+      },
+      "writtenOn": "2014-05-11T03:28:55Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "edbd2724c90e089a97a3c4ffcb152aa79d94fdb5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da0c15f0_c29a58c5",
+        "filename": "rootdir/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 4123
+      },
+      "writtenOn": "2014-05-11T03:28:55Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "edbd2724c90e089a97a3c4ffcb152aa79d94fdb5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da0c15f0_a29f64b3",
+        "filename": "rootdir/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 4123
+      },
+      "writtenOn": "2014-05-11T03:28:55Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "edbd2724c90e089a97a3c4ffcb152aa79d94fdb5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da0c15f0_42af68e3",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 4123
+      },
+      "writtenOn": "2014-05-11T03:28:55Z",
+      "side": 1,
+      "message": "using remount.qcom is deprecated. Need to handle this differently.",
+      "revId": "edbd2724c90e089a97a3c4ffcb152aa79d94fdb5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da0c15f0_22acf4ec",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 4123
+      },
+      "writtenOn": "2014-05-11T03:28:55Z",
+      "side": 1,
+      "message": "Don\u0027t believe we use this anymore?",
+      "revId": "edbd2724c90e089a97a3c4ffcb152aa79d94fdb5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
