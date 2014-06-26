@@ -367,9 +367,9 @@ service qmuxd /system/bin/qmuxd
     group radio audio gps
 
 service qseecomd /system/bin/qseecomd
-    class main
-    user system
-    group system drm
+    class core
+    user root
+    group root
 
 service thermald /system/bin/thermald
     class main
