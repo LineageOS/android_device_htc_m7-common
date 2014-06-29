@@ -829,13 +829,11 @@ SectionVerb
 	Name "Voice Call"
 
 	EnableSequence
-		'STUB_RX Mixer Voice Stub':1:1
 		'Voice Stub Tx Mixer STUB_TX_HL':1:1
 		'Voice Stub Tx Mixer STUB_1_TX_HL':1:1
 	EndSequence
 
 	DisableSequence
-		'STUB_RX Mixer Voice Stub':1:0
 		'Voice Stub Tx Mixer STUB_TX_HL':1:0
 		'Voice Stub Tx Mixer STUB_1_TX_HL':1:0
 	EndSequence
@@ -850,7 +848,6 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-		'SLIM_1 SampleRate':1:8000
 		'Voice Stub Tx Mixer AUX_PCM_UL_TX':1:0
 		'SLIMBUS_1_RX Mixer Voice Stub':1:0
 		'Voice Stub Tx Mixer SLIM_1_TX':1:0
@@ -868,8 +865,7 @@ SectionVerb
 	Name "Voice CallBT SCO Tx"
 
 	EnableSequence
-		'SLIM_1 SampleRate':1:8000
-		'SLIM_1_RX Channels':0:One
+		'Internal BTSCO SampleRate':0:8000
 		'Voice Stub Tx Mixer AUX_PCM_UL_TX':1:1
 		'SLIMBUS_1_RX Mixer Voice Stub':1:1
 		'Voice Stub Tx Mixer SLIM_1_TX':1:1
@@ -894,7 +890,6 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-		'SLIM_1 SampleRate':1:8000
 		'Voice Stub Tx Mixer AUX_PCM_UL_TX':1:0
 		'SLIMBUS_1_RX Mixer Voice Stub':1:0
 		'Voice Stub Tx Mixer SLIM_1_TX':1:0
@@ -912,8 +907,7 @@ SectionVerb
 	Name "Voice CallBT SCO WB Tx"
 
 	EnableSequence
-		'SLIM_1 SampleRate':0:16000
-		'SLIM_1_RX Channels':0:One
+		'Internal BTSCO SampleRate':0:8000
 		'Voice Stub Tx Mixer AUX_PCM_UL_TX':1:1
 		'SLIMBUS_1_RX Mixer Voice Stub':1:1
 		'Voice Stub Tx Mixer SLIM_1_TX':1:1
@@ -950,6 +944,62 @@ SectionVerb
 		'Voice Stub Tx Mixer MI2S_TX':1:0
 		'SLIMBUS_3_RX_Voice Mixer Voice Stub':1:0
 		'SLIMBUS_3_RX Port Mixer MI2S_TX':1:0
+	EndSequence
+	CapturePCM  12
+	PlaybackPCM  12
+EndSection
+
+SectionVerb
+	Name "Voice CallTTY Full Rx"
+
+	EnableSequence
+		'STUB_RX Mixer Voice Stub':1:1
+	EndSequence
+
+	DisableSequence
+		'STUB_RX Mixer Voice Stub':1:0
+	EndSequence
+	CapturePCM  12
+	PlaybackPCM  12
+EndSection
+
+SectionVerb
+	Name "Voice CallTTY Headset Rx"
+
+	EnableSequence
+		'STUB_RX Mixer Voice Stub':1:1
+	EndSequence
+
+	DisableSequence
+		'STUB_RX Mixer Voice Stub':1:0
+	EndSequence
+	CapturePCM  12
+	PlaybackPCM  12
+EndSection
+
+SectionVerb
+	Name "Voice CallVoice Earpiece"
+
+	EnableSequence
+		'STUB_RX Mixer Voice Stub':1:1
+	EndSequence
+
+	DisableSequence
+		'STUB_RX Mixer Voice Stub':1:0
+	EndSequence
+	CapturePCM  12
+	PlaybackPCM  12
+EndSection
+
+SectionVerb
+	Name "Voice CallVoice Headphones"
+
+	EnableSequence
+		'STUB_RX Mixer Voice Stub':1:1
+	EndSequence
+
+	DisableSequence
+		'STUB_RX Mixer Voice Stub':1:0
 	EndSequence
 	CapturePCM  12
 	PlaybackPCM  12
@@ -1476,10 +1526,10 @@ SectionDevice
 		'RX5 MIX1 INP2':0:RX7
 		'RX4 DSM MUX':0:DSM_INV
 		'RX6 DSM MUX':0:DSM_INV
-		'RX3 Digital Volume':2:55
-		'RX4 Digital Volume':2:55
-		'RX5 Digital Volume':2:55
-		'RX6 Digital Volume':2:55
+		'RX3 Digital Volume':2:54
+		'RX4 Digital Volume':2:54
+		'RX5 Digital Volume':2:54
+		'RX6 Digital Volume':2:54
 		'LINEOUT1 Volume':1:66
 		'LINEOUT2 Volume':1:66
 		'LINEOUT3 Volume':1:66
@@ -1698,29 +1748,21 @@ SectionDevice
 	Name "Speaker DMIC Endfire"
 
 	EnableSequence
-		'SLIM_0_TX Channels':0:Two
-		'SLIM TX7 MUX':0:DEC8
-		'DEC8 MUX':0:DMIC2
-		'DEC8 Volume':2:57
-		'SLIM TX8 MUX':0:DEC9
+		'SLIM_0_TX Channels':0:One
+		'SLIM TX7 MUX':0:DEC9
 		'DEC9 MUX':0:DMIC4
-		'DEC9 Volume':2:57
-		'MICBIAS1 CAPLESS Switch':1:0
+		'DEC9 Volume':2:59
 		'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
 	DisableSequence
 		'SLIM TX7 MUX':0:ZERO
-		'SLIM TX8 MUX':0:ZERO
-		'DEC8 MUX':0:ZERO
 		'DEC9 MUX':0:ZERO
-		'DEC8 Volume':2:0
 		'DEC9 Volume':2:0
-		'MICBIAS1 CAPLESS Switch':1:0
 		'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
-	ACDBID  51:2
+	ACDBID  52:2
 EndSection
 
 SectionDevice
