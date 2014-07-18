@@ -1126,10 +1126,12 @@ SectionVerb
 	Name "Voice Call IPVOIP Speaker"
 
 	EnableSequence
+		'MI2S_RX Audio Mixer MultiMedia1':1:1
 		'MI2S_RX_Voice Mixer Voip':1:1
 	EndSequence
 
 	DisableSequence
+		'MI2S_RX Audio Mixer MultiMedia1':1:0
 		'MI2S_RX_Voice Mixer Voip':1:0
 	EndSequence
 	CapturePCM  3
@@ -3524,10 +3526,12 @@ SectionModifier
 	Name "Play VOIPVOIP Speaker"
 
 	EnableSequence
+		'MI2S_RX Audio Mixer MultiMedia1':1:1
 		'MI2S_RX_Voice Mixer Voip':1:1
 	EndSequence
 
 	DisableSequence
+		'MI2S_RX Audio Mixer MultiMedia1':1:0
 		'MI2S_RX_Voice Mixer Voip':1:0
 	EndSequence
 	CapturePCM  3
