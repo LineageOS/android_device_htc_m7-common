@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-ifneq ($(filter m7 m7att m7spr m7tmo m7ul m7vzw,$(TARGET_DEVICE)),)
+ifneq ($(filter m7 m7att m7spr m7sprcn m7tmo m7ul m7vzw,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
@@ -40,7 +40,7 @@ FIRMWARE_MDM_IMAGES += \
     sbl1_82.mbn sbl1_92.mbn sbl1_96.mbn
 endif
 
-ifneq ($(filter m7spr m7vzw,$(TARGET_DEVICE)),)
+ifneq ($(filter m7spr m7sprcn m7vzw,$(TARGET_DEVICE)),)
 FIRMWARE_MDM_IMAGES += \
     htccnv.mbn htcnvmfg.mbn htcuserd.mbn
 endif
