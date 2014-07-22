@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-ifneq ($(filter m7 m7att m7spr m7tmo m7ul m7vzw,$(TARGET_DEVICE)),)
+ifneq ($(filter m7 m7att m7spr m7sprcn m7tmo m7ul m7vzw,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
