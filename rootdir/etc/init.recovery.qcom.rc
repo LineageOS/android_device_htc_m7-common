@@ -13,6 +13,7 @@ on boot
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 384000
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq 384000
     setprop recovery.perf.mode 0
+    start chargeled
 
 on property:recovery.perf.mode=0
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "ondemand"
@@ -31,3 +32,6 @@ on property:recovery.perf.mode=1
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "performance"
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "performance"
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor "performance"
+
+service chargeled /sbin/chargeled
+    disabled
