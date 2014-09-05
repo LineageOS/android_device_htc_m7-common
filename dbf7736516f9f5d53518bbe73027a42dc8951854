@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_81415d0e",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-05T07:32:19Z",
+      "side": 1,
+      "message": "Might be better to return a status code in the form of an enum or #define BATTERY_STATUS_FULL/CHARGING/NOT_CHARGING instead of a char, this lets you avoid doing return \u0027X\u0027 in favor of returning a real error code.",
+      "revId": "dbf7736516f9f5d53518bbe73027a42dc8951854",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_a148d92e",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-05T07:32:19Z",
+      "side": 1,
+      "message": "You should be able to just do fputs(\"0\", gled), or something like #define LED_OFF \"0\"; fputs(LED_OFF, gled); no?",
+      "revId": "dbf7736516f9f5d53518bbe73027a42dc8951854",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_0156edd1",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-05T07:32:19Z",
+      "side": 1,
+      "message": "If you are using status codes instead of chars, you could swap this for a status code type too.",
+      "revId": "dbf7736516f9f5d53518bbe73027a42dc8951854",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_81583dfc",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-05T07:32:19Z",
+      "side": 1,
+      "message": "You can listen for uevents to figure out charging status. The charger code does this, see: https://github.com/CyanogenMod/android_system_core/blob/cm-11.0/charger/charger.c#L539 and surrounding.",
+      "revId": "dbf7736516f9f5d53518bbe73027a42dc8951854",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_2104c913",
+        "filename": "chargeled/chargeled.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-05T07:32:19Z",
+      "side": 1,
+      "message": "If it\u0027s a static function you don\u0027t really need this here.",
+      "revId": "dbf7736516f9f5d53518bbe73027a42dc8951854",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
