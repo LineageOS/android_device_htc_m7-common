@@ -189,6 +189,57 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_fc3eefb6",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 8657
+      },
+      "writtenOn": "2014-09-13T07:45:55Z",
+      "side": 1,
+      "message": "\"%s: ....\", __func__, ....",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_5c4c4370",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 8657
+      },
+      "writtenOn": "2014-09-13T07:45:55Z",
+      "side": 1,
+      "message": "\"%s: ....\", __func__, ....",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_3c498760",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 8657
+      },
+      "writtenOn": "2014-09-13T07:45:55Z",
+      "side": 1,
+      "message": "\"%s: ....\", __func__, ....",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_fc10af50",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 4
@@ -223,6 +274,23 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_9c4d3b75",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 8657
+      },
+      "writtenOn": "2014-09-13T07:45:55Z",
+      "side": 1,
+      "message": "Why null terminate two bytes?",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_3c1b4774",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 4
@@ -234,6 +302,91 @@
       "writtenOn": "2014-09-13T07:11:36Z",
       "side": 1,
       "message": "Maybe just add \"SUBSYSTEM\u003d\" to the macro. It\u0027s not used anywhere else. Or just hardcode the string.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_7c52df14",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 8657
+      },
+      "writtenOn": "2014-09-13T07:45:55Z",
+      "side": 1,
+      "message": "If you use strstr(), you can do away with the loop and the temporary.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_dc57b300",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 8657
+      },
+      "writtenOn": "2014-09-13T07:45:55Z",
+      "side": 1,
+      "message": "\"%s: ....\", __func__, ....\nYou might want to rename the function some day.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_bc2597ac",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 8657
+      },
+      "writtenOn": "2014-09-13T07:45:55Z",
+      "side": 1,
+      "message": "This should really be in uevent_init(). Check the fd and exit in case of errors. No point continuing if you can\u0027t get the descriptor.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_bc5c7726",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 8657
+      },
+      "writtenOn": "2014-09-13T07:45:55Z",
+      "side": 1,
+      "message": "\"%s: ....\", __func__, ....",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_1c42cb3e",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 8657
+      },
+      "writtenOn": "2014-09-13T07:45:55Z",
+      "side": 1,
+      "message": "\"%s: ....\", __func__, ....",
       "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
