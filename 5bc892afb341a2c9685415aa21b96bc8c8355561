@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_1c976b91",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_9136c401",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_dc09732e",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2014-09-13T07:11:36Z",
       "side": 1,
       "message": "You may as well coalesce the declaration and the definition.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_fc938fa1",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_dc09732e",
       "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -70,6 +106,42 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_5c91e398",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_f13bb8e9",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_3c8ea778",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_911d2476",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_bc0e3732",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 4
@@ -81,6 +153,24 @@
       "writtenOn": "2014-09-13T07:11:36Z",
       "side": 1,
       "message": "If you\u0027re defining constants, perhaps #define UEVENT_BUF_SZ 64*1024 for consistency.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_9ce9bb1d",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_bc0e3732",
       "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -104,6 +194,24 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_7cee5f23",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_1c148b42",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_110ab426",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 4
@@ -115,6 +223,24 @@
       "writtenOn": "2014-09-13T07:44:17Z",
       "side": 1,
       "message": "Might as well make this a define.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_dcf33309",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_110ab426",
       "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -138,6 +264,24 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_bcf8f7e6",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_9cfffb00",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_7c049f14",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 4
@@ -149,6 +293,24 @@
       "writtenOn": "2014-09-13T07:44:17Z",
       "side": 1,
       "message": "Same thing here with the error status.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_1cde4b6d",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "no errno",
+      "parentUuid": "7a1b2928_7c049f14",
       "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -172,6 +334,24 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_fcda6f77",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_b1182086",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_d1403c59",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 4
@@ -183,6 +363,24 @@
       "writtenOn": "2014-09-13T06:32:06Z",
       "side": 1,
       "message": "can be changed to void since we never monitor return status",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_5ce8c310",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_d1403c59",
       "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -206,6 +404,24 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_3ce50737",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_fc3eefb6",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_5c4c4370",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 4
@@ -217,6 +433,24 @@
       "writtenOn": "2014-09-13T07:45:55Z",
       "side": 1,
       "message": "\"%s: ....\", __func__, ....",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_9cd09b55",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_5c4c4370",
       "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -240,6 +474,24 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_7cd5bf41",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_3c498760",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_fc10af50",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 4
@@ -251,6 +503,24 @@
       "writtenOn": "2014-09-13T07:11:36Z",
       "side": 1,
       "message": "Maybe move this inside the function. Nothing else uses it. Or move it to the top.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_bccf57af",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_fc10af50",
       "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -274,6 +544,24 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_1cc5ab8d",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_5c1e0364",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_9c4d3b75",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 4
@@ -285,6 +573,24 @@
       "writtenOn": "2014-09-13T07:45:55Z",
       "side": 1,
       "message": "Why null terminate two bytes?",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_9ca1bbac",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "I believe this is how it works: strcmp uses one \\0 for string comparison, then while (*cp++) cycles until the next \\0 to indicate the next string.",
+      "parentUuid": "7a1b2928_9c4d3b75",
       "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -325,6 +631,42 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_dcab3388",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_3c1b4774",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_7ca65fc2",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "I think I\u0027ll leave it this way in case I ever want to parse for more than just SUBSYSTEM\u003dpower_supply.",
+      "parentUuid": "7a1b2928_7c52df14",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_dc57b300",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 4
@@ -336,6 +678,24 @@
       "writtenOn": "2014-09-13T07:45:55Z",
       "side": 1,
       "message": "\"%s: ....\", __func__, ....\nYou might want to rename the function some day.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_7c3c9f93",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_dc57b300",
       "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -359,6 +719,24 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_dc41730d",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_bc2597ac",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_bc5c7726",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 4
@@ -376,6 +754,24 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_1c4c8b41",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_bc5c7726",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_1c42cb3e",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 4
@@ -387,6 +783,24 @@
       "writtenOn": "2014-09-13T07:45:55Z",
       "side": 1,
       "message": "\"%s: ....\", __func__, ....",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_fc48af2f",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T09:29:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_1c42cb3e",
       "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
