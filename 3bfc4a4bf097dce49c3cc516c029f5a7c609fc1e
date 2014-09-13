@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_dc35f346",
+        "filename": "chargeled/Android.mk",
+        "patchSetId": 6
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T10:32:45Z",
+      "side": 1,
+      "message": "ha! you\u0027re wrong!",
+      "parentUuid": "7a1b2928_7cbbffc4",
+      "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_fcceef58",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2014-09-13T10:19:29Z",
       "side": 1,
       "message": "I\u0027d just get rid of these two. epoll_create() ignores the argument anyway, and people tend to just spell out *poll(..., -1);\nThey don\u0027t need to be global in any case.",
+      "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_9c041b7f",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T10:32:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_fcceef58",
       "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_7c093f95",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T10:32:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_bcec77c8",
+      "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_fca0af92",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 6
@@ -64,6 +118,24 @@
       "writtenOn": "2014-09-13T10:01:01Z",
       "side": 1,
       "message": "strerror(errno)",
+      "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_dcfe936a",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T10:32:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_fca0af92",
       "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_bc3ab734",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T10:32:45Z",
+      "side": 1,
+      "message": "going to have to use purple paint, sorry.",
+      "parentUuid": "7a1b2928_dce7b3e2",
+      "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_9cb6dbda",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 6
@@ -98,6 +188,24 @@
       "writtenOn": "2014-09-13T10:01:01Z",
       "side": 1,
       "message": "Technically declaring a variable somewhere other than the top of the function isn\u0027t allowed by some C compilers.",
+      "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_bc03d772",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T10:32:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_9cb6dbda",
       "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_1cf92b81",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T10:32:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_1ca48ba4",
+      "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_5cae0386",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 6
@@ -132,6 +258,24 @@
       "writtenOn": "2014-09-13T10:01:01Z",
       "side": 1,
       "message": "strerror(errno)",
+      "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_fcf54f83",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T10:32:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_5cae0386",
       "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -155,6 +299,24 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_5cf3a39e",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T10:32:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_3cab4776",
+      "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_1ccbeb54",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 6
@@ -172,6 +334,24 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_3cf06790",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T10:32:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_1ccbeb54",
+      "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_dcb053e0",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 6
@@ -183,6 +363,24 @@
       "writtenOn": "2014-09-13T10:19:29Z",
       "side": 1,
       "message": "It would be more idiomatic to test for failure and exiting with non-zero status.",
+      "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_9c2b7beb",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T10:32:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_dcb053e0",
       "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
