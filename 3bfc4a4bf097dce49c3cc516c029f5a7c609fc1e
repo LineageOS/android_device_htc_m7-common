@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_fca0af92",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-13T10:01:01Z",
+      "side": 1,
+      "message": "strerror(errno)",
+      "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_9cb6dbda",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-13T10:01:01Z",
+      "side": 1,
+      "message": "Technically declaring a variable somewhere other than the top of the function isn\u0027t allowed by some C compilers.",
+      "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_1ca48ba4",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-13T10:01:01Z",
+      "side": 1,
+      "message": "strerror(errno)",
+      "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_5cae0386",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-13T10:01:01Z",
+      "side": 1,
+      "message": "strerror(errno)",
+      "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_3cab4776",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-13T10:01:01Z",
+      "side": 1,
+      "message": "strerror(errno)",
+      "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_1ccbeb54",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-13T10:01:01Z",
+      "side": 1,
+      "message": "Same thing for declaring variables here.",
+      "revId": "3bfc4a4bf097dce49c3cc516c029f5a7c609fc1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
