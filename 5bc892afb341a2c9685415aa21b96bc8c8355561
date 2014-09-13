@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_9136c401",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T06:32:06Z",
+      "side": 1,
+      "message": "delete",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_f13bb8e9",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T06:32:06Z",
+      "side": 1,
+      "message": "group with other uevent functions",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_d1403c59",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-13T06:32:06Z",
+      "side": 1,
+      "message": "can be changed to void since we never monitor return status",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
