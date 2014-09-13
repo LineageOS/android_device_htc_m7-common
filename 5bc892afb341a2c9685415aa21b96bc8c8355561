@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_dc09732e",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 8657
+      },
+      "writtenOn": "2014-09-13T07:11:36Z",
+      "side": 1,
+      "message": "You may as well coalesce the declaration and the definition.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_f13bb8e9",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 4
@@ -36,6 +53,40 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_bc0e3732",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 8657
+      },
+      "writtenOn": "2014-09-13T07:11:36Z",
+      "side": 1,
+      "message": "If you\u0027re defining constants, perhaps #define UEVENT_BUF_SZ 64*1024 for consistency.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_1c148b42",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 8657
+      },
+      "writtenOn": "2014-09-13T07:11:36Z",
+      "side": 1,
+      "message": "There\u0027s just one instance of the map, no need to pass it here.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_d1403c59",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 4
@@ -47,6 +98,57 @@
       "writtenOn": "2014-09-13T06:32:06Z",
       "side": 1,
       "message": "can be changed to void since we never monitor return status",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_fc10af50",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 8657
+      },
+      "writtenOn": "2014-09-13T07:11:36Z",
+      "side": 1,
+      "message": "Maybe move this inside the function. Nothing else uses it. Or move it to the top.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_5c1e0364",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 8657
+      },
+      "writtenOn": "2014-09-13T07:11:36Z",
+      "side": 1,
+      "message": "Move this to the top.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_3c1b4774",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 8657
+      },
+      "writtenOn": "2014-09-13T07:11:36Z",
+      "side": 1,
+      "message": "Maybe just add \"SUBSYSTEM\u003d\" to the macro. It\u0027s not used anywhere else. Or just hardcode the string.",
       "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
