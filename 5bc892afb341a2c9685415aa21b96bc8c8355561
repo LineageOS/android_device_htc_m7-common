@@ -53,6 +53,23 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_911d2476",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-13T07:44:17Z",
+      "side": 1,
+      "message": "May want this to return a status code indicating failure to get uevent_fd so the whole program doesn\u0027t enter the main loop.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_bc0e3732",
         "filename": "chargeled/chargeled.c",
         "patchSetId": 4
@@ -81,6 +98,74 @@
       "writtenOn": "2014-09-13T07:11:36Z",
       "side": 1,
       "message": "There\u0027s just one instance of the map, no need to pass it here.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_110ab426",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-13T07:44:17Z",
+      "side": 1,
+      "message": "Might as well make this a define.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_9cfffb00",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-13T07:44:17Z",
+      "side": 1,
+      "message": "You can read the errno variable to see the real error and continue propagating that value as well.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_7c049f14",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-13T07:44:17Z",
+      "side": 1,
+      "message": "Same thing here with the error status.",
+      "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_b1182086",
+        "filename": "chargeled/chargeled.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-13T07:44:17Z",
+      "side": 1,
+      "message": "Same thing here with the error status.",
       "revId": "5bc892afb341a2c9685415aa21b96bc8c8355561",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
