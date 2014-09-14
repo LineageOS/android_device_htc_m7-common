@@ -44,9 +44,6 @@ on boot
 
     start choice_fn
 
-service charger /sbin/charger
-    disabled
-
 service choice_fn /sbin/choice_fn
     disabled
 
