@@ -37,19 +37,11 @@ COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 PRODUCT_PACKAGES += \
     lpm.rc \
     charger \
+    charger_res_images \
     choice_fn \
     offmode_charging \
     chargeled \
     init.recovery.qcom.rc
-
-PRODUCT_PACKAGES += \
-    battery_0.png \
-    battery_1.png \
-    battery_2.png \
-    battery_3.png \
-    battery_4.png \
-    battery_fail.png \
-    battery_full.png
 
 # QC thermald config
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/thermald.conf:system/etc/thermald.conf
