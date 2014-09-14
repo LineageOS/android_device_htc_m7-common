@@ -100,6 +100,8 @@ BOARD_RECOVERY_BLDRMSG_OFFSET := 2048
 
 # Charge mode
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
+BOARD_ALLOW_SUSPEND_IN_CHARGER := true
+BOARD_CHARGER_RES := device/htc/m7-common/recovery/res/images/charger
 
 # inherit from the proprietary version
 -include vendor/htc/m7-common/BoardConfigVendor.mk
