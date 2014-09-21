@@ -424,6 +424,14 @@ service dhcpcd_bt-pan /system/bin/dhcpcd -BKLG
 service iprenew_bt-pan /system/bin/dhcpcd -n
     disabled
     oneshot
+
+service fm_dl /system/bin/setprop hw.fm.init 1
+    class late_start
+    user root
+    group system fm_radio
+    disabled
+    oneshot
+
 # End WiFi
 
 # Property triggers begin here
