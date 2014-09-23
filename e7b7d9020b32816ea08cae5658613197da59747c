@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_c4bfcaf9",
+        "filename": "m7-common.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-23T18:05:54Z",
+      "side": 1,
+      "message": "ifneq ($(filter m7 m7spr,$(TARGET_DEVICE)),)",
+      "revId": "e7b7d9020b32816ea08cae5658613197da59747c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_a4ba8e08",
+        "filename": "m7-common.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-23T18:05:54Z",
+      "side": 1,
+      "message": "endif",
+      "revId": "e7b7d9020b32816ea08cae5658613197da59747c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_0438a29f",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 428,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-23T18:05:54Z",
+      "side": 1,
+      "message": "move service to init.target.rc.gsm and init.target.rc.spr",
+      "revId": "e7b7d9020b32816ea08cae5658613197da59747c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
