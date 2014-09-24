@@ -1,5 +1,12 @@
 on boot
 
+service fm_dl /system/bin/setprop hw.fm.init 1
+    class late_start
+    user root
+    group system fm_radio
+    disabled
+    oneshot
+
 service kickstart /system/bin/qcks -1 modem_st1 -2 modem_st2 -3 radio_config -4 cdma_record -i /vendor/firmware/
     class core
     user root

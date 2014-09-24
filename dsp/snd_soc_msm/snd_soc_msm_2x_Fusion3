@@ -1387,6 +1387,65 @@ SectionDevice
 EndSection
 
 SectionDevice
+	Name "FM Headset"
+
+	EnableSequence
+		'SLIM_0_RX Channels':0:Two
+		'RX3 MIX1 INP1':0:RX1
+		'RX3 MIX1 INP2':0:RX6
+		'RX5 MIX1 INP1':0:RX2
+		'RX5 MIX1 INP2':0:RX7
+		'RX4 DSM MUX':0:DSM_INV
+		'RX6 DSM MUX':0:DSM_INV
+		'RX3 Digital Volume':1:67
+		'RX4 Digital Volume':1:67
+		'RX5 Digital Volume':1:67
+		'RX6 Digital Volume':1:67
+		'LINEOUT1 Volume':1:20
+		'LINEOUT2 Volume':1:20
+		'LINEOUT3 Volume':1:20
+		'LINEOUT4 Volume':1:20
+		'HS AMP EN Switch':1:1
+	EndSequence
+
+	DisableSequence
+		'HS AMP EN Switch':1:0
+		'RX3 MIX1 INP1':0:ZERO
+		'RX3 MIX1 INP2':0:ZERO
+		'RX5 MIX1 INP1':0:ZERO
+		'RX5 MIX1 INP2':0:ZERO
+		'RX4 DSM MUX':0:CIC_OUT
+		'RX6 DSM MUX':0:CIC_OUT
+		'LINEOUT1 Volume':1:0
+		'LINEOUT2 Volume':1:0
+		'LINEOUT3 Volume':1:0
+		'LINEOUT4 Volume':1:0
+		'RX3 Digital Volume':1:0
+		'RX4 Digital Volume':1:0
+		'RX5 Digital Volume':1:0
+		'RX6 Digital Volume':1:0
+	EndSequence
+
+	ACDBID  10:1
+EndSection
+
+SectionDevice
+	Name "FM Speaker"
+
+	EnableSequence
+		'MI2S_RX Port Mixer INTERNAL_FM_TX':1:1
+		'MI2S_RX_DL_HL Switch':1:1
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Port Mixer INTERNAL_FM_TX':1:0
+		'MI2S_RX_DL_HL Switch':1:0
+	EndSequence
+
+	ACDBID  15:1
+EndSection
+
+SectionDevice
 	Name "FM Tx"
 
 	EnableSequence
