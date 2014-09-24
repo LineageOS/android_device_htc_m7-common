@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_647356e8",
+        "filename": "m7-common.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 3803
+      },
+      "writtenOn": "2014-09-24T11:52:15Z",
+      "side": 1,
+      "message": "Maybe I am misunderstanding ifneq, but wouldn\u0027t that exclude the m7 and m7spr?",
+      "parentUuid": "7a1b2928_c4bfcaf9",
+      "revId": "e7b7d9020b32816ea08cae5658613197da59747c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_a4728e47",
         "filename": "m7-common.mk",
         "patchSetId": 3
