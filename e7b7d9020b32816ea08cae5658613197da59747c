@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_a4728e47",
+        "filename": "m7-common.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 5530
+      },
+      "writtenOn": "2014-09-24T06:36:50Z",
+      "side": 1,
+      "message": "You may want to add this into the two device trees. Just because adding ifneq this will not get picked up.",
+      "revId": "e7b7d9020b32816ea08cae5658613197da59747c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_a4ba8e08",
         "filename": "m7-common.mk",
         "patchSetId": 3
