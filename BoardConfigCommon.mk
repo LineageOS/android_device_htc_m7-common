@@ -44,6 +44,7 @@ BOARD_USES_SEPERATED_VOICE_SPEAKER := true  # use distinct voice speaker use cas
 BOARD_USES_SEPERATED_VOIP := true  # use distinct VOIP use cases
 BOARD_AUDIO_AMPLIFIER := device/htc/m7-common/libaudioamp
 BOARD_HAVE_HTC_CSDCLIENT := true
+QCOM_FM_ENABLED := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_BCM := true

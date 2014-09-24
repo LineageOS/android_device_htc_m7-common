@@ -2641,6 +2641,7 @@ SectionModifier
 	Name "Play FM"
 
 	EnableSequence
+		'Internal FM RX Volume':1:0
 		'SLIMBUS_0_RX Port Mixer PRI_TX':1:1
 		'SLIMBUS_DL_HL Switch':1:1
 	EndSequence
@@ -2666,9 +2667,10 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play FMSpeaker FM"
+	Name "Play FMSpeaker"
 
 	EnableSequence
+		'Internal FM RX Volume':1:0
 		'MI2S_RX Port Mixer PRI_TX':1:1
 		'MI2S_RX_DL_HL Switch':1:1
 	EndSequence
