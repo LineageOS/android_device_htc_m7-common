@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_67d99883",
+        "filename": "rootdir/etc/init.target.rc.gsm",
+        "patchSetId": 7
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-24T12:54:41Z",
+      "side": 1,
+      "message": "Move to the top of the service definitions. fm_dl is alphabetically before kickstart.",
+      "revId": "bedddb809f7752326f1f31d9df0bef03bafaf41c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_c7e86c13",
+        "filename": "rootdir/etc/init.target.rc.spr",
+        "patchSetId": 7
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-24T12:54:41Z",
+      "side": 1,
+      "message": "Move to the top of the service definitions. fm_dl is alphabetically before kickstart.",
+      "revId": "bedddb809f7752326f1f31d9df0bef03bafaf41c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
