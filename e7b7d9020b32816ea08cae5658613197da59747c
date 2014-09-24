@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "7a1b2928_044b8288",
+        "filename": "m7-common.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-09-24T11:54:04Z",
+      "side": 1,
+      "message": "see that last comma near the end? ifneq empty. so it includes m7 and m7spr. in any case, go ahead and move these to devices m7 and m7spr instead, as david recommends below.",
+      "parentUuid": "7a1b2928_647356e8",
+      "revId": "e7b7d9020b32816ea08cae5658613197da59747c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1b2928_a4728e47",
         "filename": "m7-common.mk",
         "patchSetId": 3
