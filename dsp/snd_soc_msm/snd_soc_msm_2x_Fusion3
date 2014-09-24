@@ -15,39 +15,6 @@ SectionVerb
 	PlaybackPCM  1
 EndSection
 }
-SectionUseCase."FM Digital Radio" {
-SectionVerb
-	Name "FM Digital Radio"
-
-	EnableSequence
-		'SLIMBUS_0_RX Port Mixer PRI_TX':1:1
-		'SLIMBUS_DL_HL Switch':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Port Mixer PRI_TX':1:0
-		'SLIMBUS_DL_HL Switch':1:0
-	EndSequence
-	CapturePCM  6
-	PlaybackPCM  5
-EndSection
-
-SectionVerb
-	Name "FM Digital RadioSpeaker FM"
-
-	EnableSequence
-		'MI2S_RX Port Mixer PRI_TX':1:1
-		'MI2S_RX_DL_HL Switch':1:1
-	EndSequence
-
-	DisableSequence
-		'MI2S_RX Port Mixer PRI_TX':1:0
-		'MI2S_RX_DL_HL Switch':1:0
-	EndSequence
-	CapturePCM  6
-	PlaybackPCM  5
-EndSection
-}
 SectionUseCase."FM REC" {
 SectionVerb
 	Name "FM REC"
@@ -1384,6 +1351,38 @@ SectionDevice
 	EndSequence
 
 	ACDBID  7:1
+EndSection
+
+SectionVerb
+	Name "FM Headset"
+
+	EnableSequence
+		'SLIMBUS_0_RX Port Mixer PRI_TX':1:1
+		'SLIMBUS_DL_HL Switch':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Port Mixer PRI_TX':1:0
+		'SLIMBUS_DL_HL Switch':1:0
+	EndSequence
+	CapturePCM  6
+	PlaybackPCM  5
+EndSection
+
+SectionVerb
+	Name "FM Speaker"
+
+	EnableSequence
+		'MI2S_RX Port Mixer PRI_TX':1:1
+		'MI2S_RX_DL_HL Switch':1:1
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Port Mixer PRI_TX':1:0
+		'MI2S_RX_DL_HL Switch':1:0
+	EndSequence
+	CapturePCM  6
+	PlaybackPCM  5
 EndSection
 
 SectionDevice
