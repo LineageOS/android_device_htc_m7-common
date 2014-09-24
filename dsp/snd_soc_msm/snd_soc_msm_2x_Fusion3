@@ -20,12 +20,12 @@ SectionVerb
 	Name "FM Digital Radio"
 
 	EnableSequence
-		'SLIMBUS_0_RX Port Mixer PRI_TX':1:1
+		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:1
 		'SLIMBUS_DL_HL Switch':1:1
 	EndSequence
 
 	DisableSequence
-		'SLIMBUS_0_RX Port Mixer PRI_TX':1:0
+		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:0
 		'SLIMBUS_DL_HL Switch':1:0
 	EndSequence
 	CapturePCM  6
@@ -36,12 +36,12 @@ SectionVerb
 	Name "FM Digital RadioSpeaker FM"
 
 	EnableSequence
-		'MI2S_RX Port Mixer PRI_TX':1:1
+		'MI2S_RX Port Mixer INTERNAL_FM_TX':1:1
 		'MI2S_RX_DL_HL Switch':1:1
 	EndSequence
 
 	DisableSequence
-		'MI2S_RX Port Mixer PRI_TX':1:0
+		'MI2S_RX Port Mixer INTERNAL_FM_TX':1:0
 		'MI2S_RX_DL_HL Switch':1:0
 	EndSequence
 	CapturePCM  6
@@ -2641,12 +2641,12 @@ SectionModifier
 	Name "Play FM"
 
 	EnableSequence
-		'SLIMBUS_0_RX Port Mixer PRI_TX':1:1
+		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:1
 		'SLIMBUS_DL_HL Switch':1:1
 	EndSequence
 
 	DisableSequence
-		'SLIMBUS_0_RX Port Mixer PRI_TX':1:0
+		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:0
 		'SLIMBUS_DL_HL Switch':1:0
 	EndSequence
 	CapturePCM  6
@@ -2669,12 +2669,12 @@ SectionModifier
 	Name "Play FMSpeaker FM"
 
 	EnableSequence
-		'MI2S_RX Port Mixer PRI_TX':1:1
+		'MI2S_RX Port Mixer INTERNAL_FM_TX':1:1
 		'MI2S_RX_DL_HL Switch':1:1
 	EndSequence
 
 	DisableSequence
-		'MI2S_RX Port Mixer PRI_TX':1:0
+		'MI2S_RX Port Mixer INTERNAL_FM_TX':1:0
 		'MI2S_RX_DL_HL Switch':1:0
 	EndSequence
 	CapturePCM  6
