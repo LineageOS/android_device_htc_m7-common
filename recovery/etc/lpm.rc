@@ -44,13 +44,16 @@ on boot
 
     start choice_fn
 
-service charger /sbin/charger
-    disabled
-
 service choice_fn /sbin/choice_fn
     disabled
 
+service detect_key /sbin/detect_key
+    disabled
+
 service offmode_charging /sbin/offmode_charging
+    disabled
+
+service power_test /sbin/power_test
     disabled
 
 service ueventd /sbin/ueventd
