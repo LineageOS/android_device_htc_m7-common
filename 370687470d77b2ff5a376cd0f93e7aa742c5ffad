@@ -16,6 +16,24 @@
       "revId": "370687470d77b2ff5a376cd0f93e7aa742c5ffad",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_199f64b5",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 13
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 5530
+      },
+      "writtenOn": "2014-10-02T08:00:58Z",
+      "side": 1,
+      "message": "But keep this here in common or move to m7 and m7spr gits?",
+      "parentUuid": "7a1b2928_590d5c36",
+      "revId": "370687470d77b2ff5a376cd0f93e7aa742c5ffad",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
