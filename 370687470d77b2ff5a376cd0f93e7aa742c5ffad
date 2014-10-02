@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_590d5c36",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 13
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-10-02T07:10:00Z",
+      "side": 1,
+      "message": "Both of these flags should probably go in the audio section.",
+      "revId": "370687470d77b2ff5a376cd0f93e7aa742c5ffad",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
