@@ -219,9 +219,23 @@ lib/libmpl.so
 lib/libmpl_jni.so
 
 # Widevine
+bin/qseecomd
+vendor/lib/drm/libdrmwvmplugin.so
+vendor/lib/libdrmfs.so
+vendor/lib/libdrmtime.so
+vendor/lib/liboemcrypto.so
 vendor/lib/libQSEEComAPI.so
+vendor/lib/libwvdrm_L1.so
 vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
+vendor/lib/mediadrm/libwvdrmengine.so
+
+# Widevine firmware
+etc/firmware/tzapps.b00
+etc/firmware/tzapps.b01
+etc/firmware/tzapps.b02
+etc/firmware/tzapps.b03
+etc/firmware/tzapps.mdt
 
 # WLAN firmware
 etc/firmware/BCM4335B0_002.001.006.0296.0297.hcd
