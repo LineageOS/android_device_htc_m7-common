@@ -359,6 +359,11 @@ service qmuxd /system/bin/qmuxd
     user radio
     group radio audio gps
 
+service qseecomd /system/bin/qseecomd
+    class main
+    user system
+    group system drm
+
 service thermald /system/bin/thermald
     class main
     user root
