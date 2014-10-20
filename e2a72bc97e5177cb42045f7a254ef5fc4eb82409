@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a18252c_9b99f322",
+        "filename": "rootdir/etc/init.target.rc.gsm",
+        "patchSetId": 17
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-10-20T16:29:31Z",
+      "side": 1,
+      "message": "It\u0027s probably find to leave this service entry in the main init.qcom.rc file if the applications are only built for m7/m7spr, since that is the entry point.",
+      "revId": "e2a72bc97e5177cb42045f7a254ef5fc4eb82409",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
