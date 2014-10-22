@@ -39,4 +39,7 @@ limitations under the License.
     <!-- If true, the text message will be split every 160 characters.
          If false, the text will never be split before being sent. -->
     <bool name="enableSplitSMS">true</bool>
+
+    <!-- Support to hide Sprints VVM text messages -->
+    <bool name="enableSprintVVM">true</bool>
 </mms_config>
