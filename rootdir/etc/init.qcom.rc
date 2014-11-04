@@ -332,6 +332,12 @@ service cir_fw_update /system/bin/cir_fw_update -u cir.img
     group root
     oneshot
 
+service fm_dl /system/bin/setprop hw.fm.init 1
+    user root
+    group system fm_radio
+    disabled
+    oneshot
+
 # FUSE
 service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
     class late_start
@@ -358,6 +364,11 @@ service qmuxd /system/bin/qmuxd
     class core
     user radio
     group radio audio gps
+
+service qseecomd /system/bin/qseecomd
+    class main
+    user system
+    group system drm
 
 service thermald /system/bin/thermald
     class main
