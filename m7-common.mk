@@ -34,14 +34,6 @@ PRODUCT_PACKAGES += \
 
 # Recovery
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
-PRODUCT_PACKAGES += \
-    lpm.rc \
-    choice_fn \
-    offmode_charging \
-    offmode_charging_res_images \
-    offmode_charging_warn_res_images \
-    chargeled \
-    init.recovery.qcom.rc
 
 # QC thermald config
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/thermald.conf:system/etc/thermald.conf
