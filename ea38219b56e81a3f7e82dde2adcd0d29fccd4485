@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a122d0e_9faa7618",
+        "filename": "camera/CameraWrapper.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-11-13T10:27:50Z",
+      "side": 0,
+      "message": "Don\u0027t remove this, add legacy_open",
+      "revId": "ea38219b56e81a3f7e82dde2adcd0d29fccd4485",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
