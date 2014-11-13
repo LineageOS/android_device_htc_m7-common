@@ -93,7 +93,10 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    gps.msm8960
+    gps.msm8960 \
+    libloc_adapter \
+    libloc_eng \
+    libgps.utils
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf
