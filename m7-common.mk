@@ -46,9 +46,17 @@ PRODUCT_PACKAGES += \
 # Wifi config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:/system/etc/wifi/p2p_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
     $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:/system/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/calibration:/system/etc/calibration \
     $(LOCAL_PATH)/configs/calibration_EMEA:/system/etc/calibration_EMEA
+
+PRODUCT_PACKAGES += \
+    dhcpcd.conf \
+    hostapd \
+    hostapd_default.conf \
+    libwpa_client \
+    wpa_supplicant
 
 # Audio config
 PRODUCT_COPY_FILES += \
