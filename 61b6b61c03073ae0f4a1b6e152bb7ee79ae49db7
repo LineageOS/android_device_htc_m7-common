@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a122d0e_e1494d90",
+        "filename": "include/camera/CameraParametersExtra.h",
+        "patchSetId": 5
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-11-14T23:01:11Z",
+      "side": 1,
+      "message": "Kind of weirds me out to put function definitions here, maybe we want to add another section for missing symbols in frameworks/av",
+      "revId": "61b6b61c03073ae0f4a1b6e152bb7ee79ae49db7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
