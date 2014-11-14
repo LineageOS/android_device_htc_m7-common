@@ -27,7 +27,9 @@
 # inherit from common msm8960
 -include device/htc/msm8960-common/BoardConfigCommon.mk
 
-TARGET_SPECIFIC_HEADER_PATH := device/htc/m7-common/include
+LOCAL_PATH := device/htc/m7-common
+
+TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80600000
@@ -43,32 +45,51 @@ BOARD_USES_SEPERATED_AUDIO_INPUT := true  # use distinct voice recognition use c
 BOARD_USES_SEPERATED_FM := true # use distinct fm use cases
 BOARD_USES_SEPERATED_VOICE_SPEAKER := true  # use distinct voice speaker use case
 BOARD_USES_SEPERATED_VOIP := true  # use distinct VOIP use cases
-BOARD_AUDIO_AMPLIFIER := device/htc/m7-common/libaudioamp
+BOARD_AUDIO_AMPLIFIER := $(LOCAL_PATH)/libaudioamp
 BOARD_HAVE_HTC_CSDCLIENT := true
 QCOM_FM_ENABLED := true
 
 # Bluetooth
-BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/m7-common/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/htc/m7-common/bluetooth/libbt_vndcfg.txt
+BOARD_BLUEDROID_VENDOR_CONF := $(LOCAL_PATH)/bluetooth/libbt_vndcfg.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
+BOARD_HAVE_BLUETOOTH_BCM := true
 
 # Camera
 COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 USE_DEVICE_SPECIFIC_CAMERA := true
 
+# Charger
+BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
+
+# CMHW
+BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw
+
+# Filesystem
+BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776704
+BOARD_FLASH_BLOCK_SIZE := 131072
+
 # Graphics
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 HAVE_ADRENO_SOURCE := false
+
+# Recovery
+BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
+BOARD_RECOVERY_BLDRMSG_OFFSET := 2048
+BOARD_RECOVERY_SWIPE := true
+COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
+TARGET_RECOVERY_DEVICE_DIRS += $(LOCAL_PATH)
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+TARGET_USERIMAGES_USE_EXT4 := true
 
 # RIL
 BOARD_PROVIDES_LIBRIL := true
 
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
-
-# Tuning
-BOARD_HARDWARE_CLASS := device/htc/m7-common/cmhw
 
 # Wifi
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
@@ -81,24 +102,6 @@ WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path
 WIFI_DRIVER_FW_PATH_STA          := "/system/etc/firmware/fw_bcm4335_b0.bin"
 WIFI_DRIVER_FW_PATH_AP           := "/system/etc/firmware/fw_bcm4335_apsta_b0.bin"
 WIFI_DRIVER_FW_PATH_P2P          := "/system/etc/firmware/fw_bcm4335_p2p_b0.bin"
-
-# Filesystem
-BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776704
-BOARD_FLASH_BLOCK_SIZE := 131072
-
-# Custom Recovery
-TARGET_RECOVERY_FSTAB := device/htc/m7-common/rootdir/etc/fstab.qcom
-BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
-BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_RECOVERY_SWIPE := true
-TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_RECOVERY_BLDRMSG_OFFSET := 2048
-TARGET_RECOVERY_DEVICE_DIRS += device/htc/m7-common
-
-# Charge mode
-BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
 
 # inherit from the proprietary version
 -include vendor/htc/m7-common/BoardConfigVendor.mk
