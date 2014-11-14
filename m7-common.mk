@@ -50,12 +50,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/calibration:/system/etc/calibration \
     $(LOCAL_PATH)/configs/calibration_EMEA:/system/etc/calibration_EMEA
 
-PRODUCT_PACKAGES += \
-    dhcpcd.conf \
-    hostapd \
-    wpa_supplicant \
-    wpa_supplicant.conf
-
 # Audio config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
