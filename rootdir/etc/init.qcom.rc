@@ -1,3 +1,4 @@
+import init.target.rc
 import init.qcom.usb.rc
 
 on early-init
