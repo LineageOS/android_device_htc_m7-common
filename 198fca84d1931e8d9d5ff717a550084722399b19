@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a122d0e_26419b0c",
+        "filename": "gps/libloc_api_50001/LocApiAdapter.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-11-14T12:55:04Z",
+      "side": 1,
+      "message": "Are you using new blobs or something?",
+      "revId": "198fca84d1931e8d9d5ff717a550084722399b19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a122d0e_86bb4f0e",
+        "filename": "gps/libloc_api_50001/loc.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 745,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-11-14T12:55:04Z",
+      "side": 1,
+      "message": "This does... nothing?",
+      "revId": "198fca84d1931e8d9d5ff717a550084722399b19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a122d0e_c63b879b",
+        "filename": "m7-common.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-11-14T12:55:04Z",
+      "side": 1,
+      "message": "Unnecessary, gps.msm8960 declares a dependency on thes.e",
+      "revId": "198fca84d1931e8d9d5ff717a550084722399b19",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
