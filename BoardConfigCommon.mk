@@ -47,7 +47,6 @@ BOARD_USES_SEPERATED_VOICE_SPEAKER := true  # use distinct voice speaker use cas
 BOARD_USES_SEPERATED_VOIP := true  # use distinct VOIP use cases
 BOARD_AUDIO_AMPLIFIER := $(LOCAL_PATH)/libaudioamp
 BOARD_HAVE_HTC_CSDCLIENT := true
-QCOM_FM_ENABLED := true
 
 # Bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := $(LOCAL_PATH)/bluetooth/libbt_vndcfg.txt
