@@ -177,7 +177,7 @@ public:
     {LOC_LOGW("%s: default implementation invoked", __func__); return LOC_API_ADAPTER_ERR_SUCCESS;}
 #ifdef FEATURE_IPV6
     inline virtual enum loc_api_adapter_err
-        atlOpenStatus(int handle, int is_succ, char* apn, AGpsBearerType bear, AGpsType agpsType)
+        atlOpenStatus(int handle, int is_succ, char* apn, ApnIpType bear, AGpsType agpsType)
     {LOC_LOGW("%s: default implementation invoked", __func__); return LOC_API_ADAPTER_ERR_SUCCESS;}
 #else
     inline virtual enum loc_api_adapter_err

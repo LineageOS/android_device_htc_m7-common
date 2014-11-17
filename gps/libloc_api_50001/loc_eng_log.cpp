@@ -170,13 +170,13 @@ static loc_name_val_s_type loc_eng_aiding_data_bits[] =
 #ifdef FEATURE_DELEXT
     ,NAME_VAL( GPS_DELETE_ALMANAC_CORR ),
     NAME_VAL( GPS_DELETE_FREQ_BIAS_EST ),
-    NAME_VAL( GPS_DELETE_EPHEMERIS_GLO ),
-    NAME_VAL( GPS_DELETE_ALMANAC_GLO ),
-    NAME_VAL( GPS_DELETE_SVDIR_GLO ),
-    NAME_VAL( GPS_DELETE_SVSTEER_GLO ),
-    NAME_VAL( GPS_DELETE_ALMANAC_CORR_GLO ),
+    NAME_VAL( GLO_DELETE_EPHEMERIS ),
+    NAME_VAL( GLO_DELETE_ALMANAC ),
+    NAME_VAL( GLO_DELETE_SVDIR ),
+    NAME_VAL( GLO_DELETE_SVSTEER ),
+    NAME_VAL( GLO_DELETE_ALMANAC_CORR ),
     NAME_VAL( GPS_DELETE_TIME_GPS ),
-    NAME_VAL( GPS_DELETE_TIME_GLO )
+    NAME_VAL( GLO_DELETE_TIME )
 #endif
 };
 static int loc_eng_aiding_data_bit_num = sizeof(loc_eng_aiding_data_bits) / sizeof(loc_name_val_s_type);
@@ -253,14 +253,14 @@ const char* loc_get_ni_encoding_name(GpsNiEncodingType encoding)
 #ifdef FEATURE_IPV6
 static loc_name_val_s_type loc_eng_agps_bears[] =
 {
-    NAME_VAL( AGPS_APN_BEARER_INVALID ),
-    NAME_VAL( AGPS_APN_BEARER_IPV4 ),
-    NAME_VAL( AGPS_APN_BEARER_IPV4 ),
-    NAME_VAL( AGPS_APN_BEARER_IPV4V6 )
+    NAME_VAL( APN_IP_INVALID ),
+    NAME_VAL( APN_IP_IPV4 ),
+    NAME_VAL( APN_IP_IPV4 ),
+    NAME_VAL( APN_IP_IPV4V6 )
 };
 static int loc_eng_agps_bears_num = sizeof(loc_eng_agps_bears) / sizeof(loc_name_val_s_type);
 
-const char* loc_get_agps_bear_name(AGpsBearerType bearer)
+const char* loc_get_agps_bear_name(ApnIpType bearer)
 {
     return loc_get_name_from_val(loc_eng_agps_bears, loc_eng_agps_bears_num, (long) bearer);
 }
