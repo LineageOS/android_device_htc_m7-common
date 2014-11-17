@@ -916,7 +916,7 @@ SIDE EFFECTS
 ===========================================================================*/
 #ifdef FEATURE_IPV6
 int loc_eng_agps_open(loc_eng_data_s_type &loc_eng_data, AGpsType agpsType,
-                     const char* apn, AGpsBearerType bearerType)
+                     const char* apn, ApnIpType bearerType)
 {
     ENTRY_LOG_CALLFLOW();
     INIT_CHECK(loc_eng_data.context && loc_eng_data.agps_status_cb,

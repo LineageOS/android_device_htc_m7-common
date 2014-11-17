@@ -725,12 +725,12 @@ struct loc_eng_msg_atl_open_success : public loc_eng_msg {
     const AGpsStatusValue agpsType;
     const int length;
     char* const apn;
-    const AGpsBearerType bearerType;
+    const ApnIpType bearerType;
     inline loc_eng_msg_atl_open_success(void* instance,
                                         AGpsStatusValue atype,
                                         const char* name,
                                         int len,
-                                        AGpsBearerType btype) :
+                                        ApnIpType btype) :
         loc_eng_msg(instance, LOC_ENG_MSG_ATL_OPEN_SUCCESS),
         agpsType(atype), length(len),
         apn(new char[len+1]), bearerType(btype)

@@ -234,7 +234,7 @@ void loc_eng_agps_init(loc_eng_data_s_type &loc_eng_data,
                        AGpsCallbacks* callbacks);
 #ifdef FEATURE_IPV6
 int  loc_eng_agps_open(loc_eng_data_s_type &loc_eng_data, AGpsType agpsType,
-                      const char* apn, AGpsBearerType bearerType);
+                      const char* apn, ApnIpType bearerType);
 int  loc_eng_agps_closed(loc_eng_data_s_type &loc_eng_data, AGpsType agpsType);
 int  loc_eng_agps_open_failed(loc_eng_data_s_type &loc_eng_data, AGpsType agpsType);
 #else

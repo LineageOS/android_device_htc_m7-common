@@ -705,12 +705,13 @@ void AgpsStateMachine::sendRsrcRequest(AGpsStatusValue action) const
 
 #ifdef FEATURE_IPV6
         if (s == NULL) {
-            nifRequest.ipv4_addr = INADDR_NONE;
-            nifRequest.ipv6_addr[0] = 0;
+            nifRequest.ipaddr = INADDR_NONE;
+            memset(&nifRequest.addr, 0, sizeof(nifRequest.addr));
             nifRequest.ssid[0] = '\0';
             nifRequest.password[0] = '\0';
         } else {
-            s->setIPAddresses(nifRequest.ipv4_addr, (char*)nifRequest.ipv6_addr);
+            s->setIPAddresses(nifRequest.ipaddr,
+                    (char*)&((struct sockaddr_in6*)&(nifRequest.addr))->sin6_addr);
             s->setWifiInfo(nifRequest.ssid, nifRequest.password);
         }
 #else

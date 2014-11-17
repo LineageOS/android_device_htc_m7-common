@@ -152,7 +152,7 @@ class AgpsStateMachine {
     unsigned int mAPNLen;
 #ifdef FEATURE_IPV6
     // bear
-    AGpsBearerType mBearer;
+    ApnIpType mBearer;
 #endif
     // ipv4 address for routing
     bool mEnforceSingleSubscriber;
@@ -165,8 +165,8 @@ public:
     void setAPN(const char* apn, unsigned int len);
     inline const char* getAPN() const { return (const char*)mAPN; }
 #ifdef FEATURE_IPV6
-    inline void setBearer(AGpsBearerType bearer) { mBearer = bearer; }
-    inline AGpsBearerType getBearer() const { return mBearer; }
+    inline void setBearer(ApnIpType bearer) { mBearer = bearer; }
+    inline ApnIpType getBearer() const { return mBearer; }
 #endif
     inline AGpsType getType() const { return (AGpsType)mType; }
 

@@ -49,7 +49,7 @@ const char* loc_get_ni_type_name(GpsNiType type);
 const char* loc_get_ni_response_name(GpsUserResponseType response);
 const char* loc_get_ni_encoding_name(GpsNiEncodingType encoding);
 #ifdef FEATURE_IPV6
-const char* loc_get_agps_bear_name(AGpsBearerType bear);
+const char* loc_get_agps_bear_name(ApnIpType bear);
 #endif
 const char* loc_get_server_type_name(LocServerType type);
 const char* loc_get_position_sess_status_name(enum loc_sess_status status);
