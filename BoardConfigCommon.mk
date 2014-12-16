@@ -98,6 +98,8 @@ BOARD_SEPOLICY_UNION += \
     mdm_helper.te \
     mm-qcamerad.te \
     mpdecision.te \
+    property_contexts \
+    recovery.te \
     thermal-engine.te \
     ueventd.te \
     wpa.te
