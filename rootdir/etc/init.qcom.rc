@@ -157,6 +157,11 @@ on init
     # connection tracking to treat them as INVALID packet
     write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
 
+    # Camera
+    chown media system /sys/camera_htccallback/htccallback
+    chmod 0660 /sys/camera_htccallback/htccallback
+    restorecon /sys/camera_htccallback/htccallback
+
     # Vibrator
     chown root system /sys/class/timed_output/vibrator/voltage_level
     chmod 0664 /sys/class/timed_output/vibrator/voltage_level
@@ -293,7 +298,6 @@ on boot
     chown system system /sys/devices/virtual/graphics/fb1/format_3d
     chown system system /sys/devices/virtual/graphics/fb1/hpd
 
-    chown media system /sys/camera_htccallback/htccallback
     chown media system /sys/camera_attrs/videochat
 
     chown root system /proc/driver/hdf

@@ -1,0 +1,1 @@
+allow netmgrd self:packet_socket { create bind read write };
