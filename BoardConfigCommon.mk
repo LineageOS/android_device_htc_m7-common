@@ -93,8 +93,16 @@ BOARD_SEPOLICY_DIRS += \
     device/htc/m7-common/sepolicy
 
 BOARD_SEPOLICY_UNION += \
+    device.te \
+    file_contexts \
+    mdm_helper.te \
+    mm-qcamerad.te \
+    mpdecision.te \
     property_contexts \
     recovery.te
+    thermal-engine.te \
+    ueventd.te \
+    wpa.te
 
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
