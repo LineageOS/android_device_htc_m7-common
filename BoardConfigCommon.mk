@@ -86,6 +86,9 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # RIL
 BOARD_PROVIDES_LIBRIL := true
 
+# SELinux
+-include device/qcom/sepolicy/sepolicy.mk
+
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
