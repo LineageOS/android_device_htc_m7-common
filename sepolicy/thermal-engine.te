@@ -1,0 +1,2 @@
+allow thermal-engine self:capability { chown net_admin };
+allow thermal-engine self:netlink_kobject_uevent_socket rw_socket_perms;
