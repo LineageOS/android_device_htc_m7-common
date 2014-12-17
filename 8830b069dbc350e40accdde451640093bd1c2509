@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7aa08908_5f68f4ba",
+        "filename": "recovery/root/init.recovery.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-12-17T08:06:40Z",
+      "side": 1,
+      "message": "May change to: seclabel u:r:healthd:s0",
+      "revId": "8830b069dbc350e40accdde451640093bd1c2509",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
