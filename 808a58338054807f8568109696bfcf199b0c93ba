@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7aa08908_7f204d4a",
+        "filename": "configs/audio_policy.conf",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2014-12-18T08:28:36Z",
+      "side": 1,
+      "message": "Based on arco\u0027s comments in http://review.cyanogenmod.org/81925 it seems we shouldn\u0027t be using a separate a2d2. Confirm?",
+      "revId": "808a58338054807f8568109696bfcf199b0c93ba",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
