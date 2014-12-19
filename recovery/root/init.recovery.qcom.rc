@@ -39,7 +39,7 @@ on property:recovery.perf.mode=1
 
 service chargeled /sbin/chargeled
     disabled
-    seclabel u:r:recovery:s0
+    seclabel u:r:healthd:s0
 
 service choice_fn /sbin/choice_fn
     disabled
@@ -51,7 +51,7 @@ service detect_key /sbin/detect_key
 
 service offmode_charging /sbin/offmode_charging
     disabled
-    seclabel u:r:recovery:s0
+    seclabel u:r:healthd:s0
 
 service power_test /sbin/power_test
     disabled
