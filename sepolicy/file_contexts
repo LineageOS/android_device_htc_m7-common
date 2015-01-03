@@ -15,6 +15,10 @@
 /dev/rawchip.*                  u:object_r:camera_device:s0
 /sys/camera_htccallback/htccallback u:object_r:camera_sysfs:s0
 
+# CIR
+/dev/ttyHSL2                    u:object_r:cir_device:s0
+/system/bin/cir_fw_update       u:object_r:cir_fw_update_exec:s0
+
 # CMHW
 /sys/devices/virtual/timed_output/vibrator/voltage_level   u:object_r:vibeamp_sysfs:s0
 
