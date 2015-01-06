@@ -93,6 +93,7 @@ BOARD_SEPOLICY_DIRS += \
     device/htc/m7-common/sepolicy
 
 BOARD_SEPOLICY_UNION += \
+    akmd.te \
     cir_fw_update.te
 
 # USB
