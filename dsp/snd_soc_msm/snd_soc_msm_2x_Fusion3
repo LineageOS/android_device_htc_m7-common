@@ -149,106 +149,6 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFiPROXY Rx ANC Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-	CapturePCM  0
-	PlaybackPCM  0
-EndSection
-
-SectionVerb
-	Name "HiFiPROXY Rx Earpiece"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-	CapturePCM  0
-	PlaybackPCM  0
-EndSection
-
-SectionVerb
-	Name "HiFiPROXY Rx Headphones"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-	CapturePCM  0
-	PlaybackPCM  0
-EndSection
-
-SectionVerb
-	Name "HiFiPROXY Rx Speaker"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'MI2S_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'MI2S_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-	CapturePCM  0
-	PlaybackPCM  0
-EndSection
-
-SectionVerb
-	Name "HiFiPROXY Rx Speaker ANC Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'MI2S_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'MI2S_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-	CapturePCM  0
-	PlaybackPCM  0
-EndSection
-
-SectionVerb
-	Name "HiFiPROXY Rx Speaker Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-		'MI2S_RX Audio Mixer MultiMedia1':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-		'MI2S_RX Audio Mixer MultiMedia1':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-	CapturePCM  0
-	PlaybackPCM  0
-EndSection
-
-SectionVerb
 	Name "HiFiPROXY Tx"
 
 	EnableSequence
@@ -285,32 +185,6 @@ SectionVerb
 	DisableSequence
 		'MI2S_RX Audio Mixer MultiMedia1':1:0
 		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-	CapturePCM  0
-	PlaybackPCM  0
-EndSection
-
-SectionVerb
-	Name "HiFiUSB PROXY Rx"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-	CapturePCM  0
-	PlaybackPCM  0
-EndSection
-
-SectionVerb
-	Name "HiFiUSB PROXY Tx"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
 	EndSequence
 	CapturePCM  0
 	PlaybackPCM  0
@@ -433,30 +307,6 @@ SectionVerb
 	EndSequence
 	PlaybackPCM  4
 EndSection
-
-SectionVerb
-	Name "HiFi Low PowerUSB PROXY Rx"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-	PlaybackPCM  4
-EndSection
-
-SectionVerb
-	Name "HiFi Low PowerUSB PROXY Tx"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-	EndSequence
-	PlaybackPCM  4
-EndSection
 }
 SectionUseCase."HiFi Lowlatency" {
 SectionVerb
@@ -514,13 +364,13 @@ EndSection
 SectionVerb
 	Name "HiFi LowlatencyPROXY Rx"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
+    EnableSequence
+	    'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
+    EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
+    DisableSequence
+        'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
+    EndSequence
 	PlaybackPCM  14
 EndSection
 
@@ -603,32 +453,6 @@ SectionVerb
 	CapturePCM  14
 	PlaybackPCM  14
 EndSection
-
-SectionVerb
-	Name "HiFi Lowlatency RecPROXY Rx"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-	EndSequence
-	CapturePCM  14
-	PlaybackPCM  14
-EndSection
-
-SectionVerb
-	Name "HiFi Lowlatency RecPROXY Tx"
-
-	EnableSequence
-		'MultiMedia5 Mixer AFE_PCM_TX':1:1
-	EndSequence
-
-	DisableSequence
-		'MultiMedia5 Mixer AFE_PCM_TX':1:0
-	EndSequence
-	CapturePCM  14
-	PlaybackPCM  14
-EndSection
 }
 SectionUseCase."HiFi Rec" {
 SectionVerb
@@ -668,20 +492,6 @@ SectionVerb
 
 	DisableSequence
 		'MultiMedia1 Mixer AUX_PCM_UL_TX':1:0
-	EndSequence
-	CapturePCM  0
-	PlaybackPCM  0
-EndSection
-
-SectionVerb
-	Name "HiFi RecPROXY Tx"
-
-	EnableSequence
-		'MultiMedia1 Mixer AFE_PCM_TX':1:1
-	EndSequence
-
-	DisableSequence
-		'MultiMedia1 Mixer AFE_PCM_TX':1:0
 	EndSequence
 	CapturePCM  0
 	PlaybackPCM  0
@@ -756,16 +566,16 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi TunnelPROXY Rx"
+    Name "HiFi TunnelPROXY Rx"
 
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
+    EnableSequence
+        'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
+    EndSequence
 
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-	PlaybackPCM 9
+    DisableSequence
+        'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
+    EndSequence
+    PlaybackPCM  9
 EndSection
 
 SectionVerb
@@ -1620,79 +1430,7 @@ SectionDevice
 	DisableSequence
 	EndSequence
 
-	ACDBID  20:1
-EndSection
-
-SectionDevice
-	Name "PROXY Rx Earpiece"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	ACDBID  7:1
-EndSection
-
-SectionDevice
-	Name "PROXY Rx ANC Headset"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	ACDBID  26:1
-EndSection
-
-SectionDevice
-	Name "PROXY Rx Headphones"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	ACDBID  10:1
-EndSection
-
-SectionDevice
-	Name "PROXY Rx Speaker"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	ACDBID  15:1
-EndSection
-
-SectionDevice
-	Name "PROXY Rx Speaker ANC Headset"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	ACDBID  26:1
-EndSection
-
-SectionDevice
-	Name "PROXY Rx Speaker Headset"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	ACDBID  10:1
+	ACDBID  22:1
 EndSection
 
 SectionDevice
@@ -1704,7 +1442,7 @@ SectionDevice
 	DisableSequence
 	EndSequence
 
-	ACDBID  0:2
+	ACDBID  21:2
 EndSection
 
 SectionDevice
@@ -2068,42 +1806,6 @@ SectionDevice
 	EndSequence
 
 	ACDBID  16:2
-EndSection
-
-SectionDevice
-	Name "USB PROXY Rx"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	ACDBID  45:1
-EndSection
-
-SectionDevice
-	Name "USB PROXY Rx Speaker"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	ACDBID  22:1
-EndSection
-
-SectionDevice
-	Name "USB PROXY Tx"
-
-	EnableSequence
-	EndSequence
-
-	DisableSequence
-	EndSequence
-
-	ACDBID  44:1
 EndSection
 
 SectionDevice
@@ -2581,20 +2283,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Capture Lowlatency MusicPROXY Tx"
-
-	EnableSequence
-		'MultiMedia5 Mixer AFE_PCM_TX':1:1
-	EndSequence
-
-	DisableSequence
-		'MultiMedia5 Mixer AFE_PCM_TX':1:0
-	EndSequence
-	CapturePCM  14
-	PlaybackPCM  14
-EndSection
-
-SectionModifier
 	Name "Capture Music"
 
 	EnableSequence
@@ -2783,20 +2471,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play Lowlatency MusicPROXY Rx"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia5':1:0
-	EndSequence
-	CapturePCM  14
-	PlaybackPCM  14
-EndSection
-
-SectionModifier
 	Name "Play Lowlatency MusicSpeaker"
 
 	EnableSequence
@@ -2890,113 +2564,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play LPAPROXY Rx"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-	PlaybackPCM  4
-EndSection
-
-SectionModifier
-	Name "Play LPAPROXY Rx ANC Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-	PlaybackPCM  4
-EndSection
-
-SectionModifier
-	Name "Play LPAPROXY Rx Earpiece"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-	PlaybackPCM  4
-EndSection
-
-SectionModifier
-	Name "Play LPAPROXY Rx Headphones"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-	PlaybackPCM  4
-EndSection
-
-SectionModifier
-	Name "Play LPAPROXY Rx Speaker"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-		'MI2S_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-		'MI2S_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-	PlaybackPCM  4
-EndSection
-
-SectionModifier
-	Name "Play LPAPROXY Rx Speaker ANC Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-		'MI2S_RX Audio Mixer MultiMedia3':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-		'MI2S_RX Audio Mixer MultiMedia3':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-	PlaybackPCM  4
-EndSection
-
-SectionModifier
-	Name "Play LPAPROXY Rx Speaker Headset"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-		'MI2S_RX Audio Mixer MultiMedia3':1:1
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-		'MI2S_RX Audio Mixer MultiMedia3':1:0
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-	PlaybackPCM  4
-EndSection
-
-SectionModifier
 	Name "Play LPAPROXY Tx"
 
 	EnableSequence
@@ -3031,34 +2598,6 @@ SectionModifier
 	DisableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
 		'INTERNAL_FM_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-	PlaybackPCM  4
-EndSection
-
-SectionModifier
-	Name "Play LPAUSB PROXY Rx"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-	PlaybackPCM  4
-EndSection
-
-SectionModifier
-	Name "Play LPAUSB PROXY Rx Speaker"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
-		'MI2S_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
-		'MI2S_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
 	PlaybackPCM  4
 EndSection
@@ -3128,20 +2667,6 @@ SectionModifier
 
 	DisableSequence
 		'HDMI Mixer MultiMedia1':1:0
-	EndSequence
-	CapturePCM  0
-	PlaybackPCM  0
-EndSection
-
-SectionModifier
-	Name "Play MusicPROXY Rx"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia1':1:0
 	EndSequence
 	CapturePCM  0
 	PlaybackPCM  0
@@ -3269,19 +2794,6 @@ SectionModifier
 
 	DisableSequence
 		'HDMI Mixer MultiMedia4':1:0
-	EndSequence
-	PlaybackPCM  9
-EndSection
-
-SectionModifier
-	Name "Play TunnelPROXY Rx"
-
-	EnableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
 	EndSequence
 	PlaybackPCM  9
 EndSection
