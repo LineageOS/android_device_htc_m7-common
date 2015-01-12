@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7aa08908_3c397642",
+        "filename": "sepolicy/hostapd.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2015-01-12T10:43:44Z",
+      "side": 1,
+      "message": "bluetooth_device",
+      "revId": "33fe7678815ad9a3caa5c01fe26747800fc4f561",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
