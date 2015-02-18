@@ -25,7 +25,7 @@ limitations under the License.
     <string name="userAgent">HTC6500LVW</string>
 
     <!-- UAProf URL -->
-    <string name="uaProfUrl">http://uaprof.vtext.com/pcd/adr6500/adr6500.xml</string>
+    <string name="uaProfUrl">http://uaprof.vtext.com/htc/htc6500lvw/htc6500lvw.xml</string>
 
     <!-- Maximum number of SMS message segments in a long text message before converting
          the SMS message to an MMS message. -->
