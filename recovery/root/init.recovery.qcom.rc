@@ -17,7 +17,8 @@ on boot
 
 on charger
     start choice_fn
-    start chargeled
+    start detect_key
+    start offmode_charging
 
 on property:recovery.perf.mode=0
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "ondemand"
@@ -43,11 +44,13 @@ service chargeled /sbin/chargeled
 
 service choice_fn /sbin/choice_fn
     disabled
+    oneshot
     seclabel u:r:recovery:s0
 
 service detect_key /sbin/detect_key
     disabled
-    seclabel u:r:recovery:s0
+    oneshot
+    seclabel u:r:healthd:s0
 
 service offmode_charging /sbin/offmode_charging
     disabled
@@ -55,4 +58,5 @@ service offmode_charging /sbin/offmode_charging
 
 service power_test /sbin/power_test
     disabled
+    oneshot
     seclabel u:r:recovery:s0
