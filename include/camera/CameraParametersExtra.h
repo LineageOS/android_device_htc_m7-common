@@ -105,6 +105,7 @@ const char CameraParameters::KEY_SELECTABLE_ZONE_AF[] = "selectable-zone-af"; \
 const char CameraParameters::KEY_SHARPNESS[] = "sharpness"; \
 const char CameraParameters::KEY_SINGLE_ISP_OUTPUT_ENABLED[] = "single-isp-output-enabled"; \
 const char CameraParameters::KEY_SKIN_TONE_ENHANCEMENT[] = "skinToneEnhancement"; \
+const char CameraParameters::KEY_SMILEINFO_BYFACE_SUPPORTED[] = "smileinfo-byface-supported"; \
 const char CameraParameters::KEY_SUPPORTED_AUTO_EXPOSURE[] = "auto-exposure-values"; \
 const char CameraParameters::KEY_SUPPORTED_CAPTURE_MODES[] = "capture-mode-values"; \
 const char CameraParameters::KEY_SUPPORTED_DENOISE[] = "denoise-values"; \
@@ -396,6 +397,7 @@ struct FPSRange{ \
     static const char KEY_SHARPNESS[]; \
     static const char KEY_SINGLE_ISP_OUTPUT_ENABLED[]; \
     static const char KEY_SKIN_TONE_ENHANCEMENT[]; \
+    static const char KEY_SMILEINFO_BYFACE_SUPPORTED[]; \
     static const char KEY_SUPPORTED_AUTO_EXPOSURE[]; \
     static const char KEY_SUPPORTED_CAPTURE_MODES[]; \
     static const char KEY_SUPPORTED_DENOISE[]; \
