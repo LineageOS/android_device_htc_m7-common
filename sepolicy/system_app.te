@@ -1,2 +1,0 @@
-allow system_app vibeamp_sysfs:file { getattr open read write };
-allow system_app vibeamp_sysfs:dir search;

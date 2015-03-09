@@ -1,1 +1,3 @@
+allow system_server vibeamp_sysfs:dir search;
+allow system_server vibeamp_sysfs:file { getattr open read write };
 allow system_server cir_device:chr_file { open read write ioctl };
