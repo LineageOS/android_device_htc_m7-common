@@ -7,24 +7,9 @@ on early-init
     chown system system /sys/kernel/debug/kgsl/proc
 
 on init
-    mkdir /mnt/shell/emulated 0700 shell shell
-    mkdir /storage/emulated 0555 root root
-
-    mkdir /mnt/media_rw/usbdisk 0700 media_rw media_rw
-    mkdir /storage/usbdisk 0700 root root
-
-    export EXTERNAL_STORAGE /storage/emulated/legacy
-    export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
-    export EMULATED_STORAGE_TARGET /storage/emulated
-    export SECONDARY_STORAGE /storage/usbdisk
-
-    # for backwards compatibility
-    symlink /storage/emulated/legacy /sdcard
-    symlink /storage/emulated/legacy /mnt/sdcard
-    symlink /storage/emulated/legacy /storage/sdcard0
-    symlink /mnt/shell/emulated/0 /storage/emulated/legacy
-    symlink /storage/usbdisk /usbdisk
-    symlink /storage/usbdisk /mnt/usbdisk
+    # Support legacy paths
+    symlink /sdcard /mnt/sdcard
+    symlink /sdcard /storage/sdcard0
 
     # For Invensense MPU3050
     chmod 0664 /sys/class/gyro_sensors/gyro/mpu_lpm_flag
@@ -192,8 +177,6 @@ on fs
     mkdir /mnt/secdata 0755 system system
     mount tmpfs tmpfs /mnt/secdata mode=0755,gid=1000
 
-    setprop ro.crypto.fuse_sdcard true
-
 on post-fs-data
     # Create symbolic links to mount points outside of /data for qcks
     symlink /mnt/qcks /data/qcks
@@ -226,9 +209,6 @@ on post-fs-data
     mkdir /data/misc/location 0770 gps gps
     mkdir /data/misc/location/mq 0770 gps gps
     mkdir /data/misc/gpsone_d 0770 system gps
-
-    # We will remap this as /mnt/sdcard with the sdcard fuse tool
-    mkdir /data/media 0770 media_rw media_rw
 
     setprop qcom.audio.init complete
 
@@ -341,17 +321,8 @@ service fm_dl /system/bin/setprop hw.fm.init 1
     disabled
     oneshot
 
-# FUSE
-service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
-    class late_start
-
-service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbdisk /storage/usbdisk
-    class late_start
-    disabled
-
 service netmgrd /system/bin/netmgrd
     class core
-# End FUSE
 
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
     class main
