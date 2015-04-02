@@ -87,12 +87,7 @@ BOARD_PROVIDES_LIBRIL := true
 # SELinux
 -include device/qcom/sepolicy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += \
-    device/htc/m7-common/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-    akmd.te \
-    cir_fw_update.te
+BOARD_SEPOLICY_DIRS += device/htc/m7-common/sepolicy
 
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
