@@ -328,6 +328,7 @@ service akmd /system/bin/akmd
     class main
     user system
     group system misc input
+    seclabel u:r:akmd:s0
 
 service cir_fw_update /system/bin/cir_fw_update -u cir.img
     class main
