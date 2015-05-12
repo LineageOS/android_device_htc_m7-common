@@ -130,6 +130,7 @@ const char CameraParameters::KEY_TOUCH_INDEX_AEC[] = "touch-index-aec"; \
 const char CameraParameters::KEY_TOUCH_INDEX_AF[] = "touch-index-af"; \
 const char CameraParameters::KEY_VIDEO_HIGH_FRAME_RATE[] = "video-hfr"; \
 const char CameraParameters::KEY_ZSL[] = "zsl"; \
+const char CameraParameters::KEY_ZSL_MYMODE[] = "zsl"; \
 const char CameraParameters::LENSSHADE_DISABLE[] = "disable"; \
 const char CameraParameters::LENSSHADE_ENABLE[] = "enable"; \
 const char CameraParameters::LOW_POWER[] = "Low_Power"; \
@@ -422,6 +423,7 @@ struct FPSRange{ \
     static const char KEY_TOUCH_INDEX_AF[]; \
     static const char KEY_VIDEO_HIGH_FRAME_RATE[]; \
     static const char KEY_ZSL[]; \
+    static const char KEY_ZSL_MYMODE[]; \
     static const char LENSSHADE_DISABLE[] ; \
     static const char LENSSHADE_ENABLE[] ; \
     static const char LOW_POWER[]; \
