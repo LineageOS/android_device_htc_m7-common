@@ -16,6 +16,24 @@
       "revId": "fd92391bd99eadf9b91bb151759ae7e5184cf99c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a89bdaa_3d4fb893",
+        "filename": "include/camera/CameraParametersExtra.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-05-19T11:52:11Z",
+      "side": 1,
+      "message": "Doesn\u0027t matter though, this value needs to match what the stock ROM has.",
+      "parentUuid": "9a89bdaa_3d9a5815",
+      "revId": "fd92391bd99eadf9b91bb151759ae7e5184cf99c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
