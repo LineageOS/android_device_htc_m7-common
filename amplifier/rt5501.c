@@ -14,14 +14,15 @@
  * limitations under the License.
  */
 
+#define LOG_TAG "rt5501"
+//#define LOG_NDEBUG 0
+
 #include <stdio.h>
 #include <sys/ioctl.h>
 #include <fcntl.h>
 
 #include <system/audio.h>
 
-//#define LOG_NDEBUG 0
-#define LOG_TAG "rt5501"
 #include <cutils/log.h>
 
 #include "rt5501.h"
@@ -48,11 +49,11 @@ int rt5501_set_mode(audio_mode_t mode) {
             /* For headsets with a impedance between 128ohm and 1000ohm */
             if (headsetohm >= HEADSET_128OM && headsetohm <= HEADSET_1KOM) {
                 ALOGI("Mode: Playback 128");
-                amp_config.reg_len = sizeof(rt5501_playback_128_data) / sizeof(rt5501_reg_data);
+                amp_config.reg_len = sizeof(rt5501_playback_128_data) / sizeof(struct rt5501_reg_data);
                 memcpy(&amp_config.reg, rt5501_playback_128_data, sizeof(rt5501_playback_128_data));
             } else {
                 ALOGI("Mode: Playback");
-                amp_config.reg_len = sizeof(rt5501_playback_data) / sizeof(rt5501_reg_data);
+                amp_config.reg_len = sizeof(rt5501_playback_data) / sizeof(struct rt5501_reg_data);
                 memcpy(&amp_config.reg, rt5501_playback_data, sizeof(rt5501_playback_data));
             }
             amp_data.out_mode = RT5501_MODE_PLAYBACK;
@@ -60,7 +61,7 @@ int rt5501_set_mode(audio_mode_t mode) {
             break;
         case AUDIO_MODE_RINGTONE:
             ALOGI("Mode: Ring");
-            amp_config.reg_len = sizeof(rt5501_ring_data) / sizeof(rt5501_reg_data);
+            amp_config.reg_len = sizeof(rt5501_ring_data) / sizeof(struct rt5501_reg_data);
             memcpy(&amp_config.reg, rt5501_ring_data, sizeof(rt5501_ring_data));
             amp_data.out_mode = RT5501_MODE_RING;
             amp_data.config = amp_config;
@@ -68,14 +69,14 @@ int rt5501_set_mode(audio_mode_t mode) {
         case AUDIO_MODE_IN_CALL:
         case AUDIO_MODE_IN_COMMUNICATION:
             ALOGI("Mode: Voice");
-            amp_config.reg_len = sizeof(rt5501_voice_data) / sizeof(rt5501_reg_data);
+            amp_config.reg_len = sizeof(rt5501_voice_data) / sizeof(struct rt5501_reg_data);
             memcpy(&amp_config.reg, rt5501_voice_data, sizeof(rt5501_voice_data));
             amp_data.out_mode = RT5501_MODE_VOICE;
             amp_data.config = amp_config;
             break;
         default:
             ALOGI("Mode: Default");
-            amp_config.reg_len = sizeof(rt5501_playback_data) / sizeof(rt5501_reg_data);
+            amp_config.reg_len = sizeof(rt5501_playback_data) / sizeof(struct rt5501_reg_data);
             memcpy(&amp_config.reg, rt5501_playback_data, sizeof(rt5501_playback_data));
             amp_data.out_mode = RT5501_MODE_PLAYBACK;
             amp_data.config = amp_config;

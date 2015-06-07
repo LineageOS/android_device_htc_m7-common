@@ -45,7 +45,6 @@ BOARD_USES_SEPERATED_AUDIO_INPUT := true  # use distinct voice recognition use c
 BOARD_USES_SEPERATED_FM := true # use distinct fm use cases
 BOARD_USES_SEPERATED_VOICE_SPEAKER := true  # use distinct voice speaker use case
 BOARD_USES_SEPERATED_VOIP := true  # use distinct VOIP use cases
-BOARD_AUDIO_AMPLIFIER := $(LOCAL_PATH)/libaudioamp
 BOARD_HAVE_HTC_CSDCLIENT := true
 
 # Bluetooth

@@ -14,6 +14,9 @@
  * limitations under the License.
  */
 
+#ifndef _RT5501_H_
+#define _RT5501_H_
+
 #define RT5501_DEVICE "/dev/rt5501"
 #define RT5501_MAX_REG_DATA 15
 
@@ -126,3 +129,5 @@ enum HEADSET_OM {
 #define RT5501_QUERY_OM       _IOW(RT5501_IOCTL_MAGIC, 0x08,  unsigned)
 
 int rt5501_set_mode(audio_mode_t mode);
+
+#endif
