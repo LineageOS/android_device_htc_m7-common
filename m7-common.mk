@@ -48,7 +48,7 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui
 
 # Audio
 PRODUCT_PACKAGES += \
-    libaudioamp
+    audio_amplifier.msm8960
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
