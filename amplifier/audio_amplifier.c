@@ -80,6 +80,8 @@ static int amp_dev_close(hw_device_t *device)
 {
     m7_device_t *tfa9887 = (m7_device_t *) device;
 
+    tfa9887_close();
+
     free(tfa9887);
 
     return 0;
@@ -119,6 +121,8 @@ static int amp_module_open(const hw_module_t *module, UNUSED const char *name,
     m7_dev->current_mode = AUDIO_MODE_NORMAL;
 
     *device = (hw_device_t *) m7_dev;
+
+    tfa9887_open();
 
     return 0;
 }
