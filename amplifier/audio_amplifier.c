@@ -45,12 +45,12 @@ static m7_device_t *m7_dev = NULL;
 static int amp_set_mode(amplifier_device_t *device, audio_mode_t mode)
 {
     int ret = 0;
-    m7_device_t *tfa9887 = (m7_device_t *) device;
+    m7_device_t *dev = (m7_device_t *) device;
 
-    tfa9887->current_mode = mode;
+    dev->current_mode = mode;
 
-    if ((tfa9887->current_output_devices & DEVICE_OUT_WIRED_HEADSET) ||
-            (tfa9887->current_output_devices & DEVICE_OUT_WIRED_HEADPHONE)) {
+    if ((dev->current_output_devices & DEVICE_OUT_WIRED_HEADSET) ||
+            (dev->current_output_devices & DEVICE_OUT_WIRED_HEADPHONE)) {
         /* Write config for headset amplifier */
         ret = rt5501_set_mode(mode);
     } else {
@@ -63,13 +63,13 @@ static int amp_set_mode(amplifier_device_t *device, audio_mode_t mode)
 
 static int amp_set_output_devices(amplifier_device_t *device, uint32_t devices)
 {
-    m7_device_t *tfa9887 = (m7_device_t *) device;
+    m7_device_t *dev = (m7_device_t *) device;
 
     if (devices != 0) {
-        if (tfa9887->current_output_devices != devices) {
-            tfa9887->current_output_devices = devices;
+        if (dev->current_output_devices != devices) {
+            dev->current_output_devices = devices;
             /* Set amplifier mode when device changes */
-            amp_set_mode(device, tfa9887->current_mode);
+            amp_set_mode(device, dev->current_mode);
         }
     }
 
@@ -78,11 +78,11 @@ static int amp_set_output_devices(amplifier_device_t *device, uint32_t devices)
 
 static int amp_dev_close(hw_device_t *device)
 {
-    m7_device_t *tfa9887 = (m7_device_t *) device;
+    m7_device_t *dev = (m7_device_t *) device;
 
     tfa9887_close();
 
-    free(tfa9887);
+    free(dev);
 
     return 0;
 }
