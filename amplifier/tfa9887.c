@@ -52,6 +52,11 @@ const struct mode_config_t right_mode_configs[TFA9887_MODE_MAX] = {
         .config = CONFIG_VOICE_R,
         .preset = PRESET_VOICE_R,
         .eq = EQ_VOICE_R
+    },
+    {   /* VOIP */
+        .config = CONFIG_VOIP_R,
+        .preset = PRESET_VOIP_R,
+        .eq = EQ_VOIP_R
     }
 };
 
@@ -70,6 +75,11 @@ const struct mode_config_t left_mode_configs[TFA9887_MODE_MAX] = {
         .config = CONFIG_VOICE_L,
         .preset = PRESET_VOICE_L,
         .eq = EQ_VOICE_L
+    },
+    {   /* VOIP */
+        .config = CONFIG_VOIP_L,
+        .preset = PRESET_VOIP_L,
+        .eq = EQ_VOIP_L
     }
 };
 
@@ -173,8 +183,9 @@ static uint32_t get_mode(audio_mode_t mode)
         case AUDIO_MODE_RINGTONE:
             return TFA9887_MODE_RING;
         case AUDIO_MODE_IN_CALL:
-        case AUDIO_MODE_IN_COMMUNICATION:
             return TFA9887_MODE_VOICE;
+        case AUDIO_MODE_IN_COMMUNICATION:
+            return TFA9887_MODE_VOIP;
         case AUDIO_MODE_NORMAL:
         default:
             return TFA9887_MODE_PLAYBACK;
