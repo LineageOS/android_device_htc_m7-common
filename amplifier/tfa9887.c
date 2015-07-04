@@ -572,7 +572,7 @@ static int tfa9887_load_dsp(struct tfa9887_amp_t *amp, const char *param_file)
     return error;
 }
 
-static int tfa9887_power(struct tfa9887_amp_t *amp, bool on)
+static int tfa9887_hw_power(struct tfa9887_amp_t *amp, bool on)
 {
     int error;
     uint16_t value;
@@ -987,7 +987,7 @@ static int tfa9887_hw_init(struct tfa9887_amp_t *amp, int sample_rate)
         ALOGE("Unable to set volume");
         goto priv_init_err;
     }
-    error = tfa9887_power(amp, true);
+    error = tfa9887_hw_power(amp, true);
     if (error != 0) {
         ALOGE("Unable to power up");
         goto priv_init_err;
@@ -1197,7 +1197,32 @@ int tfa9887_open(void)
         /* Shut down I2S interface */
         amp->initializing = false;
         pthread_join(amp->write_thread, NULL);
+        /* Remember to power off, since we powered on in hw_init */
+        tfa9887_hw_power(amp, false);
     }
+
+    return 0;
+}
+
+int tfa9887_power(bool on)
+{
+    int i, rc;
+    struct tfa9887_amp_t *amp = NULL;
+
+    if (!amps) {
+        ALOGE("%s: TFA9887 not open!\n", __func__);
+    }
+
+    for (i = 0; i < AMP_MAX; i++) {
+        amp = &amps[i];
+        rc = tfa9887_hw_power(amp, on);
+        if (rc) {
+            ALOGE("Unable to power on %s amp: %d\n",
+                    amp->is_right? "right" : "left", rc);
+        }
+    }
+
+    ALOGI("%s: Set amplifier power to %d\n", __func__, on);
 
     return 0;
 }
@@ -1252,6 +1277,7 @@ int tfa9887_close(void)
 
     for (i = 0; i < AMP_MAX; i++) {
         amp = &amps[i];
+        tfa9887_hw_power(amp, false);
         close(amp->fd);
     }
 
