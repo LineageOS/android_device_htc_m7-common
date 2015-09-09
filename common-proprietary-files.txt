@@ -3,6 +3,7 @@ bin/akmd
 bin/ks
 bin/mm-qcamera-daemon
 bin/mpdecision
+bin/radish
 bin/thermald
 
 # Configuration files
