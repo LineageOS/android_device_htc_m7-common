@@ -326,9 +326,9 @@ service netmgrd /system/bin/netmgrd
     class core
 
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
-    class main
+    class late_start
     user root
-    disabled
+    group system
 
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start

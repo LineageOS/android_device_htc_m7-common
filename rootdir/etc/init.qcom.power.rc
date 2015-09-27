@@ -96,9 +96,7 @@ on enable-low-power
 
     rm /data/system/default_values
 
-    start mpdecision
-
-on class_start:late_start
+on boot
     trigger enable-low-power
 
 on property:init.svc.recovery=running
