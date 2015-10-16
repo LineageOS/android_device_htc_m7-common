@@ -1,2 +1,0 @@
-oc.cpu_ctrl                     u:object_r:powerctl_prop:s0
-persist.camera.                 u:object_r:camera_prop:s0
