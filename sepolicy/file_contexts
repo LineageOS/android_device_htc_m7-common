@@ -10,7 +10,6 @@
 /dev/rfkill                     u:object_r:bluetooth_device:s0
 
 # Camera
-/data/cam_socket.*              u:object_r:camera_socket:s0
 /dev/gemini.*                   u:object_r:camera_device:s0
 /dev/rawchip.*                  u:object_r:camera_device:s0
 /sys/camera_htccallback/htccallback u:object_r:camera_sysfs:s0
@@ -23,10 +22,6 @@
 /sys/devices/virtual/timed_output/vibrator/voltage_level   u:object_r:vibeamp_sysfs:s0
 
 # Modem
-/dev/block/mmcblk0p17           u:object_r:modem_efs_partition_device:s0
-/dev/block/mmcblk0p20           u:object_r:modem_efs_partition_device:s0
-/dev/block/mmcblk0p21           u:object_r:modem_efs_partition_device:s0
-/dev/block/mmcblk0p28           u:object_r:modem_efs_partition_device:s0
 /dev/ttyUSB0                    u:object_r:radio_device:s0
 
 # Mpdecision
@@ -40,6 +35,3 @@
 /dev/cm3602                     u:object_r:sensors_device:s0
 /dev/lightsensor                u:object_r:sensors_device:s0
 /system/bin/akmd                u:object_r:akmd_exec:s0
-
-# Timer
-/dev/timerirq                   u:object_r:timerirq_device:s0
