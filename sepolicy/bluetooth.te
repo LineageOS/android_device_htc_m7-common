@@ -1,1 +1,1 @@
-allow bluetooth bluetooth_device:chr_file { write open };
+allow bluetooth bluetooth_device:chr_file rw_file_perms;

@@ -1,1 +1,1 @@
-allow tee self:process execmem;
+allow tee system_file:file execmod; # for libdrmfs
