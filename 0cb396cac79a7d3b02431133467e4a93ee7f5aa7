@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f2577a7_907c5ab6",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 263,
+      "author": {
+        "id": 7202
+      },
+      "writtenOn": "2015-10-20T01:24:21Z",
+      "side": 0,
+      "message": "Merged to fwb. No need to disable.",
+      "range": {
+        "startLine": 263,
+        "startChar": 19,
+        "endLine": 263,
+        "endChar": 45
+      },
+      "revId": "0cb396cac79a7d3b02431133467e4a93ee7f5aa7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
