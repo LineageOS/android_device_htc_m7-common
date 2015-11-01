@@ -31,6 +31,8 @@ LOCAL_PATH := device/htc/m7-common
 
 TARGET_SPECIFIC_HEADER_PATH += device/htc/m7-common/include
 
+USE_CLANG_PLATFORM_BUILD := true
+
 # Kernel
 BOARD_KERNEL_BASE := 0x80600000
 BOARD_KERNEL_PAGESIZE := 2048
