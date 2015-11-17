@@ -8,7 +8,7 @@ on early-init
 
 on init
     export LD_PRELOAD /system/lib/libhtc_symbols.so:/system/lib/libboringssl-compat.so
-    export LD_SHIM_LIBS "/system/lib/hw/camera.vendor.msm8960.so|libcamera_shim.so"
+    export LD_SHIM_LIBS "/system/lib/hw/camera.vendor.msm8960.so|libcamera_shim.so:/system/vendor/lib/libqc-opt.so|libqc-opt_shim.so"
 
     # Support legacy paths
     symlink /sdcard /mnt/sdcard

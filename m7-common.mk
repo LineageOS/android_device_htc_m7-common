@@ -120,6 +120,10 @@ endif
 PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
+# PowerHAL
+PRODUCT_PACKAGES += \
+    libqc-opt_shim
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
