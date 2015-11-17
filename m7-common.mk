@@ -69,7 +69,8 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8960 \
-    libcamera_shim
+    libcamera_shim \
+    libqc-opt_shim
 
 # GPS
 PRODUCT_PACKAGES += \
