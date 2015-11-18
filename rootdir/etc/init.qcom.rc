@@ -7,7 +7,7 @@ on early-init
     chown system system /sys/kernel/debug/kgsl/proc
 
 on init
-    export LD_PRELOAD /system/lib/libhtc_symbols.so
+    export LD_PRELOAD /system/lib/libhtc_symbols.so:/system/lib/libboringssl-compat.so
 
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
