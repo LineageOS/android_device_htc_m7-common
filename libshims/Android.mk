@@ -24,3 +24,13 @@ LOCAL_MODULE := libqc-opt_shim
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := \
+    htc_log.c
+
+LOCAL_MODULE := liblog_shim
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
