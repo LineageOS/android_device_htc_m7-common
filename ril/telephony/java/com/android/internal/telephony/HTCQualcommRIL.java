@@ -145,6 +145,17 @@ public class HTCQualcommRIL extends RIL implements CommandsInterface {
     }
 
     @Override
+    public void getRadioCapability(Message response) {
+        if (response == null)
+            return;
+
+        if (RILJ_LOGD) riljLog("HTCQualcommRIL: returning static radio capability");
+        Object ret = makeStaticRadioCapability();
+        AsyncResult.forMessage(response, ret, null);
+        response.sendToTarget();
+    }
+
+    @Override
     protected void
     send(RILRequest rr) {
         switch (rr.mRequest) {
