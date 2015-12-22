@@ -29,7 +29,7 @@
 
 LOCAL_PATH := device/htc/m7-common
 
-TARGET_SPECIFIC_HEADER_PATH += $(LOCAL_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH += device/htc/m7-common/include
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80600000
