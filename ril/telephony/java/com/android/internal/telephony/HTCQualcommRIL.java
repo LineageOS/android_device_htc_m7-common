@@ -117,4 +117,19 @@ public class HTCQualcommRIL extends RIL implements CommandsInterface {
                 break;
         }
     }
+
+    @Override
+    protected void
+    send(RILRequest rr) {
+        if (rr.mRequest >= RIL_REQUEST_GET_CELL_INFO_LIST) {
+            if (RILJ_LOGD) {
+                riljLog("HTCQualcommRIL: received unsupported request "
+                        + rr.mRequest);
+            }
+            rr.onError(REQUEST_NOT_SUPPORTED, null);
+            rr.release();
+        } else {
+            super.send(rr);
+        }
+    }
 }
