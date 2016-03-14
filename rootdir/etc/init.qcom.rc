@@ -3,7 +3,6 @@ import init.target.rc
 import init.qcom.usb.rc
 
 on early-init
-    mount debugfs /sys/kernel/debug /sys/kernel/debug
     chown system system /sys/kernel/debug/kgsl/proc
 
 on init
