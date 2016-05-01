@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_2ba8941d",
+        "filename": "libshims/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2016-05-01T17:14:45Z",
+      "side": 1,
+      "message": "needs copyright/license",
+      "revId": "afeaccf3c2dbe473f61858766721c1449822b8b1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_0bab581d",
+        "filename": "m7-common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2016-05-01T17:14:45Z",
+      "side": 1,
+      "message": "oops, remove from camera category",
+      "revId": "afeaccf3c2dbe473f61858766721c1449822b8b1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
