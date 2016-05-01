@@ -39,6 +39,30 @@
       "revId": "03658184ae726b8957d00f20212141a252324fc6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_8b3ae8e4",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2016-05-01T17:31:06Z",
+      "side": 1,
+      "message": "Are they all services where we can just move this line underneath the relevant service definition?",
+      "parentUuid": "5faad753_cb30e00a",
+      "range": {
+        "startLine": 10,
+        "startChar": 4,
+        "endLine": 10,
+        "endChar": 56
+      },
+      "revId": "03658184ae726b8957d00f20212141a252324fc6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
