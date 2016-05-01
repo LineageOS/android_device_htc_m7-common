@@ -63,6 +63,30 @@
       "revId": "03658184ae726b8957d00f20212141a252324fc6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_4b24f0c6",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2016-05-01T17:32:10Z",
+      "side": 1,
+      "message": "Err, I mean, we can shim the libboringssl-compat library for only the libraries which need it.",
+      "parentUuid": "5faad753_8b3ae8e4",
+      "range": {
+        "startLine": 10,
+        "startChar": 4,
+        "endLine": 10,
+        "endChar": 56
+      },
+      "revId": "03658184ae726b8957d00f20212141a252324fc6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
