@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_f72fbff3",
+        "filename": "sepolicy/mdm_helper.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2016-05-02T19:19:23Z",
+      "side": 1,
+      "message": "Shouldn\u0027t need this, set_prop should give you the necessary perms for this.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 47
+      },
+      "revId": "aab3d85b3f73413133c25129e60948f135822b0e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
