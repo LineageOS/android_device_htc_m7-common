@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_c1d0c153",
+        "filename": "sepolicy/mdm_helper.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2016-05-02T01:37:45Z",
+      "side": 1,
+      "message": "probably better to do set_prop(mdm_helper, radio_prop)",
+      "revId": "fb97280b73fb78d764cb3c5d7f8d42f3b02449c4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
