@@ -32,7 +32,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.baseband.arch=mdm
+    ro.baseband.arch=mdm \
+    ro.telephony.ril_class=HTCQualcommRIL
 
 # Scheduler
 PRODUCT_PROPERTY_OVERRIDES += \
