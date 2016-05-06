@@ -93,9 +93,6 @@ BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
 
 BOARD_SEPOLICY_DIRS += device/htc/m7-common/sepolicy
 
-# USB
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
-
 # Wifi
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 BOARD_WLAN_DEVICE                := bcmdhd
