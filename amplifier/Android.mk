@@ -14,7 +14,7 @@ LOCAL_SRC_FILES := \
 	tfa9887.c \
 	audio_amplifier.c
 
-LOCAL_MODULE := audio_amplifier.msm8960
+LOCAL_MODULE := audio_amplifier.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE_TAGS := optional
 
