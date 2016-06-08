@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_dd259d5d",
+        "filename": "overlay/frameworks/base/core/res/res/values-mcc311-mnc480/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 5530
+      },
+      "writtenOn": "2016-06-08T15:14:19Z",
+      "side": 1,
+      "message": "Some settings are already defined in the frameworks_base git. I think this one here might.",
+      "revId": "163d0b79fcc6290e904098a68b70fa41a17decfd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
