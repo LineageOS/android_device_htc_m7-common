@@ -58,6 +58,24 @@ public class HTCQualcommRIL extends RIL implements CommandsInterface {
         super(context, networkMode, cdmaSubscription, instanceId);
     }
 
+    @Override
+    protected Object
+    responseIccCardStatus(Parcel p) {
+        final int CARDSTATE_ABSENT = 0;
+        final int CARDSTATE_ERROR = 2;
+        int dataPosition = p.dataPosition();
+        int cardState = p.readInt();
+
+        if (cardState > CARDSTATE_ERROR) {
+            p.setDataPosition(dataPosition);
+            p.writeInt(CARDSTATE_ABSENT);
+        }
+
+        p.setDataPosition(dataPosition);
+
+        return super.responseIccCardStatus(p);
+    }
+
     private static String
     responseToStringHTC(int request) {
         switch(request) {
