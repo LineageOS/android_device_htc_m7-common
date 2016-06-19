@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_670cfc40",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2016-06-19T01:49:55Z",
+      "side": 1,
+      "message": "Last time I checked, F comes before G in the alphabet.",
+      "revId": "7b4d1fe33adf06a48aed228facfcc4f268497c25",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
