@@ -1,0 +1,8 @@
+recovery_only(`
+    # detect_key & offmode_charging
+    allow healthd input_device:chr_file write;
+
+    # offmode_charging
+    allow healthd misc_partition:blk_file rw_file_perms;
+    set_prop(healthd, powerctl_prop)
+')
