@@ -93,6 +93,18 @@ SectionVerb
 EndSection
 
 SectionVerb
+	Name "HiFiBT SCO Tx"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+	EndSequence
+	CapturePCM  0
+	PlaybackPCM  0
+EndSection
+
+SectionVerb
 	Name "HiFiBT SCO WB Rx"
 
 	EnableSequence
@@ -101,6 +113,18 @@ SectionVerb
 
 	DisableSequence
 		'AUX_PCM_RX Audio Mixer MultiMedia1':1:0
+	EndSequence
+	CapturePCM  0
+	PlaybackPCM  0
+EndSection
+
+SectionVerb
+	Name "HiFiDMIC Endfire"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
 	EndSequence
 	CapturePCM  0
 	PlaybackPCM  0
@@ -262,6 +286,20 @@ EndSection
 
 SectionVerb
 	Name "HiFiSpeaker"
+
+	EnableSequence
+		'MI2S_RX Audio Mixer MultiMedia1':1:1
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Audio Mixer MultiMedia1':1:0
+	EndSequence
+	CapturePCM  0
+	PlaybackPCM  0
+EndSection
+
+SectionVerb
+	Name "HiFiSpeaker FM"
 
 	EnableSequence
 		'MI2S_RX Audio Mixer MultiMedia1':1:1
@@ -486,6 +524,17 @@ SectionVerb
 EndSection
 
 SectionVerb
+	Name "HiFi LowlatencyBT SCO Tx"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+	EndSequence
+	PlaybackPCM  14
+EndSection
+
+SectionVerb
 	Name "HiFi LowlatencyBT SCO WB Rx"
 
 	EnableSequence
@@ -494,6 +543,17 @@ SectionVerb
 
 	DisableSequence
 		'AUX_PCM_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	PlaybackPCM  14
+EndSection
+
+SectionVerb
+	Name "HiFi LowlatencyDMIC Endfire"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
 	EndSequence
 	PlaybackPCM  14
 EndSection
@@ -549,6 +609,47 @@ SectionVerb
 EndSection
 
 SectionVerb
+	Name "HiFi LowlatencySpeaker FM"
+
+	EnableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	PlaybackPCM  14
+EndSection
+
+SectionVerb
+	Name "HiFi LowlatencySpeaker Headset"
+
+	EnableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:1
+		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:0
+		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	PlaybackPCM  14
+EndSection
+
+SectionVerb
+	Name "HiFi LowlatencyVoice Speaker"
+
+	EnableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	PlaybackPCM  14
+EndSection
+
+SectionVerb
 	Name "HiFi LowlatencyVOIP Speaker"
 
 	EnableSequence
@@ -580,11 +681,11 @@ SectionVerb
 	Name "HiFi Lowlatency RecBT SCO Tx"
 
 	EnableSequence
-		'MultiMedia5 Mixer AUX_PCM_TX':1:1
+		'MultiMedia5 Mixer AUX_PCM_UL_TX':1:1
 	EndSequence
 
 	DisableSequence
-		'MultiMedia5 Mixer AUX_PCM_TX':1:0
+		'MultiMedia5 Mixer AUX_PCM_UL_TX':1:0
 	EndSequence
 	CapturePCM  14
 	PlaybackPCM  14
@@ -594,11 +695,11 @@ SectionVerb
 	Name "HiFi Lowlatency RecBT SCO WB Tx"
 
 	EnableSequence
-		'MultiMedia5 Mixer AUX_PCM_TX':1:1
+		'MultiMedia5 Mixer AUX_PCM_UL_TX':1:1
 	EndSequence
 
 	DisableSequence
-		'MultiMedia5 Mixer AUX_PCM_TX':1:0
+		'MultiMedia5 Mixer AUX_PCM_UL_TX':1:0
 	EndSequence
 	CapturePCM  14
 	PlaybackPCM  14
@@ -776,6 +877,21 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
+		'MI2S_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+	PlaybackPCM  9
+EndSection
+
+SectionVerb
+	Name "HiFi TunnelSpeaker Headset"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+		'MI2S_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
 		'MI2S_RX Audio Mixer MultiMedia4':1:0
 	EndSequence
 	PlaybackPCM  9
@@ -1117,6 +1233,48 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
+	EndSequence
+	CapturePCM  3
+	PlaybackPCM  3
+EndSection
+
+SectionVerb
+	Name "Voice Call IPVOIP Earpiece"
+
+	EnableSequence
+		'SLIM_0_RX_Voice Mixer Voip':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIM_0_RX_Voice Mixer Voip':1:0
+	EndSequence
+	CapturePCM  3
+	PlaybackPCM  3
+EndSection
+
+SectionVerb
+	Name "Voice Call IPVOIP Headphones"
+
+	EnableSequence
+		'SLIM_0_RX_Voice Mixer Voip':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIM_0_RX_Voice Mixer Voip':1:0
+	EndSequence
+	CapturePCM  3
+	PlaybackPCM  3
+EndSection
+
+SectionVerb
+	Name "Voice Call IPVOIP Line"
+
+	EnableSequence
+		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
+	EndSequence
+
+	DisableSequence
+		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
 	EndSequence
 	CapturePCM  3
 	PlaybackPCM  3
@@ -1762,7 +1920,7 @@ SectionDevice
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX7 MUX':0:DEC9
 		'DEC9 MUX':0:DMIC4
-		'DEC9 Volume':2:5C
+		'DEC9 Volume':2:56
 		'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
@@ -1923,14 +2081,12 @@ SectionDevice
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX7 MUX':0:DEC8
 		'DEC8 MUX':0:ADC2
-		'DEC8 Volume':2:52
-		'ADC2 Volume':1:50
+		'ADC2 Volume':1:100
 	EndSequence
 
 	DisableSequence
 		'SLIM TX7 MUX':0:ZERO
 		'DEC8 MUX':0:ZERO
-		'DEC8 Volume':2:0
 		'ADC2 Volume':1:0
 	EndSequence
 
@@ -2055,15 +2211,13 @@ SectionDevice
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX7 MUX':0:DEC8
 		'DEC8 MUX':0:ADC2
-		'DEC8 Volume':2:52
-		'ADC2 Volume':1:50
+		'ADC2 Volume':1:100
 	EndSequence
 
 	DisableSequence
 		'TTY Mode':0:ZERO
 		'SLIM TX7 MUX':0:ZERO
 		'DEC8 MUX':0:ZERO
-		'DEC8 Volume':2:0
 		'ADC2 Volume':1:0
 	EndSequence
 
@@ -2783,6 +2937,34 @@ SectionModifier
 EndSection
 
 SectionModifier
+	Name "Play Lowlatency MusicFM Tx"
+
+	EnableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	CapturePCM  14
+	PlaybackPCM  14
+EndSection
+
+SectionModifier
+	Name "Play Lowlatency MusicHDMI"
+
+	EnableSequence
+		'HDMI Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'HDMI Mixer MultiMedia5':1:0
+	EndSequence
+	CapturePCM  14
+	PlaybackPCM  14
+EndSection
+
+SectionModifier
 	Name "Play Lowlatency MusicPROXY Rx"
 
 	EnableSequence
@@ -2797,7 +2979,79 @@ SectionModifier
 EndSection
 
 SectionModifier
+	Name "Play Lowlatency MusicPROXY Tx"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+	EndSequence
+	CapturePCM  14
+	PlaybackPCM  14
+EndSection
+
+SectionModifier
 	Name "Play Lowlatency MusicSpeaker"
+
+	EnableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	CapturePCM  14
+	PlaybackPCM  14
+EndSection
+
+SectionModifier
+	Name "Play Lowlatency MusicSpeaker FM"
+
+	EnableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	CapturePCM  14
+	PlaybackPCM  14
+EndSection
+
+SectionModifier
+	Name "Play Lowlatency MusicSpeaker FM Tx"
+
+	EnableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia5':1:1
+		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia5':1:0
+		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	CapturePCM  14
+	PlaybackPCM  14
+EndSection
+
+SectionModifier
+	Name "Play Lowlatency MusicSpeaker Headset"
+
+	EnableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:1
+		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:1
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Audio Mixer MultiMedia5':1:0
+		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
+	EndSequence
+	CapturePCM  14
+	PlaybackPCM  14
+EndSection
+
+SectionModifier
+	Name "Play Lowlatency MusicVoice Speaker"
 
 	EnableSequence
 		'MI2S_RX Audio Mixer MultiMedia5':1:1
@@ -3148,6 +3402,18 @@ SectionModifier
 EndSection
 
 SectionModifier
+	Name "Play MusicPROXY Tx"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+	EndSequence
+	CapturePCM  0
+	PlaybackPCM  0
+EndSection
+
+SectionModifier
 	Name "Play MusicSpeaker"
 
 	EnableSequence
@@ -3288,6 +3554,34 @@ EndSection
 
 SectionModifier
 	Name "Play TunnelSpeaker"
+
+	EnableSequence
+		'MI2S_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'MI2S_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+	PlaybackPCM  9
+EndSection
+
+SectionModifier
+	Name "Play TunnelSpeaker Headset"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+		'MI2S_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+		'MI2S_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+	PlaybackPCM  9
+EndSection
+
+SectionModifier
+	Name "Play TunnelVOIP Speaker"
 
 	EnableSequence
 		'MI2S_RX Audio Mixer MultiMedia4':1:1
