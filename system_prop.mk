@@ -4,12 +4,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.audio.fluence.mode=endfire \
-    persist.audio.handset.mic=digital \
-    persist.audio.speaker.location=high \
-    persist.audio.vr.enable=false \
-    qcom.hw.aac.encoder=true \
-    ro.qc.sdk.audio.fluencetype=fluence
+    audio.offload.disable=1 \
+    persist.audio.fluence.speaker=true \
+    persist.audio.fluence.voicecall=true \
+    persist.audio.fluence.voicerec=false \
+    ro.qc.sdk.audio.fluencetype=fluence \
+    use.dedicated.device.for.voip=true
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
