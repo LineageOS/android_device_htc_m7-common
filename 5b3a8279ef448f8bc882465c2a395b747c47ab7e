@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_106b0085",
+        "filename": "configs/snd_soc_msm_2x_Fusion3",
+        "patchSetId": 2
+      },
+      "lineNbr": 2649,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2016-06-20T17:45:35Z",
+      "side": 1,
+      "message": "remove, does not belong",
+      "revId": "5b3a8279ef448f8bc882465c2a395b747c47ab7e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_30687c85",
+        "filename": "configs/snd_soc_msm_2x_Fusion3",
+        "patchSetId": 2
+      },
+      "lineNbr": 2653,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2016-06-20T17:45:35Z",
+      "side": 1,
+      "message": "remove, does not belong",
+      "revId": "5b3a8279ef448f8bc882465c2a395b747c47ab7e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
