@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_e1be94b2",
+        "filename": "configs/mixer_paths.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 379,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2016-06-21T15:54:28Z",
+      "side": 1,
+      "message": "voip-speaker-comm",
+      "range": {
+        "startLine": 379,
+        "startChar": 26,
+        "endLine": 379,
+        "endChar": 43
+      },
+      "revId": "47268fb68cd61b1f081042b67510965b748e35c7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
