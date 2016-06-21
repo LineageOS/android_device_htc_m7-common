@@ -22,6 +22,30 @@
       "revId": "4e620dedce923399d866f37440d1d073af506356",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_3cfa93bc",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 8
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 444
+      },
+      "writtenOn": "2016-06-21T21:56:56Z",
+      "side": 1,
+      "message": "Deep buffer is still the default for music streams, unless you set audio.deep_buffer.media\u003dfalse\n\nPersonally I prefer low latency for audio feedback when touching stuff on the screen. With deep buffer there\u0027s noticeably lag between touching and the audio.",
+      "parentUuid": "5faad753_bc0683cd",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 30
+      },
+      "revId": "4e620dedce923399d866f37440d1d073af506356",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
