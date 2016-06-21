@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_e13774fe",
+        "filename": "configs/audio_platform_info.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2016-06-21T17:30:58Z",
+      "side": 1,
+      "message": "Are voice-speaker and voip-speaker-comm actually different from the \u0027speaker\u0027 case?",
+      "range": {
+        "startLine": 68,
+        "startChar": 22,
+        "endLine": 68,
+        "endChar": 50
+      },
+      "revId": "0d2036b40e2621e523f3d0b72f332ba7e29b5d34",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
