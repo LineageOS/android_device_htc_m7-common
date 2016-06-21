@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_c106f8ce",
+        "filename": "configs/audio_platform_info.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2016-06-21T15:16:08Z",
+      "side": 1,
+      "message": "I think some speaker backends will end up being necessary, due to the MI2S backend being used for those.",
+      "revId": "f62b1f1788917a3b0fff392c24cc82255574950c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_2116ecf2",
+        "filename": "configs/mixer_paths.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 349,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2016-06-21T15:16:08Z",
+      "side": 1,
+      "message": "voice-speaker?",
+      "range": {
+        "startLine": 349,
+        "startChar": 27,
+        "endLine": 349,
+        "endChar": 44
+      },
+      "revId": "f62b1f1788917a3b0fff392c24cc82255574950c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
