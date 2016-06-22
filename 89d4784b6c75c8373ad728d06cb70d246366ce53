@@ -16,6 +16,24 @@
       "revId": "89d4784b6c75c8373ad728d06cb70d246366ce53",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_93805548",
+        "filename": "configs/audio_platform_info.xml",
+        "patchSetId": 16
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2016-06-22T20:02:06Z",
+      "side": 1,
+      "message": "Oh, this needs to be remapped too.",
+      "parentUuid": "5faad753_d38a4d68",
+      "revId": "89d4784b6c75c8373ad728d06cb70d246366ce53",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
