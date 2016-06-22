@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_903dabde",
+        "filename": "configs/mixer_paths.xml",
+        "patchSetId": 13
+      },
+      "lineNbr": 548,
+      "author": {
+        "id": 444
+      },
+      "writtenOn": "2016-06-22T18:38:41Z",
+      "side": 1,
+      "message": "I think this should be \"speaker-mic\"\n\"line\" should be the same as \"headphones\"\n\nhttps://github.com/CyanogenMod/android_hardware_qcom_audio/commit/d3a91d3d45c4d7af2ecf6d646d0f1ac5da9160a5\n\nhttps://source.codeaurora.org/quic/la/device/moto/shamu/commit/mixer_paths.xml?h\u003daosp-new/master\u0026id\u003d3665108316a4c2a68add3860327402ba1a8ed773",
+      "revId": "50d020f1556ed273ed081bd92831692d1d85751f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
