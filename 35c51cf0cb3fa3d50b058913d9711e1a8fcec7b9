@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "5faad753_50f89379",
+        "filename": "configs/mixer_paths.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2016-06-22T16:55:01Z",
+      "side": 1,
+      "message": "these all need to be converted to decimal, and valid initializing values are: 0 0 0 0 0",
+      "revId": "35c51cf0cb3fa3d50b058913d9711e1a8fcec7b9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5faad753_50a17393",
         "filename": "configs/mixer_paths.xml",
         "patchSetId": 9
@@ -13,6 +30,23 @@
       "writtenOn": "2016-06-22T15:09:37Z",
       "side": 1,
       "message": "OFF is the correct value here.",
+      "revId": "35c51cf0cb3fa3d50b058913d9711e1a8fcec7b9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_f0e17f9c",
+        "filename": "configs/mixer_paths.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 755,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2016-06-22T16:55:01Z",
+      "side": 1,
+      "message": "these all need to be converted to decimal",
       "revId": "35c51cf0cb3fa3d50b058913d9711e1a8fcec7b9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
