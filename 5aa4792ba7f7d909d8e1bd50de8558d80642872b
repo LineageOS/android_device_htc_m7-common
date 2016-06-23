@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_26291de5",
+        "filename": "configs/audio_policy.conf",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2016-06-23T19:22:20Z",
+      "side": 1,
+      "message": "on second though, usb can probably go here, too. voip probably works over usb headset",
+      "revId": "5aa4792ba7f7d909d8e1bd50de8558d80642872b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
