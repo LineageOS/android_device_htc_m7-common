@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_66f075fe",
+        "filename": "configs/mixer_paths.xml",
+        "patchSetId": 18
+      },
+      "lineNbr": 659,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2016-06-23T16:12:03Z",
+      "side": 1,
+      "message": "DEC8",
+      "range": {
+        "startLine": 659,
+        "startChar": 40,
+        "endLine": 659,
+        "endChar": 44
+      },
+      "revId": "00dc7de2d367872a4908cb9895004041db0608ca",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_86f571ef",
+        "filename": "configs/mixer_paths.xml",
+        "patchSetId": 18
+      },
+      "lineNbr": 661,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2016-06-23T16:12:03Z",
+      "side": 1,
+      "message": "84",
+      "range": {
+        "startLine": 661,
+        "startChar": 39,
+        "endLine": 661,
+        "endChar": 41
+      },
+      "revId": "00dc7de2d367872a4908cb9895004041db0608ca",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_26defd6c",
+        "filename": "configs/mixer_paths.xml",
+        "patchSetId": 18
+      },
+      "lineNbr": 662,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2016-06-23T16:12:03Z",
+      "side": 1,
+      "message": "DEC9",
+      "range": {
+        "startLine": 662,
+        "startChar": 40,
+        "endLine": 662,
+        "endChar": 44
+      },
+      "revId": "00dc7de2d367872a4908cb9895004041db0608ca",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_46dbf97a",
+        "filename": "configs/mixer_paths.xml",
+        "patchSetId": 18
+      },
+      "lineNbr": 664,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2016-06-23T16:12:03Z",
+      "side": 1,
+      "message": "84",
+      "range": {
+        "startLine": 664,
+        "startChar": 39,
+        "endLine": 664,
+        "endChar": 41
+      },
+      "revId": "00dc7de2d367872a4908cb9895004041db0608ca",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
