@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_4920ea48",
+        "filename": "configs/snd_soc_msm_2x_Fusion3",
+        "patchSetId": 5
+      },
+      "lineNbr": 1192,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2016-06-23T22:19:05Z",
+      "side": 1,
+      "message": "remove, duplicates base case",
+      "revId": "93e0708ac951ead0f9e905e464e7e34b51495128",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_091672f2",
+        "filename": "configs/snd_soc_msm_2x_Fusion3",
+        "patchSetId": 5
+      },
+      "lineNbr": 1206,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2016-06-23T22:19:05Z",
+      "side": 1,
+      "message": "remove, duplicates base case",
+      "revId": "93e0708ac951ead0f9e905e464e7e34b51495128",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_a9d4fe20",
+        "filename": "configs/snd_soc_msm_2x_Fusion3",
+        "patchSetId": 5
+      },
+      "lineNbr": 1220,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2016-06-23T22:19:05Z",
+      "side": 1,
+      "message": "remove, duplicates base case",
+      "revId": "93e0708ac951ead0f9e905e464e7e34b51495128",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
