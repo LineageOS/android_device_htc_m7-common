@@ -39,4 +39,5 @@
 /dev/akm8963_dev                u:object_r:sensors_device:s0
 /dev/cm3602                     u:object_r:sensors_device:s0
 /dev/lightsensor                u:object_r:sensors_device:s0
+/dev/timerirq                   u:object_r:sensors_device:s0
 /system/bin/akmd                u:object_r:akmd_exec:s0
