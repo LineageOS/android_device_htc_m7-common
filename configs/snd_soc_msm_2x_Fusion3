@@ -580,11 +580,11 @@ SectionVerb
 	Name "HiFi Lowlatency RecBT SCO Tx"
 
 	EnableSequence
-		'MultiMedia5 Mixer AUX_PCM_TX':1:1
+		'MultiMedia5 Mixer AUX_PCM_UL_TX':1:1
 	EndSequence
 
 	DisableSequence
-		'MultiMedia5 Mixer AUX_PCM_TX':1:0
+		'MultiMedia5 Mixer AUX_PCM_UL_TX':1:0
 	EndSequence
 	CapturePCM  14
 	PlaybackPCM  14
@@ -594,11 +594,11 @@ SectionVerb
 	Name "HiFi Lowlatency RecBT SCO WB Tx"
 
 	EnableSequence
-		'MultiMedia5 Mixer AUX_PCM_TX':1:1
+		'MultiMedia5 Mixer AUX_PCM_UL_TX':1:1
 	EndSequence
 
 	DisableSequence
-		'MultiMedia5 Mixer AUX_PCM_TX':1:0
+		'MultiMedia5 Mixer AUX_PCM_UL_TX':1:0
 	EndSequence
 	CapturePCM  14
 	PlaybackPCM  14
