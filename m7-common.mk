@@ -90,6 +90,7 @@ PRODUCT_PACKAGES += \
     libnfc \
     libnfc_jni \
     libnfc_ndef \
+    libpn544_fw \
     Nfc \
     nfc.msm8960 \
     Tag
