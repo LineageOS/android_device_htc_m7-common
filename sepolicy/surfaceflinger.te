@@ -1,0 +1,1 @@
+allow surfaceflinger surfaceflinger_sysfs:file rw_file_perms;

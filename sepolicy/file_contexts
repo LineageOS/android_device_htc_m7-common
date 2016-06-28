@@ -41,3 +41,9 @@
 /dev/lightsensor                u:object_r:sensors_device:s0
 /dev/timerirq                   u:object_r:sensors_device:s0
 /system/bin/akmd                u:object_r:akmd_exec:s0
+
+# Surfaceflinger
+/sys/devices/virtual/graphics/fb1/format_3d            -- u:object_r:surfaceflinger_sysfs:s0
+/sys/devices/virtual/graphics/fb1/hpd                  -- u:object_r:surfaceflinger_sysfs:s0
+/sys/devices/virtual/graphics/fb1/product_description  -- u:object_r:surfaceflinger_sysfs:s0
+/sys/devices/virtual/graphics/fb1/vendor_name          -- u:object_r:surfaceflinger_sysfs:s0
