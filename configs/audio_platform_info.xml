@@ -19,13 +19,10 @@
         <device name="SND_DEVICE_OUT_HANDSET" acdb_id="7" />
         <device name="SND_DEVICE_OUT_SPEAKER" acdb_id="15" />
         <device name="SND_DEVICE_OUT_HEADPHONES" acdb_id="10" />
-        <device name="SND_DEVICE_OUT_LINE" acdb_id="10" />
         <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" acdb_id="603" />
-        <device name="SND_DEVICE_OUT_SPEAKER_AND_LINE" acdb_id="603" />
         <device name="SND_DEVICE_OUT_VOICE_HANDSET" acdb_id="7" />
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER" acdb_id="14" />
         <device name="SND_DEVICE_OUT_VOICE_HEADPHONES" acdb_id="10" />
-        <device name="SND_DEVICE_OUT_VOICE_LINE" acdb_id="10" />
         <device name="SND_DEVICE_OUT_BT_SCO" acdb_id="22" />
         <device name="SND_DEVICE_OUT_BT_SCO_WB" acdb_id="22" />
         <device name="SND_DEVICE_OUT_AFE_PROXY" acdb_id="20" />
