@@ -60,7 +60,6 @@ AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 
 # General compilation flags
 TARGET_SPECIFIC_HEADER_PATH += device/htc/m7-common/include
-USE_CLANG_PLATFORM_BUILD := true
 
 # Graphics
 HAVE_ADRENO_SOURCE := false
