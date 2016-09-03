@@ -9,7 +9,6 @@ on init
     export LD_SHIM_LIBS "/system/lib/hw/camera.vendor.msm8960.so|libcamera_shim.so:/system/vendor/lib/libqc-opt.so|libqc-opt_shim.so:/system/lib/liblog.so|liblog_shim.so"
 
     # Support legacy paths
-    symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
 
     # For Invensense MPU3050
