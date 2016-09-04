@@ -32,7 +32,7 @@ LOCAL_PATH := device/htc/m7-common
 
 # Audio
 BOARD_HAVE_HTC_CSDCLIENT := true
-USE_CUSTOM_AUDIO_POLICY := 1
+USE_CUSTOM_AUDIO_POLICY := 0
 
 # Bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := $(LOCAL_PATH)/bluetooth/libbt_vndcfg.txt
@@ -77,7 +77,7 @@ TARGET_KERNEL_SOURCE := kernel/htc/msm8960
 
 # Recovery
 BOARD_RECOVERY_BLDRMSG_OFFSET := 2048
-COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
+BOARD_NO_SECURE_DISCARD := true
 TARGET_RECOVERY_DEVICE_DIRS += device/htc/m7-common
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
@@ -89,9 +89,9 @@ BOARD_PROVIDES_LIBRIL := true
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
 
 # SELinux
--include device/qcom/sepolicy/sepolicy.mk
+#-include device/qcom/sepolicy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += device/htc/m7-common/sepolicy
+#BOARD_SEPOLICY_DIRS += device/htc/m7-common/sepolicy
 
 # Wifi
 BOARD_HOSTAPD_DRIVER             := NL80211

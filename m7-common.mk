@@ -128,6 +128,13 @@ PRODUCT_PACKAGES += \
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk
 
+# Telephony
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
+PRODUCT_PACKAGES += \
+    telephony-ext
+
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermald.conf:system/etc/thermald.conf
