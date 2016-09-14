@@ -33,7 +33,7 @@
         <device name="SND_DEVICE_OUT_VOIP_HEADPHONES" acdb_id="401" />
 
         <!-- Input devices -->
-        <device name="SND_DEVICE_IN_HANDSET_MIC" acdb_id="4" />
+        <device name="SND_DEVICE_IN_HANDSET_MIC" acdb_id="501" />
         <device name="SND_DEVICE_IN_HANDSET_DMIC" acdb_id="51" />
         <device name="SND_DEVICE_IN_SPEAKER_MIC" acdb_id="501" />
         <device name="SND_DEVICE_IN_SPEAKER_DMIC" acdb_id="501" />
