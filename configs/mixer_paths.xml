@@ -690,7 +690,7 @@
         <ctl name="SLIM_0_TX Channels" value="One" />
         <ctl name="SLIM TX7 MUX" value="DEC8" />
         <ctl name="DEC8 MUX" value="DMIC2" />
-        <ctl name="DEC8 Volume" value="67" />
+        <ctl name="DEC8 Volume" value="88" />
         <ctl name="MICBIAS1 CAPLESS Switch" value="0" />
     </path>
 
