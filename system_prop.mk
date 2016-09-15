@@ -9,7 +9,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.voicecall=true \
     persist.audio.fluence.voicerec=false \
     ro.qc.sdk.audio.fluencetype=fluence \
-    use.dedicated.device.for.voip=true
+    use.dedicated.device.for.voip=true \
+    use.voice.path.for.pcm.voip=true
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
