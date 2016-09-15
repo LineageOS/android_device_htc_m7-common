@@ -135,6 +135,11 @@
     <ctl name="Voice Stub Tx Mixer STUB_TX_HL" value="0" />
     <ctl name="Voice2 Stub Tx Mixer STUB_1_TX_HL" value="0" />
     <ctl name="Voice2 Stub Tx Mixer STUB_TX_HL" value="0" />
+    <ctl name="Voip Dtx Mode" value="0" />
+    <ctl name="Voip Evrc Min Max Rate Config" id="0" value="1" />
+    <ctl name="Voip Evrc Min Max Rate Config" id="1" value="4" />
+    <ctl name="Voip Mode Config" value="12" />
+    <ctl name="Voip Rate Config" value="0" />
     <ctl name="Voip_Tx Mixer AUX_PCM_TX_Voip" value="0" />
     <ctl name="Voip_Tx Mixer SLIM_0_TX_Voip" value="0" />
     <ctl name="VoLTE Stub Tx Mixer STUB_1_TX_HL" value="0" />
@@ -337,31 +342,31 @@
     </path>
 
     <!-- Voice Call IP -->
-    <path name="voip-call">
+    <path name="compress-voip-call">
         <ctl name="SLIM_0_RX_Voice Mixer Voip" value="1" />
         <ctl name="Voip_Tx Mixer SLIM_0_TX_Voip" value="1" />
     </path>
 
     <!-- Voice Call IP Base BT SCO Tx -->
-    <path name="voip-call-bt-sco-tx">
+    <path name="compress-voip-call-bt-sco-tx">
         <ctl name="AUX_PCM_RX_Voice Mixer Voip" value="1" />
         <ctl name="Voip_Tx Mixer AUX_PCM_TX_Voip" value="1" />
     </path>
 
     <!-- Voice Call IPBT SCO Tx -->
-    <path name="voip-call bt-sco">
+    <path name="compress-voip-call bt-sco">
         <ctl name="SLIM_1 SampleRate" value="8000" />
-        <path name="voip-call-bt-sco-tx" />
+        <path name="compress-voip-call-bt-sco-tx" />
     </path>
 
     <!-- Voice Call IPBT SCO WB Tx -->
-    <path name="voip-call bt-sco-wb">
+    <path name="compress-voip-call bt-sco-wb">
         <ctl name="SLIM_1 SampleRate" value="16000" />
-        <path name="voip-call-bt-sco-tx" />
+        <path name="compress-voip-call-bt-sco-tx" />
     </path>
 
     <!-- Voice Call IPVOIP Speaker -->
-    <path name="voip-call speaker">
+    <path name="compress-voip-call speaker">
         <ctl name="Voip_Tx Mixer SLIM_0_TX_Voip" value="1" />
         <ctl name="MI2S_RX Audio Mixer MultiMedia1" value="1" />
         <ctl name="MI2S_RX_Voice Mixer Voip" value="1" />
