@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff2e2bb8_164a4c54",
+        "filename": "configs/mixer_paths.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 345,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2016-10-01T02:20:58Z",
+      "side": 1,
+      "message": "These changes are definitely needed though.",
+      "range": {
+        "startLine": 345,
+        "startChar": 16,
+        "endLine": 345,
+        "endChar": 34
+      },
+      "revId": "b45f3b265483efecc0c173dafd5b2e732bc33ad2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
