@@ -29,8 +29,6 @@ import android.text.TextUtils;
 import android.telephony.CellInfo;
 import android.telephony.Rlog;
 
-import com.android.internal.telephony.uicc.IccCardApplicationStatus;
-import com.android.internal.telephony.uicc.IccCardStatus;
 import com.android.internal.telephony.dataconnection.DcFailCause;
 import com.android.internal.telephony.dataconnection.DataCallResponse;
 
@@ -56,24 +54,6 @@ public class HTCQualcommRIL extends RIL implements CommandsInterface {
     public HTCQualcommRIL(Context context, int networkMode, int cdmaSubscription,
             Integer instanceId) {
         super(context, networkMode, cdmaSubscription, instanceId);
-    }
-
-    @Override
-    protected Object
-    responseIccCardStatus(Parcel p) {
-        final int CARDSTATE_ABSENT = 0;
-        final int CARDSTATE_ERROR = 2;
-        int dataPosition = p.dataPosition();
-        int cardState = p.readInt();
-
-        if (cardState > CARDSTATE_ERROR) {
-            p.setDataPosition(dataPosition);
-            p.writeInt(CARDSTATE_ABSENT);
-        }
-
-        p.setDataPosition(dataPosition);
-
-        return super.responseIccCardStatus(p);
     }
 
     private static String
