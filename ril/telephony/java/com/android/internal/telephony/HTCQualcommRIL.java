@@ -145,6 +145,52 @@ public class HTCQualcommRIL extends RIL implements CommandsInterface {
     }
 
     @Override
+    protected RILRequest processSolicited (Parcel p) {
+        boolean lteOnCdma = SystemProperties.getInt(TelephonyProperties.PROPERTY_LTE_ON_CDMA_DEVICE,0)==1 ? true : false;
+        int serial, error;
+        boolean found = false;
+        int dataPosition=p.dataPosition();
+        serial = p.readInt();
+        error = p.readInt();
+        RILRequest rr = null;
+        // Pre-process the reply before popping it 
+        synchronized (mRequestList) {
+            RILRequest tr = mRequestList.get(serial);
+            if (tr != null && tr.mSerial == serial) {
+                if (error == 0 || p.dataAvail() > 0) {
+                    try {  switch (tr.mRequest) {
+                        // Get those we're interested in 
+                        case RIL_REQUEST_VOICE_RADIO_TECH:
+                            //if lteOnCdmaDevice is set to 1, intercept it.  If not, let it pass.
+                            rr = lteOnCdma ? tr : null;
+                            break;
+                    } } catch (Throwable thr) {
+                        // Exceptions here usually mean invalid RIL responses
+                        if (tr.mResult != null) {
+                        AsyncResult.forMessage(tr.mResult, null, thr);
+                        tr.mResult.sendToTarget();
+                        }
+                        return tr;
+                    }
+                }
+            }
+        }
+        if (rr == null) {
+            // Nothing we care about, go up 
+            p.setDataPosition(dataPosition);
+            // Forward responses that we are not overriding to the super class
+            return super.processSolicited(p);
+        }
+        rr = findAndRemoveRequestFromList(serial);
+        if (rr == null) {
+            Rlog.w(RILJ_LOG_TAG, "HTCQualcommRIL: Unexpected solicited response! sn: "
+            + serial + " error: " + error);
+            return null;
+        }
+        return rr;
+    }
+        
+    @Override
     public void getRadioCapability(Message response) {
         if (response == null)
             return;
