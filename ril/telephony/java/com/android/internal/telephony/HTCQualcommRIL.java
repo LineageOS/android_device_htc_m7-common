@@ -29,6 +29,7 @@ import android.text.TextUtils;
 import android.telephony.CellInfo;
 import android.telephony.Rlog;
 
+import com.android.internal.telephony.TelephonyProperties;
 import com.android.internal.telephony.uicc.IccCardApplicationStatus;
 import com.android.internal.telephony.uicc.IccCardStatus;
 import com.android.internal.telephony.dataconnection.DcFailCause;
@@ -141,6 +142,15 @@ public class HTCQualcommRIL extends RIL implements CommandsInterface {
                                         new AsyncResult (null, null, null));
                 }
                 break;
+        }
+    }
+
+    @Override
+    public void getVoiceRadioTechnology(Message result) {
+        if (SystemProperties.getInt(TelephonyProperties.PROPERTY_LTE_ON_CDMA_DEVICE, 0) == 1) {
+            if (RILJ_LOGD) riljLog("HTCQualcommRIL: Preventing send of RIL_REQUEST_VOICE_RADIO_TECH");
+        } else {
+            super.getVoiceRadioTechnology(result);
         }
     }
 
