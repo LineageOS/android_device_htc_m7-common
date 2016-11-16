@@ -280,18 +280,22 @@
     </path>
 
     <!-- FM REC -->
-    <path name="fm-virtual-record">
+    <path name="audio-record capture-fm">
         <ctl name="MultiMedia1 Mixer INTERNAL_FM_TX" value="1" />
     </path>
 
+    <path name="fm-virtual-record capture-fm">
+        <ctl name="MultiMedia2 Mixer INTERNAL_FM_TX" value="1" />
+    </path>
+
     <!-- FM Digital Radio -->
-    <path name="play-fm">
+    <path name="capture-fm">
         <ctl name="SLIMBUS_0_RX Port Mixer PRI_TX" value="1" />
         <ctl name="SLIMBUS_DL_HL Switch" value="1" />
     </path>
 
     <!-- FM Digital RadioSpeaker FM -->
-    <path name="play-fm speaker">
+    <path name="capture-fm speaker">
         <ctl name="MI2S_RX Port Mixer PRI_TX" value="1" />
         <ctl name="MI2S_RX_DL_HL Switch" value="1" />
     </path>
