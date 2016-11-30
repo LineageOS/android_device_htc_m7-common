@@ -45,6 +45,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.baseband.arch=mdm \
     ro.telephony.ril_class=HTCQualcommRIL
 
+# SdcardFS
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.sdcardfs=true
+
 # Scheduler
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.io.scheduler=bfq
