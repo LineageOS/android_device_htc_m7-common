@@ -3,6 +3,6 @@ recovery_only(`
     allow healthd input_device:chr_file write;
 
     # offmode_charging
-    allow healthd misc_partition:blk_file rw_file_perms;
+    allow healthd misc_block_device:blk_file rw_file_perms;
     set_prop(healthd, powerctl_prop)
 ')
