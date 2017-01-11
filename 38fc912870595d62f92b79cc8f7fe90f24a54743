@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa3479d7_4c4bda2b",
+        "filename": "sepolicy/mediaserver.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 5531
+      },
+      "writtenOn": "2017-01-11T04:19:26Z",
+      "side": 1,
+      "message": "Oops, included accidentally; may not be needed.",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 55
+      },
+      "revId": "38fc912870595d62f92b79cc8f7fe90f24a54743",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
