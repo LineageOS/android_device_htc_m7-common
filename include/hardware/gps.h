@@ -108,58 +108,42 @@ typedef uint16_t GpsLocationFlags;
  * not set, then the framework will use 1000ms for min_interval and will start
  * and call start() and stop() to schedule the GPS.
  */
-#define GPS_CAPABILITY_SCHEDULING       0x0000001
+#define GPS_CAPABILITY_SCHEDULING       (1 << 0)
 /** GPS supports MS-Based AGPS mode */
-#define GPS_CAPABILITY_MSB              0x0000002
+#define GPS_CAPABILITY_MSB              (1 << 1)
 /** GPS supports MS-Assisted AGPS mode */
-#define GPS_CAPABILITY_MSA              0x0000004
+#define GPS_CAPABILITY_MSA              (1 << 2)
 /** GPS supports single-shot fixes */
-#define GPS_CAPABILITY_SINGLE_SHOT      0x0000008
+#define GPS_CAPABILITY_SINGLE_SHOT      (1 << 3)
 /** GPS supports on demand time injection */
-#define GPS_CAPABILITY_ON_DEMAND_TIME   0x0000010
+#define GPS_CAPABILITY_ON_DEMAND_TIME   (1 << 4)
 /** GPS supports Geofencing  */
-#define GPS_CAPABILITY_GEOFENCING       0x0000020
+#define GPS_CAPABILITY_GEOFENCING       (1 << 5)
 /** GPS supports Measurements. */
-#define GPS_CAPABILITY_MEASUREMENTS     0x0000040
+#define GPS_CAPABILITY_MEASUREMENTS     (1 << 6)
 /** GPS supports Navigation Messages */
-#define GPS_CAPABILITY_NAV_MESSAGES     0x0000080
+#define GPS_CAPABILITY_NAV_MESSAGES     (1 << 7)
 
 /**
  * Flags used to specify which aiding data to delete when calling
  * delete_aiding_data().
  */
-typedef uint32_t GpsAidingData;
+typedef uint16_t GpsAidingData;
 /* IMPORTANT: Note that the following values must match
  * constants in GpsLocationProvider.java. */
-#define GPS_DELETE_EPHEMERIS                     0x00000001
-#define GPS_DELETE_ALMANAC                       0x00000002
-#define GPS_DELETE_POSITION                      0x00000004
-#define GPS_DELETE_TIME                          0x00000008
-#define GPS_DELETE_IONO                          0x00000010
-#define GPS_DELETE_UTC                           0x00000020
-#define GPS_DELETE_HEALTH                        0x00000040
-#define GPS_DELETE_SVDIR                         0x00000080
-#define GPS_DELETE_SVSTEER                       0x00000100
-#define GPS_DELETE_SADATA                        0x00000200
-#define GPS_DELETE_RTI                           0x00000400
-#define GPS_DELETE_CELLDB_INFO                   0x00000800
-#define GPS_DELETE_ALMANAC_CORR                  0x00001000
-#define GPS_DELETE_FREQ_BIAS_EST                 0x00002000
-#define GLO_DELETE_EPHEMERIS                     0x00004000
-#define GLO_DELETE_ALMANAC                       0x00008000
-#define GLO_DELETE_SVDIR                         0x00010000
-#define GLO_DELETE_SVSTEER                       0x00020000
-#define GLO_DELETE_ALMANAC_CORR                  0x00040000
-#define GPS_DELETE_TIME_GPS                      0x00080000
-#define GLO_DELETE_TIME                          0x00100000
-#define BDS_DELETE_SVDIR                         0X00200000
-#define BDS_DELETE_SVSTEER                       0X00400000
-#define BDS_DELETE_TIME                          0X00800000
-#define BDS_DELETE_ALMANAC_CORR                  0X01000000
-#define BDS_DELETE_EPHEMERIS                     0X02000000
-#define BDS_DELETE_ALMANAC                       0X04000000
-
-#define GPS_DELETE_ALL                           0xFFFFFFFF
+#define GPS_DELETE_EPHEMERIS        0x0001
+#define GPS_DELETE_ALMANAC          0x0002
+#define GPS_DELETE_POSITION         0x0004
+#define GPS_DELETE_TIME             0x0008
+#define GPS_DELETE_IONO             0x0010
+#define GPS_DELETE_UTC              0x0020
+#define GPS_DELETE_HEALTH           0x0040
+#define GPS_DELETE_SVDIR            0x0080
+#define GPS_DELETE_SVSTEER          0x0100
+#define GPS_DELETE_SADATA           0x0200
+#define GPS_DELETE_RTI              0x0400
+#define GPS_DELETE_CELLDB_INFO      0x8000
+#define GPS_DELETE_ALL              0xFFFF
 
 /** AGPS type */
 typedef int16_t AGpsType;
@@ -914,7 +898,7 @@ typedef struct {
  * Represents the status of AGPS augmented to support IPv4 and IPv6.
  */
 typedef struct {
-    /** set to sizeof(AGpsStatus_v3) */
+    /** set to sizeof(AGpsStatus) */
     size_t                  size;
 
     AGpsType                type;
@@ -932,12 +916,9 @@ typedef struct {
      */
     struct sockaddr_storage addr;
 
-
     char            ssid[SSID_BUF_SIZE];
     char            password[SSID_BUF_SIZE];
-} AGpsStatus_v3;
-
-typedef AGpsStatus_v3     AGpsStatus;
+} AGpsStatus;
 
 /**
  * Callback with AGPS status information. Can only be called from a thread
