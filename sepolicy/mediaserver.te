@@ -1,3 +1,6 @@
+allow mediaserver audio_device:chr_file rw_file_perms;
+allow mediaserver camera_device:chr_file rw_file_perms;
+allow mediaserver ion_debugfs:file r_file_perms;
 allow mediaserver self:netlink_kobject_uevent_socket create_socket_perms;
 allow mediaserver sensorservice_service:service_manager find;
 allow mediaserver system_server:unix_stream_socket rw_socket_perms;
