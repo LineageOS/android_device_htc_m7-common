@@ -22,6 +22,12 @@
 # CMHW
 /sys/devices/virtual/timed_output/vibrator/voltage_level   u:object_r:vibeamp_sysfs:s0
 
+# Graphics
+/sys/devices/platform/kgsl-3d0\.0/kgsl/kgsl-3d0/gpuclk       u:object_r:sysfs_thermal:s0
+/sys/devices/platform/kgsl-3d0\.0/kgsl/kgsl-3d0/max_gpuclk   u:object_r:sysfs_thermal:s0
+/sys/devices/platform/kgsl-3d0\.0/kgsl/kgsl-3d0/reset_count  u:object_r:sysfs_thermal:s0
+/sys/kernel/debug/ion/mm                                     u:object_r:ion_debugfs:s0
+
 # Modem
 /dev/block/mmcblk0p17           u:object_r:modem_efs_partition_device:s0
 /dev/block/mmcblk0p20           u:object_r:modem_efs_partition_device:s0
