@@ -145,6 +145,13 @@ lib/libwriteback.so
 etc/firmware/ILP0100_IPM_Code_out.bin
 etc/firmware/ILP0100_IPM_Data_out.bin
 
+# DRM
+bin/qseecomd
+lib/libdrmdecrypt.so
+vendor/lib/libdrmfs.so
+vendor/lib/libdrmtime.so
+vendor/lib/libQSEEComAPI.so
+
 # GPS
 lib/libgeofence.so
 lib/libloc_api_v02.so
@@ -195,18 +202,18 @@ lib/libmpl.so
 lib/libmpl_jni.so
 
 # Widevine
-bin/qseecomd
-lib/libdrmdecrypt.so
 vendor/lib/drm/libdrmwvmplugin.so
-vendor/lib/libdrmfs.so
-vendor/lib/libdrmtime.so
-vendor/lib/libQSEEComAPI.so
 vendor/lib/libwvdrm_L1.so
 vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
 # Widevine firmware
+etc/firmware/widevine.b00
+etc/firmware/widevine.b01
+etc/firmware/widevine.b02
+etc/firmware/widevine.b03
+etc/firmware/widevine.mdt
 etc/firmware/tzapps.b00
 etc/firmware/tzapps.b01
 etc/firmware/tzapps.b02
