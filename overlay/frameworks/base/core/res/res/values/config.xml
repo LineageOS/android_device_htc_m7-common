@@ -97,9 +97,6 @@
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
 
-    <!-- Set to false to enable CRT-off animation. -->
-    <bool name="config_animateScreenLights">false</bool>
-
     <!-- Default color for notification LED is green. -->
     <color name="config_defaultNotificationColor">#ff00ff00</color>
 
@@ -107,7 +104,9 @@
     <integer name="config_defaultNotificationLedOn">1000</integer>
 
     <!-- Default LED off time for notification LED in milliseconds. -->
-    <integer name="config_defaultNotificationLedOff">9000</integer>
+    <!-- HTC: Not milliseconds. Match to a state value from
+         notification_pulse_length_values in CMParts -->
+    <integer name="config_defaultNotificationLedOff">2</integer>
 
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
@@ -115,35 +114,8 @@
     <!-- disable menu hard key in non-pattern lockscreen -->
     <bool name="config_disableMenuKeyInLockScreen">true</bool>
 
-    <!-- Disable lockscreen translucent decor by default -->
-    <bool name="config_enableLockScreenTranslucentDecor">true</bool>
-
     <!-- Is the device capable of hot swapping an UICC card -->
     <bool name="config_hotswapCapable">true</bool>
-
-    <!-- Control the behavior when the user long presses the home button.
-              0 - Nothing
-              1 - Menu Key
-              2 - Recent apps view in SystemUI
-              3 - Launch assist intent
-              4 - Voice Search
-              5 - In-app Search
-         This needs to match the constants in
-         policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
-    -->
-    <integer name="config_longPressOnHomeBehavior">2</integer>
-
-    <!-- Control the behavior when the user double-taps the home button.
-              0 - Nothing
-              1 - Menu Key
-              2 - Recent apps view in SystemUI
-              3 - Launch assist intent
-              4 - Voice Search
-              5 - In-app Search
-         This needs to match the constants in
-         policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
-    -->
-    <integer name="config_doubleTapOnHomeBehavior">1</integer>
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N + 1 control points as follows:
@@ -278,6 +250,7 @@
 
     <!-- Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>
+
     <!-- Whether Multiuser UI should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
 
