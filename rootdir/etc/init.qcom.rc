@@ -318,12 +318,6 @@ service cir_fw_update /system/bin/cir_fw_update -u cir.img
     group root
     oneshot
 
-service fm_dl /system/bin/setprop hw.fm.init 1
-    user root
-    group system fm_radio
-    disabled
-    oneshot
-
 service netmgrd /system/bin/netmgrd
     class core
 
