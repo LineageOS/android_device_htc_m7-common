@@ -60,6 +60,7 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776704
 
 # FM
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
+BOARD_HAVE_QCOM_FM := true
 
 # General compilation flags
 TARGET_SPECIFIC_HEADER_PATH += device/htc/m7-common/include
