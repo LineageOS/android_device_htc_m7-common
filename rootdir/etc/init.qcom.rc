@@ -335,7 +335,7 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
 service qmuxd /system/bin/qmuxd
     class core
     user radio
-    group radio audio gps
+    group radio audio gps bluetooth qcom_diag
 
 service qseecomd /system/bin/qseecomd
     class core
