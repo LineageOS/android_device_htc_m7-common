@@ -284,18 +284,19 @@
         <ctl name="MultiMedia1 Mixer INTERNAL_FM_TX" value="1" />
     </path>
 
+    <!-- FM A2DP REC -->
     <path name="fm-virtual-record capture-fm">
         <ctl name="MultiMedia2 Mixer INTERNAL_FM_TX" value="1" />
     </path>
 
     <!-- FM Digital Radio -->
-    <path name="capture-fm">
+    <path name="play-fm">
         <ctl name="SLIMBUS_0_RX Port Mixer PRI_TX" value="1" />
         <ctl name="SLIMBUS_DL_HL Switch" value="1" />
     </path>
 
     <!-- FM Digital RadioSpeaker FM -->
-    <path name="capture-fm speaker">
+    <path name="play-fm speaker">
         <ctl name="MI2S_RX Port Mixer PRI_TX" value="1" />
         <ctl name="MI2S_RX_DL_HL Switch" value="1" />
     </path>
@@ -692,6 +693,10 @@
         <ctl name="DEC9 Volume" value="87" />
         <ctl name="MICBIAS1 CAPLESS Switch" value="0" />
         <ctl name="MICBIAS3 CAPLESS Switch" value="0" />
+    </path>
+
+    <!-- FM Tx -->
+    <path name="capture-fm">
     </path>
 
     <!-- Handset -->
