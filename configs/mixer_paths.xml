@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- Copyright (C) 2016 The CyanogenMod Project
+<!-- Copyright (C) 2017 The LineageOS Project
+     Copyright (C) 2016 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -234,7 +235,7 @@
         <path name="low-latency-playback speaker" />
     </path>
 
-    <!-- HiFi LowlatencyUSB PROXY Rx (not provided by HTC) -->
+    <!-- HiFi LowlatencyUSB PROXY Rx -->
     <path name="low-latency-playback usb-headphones">
         <ctl name="AFE_PCM_RX Audio Mixer MultiMedia5" value="1" />
     </path>
@@ -257,6 +258,11 @@
     <!-- HiFi RecBT SCO WB Tx -->
     <path name="audio-record bt-sco-wb">
         <ctl name="MultiMedia1 Mixer AUX_PCM_UL_TX" value="1" />
+    </path>
+
+    <!-- HiFi RecPROXY Tx -->
+    <path name="afe-proxy-record">
+        <ctl name="MultiMedia1 Mixer AFE_PCM_TX" value="1" />
     </path>
 
     <!-- HiFi Rec Compressed -->
@@ -391,25 +397,20 @@
         <ctl name="VoLTE Stub Tx Mixer STUB_1_TX_HL" value="1" />
     </path>
 
-    <!-- (Not provided by HTC) -->
+    <!-- UL REC -->
     <path name="incall-rec-uplink">
         <ctl name="MultiMedia1 Mixer VOC_REC_UL" value="1" />
     </path>
 
-    <!-- (Not provided by HTC) -->
+    <!-- DL REC -->
     <path name="incall-rec-downlink">
         <ctl name="MultiMedia1 Mixer VOC_REC_DL" value="1" />
     </path>
 
-    <!-- (Not provided by HTC) -->
+    <!-- UL DL REC -->
     <path name="incall-rec-uplink-and-downlink">
         <path name="incall-rec-uplink" />
         <path name="incall-rec-downlink" />
-    </path>
-
-    <!-- HiFi RecPROXY Tx -->
-    <path name="afe-proxy-record">
-        <ctl name="MultiMedia1 Mixer AFE_PCM_TX" value="1" />
     </path>
 
     <!-- These are actual sound device specific mixer settings -->
@@ -754,6 +755,10 @@
         <ctl name="DEC8 MUX" value="DMIC2" />
         <ctl name="DEC8 Volume" value="67" />
         <ctl name="MICBIAS1 CAPLESS Switch" value="0" />
+    </path>
+
+    <!-- USB PROXY Tx -->
+    <path name="usb-headset-mic">
     </path>
 
     <!-- Voice Headset -->
