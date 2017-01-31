@@ -137,10 +137,6 @@ public class HTCQualcommRIL extends RIL implements CommandsInterface {
                     riljLog("[UNSL]< " + responseToStringHTC(response) + " "
                             + retToString(response, ret));
                 }
-                if (mExitEmergencyCallbackModeRegistrants != null) {
-                    mExitEmergencyCallbackModeRegistrants.notifyRegistrants(
-                                        new AsyncResult (null, null, null));
-                }
                 break;
         }
     }
