@@ -1,0 +1,2 @@
+# Bootloader message offset requires read access
+allow uncrypt misc_block_device:blk_file r_file_perms;
