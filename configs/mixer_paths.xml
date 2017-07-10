@@ -784,16 +784,12 @@
         <ctl name="IIR1 INP1 MUX" value="DEC5" />
     </path>
 
-    <!-- Dual-mic device DMIC Endfire substituted for Voice Line -->
+    <!-- Voice Line -->
     <path name="voice-speaker-mic">
-        <ctl name="SLIM_0_TX Channels" value="Two" />
-        <ctl name="SLIM TX7 MUX" value="DEC8" />
-        <ctl name="DEC8 MUX" value="DMIC2" />
-        <ctl name="DEC8 Volume" value="87" />
-        <ctl name="SLIM TX8 MUX" value="DEC9" />
+        <ctl name="SLIM_0_TX Channels" value="One" />
+        <ctl name="SLIM TX7 MUX" value="DEC9" />
         <ctl name="DEC9 MUX" value="DMIC4" />
-        <ctl name="DEC9 Volume" value="87" />
-        <ctl name="MICBIAS1 CAPLESS Switch" value="0" />
+        <ctl name="DEC9 Volume" value="89" />
         <ctl name="MICBIAS3 CAPLESS Switch" value="0" />
     </path>
 
@@ -829,16 +825,12 @@
         <ctl name="ADC2 Volume" value="3" />
     </path>
 
-    <!-- Dual-mic device DMIC Endfire substituted for VOIP Line -->
+    <!-- VOIP Line -->
     <path name="voip-sub-mic-comm">
-        <ctl name="SLIM_0_TX Channels" value="Two" />
-        <ctl name="SLIM TX7 MUX" value="DEC8" />
-        <ctl name="DEC8 MUX" value="DMIC2" />
-        <ctl name="DEC8 Volume" value="87" />
-        <ctl name="SLIM TX8 MUX" value="DEC9" />
+        <ctl name="SLIM_0_TX Channels" value="One" />
+        <ctl name="SLIM TX7 MUX" value="DEC9" />
         <ctl name="DEC9 MUX" value="DMIC4" />
-        <ctl name="DEC9 Volume" value="87" />
-        <ctl name="MICBIAS1 CAPLESS Switch" value="0" />
+        <ctl name="DEC9 Volume" value="92" />
         <ctl name="MICBIAS3 CAPLESS Switch" value="0" />
     </path>
 
