@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "93dc47ed_9abf5dd7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 16082
+      },
+      "writtenOn": "2017-07-11T05:39:54Z",
+      "side": 1,
+      "message": "Still doesn\u0027t inspire me with confidence...",
+      "range": {
+        "startLine": 9,
+        "startChar": 9,
+        "endLine": 9,
+        "endChar": 17
+      },
+      "revId": "1533957226fd44acc4eee2f243ab481a83de00c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
